@@ -1,0 +1,13 @@
+How to set up the scripts:
+1. Add a "CharacterBasic" model to the scene
+2. Give the "CharacterBasic" object already in the scene a CharacterController component (In the physics section of "Add Component")
+3. Add the Controller_ThirdPerson script to the "CharacterBasic" model
+	a. Set "Movement Speed" to a 5, or whatever
+4. Add an Empty GameObject to the scene and make it a child of the "CharacterBasic" object
+	a. Rename it "TargetObject"
+5. Add the Camera_ThirdPerson script to the Main Camera
+	a. Set distanceBehindObject to 5
+	b. Set distanceAboveObject to 2
+	c. Set movementSmoothing to 3
+	d. Drag "TargetObject" from "CharacterBasic" to the targetObject variable
+6. Start the game and the character should be able to move while the camera follows behind
