@@ -7,7 +7,7 @@ public class FlightControlRig : MonoBehaviour {
 	Vector3 velocity;
 	Vector3 acceleration;
 	Vector3 lift;
-	float windResistance=1.18f;
+	float windResistance=1.15f;
 
 	// Use this for initialization
 	void Start () {
@@ -24,6 +24,8 @@ public class FlightControlRig : MonoBehaviour {
 		BoxCollider coll = (BoxCollider)player.GetComponent("BoxCollider");
 		coll.center = new Vector3(0.0f,0.9f,0.0f);
 		coll.size = new Vector3(1.5f,1.8f,0.4f);
+		Rigidbody rig = (Rigidbody)player.GetComponent("Rigidbody");
+		rig.useGravity = true;
 	}
 	void flightmodeOn()
 	{
@@ -35,6 +37,8 @@ public class FlightControlRig : MonoBehaviour {
 		BoxCollider coll = (BoxCollider)player.GetComponent("BoxCollider");
 		coll.center = new Vector3(0.0f,0.0f,0.9f);
 		coll.size = new Vector3(1.5f,0.4f,1.8f);
+		Rigidbody rig = (Rigidbody)player.GetComponent("Rigidbody");
+		rig.useGravity = false;
 	}
 	
 	// Update is called once per frame
@@ -62,12 +66,12 @@ public class FlightControlRig : MonoBehaviour {
 			print (velocity);
 			player.transform.position+=velocity*Time.deltaTime;
 
-			if(Input.GetKey(KeyCode.A))
+			if(Input.GetKey(KeyCode.Q))
 			{
 				player.transform.Rotate(new Vector3(0,0,1),1.0f,Space.Self);
 				//player.transform.GetChild(0).transform.Rotate(new Vector3(0,1,0),2);
 			}
-			if(Input.GetKey(KeyCode.D))
+			if(Input.GetKey(KeyCode.E))
 			{
 				player.transform.Rotate(new Vector3(0,0,1),-1.0f,Space.Self);
 				//player.transform.GetChild(0).transform.Rotate(new Vector3(0,1,0),-2);
@@ -80,11 +84,11 @@ public class FlightControlRig : MonoBehaviour {
 			{
 				player.transform.Rotate(new Vector3(1,0,0),-1.0f,Space.Self);
 			}
-			if(Input.GetKey(KeyCode.Q))
+			if(Input.GetKey(KeyCode.A))
 			{
 				player.transform.Rotate(new Vector3(0,1,0),-1.0f,Space.Self);
 			}
-			if(Input.GetKey(KeyCode.E))
+			if(Input.GetKey(KeyCode.D))
 			{
 				player.transform.Rotate(new Vector3(0,1,0),1.0f,Space.Self);
 			}
