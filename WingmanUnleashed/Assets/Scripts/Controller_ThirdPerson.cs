@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class FlightControlRig : MonoBehaviour {
+public class Controller_ThirdPerson : MonoBehaviour 
+{
 	public GameObject player;
 	bool flightmode = false;
 	Vector3 velocity;
@@ -9,10 +10,14 @@ public class FlightControlRig : MonoBehaviour {
 	Vector3 lift;
 	float windResistance=1.15f;
 
-	// Use this for initialization
-	void Start () {
-		
-	}
+	public float movementSpeed = 10.0f;
+	private float horizontal;
+	private float vertical;
+	private CharacterController controller;
+
+	private Vector3 MovementVector { get; set; }
+
+	public static Controller_ThirdPerson Instance;
 
 	void flightmodeOff()
 	{
@@ -41,9 +46,15 @@ public class FlightControlRig : MonoBehaviour {
 		Rigidbody rig = (Rigidbody)player.GetComponent("Rigidbody");
 		rig.useGravity = false;
 	}
-	
-	// Update is called once per frame
-	void Update () {
+
+	void Awake() 
+	{
+		Instance = this;
+		//controller = GetComponent ("CharacterController") as CharacterController;
+	}
+
+	void Update() 
+	{
 		if(Input.GetKeyDown(KeyCode.Space))
 		{
 			if(flightmode)
@@ -55,7 +66,7 @@ public class FlightControlRig : MonoBehaviour {
 				flightmodeOn();
 			}
 		}
-
+		
 		if(flightmode)
 		{
 			float airspeed = velocity.magnitude;
@@ -66,7 +77,7 @@ public class FlightControlRig : MonoBehaviour {
 			velocity*=(1-(windResistance*Time.deltaTime));
 			print (velocity);
 			player.transform.position+=velocity*Time.deltaTime;
-
+			
 			if(Input.GetKey(KeyCode.Q))
 			{
 				player.transform.Rotate(new Vector3(0,0,1),1.0f,Space.Self);
@@ -94,6 +105,29 @@ public class FlightControlRig : MonoBehaviour {
 				player.transform.Rotate(new Vector3(0,1,0),1.0f,Space.Self);
 			}
 		}
+		else
+		{
+			alignCharacter ();
+			
+			bool isPressed = false;
+			
+			if(inputTaken()) { isPressed = true; }
+			
+			if(isPressed)
+			{
+				horizontal = Input.GetAxis ("Horizontal");
+				vertical = Input.GetAxis ("Vertical");
+				
+				MovementVector = new Vector3 (horizontal, 0.0f, vertical);
+				
+				MovementVector = transform.TransformDirection (MovementVector);
+				MovementVector = Vector3.Normalize (MovementVector);
+				MovementVector = (MovementVector * movementSpeed) * Time.deltaTime;
+				
+				//controller.Move (movementVector);
+				transform.position += MovementVector;
+			}
+		}
 		if(Input.GetKeyDown(KeyCode.Alpha1))
 		{
 			flightmodeOff();
@@ -110,4 +144,19 @@ public class FlightControlRig : MonoBehaviour {
 			player.transform.position = new Vector3(1814.116f,719.9808f,1764.895f);
 		}
 	}
+
+	private void alignCharacter()
+	{
+		if(MovementVector.x != 0 || MovementVector.z != 0)
+		{
+			transform.rotation = Quaternion.Euler(transform.eulerAngles.x, Camera.main.transform.eulerAngles.y, transform.eulerAngles.z);
+		}
+	}
+
+	private bool inputTaken()
+	{
+		return (Input.GetKey (KeyCode.W) || Input.GetKey (KeyCode.A) || Input.GetKey (KeyCode.S) || Input.GetKey (KeyCode.D));
+	}
+
+
 }
