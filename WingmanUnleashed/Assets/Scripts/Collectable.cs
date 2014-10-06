@@ -1,7 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Collectable : MonoBehaviour, IIteractable
+/// <summary>
+/// Behavior that work with 
+/// </summary>
+public class Collectable : MonoBehaviour, IInteractable
 {
 	public GameObject Player;
 
@@ -17,7 +20,7 @@ public class Collectable : MonoBehaviour, IIteractable
 
 	}
 
-	void IIteractable.InteractWith()
+	void IInteractable.InteractWith()
 	{
 		Player.GetComponent<Inventory>().AddItem(gameObject.GetComponent<Interactable>().InteractableName);
 		Destroy(gameObject);

@@ -2,9 +2,12 @@
 using System.Collections;
 using UnityEngine.UI;
 
+/// <summary>
+/// Allows a game object to be interacted with. GameObject must also have another script component that implements IIteractable.
+/// </summary>
 public class Interactable : MonoBehaviour
 {
-	private IIteractable behavior;
+	private IInteractable behavior;
 	public float InteractionRadius = 1.0f;
 	public KeyCode InteractionKey = KeyCode.E;
 	public GameObject Player;
@@ -26,11 +29,11 @@ public class Interactable : MonoBehaviour
 			throw new UnassignedReferenceException("Player must be defined");
 		}
 
-		behavior = (IIteractable)gameObject.GetComponent("IIteractable");
+		behavior = (IInteractable)gameObject.GetComponent("IInteractable");
 		
 		if (behavior == null)
 		{
-			throw new UnassignedReferenceException("A script that implements IIteractable must be a component in the same gameobject as this script.");
+			throw new UnassignedReferenceException("A script that implements IInteractable must be a component in the same gameobject as this script.");
 		}
 
 		GameObject.Find("InteractionManager").GetComponent<InteractionManager>().Interactables.Add(gameObject);
