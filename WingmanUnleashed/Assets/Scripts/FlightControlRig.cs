@@ -20,6 +20,7 @@ public class FlightControlRig : MonoBehaviour {
 		lift = new Vector3(0.0f,0.0f,0.0f);
 		velocity = new Vector3(0.0f,0.0f,0.0f);
 		flightmode = false;
+		player.transform.rotation = new Vector3(player.transform.rotation.x,0.0f,player.transform.rotation.z);
 		player.transform.GetChild(0).transform.localRotation=Quaternion.identity;
 		BoxCollider coll = (BoxCollider)player.GetComponent("BoxCollider");
 		coll.center = new Vector3(0.0f,0.9f,0.0f);
