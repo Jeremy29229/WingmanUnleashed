@@ -6,12 +6,13 @@ using System.Collections;
 /// </summary>
 public class Collectable : MonoBehaviour, IInteractable
 {
-	public GameObject Player;
+	public string PlayerObjectName = "CharacterBasic";
+	private Inventory inventory;
 
 	// Use this for initialization
 	void Start()
 	{
-
+		inventory = GameObject.Find(PlayerObjectName).GetComponent<Inventory>();
 	}
 
 	// Update is called once per frame
@@ -22,7 +23,7 @@ public class Collectable : MonoBehaviour, IInteractable
 
 	void IInteractable.InteractWith()
 	{
-		Player.GetComponent<Inventory>().AddItem(gameObject.GetComponent<Interactable>().InteractableName);
+		inventory.AddItem(gameObject.GetComponent<Interactable>().InteractableName);
 		Destroy(gameObject);
 	}
 }

@@ -10,7 +10,8 @@ public class Interactable : MonoBehaviour
 	private IInteractable behavior;
 	public float InteractionRadius = 1.0f;
 	public KeyCode InteractionKey = KeyCode.E;
-	public GameObject Player;
+	public string PlayerObjectName = "CharacterBasic";
+	private GameObject Player;
 	public bool IsRepeatable = false;
 	public bool IsActive = true;
 	private Canvas UI;
@@ -23,6 +24,7 @@ public class Interactable : MonoBehaviour
 		UI = (Canvas)GameObject.FindObjectOfType(typeof(Canvas));
 		//updateGUIText();
 		UI.enabled = false;
+		Player = GameObject.Find(PlayerObjectName);
 
 		if (Player == null)
 		{

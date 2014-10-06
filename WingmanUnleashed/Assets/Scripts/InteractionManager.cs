@@ -5,13 +5,15 @@ using System.Collections.Generic;
 public class InteractionManager : MonoBehaviour
 {
 	public List<GameObject> Interactables;
-	public GameObject player;
+	public string PlayerObjectName = "CharacterBasic";
+	private GameObject player;
 	private Canvas UI;
 
 	// Use this for initialization
 	void Start()
 	{
 		UI = (Canvas)GameObject.FindObjectOfType(typeof(Canvas));
+		player = GameObject.Find(PlayerObjectName);
 	}
 
 	// Update is called once per frame
