@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using System.Collections;
 
 public class Detectable : MonoBehaviour
 {
@@ -8,11 +7,6 @@ public class Detectable : MonoBehaviour
 	/// </summary>
 	public int DetectionValue = 0;
 	public Color color = new Color(1, 1, 1, 1);
-
-	void Start()
-	{
-
-	}
 
 	void Update()
 	{
@@ -53,6 +47,4 @@ public class Detectable : MonoBehaviour
 
 		color.a = 1;
 	}
-
-
 }
