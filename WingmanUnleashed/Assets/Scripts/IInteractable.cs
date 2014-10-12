@@ -5,7 +5,7 @@
 public interface IInteractable
 {
 	/// <summary>
-	/// Gets called by Iteractable script when a player attempts to interact with the game object.
+	/// Gets called by Interactable script when a player attempts to interact with the game object.
 	/// </summary>
 	void InteractWith();
 }

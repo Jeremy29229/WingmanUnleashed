@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -8,20 +7,17 @@ public class Inventory : MonoBehaviour
 	public List<InventoryItem> items;
 	public KeyCode InventoryPrintKey;
 
-	// Use this for initialization
 	void Start()
 	{
 		items = new List<InventoryItem>();
 	}
 
-	// Update is called once per frame
 	void Update()
 	{
 		if (Input.GetKeyDown(InventoryPrintKey))
 		{
 			Debug.Log(ToString());
 		}
-
 	}
 
 	public void AddItem(string name, int amount = 1)
