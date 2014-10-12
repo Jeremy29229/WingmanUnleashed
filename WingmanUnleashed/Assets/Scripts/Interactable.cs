@@ -21,7 +21,7 @@ public class Interactable : MonoBehaviour
 	// Use this for initialization
 	void Start()
 	{
-		UI = (Canvas)GameObject.FindObjectOfType(typeof(Canvas));
+		UI = (Canvas)GameObject.Find("InteractionGUI").GetComponent(typeof(Canvas));
 		//updateGUIText();
 		UI.enabled = false;
 		Player = GameObject.Find(PlayerObjectName);
@@ -74,7 +74,7 @@ public class Interactable : MonoBehaviour
 
 	public void updateGUIText()
 	{
-//		UI.GetComponentInChildren<Text>().text = "Press " + InteractionKey.ToString() + " to " + Action + " " + InteractableName;
-		//UI.enabled = false;
+		UI.GetComponentInChildren<Text>().text = "Press " + InteractionKey.ToString() + " to " + Action + " " + InteractableName;
+		UI.enabled = false;
 	}
 }
