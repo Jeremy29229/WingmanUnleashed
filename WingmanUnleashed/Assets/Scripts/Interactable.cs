@@ -74,7 +74,7 @@ public class Interactable : MonoBehaviour
 
 	public void updateGUIText()
 	{
-		UI.GetComponentInChildren<Text>().text = "Press " + InteractionKey.ToString() + " to " + Action + " " + InteractableName;
+//		UI.GetComponentInChildren<Text>().text = "Press " + InteractionKey.ToString() + " to " + Action + " " + InteractableName;
 		//UI.enabled = false;
 	}
 }
