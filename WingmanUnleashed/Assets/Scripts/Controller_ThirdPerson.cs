@@ -10,7 +10,6 @@ public class Controller_ThirdPerson : MonoBehaviour
 	Vector3 lift;
 	float windResistance = 1.15f;
 
-	public float movementSpeed = 10.0f;
 	private float horizontal;
 	private float vertical;
 
@@ -20,6 +19,7 @@ public class Controller_ThirdPerson : MonoBehaviour
 
 	void flightmodeOff()
 	{
+        Camera_ThirdPerson.Instance.usingFlightCamera = false;
 		acceleration = new Vector3(0.0f, 0.0f, 0.0f);
 		lift = new Vector3(0.0f, 0.0f, 0.0f);
 		velocity = new Vector3(0.0f, 0.0f, 0.0f);
@@ -34,6 +34,7 @@ public class Controller_ThirdPerson : MonoBehaviour
 	}
 	void flightmodeOn()
 	{
+        Camera_ThirdPerson.Instance.usingFlightCamera = true;
 		acceleration = new Vector3(0.0f, -9.81f, 0.0f);
 		lift = new Vector3(0.0f, 0.0f, 0.0f);
 		velocity = new Vector3(0.0f, 0.0f, 0.0f);
@@ -48,7 +49,8 @@ public class Controller_ThirdPerson : MonoBehaviour
 
 	void Awake()
 	{
-		Instance = this;
+        Instance = this;
+        Camera_ThirdPerson.checkForCameraCreation();
 	}
 
 	void Update()
@@ -105,26 +107,20 @@ public class Controller_ThirdPerson : MonoBehaviour
 		}
 		else
 		{
-			alignCharacter();
-
-			bool isPressed = false;
-
-			if (inputTaken()) { isPressed = true; }
-
-			if (isPressed)
-			{
-				horizontal = Input.GetAxis("Horizontal");
-				vertical = Input.GetAxis("Vertical");
-
-				MovementVector = new Vector3(horizontal, 0.0f, vertical);
-
-				MovementVector = transform.TransformDirection(MovementVector);
-				MovementVector = Vector3.Normalize(MovementVector);
-				MovementVector = (MovementVector * movementSpeed) * Time.deltaTime;
-
-				//controller.Move (movementVector);
-				transform.position += MovementVector;
-			}
+            if (Camera.main == null)
+            {
+                Debug.LogError("There needs to be a main camera for the third-person camera");
+            }
+            else
+            {
+                if (inputTaken())
+                {
+                    horizontal = Input.GetAxis("Horizontal");
+                    vertical = Input.GetAxis("Vertical");
+                    Motor_ThirdPerson.Instance.MovementVector = new Vector3(horizontal, 0.0f, vertical);
+                    Motor_ThirdPerson.Instance.UpdateMotor();
+                }
+            }
 		}
 		if (Input.GetKeyDown(KeyCode.Alpha1))
 		{
@@ -140,14 +136,6 @@ public class Controller_ThirdPerson : MonoBehaviour
 		{
 			flightmodeOff();
 			player.transform.position = new Vector3(1814.116f, 719.9808f, 1764.895f);
-		}
-	}
-
-	private void alignCharacter()
-	{
-		if (MovementVector.x != 0 || MovementVector.z != 0)
-		{
-			transform.rotation = Quaternion.Euler(transform.eulerAngles.x, Camera.main.transform.eulerAngles.y, transform.eulerAngles.z);
 		}
 	}
 
