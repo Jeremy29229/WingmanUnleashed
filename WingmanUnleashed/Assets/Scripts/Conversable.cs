@@ -4,16 +4,17 @@ using System.Collections.Generic;
 
 public class Conversable : MonoBehaviour, IInteractable
 {
-	private Conversable conversation;
+	private Conversation conversation;
 	private GameObject Player;
 
 	void start()
 	{
-
+		Player = GameObject.Find("CharacterBasic");
+		conversation = gameObject.GetComponent<Conversation>();
 	}
 
 	public void InteractWith()
 	{
-		throw new System.NotImplementedException();
+		//throw new System.NotImplementedException();
 	}
 }

@@ -17,15 +17,5 @@ public class Dialog : MonoBehaviour
 
 	public string[] disguiseName;
 
-	public InventoryItem t;
-
-	void Start()
-	{
-
-	}
-
-	void Update()
-	{
-
-	}
+	//public InventoryItem t;
 }

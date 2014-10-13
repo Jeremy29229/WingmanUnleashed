@@ -2,7 +2,7 @@
 
 public class Collectable : MonoBehaviour, IInteractable
 {
-	public string PlayerObjectName = "CharacterBasic";
+	public string PlayerObjectName = "Wingman";
 	private Inventory inventory;
 
 	void Start()

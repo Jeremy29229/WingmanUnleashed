@@ -7,7 +7,7 @@ public class VisionDetection : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		wingMan = GameObject.Find ("CharacterBasic");
+		wingMan = GameObject.Find ("Wingman");
 		playerInRange = false;
 	}
 	
