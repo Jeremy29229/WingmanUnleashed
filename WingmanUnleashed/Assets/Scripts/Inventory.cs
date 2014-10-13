@@ -15,6 +15,7 @@ public class Inventory : MonoBehaviour
 	{
 		items = new List<InventoryItem>();
         inventoryVisible = false;
+        GameObject.Find("InventoryCanvas").GetComponent<Canvas>().enabled = false;
 	}
 
 	void Update()

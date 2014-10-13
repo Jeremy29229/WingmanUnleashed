@@ -200,7 +200,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 79
+  m_RootOrder: 85
 --- !u!1 &3903449
 GameObject:
   m_ObjectHideFlags: 0
@@ -233,6 +233,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
+  inventorySprite: {fileID: 21300000, guid: 2b9c3da8bedbdb646a6c00fbef7a4728, type: 3}
 --- !u!114 &3903451
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -292,7 +293,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 142
+  m_RootOrder: 143
 --- !u!1 &5579109
 GameObject:
   m_ObjectHideFlags: 0
@@ -498,6 +499,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
+  inventorySprite: {fileID: 21300000, guid: 075a08da52ff47545add5503520059ee, type: 3}
 --- !u!23 &18605615
 Renderer:
   m_ObjectHideFlags: 0
@@ -538,7 +540,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 146
+  m_RootOrder: 147
 --- !u!1001 &18621880
 Prefab:
   m_ObjectHideFlags: 0
@@ -692,7 +694,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 48
+  m_RootOrder: 53
 --- !u!1 &21440133
 GameObject:
   m_ObjectHideFlags: 0
@@ -854,6 +856,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
+  inventorySprite: {fileID: 21300000, guid: 075a08da52ff47545add5503520059ee, type: 3}
 --- !u!23 &24756542
 Renderer:
   m_ObjectHideFlags: 0
@@ -932,7 +935,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: e133f7feb0a24394c81b8792639bc794, type: 2}
       propertyPath: m_RootOrder
-      value: 79
+      value: 84
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e133f7feb0a24394c81b8792639bc794, type: 2}
@@ -1032,6 +1035,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
+  inventorySprite: {fileID: 21300000, guid: fabb0cdf7e49f934bbf1838c19808412, type: 3}
 --- !u!23 &28352211
 Renderer:
   m_ObjectHideFlags: 0
@@ -1072,7 +1076,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 153
+  m_RootOrder: 154
 --- !u!1001 &28523013
 Prefab:
   m_ObjectHideFlags: 0
@@ -1196,7 +1200,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: fedbf4c7adac46848b6a1a570ac1f584, type: 2}
       propertyPath: m_RootOrder
-      value: 71
+      value: 76
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fedbf4c7adac46848b6a1a570ac1f584, type: 2}
@@ -1240,7 +1244,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: a9ba180a0917e05429324554a3f66868, type: 2}
       propertyPath: m_RootOrder
-      value: 129
+      value: 138
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: a9ba180a0917e05429324554a3f66868, type: 2}
       propertyPath: InteractionRadius
@@ -1357,7 +1361,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: fedbf4c7adac46848b6a1a570ac1f584, type: 2}
       propertyPath: m_RootOrder
-      value: 196
+      value: 205
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fedbf4c7adac46848b6a1a570ac1f584, type: 2}
@@ -1549,7 +1553,7 @@ Transform:
   m_Children:
   - {fileID: 1849400709}
   m_Father: {fileID: 0}
-  m_RootOrder: 69
+  m_RootOrder: 70
 --- !u!65 &46100267
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2031,7 +2035,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: e133f7feb0a24394c81b8792639bc794, type: 2}
       propertyPath: m_RootOrder
-      value: 172
+      value: 181
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e133f7feb0a24394c81b8792639bc794, type: 2}
@@ -2462,7 +2466,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: afb3aabb63e95ae4a82750125f7e5019, type: 2}
       propertyPath: m_RootOrder
-      value: 141
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: afb3aabb63e95ae4a82750125f7e5019, type: 2}
       propertyPath: m_LocalScale.x
@@ -2766,6 +2770,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
+  inventorySprite: {fileID: 21300000, guid: d7c7b0ced6d7d014a8d44aa17492b6ef, type: 3}
 --- !u!23 &85477777
 Renderer:
   m_ObjectHideFlags: 0
@@ -2806,7 +2811,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 147
+  m_RootOrder: 148
 --- !u!1001 &87104935
 Prefab:
   m_ObjectHideFlags: 0
@@ -2844,7 +2849,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: a9ba180a0917e05429324554a3f66868, type: 2}
       propertyPath: m_RootOrder
-      value: 154
+      value: 163
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: a9ba180a0917e05429324554a3f66868, type: 2}
       propertyPath: InteractionRadius
@@ -2918,6 +2923,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
+  inventorySprite: {fileID: 21300000, guid: 79e16ca54f518284b8c8926abc8766d0, type: 3}
 --- !u!23 &88533036
 Renderer:
   m_ObjectHideFlags: 0
@@ -2984,7 +2990,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 675e4198ae9efe542bc4ac9fda04e680, type: 2}
       propertyPath: m_RootOrder
-      value: 25
+      value: 27
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 675e4198ae9efe542bc4ac9fda04e680, type: 2}
@@ -3024,6 +3030,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
+  inventorySprite: {fileID: 21300000, guid: a86fb142c895f8543a0e9deae93c0257, type: 3}
 --- !u!114 &89514001
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3056,6 +3063,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
+  inventorySprite: {fileID: 0}
 --- !u!23 &89514003
 Renderer:
   m_ObjectHideFlags: 0
@@ -3096,7 +3104,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 200
+  m_RootOrder: 201
 --- !u!1 &90894181
 GameObject:
   m_ObjectHideFlags: 0
@@ -3192,7 +3200,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b62decc40a48fd14f845d8e02ca16e07, type: 2}
       propertyPath: m_RootOrder
-      value: 118
+      value: 127
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: b62decc40a48fd14f845d8e02ca16e07, type: 2}
       propertyPath: InteractionRadius
@@ -3254,6 +3262,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
+  inventorySprite: {fileID: 21300000, guid: 79e16ca54f518284b8c8926abc8766d0, type: 3}
 --- !u!23 &92088511
 Renderer:
   m_ObjectHideFlags: 0
@@ -3294,7 +3303,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 130
+  m_RootOrder: 131
 --- !u!1 &98121381
 GameObject:
   m_ObjectHideFlags: 0
@@ -3346,6 +3355,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
+  inventorySprite: {fileID: 21300000, guid: 79e16ca54f518284b8c8926abc8766d0, type: 3}
 --- !u!23 &98121384
 Renderer:
   m_ObjectHideFlags: 0
@@ -3386,7 +3396,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 191
+  m_RootOrder: 192
 --- !u!1001 &98985678
 Prefab:
   m_ObjectHideFlags: 0
@@ -3718,6 +3728,74 @@ Prefab:
   m_RootGameObject: {fileID: 366287571}
   m_IsPrefabParent: 0
   m_IsExploded: 1
+--- !u!1 &108551520
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100020, guid: 5a1faa1dfa6c2b1438a5235ba45c395a, type: 2}
+  m_PrefabInternal: {fileID: 2037409405}
+  serializedVersion: 4
+  m_Component:
+  - 224: {fileID: 108551521}
+  - 222: {fileID: 108551523}
+  - 114: {fileID: 108551522}
+  m_Layer: 5
+  m_Name: ItemDisplay
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &108551521
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 22400020, guid: 5a1faa1dfa6c2b1438a5235ba45c395a,
+    type: 2}
+  m_PrefabInternal: {fileID: 2037409405}
+  m_GameObject: {fileID: 108551520}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1464265566}
+  - {fileID: 917235978}
+  - {fileID: 1981337442}
+  m_Father: {fileID: 1112062357}
+  m_RootOrder: 0
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: .5, y: .5}
+--- !u!114 &108551522
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400026, guid: 5a1faa1dfa6c2b1438a5235ba45c395a,
+    type: 2}
+  m_PrefabInternal: {fileID: 2037409405}
+  m_GameObject: {fileID: 108551520}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: .39199999}
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+--- !u!222 &108551523
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 22200018, guid: 5a1faa1dfa6c2b1438a5235ba45c395a,
+    type: 2}
+  m_PrefabInternal: {fileID: 2037409405}
+  m_GameObject: {fileID: 108551520}
+  m_HideIfInvisible: 1
 --- !u!1001 &109083078
 Prefab:
   m_ObjectHideFlags: 0
@@ -3755,7 +3833,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 842528d34c2e16540a628ef6977ab911, type: 2}
       propertyPath: m_RootOrder
-      value: 133
+      value: 142
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 842528d34c2e16540a628ef6977ab911, type: 2}
       propertyPath: InteractionRadius
@@ -3886,6 +3964,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
+  inventorySprite: {fileID: 21300000, guid: 74e5e08132e36fa4da8651e50f038972, type: 3}
 --- !u!23 &113464439
 Renderer:
   m_ObjectHideFlags: 0
@@ -3926,7 +4005,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 106
+  m_RootOrder: 107
 --- !u!1001 &119880182
 Prefab:
   m_ObjectHideFlags: 0
@@ -3964,7 +4043,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b0f6864995b484b4390835dd573225c0, type: 2}
       propertyPath: m_RootOrder
-      value: 0
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b0f6864995b484b4390835dd573225c0, type: 2}
@@ -4091,6 +4170,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
+  inventorySprite: {fileID: 21300000, guid: 74e5e08132e36fa4da8651e50f038972, type: 3}
 --- !u!23 &121966013
 Renderer:
   m_ObjectHideFlags: 0
@@ -4131,7 +4211,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 176
+  m_RootOrder: 177
 --- !u!1 &122365115
 GameObject:
   m_ObjectHideFlags: 0
@@ -4400,6 +4480,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
+  inventorySprite: {fileID: 21300000, guid: 075a08da52ff47545add5503520059ee, type: 3}
 --- !u!23 &138704430
 Renderer:
   m_ObjectHideFlags: 0
@@ -4440,7 +4521,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 120
+  m_RootOrder: 121
 --- !u!1 &142368397
 GameObject:
   m_ObjectHideFlags: 0
@@ -4907,7 +4988,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 842528d34c2e16540a628ef6977ab911, type: 2}
       propertyPath: m_RootOrder
-      value: 134
+      value: 143
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 842528d34c2e16540a628ef6977ab911, type: 2}
       propertyPath: InteractionRadius
@@ -5013,7 +5094,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0244d14266c8ee544804b1d988a45262, type: 2}
       propertyPath: m_RootOrder
-      value: 182
+      value: 191
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0244d14266c8ee544804b1d988a45262, type: 2}
@@ -5052,6 +5133,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
+  inventorySprite: {fileID: 21300000, guid: 207b26bd2376b694dac1dab972102c4d, type: 3}
 --- !u!114 &166487402
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5111,7 +5193,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 158
+  m_RootOrder: 159
 --- !u!1 &166959093
 GameObject:
   m_ObjectHideFlags: 0
@@ -5221,6 +5303,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
+  inventorySprite: {fileID: 21300000, guid: 6467d26a256321f4d88c7c40f1ddd161, type: 3}
 --- !u!23 &167981883
 Renderer:
   m_ObjectHideFlags: 0
@@ -5261,7 +5344,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 128
+  m_RootOrder: 129
 --- !u!1 &168160063
 GameObject:
   m_ObjectHideFlags: 0
@@ -5528,7 +5611,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 845135208a0fce4488e286eee9113bb1, type: 2}
       propertyPath: m_RootOrder
-      value: 192
+      value: 201
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 845135208a0fce4488e286eee9113bb1, type: 2}
@@ -5829,7 +5912,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c02b499ca49ee4b4194a1a0e7aa7bdf8, type: 2}
       propertyPath: m_RootOrder
-      value: 100
+      value: 109
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: c02b499ca49ee4b4194a1a0e7aa7bdf8, type: 2}
       propertyPath: InteractionRadius
@@ -5877,7 +5960,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c02b499ca49ee4b4194a1a0e7aa7bdf8, type: 2}
       propertyPath: m_RootOrder
-      value: 101
+      value: 110
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: c02b499ca49ee4b4194a1a0e7aa7bdf8, type: 2}
       propertyPath: InteractionRadius
@@ -5925,7 +6008,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b62decc40a48fd14f845d8e02ca16e07, type: 2}
       propertyPath: m_RootOrder
-      value: 117
+      value: 126
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: b62decc40a48fd14f845d8e02ca16e07, type: 2}
       propertyPath: InteractionRadius
@@ -6315,6 +6398,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
+  inventorySprite: {fileID: 21300000, guid: 075a08da52ff47545add5503520059ee, type: 3}
 --- !u!23 &199543780
 Renderer:
   m_ObjectHideFlags: 0
@@ -6674,13 +6758,83 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: e133f7feb0a24394c81b8792639bc794, type: 2}
       propertyPath: m_RootOrder
-      value: 78
+      value: 83
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e133f7feb0a24394c81b8792639bc794, type: 2}
   m_RootGameObject: {fileID: 1441596224}
   m_IsPrefabParent: 0
   m_IsExploded: 1
+--- !u!1 &216748032
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100002, guid: 5a1faa1dfa6c2b1438a5235ba45c395a, type: 2}
+  m_PrefabInternal: {fileID: 2037409405}
+  serializedVersion: 4
+  m_Component:
+  - 224: {fileID: 216748033}
+  - 222: {fileID: 216748035}
+  - 114: {fileID: 216748034}
+  m_Layer: 5
+  m_Name: MoneyLabel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &216748033
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 22400002, guid: 5a1faa1dfa6c2b1438a5235ba45c395a,
+    type: 2}
+  m_PrefabInternal: {fileID: 2037409405}
+  m_GameObject: {fileID: 216748032}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1346731065}
+  m_RootOrder: 3
+  m_AnchorMin: {x: .5, y: .5}
+  m_AnchorMax: {x: .5, y: .5}
+  m_AnchoredPosition: {x: -448.399994, y: 218}
+  m_SizeDelta: {x: 74.1999969, y: 30}
+  m_Pivot: {x: .5, y: .5}
+--- !u!114 &216748034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400002, guid: 5a1faa1dfa6c2b1438a5235ba45c395a,
+    type: 2}
+  m_PrefabInternal: {fileID: 2037409405}
+  m_GameObject: {fileID: 216748032}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: .1953125, g: .1953125, b: .1953125, a: 1}
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 22
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 3
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 'Money:'
+--- !u!222 &216748035
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 22200002, guid: 5a1faa1dfa6c2b1438a5235ba45c395a,
+    type: 2}
+  m_PrefabInternal: {fileID: 2037409405}
+  m_GameObject: {fileID: 216748032}
+  m_HideIfInvisible: 0
 --- !u!1 &219806105
 GameObject:
   m_ObjectHideFlags: 0
@@ -6988,7 +7142,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 845135208a0fce4488e286eee9113bb1, type: 2}
       propertyPath: m_RootOrder
-      value: 191
+      value: 200
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 845135208a0fce4488e286eee9113bb1, type: 2}
@@ -7090,7 +7244,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 876efe92cdadf7b42935fc899e1b5e9d, type: 2}
       propertyPath: m_RootOrder
-      value: 0
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 876efe92cdadf7b42935fc899e1b5e9d, type: 2}
@@ -7229,6 +7383,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
+  inventorySprite: {fileID: 21300000, guid: 79e16ca54f518284b8c8926abc8766d0, type: 3}
 --- !u!23 &231449707
 Renderer:
   m_ObjectHideFlags: 0
@@ -7395,7 +7550,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: a31d7ba48e009054c96003455efcb6f6, type: 2}
       propertyPath: m_RootOrder
-      value: 14
+      value: 17
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a31d7ba48e009054c96003455efcb6f6, type: 2}
@@ -7619,7 +7774,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0244d14266c8ee544804b1d988a45262, type: 2}
       propertyPath: m_RootOrder
-      value: 83
+      value: 90
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0244d14266c8ee544804b1d988a45262, type: 2}
@@ -7804,6 +7959,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
+  inventorySprite: {fileID: 21300000, guid: 075a08da52ff47545add5503520059ee, type: 3}
 --- !u!23 &242948488
 Renderer:
   m_ObjectHideFlags: 0
@@ -7844,7 +8000,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 173
+  m_RootOrder: 174
 --- !u!1 &243112875
 GameObject:
   m_ObjectHideFlags: 0
@@ -7896,6 +8052,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
+  inventorySprite: {fileID: 21300000, guid: 6467d26a256321f4d88c7c40f1ddd161, type: 3}
 --- !u!23 &243112878
 Renderer:
   m_ObjectHideFlags: 0
@@ -7936,7 +8093,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 90
+  m_RootOrder: 88
 --- !u!1001 &243637764
 Prefab:
   m_ObjectHideFlags: 0
@@ -8196,7 +8353,7 @@ Transform:
   - {fileID: 1667156905}
   - {fileID: 1633599501}
   m_Father: {fileID: 0}
-  m_RootOrder: 24
+  m_RootOrder: 26
 --- !u!1 &264284998
 GameObject:
   m_ObjectHideFlags: 0
@@ -8229,6 +8386,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
+  inventorySprite: {fileID: 21300000, guid: 2b9c3da8bedbdb646a6c00fbef7a4728, type: 3}
 --- !u!114 &264285000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8288,7 +8446,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 139
+  m_RootOrder: 140
 --- !u!1 &265619337
 GameObject:
   m_ObjectHideFlags: 0
@@ -8340,6 +8498,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
+  inventorySprite: {fileID: 21300000, guid: 075a08da52ff47545add5503520059ee, type: 3}
 --- !u!23 &265619340
 Renderer:
   m_ObjectHideFlags: 0
@@ -8380,7 +8539,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 178
+  m_RootOrder: 179
 --- !u!1 &266080037
 GameObject:
   m_ObjectHideFlags: 0
@@ -8508,7 +8667,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c02b499ca49ee4b4194a1a0e7aa7bdf8, type: 2}
       propertyPath: m_RootOrder
-      value: 52
+      value: 58
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: c02b499ca49ee4b4194a1a0e7aa7bdf8, type: 2}
       propertyPath: InteractionRadius
@@ -8570,6 +8729,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
+  inventorySprite: {fileID: 21300000, guid: 6467d26a256321f4d88c7c40f1ddd161, type: 3}
 --- !u!23 &270669740
 Renderer:
   m_ObjectHideFlags: 0
@@ -8610,7 +8770,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 91
+  m_RootOrder: 90
 --- !u!1001 &275347000
 Prefab:
   m_ObjectHideFlags: 0
@@ -8648,7 +8808,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 270cc1d03d521674db351e9b916d8ea8, type: 3}
       propertyPath: m_RootOrder
-      value: 26
+      value: 28
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: 270cc1d03d521674db351e9b916d8ea8, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -8927,7 +9087,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b152942d2cd1e484b8442a8fdf9e8677, type: 2}
       propertyPath: m_RootOrder
-      value: 54
+      value: 61
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b152942d2cd1e484b8442a8fdf9e8677, type: 2}
@@ -9148,6 +9308,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
+  inventorySprite: {fileID: 21300000, guid: 74e5e08132e36fa4da8651e50f038972, type: 3}
 --- !u!23 &282378199
 Renderer:
   m_ObjectHideFlags: 0
@@ -9188,7 +9349,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 108
+  m_RootOrder: 109
 --- !u!1 &283056674
 GameObject:
   m_ObjectHideFlags: 0
@@ -9566,6 +9727,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
+  inventorySprite: {fileID: 21300000, guid: 207b26bd2376b694dac1dab972102c4d, type: 3}
 --- !u!114 &291611288
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9625,7 +9787,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 113
+  m_RootOrder: 114
 --- !u!1 &293104785
 GameObject:
   m_ObjectHideFlags: 0
@@ -9658,6 +9820,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
+  inventorySprite: {fileID: 21300000, guid: 2b9c3da8bedbdb646a6c00fbef7a4728, type: 3}
 --- !u!114 &293104787
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9717,7 +9880,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 47
+  m_RootOrder: 48
 --- !u!1 &296851893
 GameObject:
   m_ObjectHideFlags: 0
@@ -9769,6 +9932,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
+  inventorySprite: {fileID: 21300000, guid: 075a08da52ff47545add5503520059ee, type: 3}
 --- !u!23 &296851896
 Renderer:
   m_ObjectHideFlags: 0
@@ -9809,7 +9973,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 183
+  m_RootOrder: 184
 --- !u!1 &298499825
 GameObject:
   m_ObjectHideFlags: 0
@@ -9861,6 +10025,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
+  inventorySprite: {fileID: 21300000, guid: 74e5e08132e36fa4da8651e50f038972, type: 3}
 --- !u!23 &298499828
 Renderer:
   m_ObjectHideFlags: 0
@@ -9901,7 +10066,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 111
+  m_RootOrder: 112
 --- !u!1001 &298564182
 Prefab:
   m_ObjectHideFlags: 0
@@ -10009,6 +10174,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
+  inventorySprite: {fileID: 21300000, guid: 075a08da52ff47545add5503520059ee, type: 3}
 --- !u!23 &298970896
 Renderer:
   m_ObjectHideFlags: 0
@@ -10271,6 +10437,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
+  inventorySprite: {fileID: 21300000, guid: 075a08da52ff47545add5503520059ee, type: 3}
 --- !u!23 &305127301
 Renderer:
   m_ObjectHideFlags: 0
@@ -10311,7 +10478,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 119
+  m_RootOrder: 120
 --- !u!1 &308325867
 GameObject:
   m_ObjectHideFlags: 0
@@ -10432,6 +10599,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
+  inventorySprite: {fileID: 21300000, guid: 207b26bd2376b694dac1dab972102c4d, type: 3}
 --- !u!23 &308495678
 Renderer:
   m_ObjectHideFlags: 0
@@ -10472,7 +10640,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 155
+  m_RootOrder: 156
 --- !u!1 &310786813
 GameObject:
   m_ObjectHideFlags: 0
@@ -10817,6 +10985,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
+  inventorySprite: {fileID: 21300000, guid: 92e68bc38ce3bad498b44364730e3b85, type: 3}
 --- !u!23 &320308246
 Renderer:
   m_ObjectHideFlags: 0
@@ -10895,7 +11064,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0859fe67e4985764eb41dda1a1e2b743, type: 2}
       propertyPath: m_RootOrder
-      value: 161
+      value: 170
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0859fe67e4985764eb41dda1a1e2b743, type: 2}
@@ -10939,7 +11108,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: fedbf4c7adac46848b6a1a570ac1f584, type: 2}
       propertyPath: m_RootOrder
-      value: 197
+      value: 206
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fedbf4c7adac46848b6a1a570ac1f584, type: 2}
@@ -11356,7 +11525,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: edd970519df8ff648a3a49ee2ad875bd, type: 2}
       propertyPath: m_RootOrder
-      value: 183
+      value: 192
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: edd970519df8ff648a3a49ee2ad875bd, type: 2}
       propertyPath: InteractionRadius
@@ -11430,6 +11599,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
+  inventorySprite: {fileID: 21300000, guid: 96ca86d1cbf171a41a9323ffbb42f86b, type: 3}
 --- !u!23 &338339744
 Renderer:
   m_ObjectHideFlags: 0
@@ -11894,7 +12064,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: fedbf4c7adac46848b6a1a570ac1f584, type: 2}
       propertyPath: m_RootOrder
-      value: 69
+      value: 74
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fedbf4c7adac46848b6a1a570ac1f584, type: 2}
@@ -12150,7 +12320,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 19a8ec6a2b6d3844bbb20fc1a5f63060, type: 2}
       propertyPath: m_RootOrder
-      value: 56
+      value: 63
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 19a8ec6a2b6d3844bbb20fc1a5f63060, type: 2}
@@ -12315,7 +12485,7 @@ RectTransform:
   - {fileID: 376156291}
   - {fileID: 1668022261}
   m_Father: {fileID: 0}
-  m_RootOrder: 35
+  m_RootOrder: 36
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
@@ -12564,6 +12734,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
+  inventorySprite: {fileID: 21300000, guid: 075a08da52ff47545add5503520059ee, type: 3}
 --- !u!23 &379972935
 Renderer:
   m_ObjectHideFlags: 0
@@ -12604,7 +12775,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 77
+  m_RootOrder: 78
 --- !u!1 &383631840
 GameObject:
   m_ObjectHideFlags: 0
@@ -12780,7 +12951,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: e133f7feb0a24394c81b8792639bc794, type: 2}
       propertyPath: m_RootOrder
-      value: 148
+      value: 157
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e133f7feb0a24394c81b8792639bc794, type: 2}
@@ -12937,7 +13108,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: fedbf4c7adac46848b6a1a570ac1f584, type: 2}
       propertyPath: m_RootOrder
-      value: 198
+      value: 207
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fedbf4c7adac46848b6a1a570ac1f584, type: 2}
@@ -13240,6 +13411,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
+  inventorySprite: {fileID: 21300000, guid: 96ca86d1cbf171a41a9323ffbb42f86b, type: 3}
 --- !u!23 &402769143
 Renderer:
   m_ObjectHideFlags: 0
@@ -13280,7 +13452,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 184
+  m_RootOrder: 185
 --- !u!1001 &403783884
 Prefab:
   m_ObjectHideFlags: 0
@@ -13318,7 +13490,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: fedbf4c7adac46848b6a1a570ac1f584, type: 2}
       propertyPath: m_RootOrder
-      value: 193
+      value: 202
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fedbf4c7adac46848b6a1a570ac1f584, type: 2}
@@ -13353,7 +13525,7 @@ Transform:
   m_Children:
   - {fileID: 197343026}
   m_Father: {fileID: 0}
-  m_RootOrder: 70
+  m_RootOrder: 71
 --- !u!65 &406513742
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13447,7 +13619,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: edd970519df8ff648a3a49ee2ad875bd, type: 2}
       propertyPath: m_RootOrder
-      value: 149
+      value: 158
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: edd970519df8ff648a3a49ee2ad875bd, type: 2}
       propertyPath: InteractionRadius
@@ -13620,7 +13792,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0244d14266c8ee544804b1d988a45262, type: 2}
       propertyPath: m_RootOrder
-      value: 86
+      value: 94
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0244d14266c8ee544804b1d988a45262, type: 2}
@@ -13885,6 +14057,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
+  inventorySprite: {fileID: 21300000, guid: 5e909bf71c9b68f4790b0e394b3356a8, type: 3}
 --- !u!23 &418877249
 Renderer:
   m_ObjectHideFlags: 0
@@ -13925,7 +14098,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 55
+  m_RootOrder: 54
 --- !u!1 &419061974
 GameObject:
   m_ObjectHideFlags: 0
@@ -14019,6 +14192,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
+  inventorySprite: {fileID: 21300000, guid: 075a08da52ff47545add5503520059ee, type: 3}
 --- !u!23 &420110373
 Renderer:
   m_ObjectHideFlags: 0
@@ -14059,7 +14233,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 127
+  m_RootOrder: 128
 --- !u!1001 &420722361
 Prefab:
   m_ObjectHideFlags: 0
@@ -14560,7 +14734,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c02b499ca49ee4b4194a1a0e7aa7bdf8, type: 2}
       propertyPath: m_RootOrder
-      value: 110
+      value: 119
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: c02b499ca49ee4b4194a1a0e7aa7bdf8, type: 2}
       propertyPath: InteractionRadius
@@ -14603,6 +14777,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
+  inventorySprite: {fileID: 21300000, guid: 2b9c3da8bedbdb646a6c00fbef7a4728, type: 3}
 --- !u!114 &435732150
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14662,7 +14837,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 159
+  m_RootOrder: 160
 --- !u!1 &436855188
 GameObject:
   m_ObjectHideFlags: 0
@@ -14696,6 +14871,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
+  inventorySprite: {fileID: 21300000, guid: a86fb142c895f8543a0e9deae93c0257, type: 3}
 --- !u!114 &436855190
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14728,6 +14904,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
+  inventorySprite: {fileID: 0}
 --- !u!23 &436855192
 Renderer:
   m_ObjectHideFlags: 0
@@ -14768,7 +14945,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 151
+  m_RootOrder: 152
 --- !u!1 &437902598
 GameObject:
   m_ObjectHideFlags: 0
@@ -15063,6 +15240,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
+  inventorySprite: {fileID: 21300000, guid: 6467d26a256321f4d88c7c40f1ddd161, type: 3}
 --- !u!23 &440708420
 Renderer:
   m_ObjectHideFlags: 0
@@ -15103,7 +15281,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 188
+  m_RootOrder: 189
 --- !u!1 &440859833
 GameObject:
   m_ObjectHideFlags: 0
@@ -15132,7 +15310,7 @@ Transform:
   m_Children:
   - {fileID: 1974196744}
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 12
 --- !u!95 &440859835
 Animator:
   serializedVersion: 3
@@ -15186,7 +15364,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: edd970519df8ff648a3a49ee2ad875bd, type: 2}
       propertyPath: m_RootOrder
-      value: 184
+      value: 193
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: edd970519df8ff648a3a49ee2ad875bd, type: 2}
       propertyPath: InteractionRadius
@@ -15601,6 +15779,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
+  inventorySprite: {fileID: 21300000, guid: 92e68bc38ce3bad498b44364730e3b85, type: 3}
 --- !u!23 &458034316
 Renderer:
   m_ObjectHideFlags: 0
@@ -15641,7 +15820,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 137
+  m_RootOrder: 138
 --- !u!1001 &458498352
 Prefab:
   m_ObjectHideFlags: 0
@@ -15840,7 +16019,7 @@ Transform:
   m_Children:
   - {fileID: 1783230532}
   m_Father: {fileID: 0}
-  m_RootOrder: 206
+  m_RootOrder: 207
 --- !u!65 &465153557
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15945,6 +16124,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
+  inventorySprite: {fileID: 21300000, guid: 075a08da52ff47545add5503520059ee, type: 3}
 --- !u!23 &465665058
 Renderer:
   m_ObjectHideFlags: 0
@@ -15985,7 +16165,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 180
+  m_RootOrder: 181
 --- !u!1 &469343458
 GameObject:
   m_ObjectHideFlags: 0
@@ -16456,6 +16636,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
+  inventorySprite: {fileID: 21300000, guid: c96e8e686cd86ad4f8453538bc3ee095, type: 3}
 --- !u!23 &473573090
 Renderer:
   m_ObjectHideFlags: 0
@@ -16496,7 +16677,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 54
+  m_RootOrder: 52
 --- !u!1 &478635067
 GameObject:
   m_ObjectHideFlags: 0
@@ -16589,6 +16770,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
+  inventorySprite: {fileID: 21300000, guid: 92e68bc38ce3bad498b44364730e3b85, type: 3}
 --- !u!23 &480137479
 Renderer:
   m_ObjectHideFlags: 0
@@ -16629,7 +16811,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 135
+  m_RootOrder: 136
 --- !u!1 &481769512
 GameObject:
   m_ObjectHideFlags: 0
@@ -17192,6 +17374,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
+  inventorySprite: {fileID: 21300000, guid: 075a08da52ff47545add5503520059ee, type: 3}
 --- !u!23 &511524237
 Renderer:
   m_ObjectHideFlags: 0
@@ -17606,7 +17789,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400006, guid: a2b4b6ac6bf32da4bbfc272a6a036afd, type: 2}
       propertyPath: m_RootOrder
-      value: 59
+      value: 67
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a2b4b6ac6bf32da4bbfc272a6a036afd, type: 2}
@@ -17694,7 +17877,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: edd970519df8ff648a3a49ee2ad875bd, type: 2}
       propertyPath: m_RootOrder
-      value: 108
+      value: 117
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: edd970519df8ff648a3a49ee2ad875bd, type: 2}
       propertyPath: InteractionRadius
@@ -17749,6 +17932,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
+  inventorySprite: {fileID: 21300000, guid: 207b26bd2376b694dac1dab972102c4d, type: 3}
 --- !u!114 &532004461
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17848,6 +18032,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
+  inventorySprite: {fileID: 21300000, guid: 6467d26a256321f4d88c7c40f1ddd161, type: 3}
 --- !u!23 &535081457
 Renderer:
   m_ObjectHideFlags: 0
@@ -17888,7 +18073,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 154
+  m_RootOrder: 155
 --- !u!1001 &537216668
 Prefab:
   m_ObjectHideFlags: 0
@@ -17926,7 +18111,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b22023b013951c14da15fe063f86e3d9, type: 2}
       propertyPath: m_RootOrder
-      value: 0
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b22023b013951c14da15fe063f86e3d9, type: 2}
@@ -18028,7 +18213,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: a9ba180a0917e05429324554a3f66868, type: 2}
       propertyPath: m_RootOrder
-      value: 152
+      value: 161
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: a9ba180a0917e05429324554a3f66868, type: 2}
       propertyPath: InteractionRadius
@@ -18302,7 +18487,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: a9ba180a0917e05429324554a3f66868, type: 2}
       propertyPath: m_RootOrder
-      value: 127
+      value: 136
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: a9ba180a0917e05429324554a3f66868, type: 2}
       propertyPath: InteractionRadius
@@ -18448,7 +18633,7 @@ Transform:
   m_Children:
   - {fileID: 776832510}
   m_Father: {fileID: 0}
-  m_RootOrder: 26
+  m_RootOrder: 25
 --- !u!95 &549440435
 Animator:
   serializedVersion: 3
@@ -18785,7 +18970,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 842528d34c2e16540a628ef6977ab911, type: 2}
       propertyPath: m_RootOrder
-      value: 158
+      value: 167
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 842528d34c2e16540a628ef6977ab911, type: 2}
       propertyPath: InteractionRadius
@@ -18910,6 +19095,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
+  inventorySprite: {fileID: 21300000, guid: 2b9c3da8bedbdb646a6c00fbef7a4728, type: 3}
 --- !u!114 &566545184
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18969,7 +19155,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 140
+  m_RootOrder: 141
 --- !u!1 &566576237
 GameObject:
   m_ObjectHideFlags: 0
@@ -19079,6 +19265,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
+  inventorySprite: {fileID: 21300000, guid: 96ca86d1cbf171a41a9323ffbb42f86b, type: 3}
 --- !u!23 &567088537
 Renderer:
   m_ObjectHideFlags: 0
@@ -19119,7 +19306,121 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 126
+  m_RootOrder: 127
+--- !u!1 &569050833
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100016, guid: 5a1faa1dfa6c2b1438a5235ba45c395a, type: 2}
+  m_PrefabInternal: {fileID: 2037409405}
+  serializedVersion: 4
+  m_Component:
+  - 224: {fileID: 569050837}
+  - 222: {fileID: 569050836}
+  - 114: {fileID: 569050835}
+  - 114: {fileID: 569050834}
+  m_Layer: 5
+  m_Name: ItemsScroll
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &569050834
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400018, guid: 5a1faa1dfa6c2b1438a5235ba45c395a,
+    type: 2}
+  m_PrefabInternal: {fileID: 2037409405}
+  m_GameObject: {fileID: 569050833}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -2061169968, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: .501960814, g: .501960814, b: .501960814, a: .501960814}
+    m_HighlightedColor: {r: .501960814, g: .501960814, b: .501960814, a: .698039234}
+    m_PressedColor: {r: .345098048, g: .345098048, b: .345098048, a: .698039234}
+    m_DisabledColor: {r: .250980407, g: .250980407, b: .250980407, a: .501960814}
+    m_ColorMultiplier: 2
+    m_FadeDuration: .100000001
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 852464707}
+  m_HandleRect: {fileID: 852464706}
+  m_Direction: 2
+  m_Value: .988357842
+  m_Size: .336585373
+  m_NumberOfSteps: 0
+  m_OnValueChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.Scrollbar+ScrollEvent, UnityEngine.UI, Version=1.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!114 &569050835
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400022, guid: 5a1faa1dfa6c2b1438a5235ba45c395a,
+    type: 2}
+  m_PrefabInternal: {fileID: 2037409405}
+  m_GameObject: {fileID: 569050833}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: .588}
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+--- !u!222 &569050836
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 22200014, guid: 5a1faa1dfa6c2b1438a5235ba45c395a,
+    type: 2}
+  m_PrefabInternal: {fileID: 2037409405}
+  m_GameObject: {fileID: 569050833}
+  m_HideIfInvisible: 0
+--- !u!224 &569050837
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 22400016, guid: 5a1faa1dfa6c2b1438a5235ba45c395a,
+    type: 2}
+  m_PrefabInternal: {fileID: 2037409405}
+  m_GameObject: {fileID: 569050833}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1456992387}
+  m_Father: {fileID: 1346731065}
+  m_RootOrder: 2
+  m_AnchorMin: {x: .5, y: .5}
+  m_AnchorMax: {x: .5, y: .5}
+  m_AnchoredPosition: {x: 476, y: -18}
+  m_SizeDelta: {x: 32, y: 421}
+  m_Pivot: {x: .5, y: .5}
 --- !u!1 &572595107
 GameObject:
   m_ObjectHideFlags: 0
@@ -19212,6 +19513,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
+  inventorySprite: {fileID: 21300000, guid: 075a08da52ff47545add5503520059ee, type: 3}
 --- !u!23 &577170533
 Renderer:
   m_ObjectHideFlags: 0
@@ -19290,7 +19592,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0244d14266c8ee544804b1d988a45262, type: 2}
       propertyPath: m_RootOrder
-      value: 53
+      value: 60
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0244d14266c8ee544804b1d988a45262, type: 2}
@@ -19334,7 +19636,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: e133f7feb0a24394c81b8792639bc794, type: 2}
       propertyPath: m_RootOrder
-      value: 80
+      value: 86
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e133f7feb0a24394c81b8792639bc794, type: 2}
@@ -19530,6 +19832,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
+  inventorySprite: {fileID: 21300000, guid: 74e5e08132e36fa4da8651e50f038972, type: 3}
 --- !u!23 &580812844
 Renderer:
   m_ObjectHideFlags: 0
@@ -19570,7 +19873,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 110
+  m_RootOrder: 111
 --- !u!1 &581433385
 GameObject:
   m_ObjectHideFlags: 0
@@ -20231,6 +20534,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
+  inventorySprite: {fileID: 21300000, guid: 79e16ca54f518284b8c8926abc8766d0, type: 3}
 --- !u!23 &600805322
 Renderer:
   m_ObjectHideFlags: 0
@@ -20271,7 +20575,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 123
+  m_RootOrder: 124
 --- !u!1 &601531465
 GameObject:
   m_ObjectHideFlags: 0
@@ -20436,7 +20740,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 3add72caf4c6658459aa3e76fc2d7cd0, type: 2}
       propertyPath: m_RootOrder
-      value: 49
+      value: 54
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: 3add72caf4c6658459aa3e76fc2d7cd0, type: 2}
       propertyPath: InteractionRadius
@@ -20542,7 +20846,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f6ba98ea6ced8ea479de804d30de9c71, type: 2}
       propertyPath: m_RootOrder
-      value: 139
+      value: 148
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: f6ba98ea6ced8ea479de804d30de9c71, type: 2}
       propertyPath: InteractionRadius
@@ -20590,7 +20894,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f6ba98ea6ced8ea479de804d30de9c71, type: 2}
       propertyPath: m_RootOrder
-      value: 174
+      value: 183
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: f6ba98ea6ced8ea479de804d30de9c71, type: 2}
       propertyPath: InteractionRadius
@@ -20975,6 +21279,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
+  inventorySprite: {fileID: 21300000, guid: 96ca86d1cbf171a41a9323ffbb42f86b, type: 3}
 --- !u!23 &619927703
 Renderer:
   m_ObjectHideFlags: 0
@@ -21420,7 +21725,7 @@ Transform:
   - {fileID: 873181707}
   - {fileID: 1984080080}
   m_Father: {fileID: 0}
-  m_RootOrder: 38
+  m_RootOrder: 40
 --- !u!1 &634276693
 GameObject:
   m_ObjectHideFlags: 0
@@ -21560,7 +21865,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f84c4cfd572907c4aa9c37592eaf95e5, type: 2}
       propertyPath: m_RootOrder
-      value: 48
+      value: 52
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: f84c4cfd572907c4aa9c37592eaf95e5, type: 2}
       propertyPath: InteractionRadius
@@ -21608,7 +21913,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: e133f7feb0a24394c81b8792639bc794, type: 2}
       propertyPath: m_RootOrder
-      value: 164
+      value: 173
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e133f7feb0a24394c81b8792639bc794, type: 2}
@@ -21682,7 +21987,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: edd970519df8ff648a3a49ee2ad875bd, type: 2}
       propertyPath: m_RootOrder
-      value: 47
+      value: 51
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: edd970519df8ff648a3a49ee2ad875bd, type: 2}
       propertyPath: InteractionRadius
@@ -22212,7 +22517,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: a9ba180a0917e05429324554a3f66868, type: 2}
       propertyPath: m_RootOrder
-      value: 46
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: a9ba180a0917e05429324554a3f66868, type: 2}
       propertyPath: InteractionRadius
@@ -22318,7 +22623,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: fedbf4c7adac46848b6a1a570ac1f584, type: 2}
       propertyPath: m_RootOrder
-      value: 66
+      value: 71
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fedbf4c7adac46848b6a1a570ac1f584, type: 2}
@@ -22393,7 +22698,7 @@ Transform:
   m_LocalScale: {x: 11, y: 11, z: 11}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 88
+  m_RootOrder: 97
 --- !u!1001 &687268840
 Prefab:
   m_ObjectHideFlags: 0
@@ -22431,7 +22736,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b62decc40a48fd14f845d8e02ca16e07, type: 2}
       propertyPath: m_RootOrder
-      value: 45
+      value: 49
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: b62decc40a48fd14f845d8e02ca16e07, type: 2}
       propertyPath: InteractionRadius
@@ -22581,6 +22886,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
+  inventorySprite: {fileID: 21300000, guid: 075a08da52ff47545add5503520059ee, type: 3}
 --- !u!23 &693376807
 Renderer:
   m_ObjectHideFlags: 0
@@ -22731,6 +23037,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
+  inventorySprite: {fileID: 21300000, guid: 075a08da52ff47545add5503520059ee, type: 3}
 --- !u!23 &697232176
 Renderer:
   m_ObjectHideFlags: 0
@@ -22771,7 +23078,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 156
+  m_RootOrder: 157
 --- !u!1 &698436323
 GameObject:
   m_ObjectHideFlags: 0
@@ -22908,7 +23215,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0859fe67e4985764eb41dda1a1e2b743, type: 2}
       propertyPath: m_RootOrder
-      value: 55
+      value: 62
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0859fe67e4985764eb41dda1a1e2b743, type: 2}
@@ -22996,7 +23303,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 845135208a0fce4488e286eee9113bb1, type: 2}
       propertyPath: m_RootOrder
-      value: 187
+      value: 196
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 845135208a0fce4488e286eee9113bb1, type: 2}
@@ -23098,7 +23405,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: e133f7feb0a24394c81b8792639bc794, type: 2}
       propertyPath: m_RootOrder
-      value: 171
+      value: 180
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e133f7feb0a24394c81b8792639bc794, type: 2}
@@ -23270,6 +23577,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
+  inventorySprite: {fileID: 21300000, guid: 207b26bd2376b694dac1dab972102c4d, type: 3}
 --- !u!23 &714114523
 Renderer:
   m_ObjectHideFlags: 0
@@ -23409,7 +23717,7 @@ Transform:
   m_Children:
   - {fileID: 954027024}
   m_Father: {fileID: 0}
-  m_RootOrder: 150
+  m_RootOrder: 151
 --- !u!1 &716663683
 GameObject:
   m_ObjectHideFlags: 0
@@ -23475,7 +23783,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 56
+  m_RootOrder: 64
 --- !u!1 &716721719
 GameObject:
   m_ObjectHideFlags: 0
@@ -23540,7 +23848,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c02b499ca49ee4b4194a1a0e7aa7bdf8, type: 2}
       propertyPath: m_RootOrder
-      value: 98
+      value: 107
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: c02b499ca49ee4b4194a1a0e7aa7bdf8, type: 2}
       propertyPath: InteractionRadius
@@ -23798,6 +24106,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
+  inventorySprite: {fileID: 21300000, guid: 2b9c3da8bedbdb646a6c00fbef7a4728, type: 3}
 --- !u!114 &727113803
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23857,7 +24166,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 166
+  m_RootOrder: 167
 --- !u!1 &728648230
 GameObject:
   m_ObjectHideFlags: 0
@@ -24162,6 +24471,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
+  inventorySprite: {fileID: 21300000, guid: 6467d26a256321f4d88c7c40f1ddd161, type: 3}
 --- !u!23 &733286785
 Renderer:
   m_ObjectHideFlags: 0
@@ -24240,7 +24550,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: e133f7feb0a24394c81b8792639bc794, type: 2}
       propertyPath: m_RootOrder
-      value: 173
+      value: 182
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e133f7feb0a24394c81b8792639bc794, type: 2}
@@ -24284,7 +24594,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c02b499ca49ee4b4194a1a0e7aa7bdf8, type: 2}
       propertyPath: m_RootOrder
-      value: 167
+      value: 176
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: c02b499ca49ee4b4194a1a0e7aa7bdf8, type: 2}
       propertyPath: InteractionRadius
@@ -24332,7 +24642,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0859fe67e4985764eb41dda1a1e2b743, type: 2}
       propertyPath: m_RootOrder
-      value: 150
+      value: 159
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0859fe67e4985764eb41dda1a1e2b743, type: 2}
@@ -24376,7 +24686,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: e133f7feb0a24394c81b8792639bc794, type: 2}
       propertyPath: m_RootOrder
-      value: 137
+      value: 146
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e133f7feb0a24394c81b8792639bc794, type: 2}
@@ -24461,7 +24771,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 5b88dd6461949fe44a29b311a7d3e6a3, type: 2}
       propertyPath: m_RootOrder
-      value: 13
+      value: 16
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5b88dd6461949fe44a29b311a7d3e6a3, type: 2}
@@ -24576,7 +24886,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: fedbf4c7adac46848b6a1a570ac1f584, type: 2}
       propertyPath: m_RootOrder
-      value: 68
+      value: 73
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fedbf4c7adac46848b6a1a570ac1f584, type: 2}
@@ -24620,7 +24930,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: e133f7feb0a24394c81b8792639bc794, type: 2}
       propertyPath: m_RootOrder
-      value: 165
+      value: 174
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e133f7feb0a24394c81b8792639bc794, type: 2}
@@ -24678,6 +24988,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
+  inventorySprite: {fileID: 21300000, guid: 74e5e08132e36fa4da8651e50f038972, type: 3}
 --- !u!23 &761077036
 Renderer:
   m_ObjectHideFlags: 0
@@ -24718,7 +25029,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 152
+  m_RootOrder: 153
 --- !u!1 &761601163
 GameObject:
   m_ObjectHideFlags: 0
@@ -24788,6 +25099,78 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1902715982}
   m_RootOrder: 94
+--- !u!1 &763945692
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100000, guid: 5a1faa1dfa6c2b1438a5235ba45c395a, type: 2}
+  m_PrefabInternal: {fileID: 2037409405}
+  serializedVersion: 4
+  m_Component:
+  - 224: {fileID: 763945693}
+  - 222: {fileID: 763945695}
+  - 114: {fileID: 763945694}
+  m_Layer: 5
+  m_Name: MoneyAmount
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &763945693
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 22400000, guid: 5a1faa1dfa6c2b1438a5235ba45c395a,
+    type: 2}
+  m_PrefabInternal: {fileID: 2037409405}
+  m_GameObject: {fileID: 763945692}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1346731065}
+  m_RootOrder: 4
+  m_AnchorMin: {x: .5, y: .5}
+  m_AnchorMax: {x: .5, y: .5}
+  m_AnchoredPosition: {x: -370.799988, y: 217.51001}
+  m_SizeDelta: {x: 81, y: 30}
+  m_Pivot: {x: .5, y: .5}
+--- !u!114 &763945694
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400000, guid: 5a1faa1dfa6c2b1438a5235ba45c395a,
+    type: 2}
+  m_PrefabInternal: {fileID: 2037409405}
+  m_GameObject: {fileID: 763945692}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: .1953125, g: .1953125, b: .1953125, a: 1}
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 22
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 3
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: '0
+
+'
+--- !u!222 &763945695
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 22200000, guid: 5a1faa1dfa6c2b1438a5235ba45c395a,
+    type: 2}
+  m_PrefabInternal: {fileID: 2037409405}
+  m_GameObject: {fileID: 763945692}
+  m_HideIfInvisible: 0
 --- !u!1 &766573903
 GameObject:
   m_ObjectHideFlags: 0
@@ -24911,6 +25294,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
+  inventorySprite: {fileID: 21300000, guid: 74e5e08132e36fa4da8651e50f038972, type: 3}
 --- !u!23 &771486358
 Renderer:
   m_ObjectHideFlags: 0
@@ -24951,7 +25335,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 107
+  m_RootOrder: 108
 --- !u!1 &771532674
 GameObject:
   m_ObjectHideFlags: 0
@@ -25448,7 +25832,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 842528d34c2e16540a628ef6977ab911, type: 2}
       propertyPath: m_RootOrder
-      value: 125
+      value: 134
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 842528d34c2e16540a628ef6977ab911, type: 2}
       propertyPath: InteractionRadius
@@ -25612,6 +25996,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
+  inventorySprite: {fileID: 21300000, guid: fabb0cdf7e49f934bbf1838c19808412, type: 3}
 --- !u!23 &790109950
 Renderer:
   m_ObjectHideFlags: 0
@@ -25652,7 +26037,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 104
+  m_RootOrder: 105
 --- !u!1 &800047852
 GameObject:
   m_ObjectHideFlags: 0
@@ -25762,6 +26147,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
+  inventorySprite: {fileID: 21300000, guid: fabb0cdf7e49f934bbf1838c19808412, type: 3}
 --- !u!23 &802211940
 Renderer:
   m_ObjectHideFlags: 0
@@ -25802,7 +26188,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 129
+  m_RootOrder: 130
 --- !u!1 &804357198
 GameObject:
   m_ObjectHideFlags: 0
@@ -25923,6 +26309,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
+  inventorySprite: {fileID: 21300000, guid: fabb0cdf7e49f934bbf1838c19808412, type: 3}
 --- !u!23 &807077801
 Renderer:
   m_ObjectHideFlags: 0
@@ -26001,7 +26388,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: afb3aabb63e95ae4a82750125f7e5019, type: 2}
       propertyPath: m_RootOrder
-      value: 142
+      value: 151
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: afb3aabb63e95ae4a82750125f7e5019, type: 2}
       propertyPath: m_LocalScale.x
@@ -26147,7 +26534,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: e133f7feb0a24394c81b8792639bc794, type: 2}
       propertyPath: m_RootOrder
-      value: 81
+      value: 87
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e133f7feb0a24394c81b8792639bc794, type: 2}
@@ -26547,7 +26934,7 @@ Transform:
   m_Children:
   - {fileID: 604295315}
   m_Father: {fileID: 0}
-  m_RootOrder: 202
+  m_RootOrder: 203
 --- !u!1 &824722784
 GameObject:
   m_ObjectHideFlags: 0
@@ -26643,13 +27030,84 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0244d14266c8ee544804b1d988a45262, type: 2}
       propertyPath: m_RootOrder
-      value: 82
+      value: 88
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0244d14266c8ee544804b1d988a45262, type: 2}
   m_RootGameObject: {fileID: 243112875}
   m_IsPrefabParent: 0
   m_IsExploded: 1
+--- !u!1 &827458986
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100026, guid: 5a1faa1dfa6c2b1438a5235ba45c395a, type: 2}
+  m_PrefabInternal: {fileID: 2037409405}
+  serializedVersion: 4
+  m_Component:
+  - 224: {fileID: 827458987}
+  - 223: {fileID: 827458989}
+  - 114: {fileID: 827458988}
+  m_Layer: 5
+  m_Name: InventoryCanvas
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &827458987
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 22400026, guid: 5a1faa1dfa6c2b1438a5235ba45c395a,
+    type: 2}
+  m_PrefabInternal: {fileID: 2037409405}
+  m_GameObject: {fileID: 827458986}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_Children:
+  - {fileID: 1346731065}
+  m_Father: {fileID: 0}
+  m_RootOrder: 35
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0, y: 0}
+--- !u!114 &827458988
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400034, guid: 5a1faa1dfa6c2b1438a5235ba45c395a,
+    type: 2}
+  m_PrefabInternal: {fileID: 2037409405}
+  m_GameObject: {fileID: 827458986}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1301386320, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Priority: 3
+  ignoreReversedGraphics: 1
+  blockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!223 &827458989
+Canvas:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 22300000, guid: 5a1faa1dfa6c2b1438a5235ba45c395a,
+    type: 2}
+  m_PrefabInternal: {fileID: 2037409405}
+  m_GameObject: {fileID: 827458986}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_RenderMode: 0
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
 --- !u!1 &829821754
 GameObject:
   m_ObjectHideFlags: 0
@@ -26853,6 +27311,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
+  inventorySprite: {fileID: 21300000, guid: 207b26bd2376b694dac1dab972102c4d, type: 3}
 --- !u!114 &837002646
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26950,7 +27409,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0244d14266c8ee544804b1d988a45262, type: 2}
       propertyPath: m_RootOrder
-      value: 85
+      value: 92
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0244d14266c8ee544804b1d988a45262, type: 2}
@@ -27022,7 +27481,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 8a85f714c8fbfc84c817ff00aec894a2, type: 2}
       propertyPath: m_RootOrder
-      value: 94
+      value: 103
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8a85f714c8fbfc84c817ff00aec894a2, type: 2}
@@ -27080,6 +27539,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
+  inventorySprite: {fileID: 21300000, guid: 74e5e08132e36fa4da8651e50f038972, type: 3}
 --- !u!23 &844770877
 Renderer:
   m_ObjectHideFlags: 0
@@ -27120,7 +27580,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 175
+  m_RootOrder: 176
 --- !u!1 &849922038
 GameObject:
   m_ObjectHideFlags: 0
@@ -27190,6 +27650,71 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1902715982}
   m_RootOrder: 58
+--- !u!1 &852464705
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100012, guid: 5a1faa1dfa6c2b1438a5235ba45c395a, type: 2}
+  m_PrefabInternal: {fileID: 2037409405}
+  serializedVersion: 4
+  m_Component:
+  - 224: {fileID: 852464706}
+  - 222: {fileID: 852464708}
+  - 114: {fileID: 852464707}
+  m_Layer: 5
+  m_Name: Handle
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &852464706
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 22400012, guid: 5a1faa1dfa6c2b1438a5235ba45c395a,
+    type: 2}
+  m_PrefabInternal: {fileID: 2037409405}
+  m_GameObject: {fileID: 852464705}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1456992387}
+  m_RootOrder: 0
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 20, y: 20}
+  m_Pivot: {x: .5, y: .5}
+--- !u!114 &852464707
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400020, guid: 5a1faa1dfa6c2b1438a5235ba45c395a,
+    type: 2}
+  m_PrefabInternal: {fileID: 2037409405}
+  m_GameObject: {fileID: 852464705}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: .588}
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+--- !u!222 &852464708
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 22200012, guid: 5a1faa1dfa6c2b1438a5235ba45c395a,
+    type: 2}
+  m_PrefabInternal: {fileID: 2037409405}
+  m_GameObject: {fileID: 852464705}
+  m_HideIfInvisible: 0
 --- !u!1 &855056638
 GameObject:
   m_ObjectHideFlags: 0
@@ -27370,7 +27895,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 845135208a0fce4488e286eee9113bb1, type: 2}
       propertyPath: m_RootOrder
-      value: 50
+      value: 55
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 845135208a0fce4488e286eee9113bb1, type: 2}
@@ -27668,7 +28193,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7ba4cdd3cb5067748a29f6c58f8b54d9, type: 2}
       propertyPath: m_RootOrder
-      value: 0
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7ba4cdd3cb5067748a29f6c58f8b54d9, type: 2}
@@ -27883,7 +28408,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 3add72caf4c6658459aa3e76fc2d7cd0, type: 2}
       propertyPath: m_RootOrder
-      value: 157
+      value: 166
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: 3add72caf4c6658459aa3e76fc2d7cd0, type: 2}
       propertyPath: InteractionRadius
@@ -27975,7 +28500,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0859fe67e4985764eb41dda1a1e2b743, type: 2}
       propertyPath: m_RootOrder
-      value: 106
+      value: 115
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0859fe67e4985764eb41dda1a1e2b743, type: 2}
@@ -28260,7 +28785,7 @@ Transform:
   m_LocalScale: {x: .44896701, y: .0884588659, z: .44896701}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 36
+  m_RootOrder: 37
 --- !u!114 &883225676
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28343,6 +28868,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
+  inventorySprite: {fileID: 21300000, guid: 79e16ca54f518284b8c8926abc8766d0, type: 3}
 --- !u!23 &884159327
 Renderer:
   m_ObjectHideFlags: 0
@@ -28383,7 +28909,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 192
+  m_RootOrder: 193
 --- !u!1001 &884637195
 Prefab:
   m_ObjectHideFlags: 0
@@ -28421,7 +28947,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c02b499ca49ee4b4194a1a0e7aa7bdf8, type: 2}
       propertyPath: m_RootOrder
-      value: 144
+      value: 153
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: c02b499ca49ee4b4194a1a0e7aa7bdf8, type: 2}
       propertyPath: InteractionRadius
@@ -28608,7 +29134,7 @@ Transform:
   m_Children:
   - {fileID: 1477915934}
   m_Father: {fileID: 0}
-  m_RootOrder: 71
+  m_RootOrder: 72
 --- !u!1 &889628545
 GameObject:
   m_ObjectHideFlags: 0
@@ -28660,6 +29186,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
+  inventorySprite: {fileID: 21300000, guid: d7c7b0ced6d7d014a8d44aa17492b6ef, type: 3}
 --- !u!23 &889628548
 Renderer:
   m_ObjectHideFlags: 0
@@ -28700,7 +29227,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 42
+  m_RootOrder: 43
 --- !u!1 &890880742
 GameObject:
   m_ObjectHideFlags: 0
@@ -28879,7 +29406,7 @@ Transform:
   - {fileID: 1762711822}
   - {fileID: 841228511}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 13
 --- !u!1 &901067226
 GameObject:
   m_ObjectHideFlags: 0
@@ -29335,6 +29862,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
+  inventorySprite: {fileID: 21300000, guid: 74e5e08132e36fa4da8651e50f038972, type: 3}
 --- !u!23 &915243927
 Renderer:
   m_ObjectHideFlags: 0
@@ -29375,7 +29903,72 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 174
+  m_RootOrder: 175
+--- !u!1 &917235977
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100008, guid: 5a1faa1dfa6c2b1438a5235ba45c395a, type: 2}
+  m_PrefabInternal: {fileID: 2037409405}
+  serializedVersion: 4
+  m_Component:
+  - 224: {fileID: 917235978}
+  - 222: {fileID: 917235980}
+  - 114: {fileID: 917235979}
+  m_Layer: 5
+  m_Name: ItemImage
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &917235978
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 22400008, guid: 5a1faa1dfa6c2b1438a5235ba45c395a,
+    type: 2}
+  m_PrefabInternal: {fileID: 2037409405}
+  m_GameObject: {fileID: 917235977}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 108551521}
+  m_RootOrder: 1
+  m_AnchorMin: {x: .5, y: .5}
+  m_AnchorMax: {x: .5, y: .5}
+  m_AnchoredPosition: {x: 1.71891975, y: -2.45127964}
+  m_SizeDelta: {x: 155.399994, y: 155.399994}
+  m_Pivot: {x: .5, y: .5}
+--- !u!114 &917235979
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400014, guid: 5a1faa1dfa6c2b1438a5235ba45c395a,
+    type: 2}
+  m_PrefabInternal: {fileID: 2037409405}
+  m_GameObject: {fileID: 917235977}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+--- !u!222 &917235980
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 22200008, guid: 5a1faa1dfa6c2b1438a5235ba45c395a,
+    type: 2}
+  m_PrefabInternal: {fileID: 2037409405}
+  m_GameObject: {fileID: 917235977}
+  m_HideIfInvisible: 1
 --- !u!1 &917962850
 GameObject:
   m_ObjectHideFlags: 0
@@ -29462,7 +30055,7 @@ Transform:
   m_Children:
   - {fileID: 80938474}
   m_Father: {fileID: 0}
-  m_RootOrder: 149
+  m_RootOrder: 150
 --- !u!65 &918290562
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -29526,6 +30119,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
+  inventorySprite: {fileID: 21300000, guid: 207b26bd2376b694dac1dab972102c4d, type: 3}
 --- !u!23 &919152844
 Renderer:
   m_ObjectHideFlags: 0
@@ -29800,6 +30394,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
+  inventorySprite: {fileID: 21300000, guid: 075a08da52ff47545add5503520059ee, type: 3}
 --- !u!23 &925837701
 Renderer:
   m_ObjectHideFlags: 0
@@ -29840,7 +30435,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 145
+  m_RootOrder: 146
 --- !u!1 &929103664
 GameObject:
   m_ObjectHideFlags: 0
@@ -29892,6 +30487,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
+  inventorySprite: {fileID: 21300000, guid: 075a08da52ff47545add5503520059ee, type: 3}
 --- !u!23 &929103667
 Renderer:
   m_ObjectHideFlags: 0
@@ -29932,7 +30528,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 78
+  m_RootOrder: 79
 --- !u!1 &931766384
 GameObject:
   m_ObjectHideFlags: 0
@@ -30011,7 +30607,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: e133f7feb0a24394c81b8792639bc794, type: 2}
       propertyPath: m_RootOrder
-      value: 76
+      value: 81
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e133f7feb0a24394c81b8792639bc794, type: 2}
@@ -30069,6 +30665,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
+  inventorySprite: {fileID: 21300000, guid: fabb0cdf7e49f934bbf1838c19808412, type: 3}
 --- !u!23 &934242016
 Renderer:
   m_ObjectHideFlags: 0
@@ -30109,7 +30706,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 99
+  m_RootOrder: 100
 --- !u!1 &934821483
 GameObject:
   m_ObjectHideFlags: 0
@@ -30277,6 +30874,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
+  inventorySprite: {fileID: 21300000, guid: 79e16ca54f518284b8c8926abc8766d0, type: 3}
 --- !u!23 &939120566
 Renderer:
   m_ObjectHideFlags: 0
@@ -30317,7 +30915,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 157
+  m_RootOrder: 158
 --- !u!1001 &949446411
 Prefab:
   m_ObjectHideFlags: 0
@@ -30946,7 +31544,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 8a85f714c8fbfc84c817ff00aec894a2, type: 2}
       propertyPath: m_RootOrder
-      value: 87
+      value: 95
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8a85f714c8fbfc84c817ff00aec894a2, type: 2}
@@ -31120,6 +31718,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
+  inventorySprite: {fileID: 21300000, guid: d7c7b0ced6d7d014a8d44aa17492b6ef, type: 3}
 --- !u!23 &974418617
 Renderer:
   m_ObjectHideFlags: 0
@@ -31160,7 +31759,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 148
+  m_RootOrder: 149
 --- !u!1 &975594695
 GameObject:
   m_ObjectHideFlags: 0
@@ -31369,6 +31968,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
+  inventorySprite: {fileID: 21300000, guid: 79e16ca54f518284b8c8926abc8766d0, type: 3}
 --- !u!23 &984561951
 Renderer:
   m_ObjectHideFlags: 0
@@ -31409,7 +32009,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 116
+  m_RootOrder: 117
 --- !u!1 &985293368
 GameObject:
   m_ObjectHideFlags: 0
@@ -31516,7 +32116,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 19a8ec6a2b6d3844bbb20fc1a5f63060, type: 2}
       propertyPath: m_RootOrder
-      value: 43
+      value: 47
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 19a8ec6a2b6d3844bbb20fc1a5f63060, type: 2}
@@ -31629,7 +32229,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: e133f7feb0a24394c81b8792639bc794, type: 2}
       propertyPath: m_RootOrder
-      value: 111
+      value: 120
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e133f7feb0a24394c81b8792639bc794, type: 2}
@@ -31673,7 +32273,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c02b499ca49ee4b4194a1a0e7aa7bdf8, type: 2}
       propertyPath: m_RootOrder
-      value: 102
+      value: 111
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: c02b499ca49ee4b4194a1a0e7aa7bdf8, type: 2}
       propertyPath: InteractionRadius
@@ -31804,6 +32404,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
+  inventorySprite: {fileID: 21300000, guid: fabb0cdf7e49f934bbf1838c19808412, type: 3}
 --- !u!23 &1001621429
 Renderer:
   m_ObjectHideFlags: 0
@@ -31844,7 +32445,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 101
+  m_RootOrder: 102
 --- !u!1001 &1002698388
 Prefab:
   m_ObjectHideFlags: 0
@@ -31882,7 +32483,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: e133f7feb0a24394c81b8792639bc794, type: 2}
       propertyPath: m_RootOrder
-      value: 136
+      value: 145
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e133f7feb0a24394c81b8792639bc794, type: 2}
@@ -32059,6 +32660,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
+  inventorySprite: {fileID: 21300000, guid: 2b9c3da8bedbdb646a6c00fbef7a4728, type: 3}
 --- !u!114 &1014545924
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32118,7 +32720,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 167
+  m_RootOrder: 168
 --- !u!1 &1015389536
 GameObject:
   m_ObjectHideFlags: 0
@@ -32273,7 +32875,7 @@ Transform:
   m_Children:
   - {fileID: 753581334}
   m_Father: {fileID: 0}
-  m_RootOrder: 22
+  m_RootOrder: 21
 --- !u!1 &1017993762
 GameObject:
   m_ObjectHideFlags: 0
@@ -33075,7 +33677,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d73f77cae1143424eb4be26da00ab50f, type: 2}
       propertyPath: m_RootOrder
-      value: 24
+      value: 25
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d73f77cae1143424eb4be26da00ab50f, type: 2}
@@ -33150,7 +33752,7 @@ Transform:
   m_LocalScale: {x: 10, y: 10, z: 10}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 82
+  m_RootOrder: 89
 --- !u!1001 &1040723788
 Prefab:
   m_ObjectHideFlags: 0
@@ -33428,6 +34030,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
+  inventorySprite: {fileID: 21300000, guid: fabb0cdf7e49f934bbf1838c19808412, type: 3}
 --- !u!23 &1044134051
 Renderer:
   m_ObjectHideFlags: 0
@@ -33508,6 +34111,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
+  inventorySprite: {fileID: 21300000, guid: 075a08da52ff47545add5503520059ee, type: 3}
 --- !u!23 &1045150474
 Renderer:
   m_ObjectHideFlags: 0
@@ -33548,7 +34152,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 83
+  m_RootOrder: 82
 --- !u!1 &1048699699
 GameObject:
   m_ObjectHideFlags: 0
@@ -33789,6 +34393,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
+  inventorySprite: {fileID: 21300000, guid: 2b9c3da8bedbdb646a6c00fbef7a4728, type: 3}
 --- !u!114 &1051461484
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33848,7 +34453,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 134
+  m_RootOrder: 135
 --- !u!1001 &1054012557
 Prefab:
   m_ObjectHideFlags: 0
@@ -33886,7 +34491,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: a537460f0a3bbbf4cbfec5d0faf04608, type: 2}
       propertyPath: m_RootOrder
-      value: 51
+      value: 56
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a537460f0a3bbbf4cbfec5d0faf04608, type: 2}
@@ -33944,6 +34549,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
+  inventorySprite: {fileID: 21300000, guid: fabb0cdf7e49f934bbf1838c19808412, type: 3}
 --- !u!23 &1054112814
 Renderer:
   m_ObjectHideFlags: 0
@@ -34128,6 +34734,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
+  inventorySprite: {fileID: 21300000, guid: 2b9c3da8bedbdb646a6c00fbef7a4728, type: 3}
 --- !u!114 &1057453256
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34187,7 +34794,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 133
+  m_RootOrder: 134
 --- !u!1 &1064391660
 GameObject:
   m_ObjectHideFlags: 0
@@ -34349,6 +34956,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
+  inventorySprite: {fileID: 21300000, guid: 2b9c3da8bedbdb646a6c00fbef7a4728, type: 3}
 --- !u!114 &1068979619
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34408,7 +35016,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 141
+  m_RootOrder: 142
 --- !u!1001 &1072428877
 Prefab:
   m_ObjectHideFlags: 0
@@ -34580,7 +35188,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f9479d4478006ee4f8573fd1c71b5328, type: 2}
       propertyPath: m_RootOrder
-      value: 0
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f9479d4478006ee4f8573fd1c71b5328, type: 2}
@@ -34769,7 +35377,7 @@ Transform:
   m_Children:
   - {fileID: 1483211748}
   m_Father: {fileID: 0}
-  m_RootOrder: 72
+  m_RootOrder: 73
 --- !u!65 &1085891708
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -34882,7 +35490,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 8a85f714c8fbfc84c817ff00aec894a2, type: 2}
       propertyPath: m_RootOrder
-      value: 121
+      value: 130
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8a85f714c8fbfc84c817ff00aec894a2, type: 2}
@@ -35020,6 +35628,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
+  inventorySprite: {fileID: 21300000, guid: 207b26bd2376b694dac1dab972102c4d, type: 3}
 --- !u!114 &1105722407
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35079,7 +35688,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 63
+  m_RootOrder: 62
 --- !u!1 &1107178532
 GameObject:
   m_ObjectHideFlags: 0
@@ -35124,6 +35733,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
+  inventorySprite: {fileID: 21300000, guid: 207b26bd2376b694dac1dab972102c4d, type: 3}
 --- !u!114 &1107178535
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35274,6 +35884,97 @@ CapsuleCollider:
   m_Height: 1.76999998
   m_Direction: 1
   m_Center: {x: 0, y: .200000003, z: 0}
+--- !u!1 &1112062356
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100024, guid: 5a1faa1dfa6c2b1438a5235ba45c395a, type: 2}
+  m_PrefabInternal: {fileID: 2037409405}
+  serializedVersion: 4
+  m_Component:
+  - 224: {fileID: 1112062357}
+  - 222: {fileID: 1112062360}
+  - 114: {fileID: 1112062359}
+  - 114: {fileID: 1112062358}
+  m_Layer: 5
+  m_Name: ItemsDisplay
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1112062357
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 22400024, guid: 5a1faa1dfa6c2b1438a5235ba45c395a,
+    type: 2}
+  m_PrefabInternal: {fileID: 2037409405}
+  m_GameObject: {fileID: 1112062356}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: .5, y: .5, z: .5}
+  m_Children:
+  - {fileID: 108551521}
+  m_Father: {fileID: 1224101868}
+  m_RootOrder: 0
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -.0124880001, y: -398.499939}
+  m_SizeDelta: {x: 931.049988, y: 2046}
+  m_Pivot: {x: .5, y: .5}
+--- !u!114 &1112062358
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400028, guid: 5a1faa1dfa6c2b1438a5235ba45c395a,
+    type: 2}
+  m_PrefabInternal: {fileID: 2037409405}
+  m_GameObject: {fileID: 1112062356}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -2095666955, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Padding:
+    m_Left: 50
+    m_Right: 50
+    m_Top: 50
+    m_Bottom: 50
+  m_ChildAlignment: 0
+  m_StartCorner: 0
+  m_StartAxis: 0
+  m_CellSize: {x: 250, y: 250}
+  m_Spacing: {x: 10, y: 10}
+  m_Constraint: 0
+  m_ConstraintCount: 2
+--- !u!114 &1112062359
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400032, guid: 5a1faa1dfa6c2b1438a5235ba45c395a,
+    type: 2}
+  m_PrefabInternal: {fileID: 2037409405}
+  m_GameObject: {fileID: 1112062356}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: .39199999}
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+--- !u!222 &1112062360
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 22200022, guid: 5a1faa1dfa6c2b1438a5235ba45c395a,
+    type: 2}
+  m_PrefabInternal: {fileID: 2037409405}
+  m_GameObject: {fileID: 1112062356}
+  m_HideIfInvisible: 1
 --- !u!1 &1112725507
 GameObject:
   m_ObjectHideFlags: 0
@@ -35325,6 +36026,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
+  inventorySprite: {fileID: 21300000, guid: fabb0cdf7e49f934bbf1838c19808412, type: 3}
 --- !u!23 &1112725510
 Renderer:
   m_ObjectHideFlags: 0
@@ -35731,7 +36433,7 @@ Transform:
   m_Children:
   - {fileID: 133502021}
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 17
 --- !u!1001 &1127353006
 Prefab:
   m_ObjectHideFlags: 0
@@ -35769,7 +36471,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 842528d34c2e16540a628ef6977ab911, type: 2}
       propertyPath: m_RootOrder
-      value: 44
+      value: 48
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 842528d34c2e16540a628ef6977ab911, type: 2}
       propertyPath: InteractionRadius
@@ -35944,7 +36646,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 842528d34c2e16540a628ef6977ab911, type: 2}
       propertyPath: m_RootOrder
-      value: 132
+      value: 141
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 842528d34c2e16540a628ef6977ab911, type: 2}
       propertyPath: InteractionRadius
@@ -36744,6 +37446,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
+  inventorySprite: {fileID: 21300000, guid: 92e68bc38ce3bad498b44364730e3b85, type: 3}
 --- !u!23 &1153531805
 Renderer:
   m_ObjectHideFlags: 0
@@ -36784,7 +37487,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 163
+  m_RootOrder: 164
 --- !u!1001 &1155384678
 Prefab:
   m_ObjectHideFlags: 0
@@ -36822,7 +37525,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: e133f7feb0a24394c81b8792639bc794, type: 2}
       propertyPath: m_RootOrder
-      value: 135
+      value: 144
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e133f7feb0a24394c81b8792639bc794, type: 2}
@@ -37225,6 +37928,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
+  inventorySprite: {fileID: 21300000, guid: 92e68bc38ce3bad498b44364730e3b85, type: 3}
 --- !u!23 &1174963037
 Renderer:
   m_ObjectHideFlags: 0
@@ -37265,7 +37969,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 160
+  m_RootOrder: 161
 --- !u!1 &1176350897
 GameObject:
   m_ObjectHideFlags: 0
@@ -37485,6 +38189,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
+  inventorySprite: {fileID: 21300000, guid: 74e5e08132e36fa4da8651e50f038972, type: 3}
 --- !u!23 &1178138306
 Renderer:
   m_ObjectHideFlags: 0
@@ -37525,7 +38230,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 109
+  m_RootOrder: 110
 --- !u!1001 &1178859899
 Prefab:
   m_ObjectHideFlags: 0
@@ -37563,7 +38268,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 8a85f714c8fbfc84c817ff00aec894a2, type: 2}
       propertyPath: m_RootOrder
-      value: 89
+      value: 98
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8a85f714c8fbfc84c817ff00aec894a2, type: 2}
@@ -37648,7 +38353,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: edd970519df8ff648a3a49ee2ad875bd, type: 2}
       propertyPath: m_RootOrder
-      value: 114
+      value: 123
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: edd970519df8ff648a3a49ee2ad875bd, type: 2}
       propertyPath: InteractionRadius
@@ -37710,6 +38415,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
+  inventorySprite: {fileID: 21300000, guid: d7c7b0ced6d7d014a8d44aa17492b6ef, type: 3}
 --- !u!23 &1182252578
 Renderer:
   m_ObjectHideFlags: 0
@@ -37750,7 +38456,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 182
+  m_RootOrder: 183
 --- !u!1001 &1182491267
 Prefab:
   m_ObjectHideFlags: 0
@@ -37788,7 +38494,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 8a85f714c8fbfc84c817ff00aec894a2, type: 2}
       propertyPath: m_RootOrder
-      value: 42
+      value: 45
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8a85f714c8fbfc84c817ff00aec894a2, type: 2}
@@ -38017,7 +38723,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0859fe67e4985764eb41dda1a1e2b743, type: 2}
       propertyPath: m_RootOrder
-      value: 41
+      value: 44
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 0859fe67e4985764eb41dda1a1e2b743, type: 2}
       propertyPath: InteractionRadius
@@ -38194,7 +38900,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: e133f7feb0a24394c81b8792639bc794, type: 2}
       propertyPath: m_RootOrder
-      value: 175
+      value: 184
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e133f7feb0a24394c81b8792639bc794, type: 2}
@@ -38298,7 +39004,7 @@ Transform:
   m_Children:
   - {fileID: 1968202910}
   m_Father: {fileID: 0}
-  m_RootOrder: 204
+  m_RootOrder: 205
 --- !u!65 &1191844690
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -38362,6 +39068,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
+  inventorySprite: {fileID: 21300000, guid: 075a08da52ff47545add5503520059ee, type: 3}
 --- !u!23 &1191918766
 Renderer:
   m_ObjectHideFlags: 0
@@ -38402,7 +39109,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 172
+  m_RootOrder: 173
 --- !u!1001 &1202681031
 Prefab:
   m_ObjectHideFlags: 0
@@ -38440,7 +39147,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400006, guid: a2b4b6ac6bf32da4bbfc272a6a036afd, type: 2}
       propertyPath: m_RootOrder
-      value: 109
+      value: 118
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a2b4b6ac6bf32da4bbfc272a6a036afd, type: 2}
@@ -38599,7 +39306,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 3add72caf4c6658459aa3e76fc2d7cd0, type: 2}
       propertyPath: m_RootOrder
-      value: 156
+      value: 165
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: 3add72caf4c6658459aa3e76fc2d7cd0, type: 2}
       propertyPath: InteractionRadius
@@ -38789,6 +39496,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
+  inventorySprite: {fileID: 21300000, guid: a86fb142c895f8543a0e9deae93c0257, type: 3}
 --- !u!114 &1209840192
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38821,6 +39529,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
+  inventorySprite: {fileID: 0}
 --- !u!23 &1209840194
 Renderer:
   m_ObjectHideFlags: 0
@@ -38861,7 +39570,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 199
+  m_RootOrder: 200
 --- !u!1001 &1211505540
 Prefab:
   m_ObjectHideFlags: 0
@@ -38899,7 +39608,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 842528d34c2e16540a628ef6977ab911, type: 2}
       propertyPath: m_RootOrder
-      value: 151
+      value: 160
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 842528d34c2e16540a628ef6977ab911, type: 2}
       propertyPath: InteractionRadius
@@ -38961,6 +39670,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
+  inventorySprite: {fileID: 21300000, guid: fabb0cdf7e49f934bbf1838c19808412, type: 3}
 --- !u!23 &1212483829
 Renderer:
   m_ObjectHideFlags: 0
@@ -39053,6 +39763,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
+  inventorySprite: {fileID: 21300000, guid: 5e909bf71c9b68f4790b0e394b3356a8, type: 3}
 --- !u!23 &1213315162
 Renderer:
   m_ObjectHideFlags: 0
@@ -39093,7 +39804,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 164
+  m_RootOrder: 165
 --- !u!1 &1214813907
 GameObject:
   m_ObjectHideFlags: 0
@@ -39200,7 +39911,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0244d14266c8ee544804b1d988a45262, type: 2}
       propertyPath: m_RootOrder
-      value: 84
+      value: 91
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0244d14266c8ee544804b1d988a45262, type: 2}
@@ -39276,6 +39987,76 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1902715982}
   m_RootOrder: 128
+--- !u!1 &1219984343
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100022, guid: 5a1faa1dfa6c2b1438a5235ba45c395a, type: 2}
+  m_PrefabInternal: {fileID: 2037409405}
+  serializedVersion: 4
+  m_Component:
+  - 224: {fileID: 1219984344}
+  - 222: {fileID: 1219984346}
+  - 114: {fileID: 1219984345}
+  m_Layer: 5
+  m_Name: InventoryLabel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1219984344
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 22400022, guid: 5a1faa1dfa6c2b1438a5235ba45c395a,
+    type: 2}
+  m_PrefabInternal: {fileID: 2037409405}
+  m_GameObject: {fileID: 1219984343}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: .49999994, y: .5, z: .5}
+  m_Children: []
+  m_Father: {fileID: 1346731065}
+  m_RootOrder: 0
+  m_AnchorMin: {x: .5, y: .5}
+  m_AnchorMax: {x: .5, y: .5}
+  m_AnchoredPosition: {x: 4, y: 217.509995}
+  m_SizeDelta: {x: 949, y: 90}
+  m_Pivot: {x: .5, y: .5}
+--- !u!114 &1219984345
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400030, guid: 5a1faa1dfa6c2b1438a5235ba45c395a,
+    type: 2}
+  m_PrefabInternal: {fileID: 2037409405}
+  m_GameObject: {fileID: 1219984343}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: .1953125, g: .1953125, b: .1953125, a: 1}
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 74
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 1
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: Inventory
+--- !u!222 &1219984346
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 22200020, guid: 5a1faa1dfa6c2b1438a5235ba45c395a,
+    type: 2}
+  m_PrefabInternal: {fileID: 2037409405}
+  m_GameObject: {fileID: 1219984343}
+  m_HideIfInvisible: 0
 --- !u!1 &1220097973
 GameObject:
   m_ObjectHideFlags: 0
@@ -39376,6 +40157,115 @@ MeshCollider:
   m_SmoothSphereCollisions: 0
   m_Convex: 0
   m_Mesh: {fileID: 4300000, guid: bb75e113f42407449bae4a574f42219c, type: 3}
+--- !u!1 &1224101867
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100004, guid: 5a1faa1dfa6c2b1438a5235ba45c395a, type: 2}
+  m_PrefabInternal: {fileID: 2037409405}
+  serializedVersion: 4
+  m_Component:
+  - 224: {fileID: 1224101868}
+  - 222: {fileID: 1224101872}
+  - 114: {fileID: 1224101871}
+  - 114: {fileID: 1224101870}
+  - 114: {fileID: 1224101869}
+  m_Layer: 5
+  m_Name: ItemsDisplayArea
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1224101868
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 22400004, guid: 5a1faa1dfa6c2b1438a5235ba45c395a,
+    type: 2}
+  m_PrefabInternal: {fileID: 2037409405}
+  m_GameObject: {fileID: 1224101867}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1112062357}
+  m_Father: {fileID: 1346731065}
+  m_RootOrder: 1
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -20, y: -15}
+  m_SizeDelta: {x: -82, y: -77}
+  m_Pivot: {x: .5, y: .5}
+--- !u!114 &1224101869
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400004, guid: 5a1faa1dfa6c2b1438a5235ba45c395a,
+    type: 2}
+  m_PrefabInternal: {fileID: 2037409405}
+  m_GameObject: {fileID: 1224101867}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1367256648, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Content: {fileID: 1112062357}
+  m_Horizontal: 0
+  m_Vertical: 1
+  m_MovementType: 1
+  m_Elasticity: .100000001
+  m_Inertia: 1
+  m_DecelerationRate: .135000005
+  m_ScrollSensitivity: 1
+  m_DragThreshold: 15
+  m_HorizontalScrollbar: {fileID: 0}
+  m_VerticalScrollbar: {fileID: 569050834}
+  m_OnValueChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.ScrollRect+ScrollRectEvent, UnityEngine.UI, Version=1.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!114 &1224101870
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400006, guid: 5a1faa1dfa6c2b1438a5235ba45c395a,
+    type: 2}
+  m_PrefabInternal: {fileID: 2037409405}
+  m_GameObject: {fileID: 1224101867}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1200242548, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShowMaskGraphic: 0
+--- !u!114 &1224101871
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400008, guid: 5a1faa1dfa6c2b1438a5235ba45c395a,
+    type: 2}
+  m_PrefabInternal: {fileID: 2037409405}
+  m_GameObject: {fileID: 1224101867}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: .39199999}
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+--- !u!222 &1224101872
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 22200004, guid: 5a1faa1dfa6c2b1438a5235ba45c395a,
+    type: 2}
+  m_PrefabInternal: {fileID: 2037409405}
+  m_GameObject: {fileID: 1224101867}
+  m_HideIfInvisible: 0
 --- !u!1 &1227980367
 GameObject:
   m_ObjectHideFlags: 0
@@ -39471,7 +40361,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: a9ba180a0917e05429324554a3f66868, type: 2}
       propertyPath: m_RootOrder
-      value: 123
+      value: 132
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: a9ba180a0917e05429324554a3f66868, type: 2}
       propertyPath: InteractionRadius
@@ -39685,6 +40575,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
+  inventorySprite: {fileID: 21300000, guid: fabb0cdf7e49f934bbf1838c19808412, type: 3}
 --- !u!23 &1238242886
 Renderer:
   m_ObjectHideFlags: 0
@@ -39751,7 +40642,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c02b499ca49ee4b4194a1a0e7aa7bdf8, type: 2}
       propertyPath: m_RootOrder
-      value: 103
+      value: 112
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: c02b499ca49ee4b4194a1a0e7aa7bdf8, type: 2}
       propertyPath: InteractionRadius
@@ -39875,6 +40766,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
+  inventorySprite: {fileID: 21300000, guid: 207b26bd2376b694dac1dab972102c4d, type: 3}
 --- !u!114 &1242257410
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40101,6 +40993,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
+  inventorySprite: {fileID: 21300000, guid: 075a08da52ff47545add5503520059ee, type: 3}
 --- !u!23 &1249158216
 Renderer:
   m_ObjectHideFlags: 0
@@ -40141,7 +41034,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 89
+  m_RootOrder: 87
 --- !u!1001 &1249818111
 Prefab:
   m_ObjectHideFlags: 0
@@ -40749,7 +41642,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 842528d34c2e16540a628ef6977ab911, type: 2}
       propertyPath: m_RootOrder
-      value: 159
+      value: 168
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 842528d34c2e16540a628ef6977ab911, type: 2}
       propertyPath: InteractionRadius
@@ -40910,7 +41803,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 845135208a0fce4488e286eee9113bb1, type: 2}
       propertyPath: m_RootOrder
-      value: 189
+      value: 198
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 845135208a0fce4488e286eee9113bb1, type: 2}
@@ -40968,6 +41861,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
+  inventorySprite: {fileID: 21300000, guid: 075a08da52ff47545add5503520059ee, type: 3}
 --- !u!23 &1280708861
 Renderer:
   m_ObjectHideFlags: 0
@@ -41008,7 +41902,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 143
+  m_RootOrder: 144
 --- !u!1 &1282764331
 GameObject:
   m_ObjectHideFlags: 0
@@ -41172,6 +42066,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
+  inventorySprite: {fileID: 21300000, guid: a86fb142c895f8543a0e9deae93c0257, type: 3}
 --- !u!114 &1284898676
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41204,6 +42099,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
+  inventorySprite: {fileID: 0}
 --- !u!23 &1284898678
 Renderer:
   m_ObjectHideFlags: 0
@@ -41244,7 +42140,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 195
+  m_RootOrder: 196
 --- !u!1 &1284912711
 GameObject:
   m_ObjectHideFlags: 0
@@ -41412,7 +42308,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 51
+  m_RootOrder: 57
 --- !u!1001 &1294015863
 Prefab:
   m_ObjectHideFlags: 0
@@ -41619,6 +42515,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
+  inventorySprite: {fileID: 21300000, guid: 79e16ca54f518284b8c8926abc8766d0, type: 3}
 --- !u!23 &1297773020
 Renderer:
   m_ObjectHideFlags: 0
@@ -41726,7 +42623,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 8a85f714c8fbfc84c817ff00aec894a2, type: 2}
       propertyPath: m_RootOrder
-      value: 93
+      value: 102
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8a85f714c8fbfc84c817ff00aec894a2, type: 2}
@@ -41966,7 +42863,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 3add72caf4c6658459aa3e76fc2d7cd0, type: 2}
       propertyPath: m_RootOrder
-      value: 179
+      value: 188
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: 3add72caf4c6658459aa3e76fc2d7cd0, type: 2}
       propertyPath: InteractionRadius
@@ -42114,7 +43011,7 @@ Transform:
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 85
+  m_RootOrder: 93
 --- !u!1001 &1313198374
 Prefab:
   m_ObjectHideFlags: 0
@@ -42265,7 +43162,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: e133f7feb0a24394c81b8792639bc794, type: 2}
       propertyPath: m_RootOrder
-      value: 75
+      value: 80
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e133f7feb0a24394c81b8792639bc794, type: 2}
@@ -42461,6 +43358,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
+  inventorySprite: {fileID: 21300000, guid: 5e909bf71c9b68f4790b0e394b3356a8, type: 3}
 --- !u!23 &1322255857
 Renderer:
   m_ObjectHideFlags: 0
@@ -42501,7 +43399,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 186
+  m_RootOrder: 187
 --- !u!1 &1323658392
 GameObject:
   m_ObjectHideFlags: 0
@@ -42818,6 +43716,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
+  inventorySprite: {fileID: 21300000, guid: 2b9c3da8bedbdb646a6c00fbef7a4728, type: 3}
 --- !u!114 &1325473197
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42877,7 +43776,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 138
+  m_RootOrder: 139
 --- !u!1 &1328608767
 GameObject:
   m_ObjectHideFlags: 0
@@ -43387,6 +44286,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
+  inventorySprite: {fileID: 21300000, guid: 6467d26a256321f4d88c7c40f1ddd161, type: 3}
 --- !u!23 &1345053698
 Renderer:
   m_ObjectHideFlags: 0
@@ -43427,7 +44327,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 190
+  m_RootOrder: 191
 --- !u!1 &1346697431
 GameObject:
   m_ObjectHideFlags: 0
@@ -43538,6 +44438,90 @@ MonoBehaviour:
   y_Smooth: .100000001
   usingFlightCamera: 0
   IsInConversation: 0
+--- !u!1 &1346731064
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100018, guid: 5a1faa1dfa6c2b1438a5235ba45c395a, type: 2}
+  m_PrefabInternal: {fileID: 2037409405}
+  serializedVersion: 4
+  m_Component:
+  - 224: {fileID: 1346731065}
+  - 222: {fileID: 1346731068}
+  - 114: {fileID: 1346731067}
+  - 114: {fileID: 1346731066}
+  m_Layer: 5
+  m_Name: InventoryDisplay
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1346731065
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 22400018, guid: 5a1faa1dfa6c2b1438a5235ba45c395a,
+    type: 2}
+  m_PrefabInternal: {fileID: 2037409405}
+  m_GameObject: {fileID: 1346731064}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1219984344}
+  - {fileID: 1224101868}
+  - {fileID: 569050837}
+  - {fileID: 216748033}
+  - {fileID: 763945693}
+  m_Father: {fileID: 827458987}
+  m_RootOrder: 0
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: -27}
+  m_SizeDelta: {x: -424, y: -101}
+  m_Pivot: {x: .5, y: .5}
+--- !u!114 &1346731066
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400010, guid: 5a1faa1dfa6c2b1438a5235ba45c395a,
+    type: 2}
+  m_PrefabInternal: {fileID: 2037409405}
+  m_GameObject: {fileID: 1346731064}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22d8f081e37b4f945b4b3c6f4c08bcc2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ItemDisplay: {fileID: 100006, guid: f7dbea529acfe1143a430a30a06a249b, type: 2}
+--- !u!114 &1346731067
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400024, guid: 5a1faa1dfa6c2b1438a5235ba45c395a,
+    type: 2}
+  m_PrefabInternal: {fileID: 2037409405}
+  m_GameObject: {fileID: 1346731064}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: .39199999}
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+--- !u!222 &1346731068
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 22200016, guid: 5a1faa1dfa6c2b1438a5235ba45c395a,
+    type: 2}
+  m_PrefabInternal: {fileID: 2037409405}
+  m_GameObject: {fileID: 1346731064}
+  m_HideIfInvisible: 0
 --- !u!1 &1346840151
 GameObject:
   m_ObjectHideFlags: 0
@@ -43578,7 +44562,7 @@ Transform:
   m_Children:
   - {fileID: 1251900352}
   m_Father: {fileID: 0}
-  m_RootOrder: 201
+  m_RootOrder: 202
 --- !u!1 &1346932943
 GameObject:
   m_ObjectHideFlags: 0
@@ -43630,6 +44614,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
+  inventorySprite: {fileID: 21300000, guid: fabb0cdf7e49f934bbf1838c19808412, type: 3}
 --- !u!23 &1346932946
 Renderer:
   m_ObjectHideFlags: 0
@@ -43670,7 +44655,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 105
+  m_RootOrder: 106
 --- !u!1 &1347957244
 GameObject:
   m_ObjectHideFlags: 0
@@ -43777,7 +44762,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c02b499ca49ee4b4194a1a0e7aa7bdf8, type: 2}
       propertyPath: m_RootOrder
-      value: 169
+      value: 178
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: c02b499ca49ee4b4194a1a0e7aa7bdf8, type: 2}
       propertyPath: InteractionRadius
@@ -43897,6 +44882,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
+  inventorySprite: {fileID: 21300000, guid: 6467d26a256321f4d88c7c40f1ddd161, type: 3}
 --- !u!23 &1349858473
 Renderer:
   m_ObjectHideFlags: 0
@@ -43937,7 +44923,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 124
+  m_RootOrder: 125
 --- !u!1 &1350521246
 GameObject:
   m_ObjectHideFlags: 0
@@ -44001,6 +44987,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
+  inventorySprite: {fileID: 21300000, guid: 79e16ca54f518284b8c8926abc8766d0, type: 3}
 --- !u!23 &1350521250
 Renderer:
   m_ObjectHideFlags: 0
@@ -44067,7 +45054,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 8a85f714c8fbfc84c817ff00aec894a2, type: 2}
       propertyPath: m_RootOrder
-      value: 91
+      value: 100
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8a85f714c8fbfc84c817ff00aec894a2, type: 2}
@@ -44169,6 +45156,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
+  inventorySprite: {fileID: 21300000, guid: 6467d26a256321f4d88c7c40f1ddd161, type: 3}
 --- !u!23 &1359038443
 Renderer:
   m_ObjectHideFlags: 0
@@ -44209,7 +45197,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 93
+  m_RootOrder: 92
 --- !u!1 &1360444511
 GameObject:
   m_ObjectHideFlags: 0
@@ -44444,7 +45432,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f6ba98ea6ced8ea479de804d30de9c71, type: 2}
       propertyPath: m_RootOrder
-      value: 40
+      value: 43
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: f6ba98ea6ced8ea479de804d30de9c71, type: 2}
       propertyPath: InteractionRadius
@@ -44552,7 +45540,7 @@ Transform:
   - {fileID: 373061485}
   - {fileID: 1836917857}
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 14
 --- !u!1 &1373100024
 GameObject:
   m_ObjectHideFlags: 0
@@ -44632,7 +45620,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c02b499ca49ee4b4194a1a0e7aa7bdf8, type: 2}
       propertyPath: m_RootOrder
-      value: 166
+      value: 175
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: c02b499ca49ee4b4194a1a0e7aa7bdf8, type: 2}
       propertyPath: InteractionRadius
@@ -44744,7 +45732,7 @@ Transform:
   - {fileID: 1611846036}
   - {fileID: 1269245021}
   m_Father: {fileID: 0}
-  m_RootOrder: 37
+  m_RootOrder: 38
 --- !u!114 &1381722369
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -44758,6 +45746,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
+  inventorySprite: {fileID: 21300000, guid: df7a38fa81cf6b94787f351862c88c39, type: 3}
 --- !u!114 &1381722370
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -44814,7 +45803,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: e133f7feb0a24394c81b8792639bc794, type: 2}
       propertyPath: m_RootOrder
-      value: 112
+      value: 121
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e133f7feb0a24394c81b8792639bc794, type: 2}
@@ -45011,6 +46000,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
+  inventorySprite: {fileID: 21300000, guid: fabb0cdf7e49f934bbf1838c19808412, type: 3}
 --- !u!23 &1390549720
 Renderer:
   m_ObjectHideFlags: 0
@@ -45222,7 +46212,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: edd970519df8ff648a3a49ee2ad875bd, type: 2}
       propertyPath: m_RootOrder
-      value: 115
+      value: 124
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: edd970519df8ff648a3a49ee2ad875bd, type: 2}
       propertyPath: InteractionRadius
@@ -45667,7 +46657,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 8a85f714c8fbfc84c817ff00aec894a2, type: 2}
       propertyPath: m_RootOrder
-      value: 96
+      value: 105
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8a85f714c8fbfc84c817ff00aec894a2, type: 2}
@@ -45711,7 +46701,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c02b499ca49ee4b4194a1a0e7aa7bdf8, type: 2}
       propertyPath: m_RootOrder
-      value: 104
+      value: 113
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: c02b499ca49ee4b4194a1a0e7aa7bdf8, type: 2}
       propertyPath: InteractionRadius
@@ -45800,7 +46790,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 19a8ec6a2b6d3844bbb20fc1a5f63060, type: 2}
       propertyPath: m_RootOrder
-      value: 147
+      value: 156
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 19a8ec6a2b6d3844bbb20fc1a5f63060, type: 2}
@@ -45916,6 +46906,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
+  inventorySprite: {fileID: 21300000, guid: 92e68bc38ce3bad498b44364730e3b85, type: 3}
 --- !u!23 &1434739756
 Renderer:
   m_ObjectHideFlags: 0
@@ -45956,7 +46947,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 162
+  m_RootOrder: 163
 --- !u!1 &1435300929
 GameObject:
   m_ObjectHideFlags: 0
@@ -46077,6 +47068,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
+  inventorySprite: {fileID: 21300000, guid: 92e68bc38ce3bad498b44364730e3b85, type: 3}
 --- !u!23 &1438993643
 Renderer:
   m_ObjectHideFlags: 0
@@ -46117,7 +47109,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 131
+  m_RootOrder: 132
 --- !u!1 &1439239436
 GameObject:
   m_ObjectHideFlags: 0
@@ -46224,7 +47216,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 8a85f714c8fbfc84c817ff00aec894a2, type: 2}
       propertyPath: m_RootOrder
-      value: 88
+      value: 96
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8a85f714c8fbfc84c817ff00aec894a2, type: 2}
@@ -46340,6 +47332,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
+  inventorySprite: {fileID: 21300000, guid: 075a08da52ff47545add5503520059ee, type: 3}
 --- !u!23 &1441596227
 Renderer:
   m_ObjectHideFlags: 0
@@ -46380,7 +47373,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 84
+  m_RootOrder: 83
 --- !u!1001 &1441650170
 Prefab:
   m_ObjectHideFlags: 0
@@ -46418,7 +47411,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c02b499ca49ee4b4194a1a0e7aa7bdf8, type: 2}
       propertyPath: m_RootOrder
-      value: 168
+      value: 177
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: c02b499ca49ee4b4194a1a0e7aa7bdf8, type: 2}
       propertyPath: InteractionRadius
@@ -46505,6 +47498,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
+  inventorySprite: {fileID: 21300000, guid: 207b26bd2376b694dac1dab972102c4d, type: 3}
 --- !u!114 &1444536234
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -46564,7 +47558,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 168
+  m_RootOrder: 169
 --- !u!1 &1449929296
 GameObject:
   m_ObjectHideFlags: 0
@@ -46820,13 +47814,47 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: e133f7feb0a24394c81b8792639bc794, type: 2}
       propertyPath: m_RootOrder
-      value: 163
+      value: 172
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e133f7feb0a24394c81b8792639bc794, type: 2}
   m_RootGameObject: {fileID: 1624993986}
   m_IsPrefabParent: 0
   m_IsExploded: 1
+--- !u!1 &1456992386
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100014, guid: 5a1faa1dfa6c2b1438a5235ba45c395a, type: 2}
+  m_PrefabInternal: {fileID: 2037409405}
+  serializedVersion: 4
+  m_Component:
+  - 224: {fileID: 1456992387}
+  m_Layer: 5
+  m_Name: Sliding Area
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1456992387
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 22400014, guid: 5a1faa1dfa6c2b1438a5235ba45c395a,
+    type: 2}
+  m_PrefabInternal: {fileID: 2037409405}
+  m_GameObject: {fileID: 1456992386}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 852464706}
+  m_Father: {fileID: 569050837}
+  m_RootOrder: 0
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: -20, y: -20}
+  m_Pivot: {x: .5, y: .5}
 --- !u!1 &1460613926
 GameObject:
   m_ObjectHideFlags: 0
@@ -46885,6 +47913,76 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1800337819}
   m_GameObject: {fileID: 1460613926}
   m_Mesh: {fileID: 4300000, guid: 018e477eac4cca445bf2390dccb43b51, type: 3}
+--- !u!1 &1464265565
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100010, guid: 5a1faa1dfa6c2b1438a5235ba45c395a, type: 2}
+  m_PrefabInternal: {fileID: 2037409405}
+  serializedVersion: 4
+  m_Component:
+  - 224: {fileID: 1464265566}
+  - 222: {fileID: 1464265568}
+  - 114: {fileID: 1464265567}
+  m_Layer: 5
+  m_Name: ItemName
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1464265566
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 22400010, guid: 5a1faa1dfa6c2b1438a5235ba45c395a,
+    type: 2}
+  m_PrefabInternal: {fileID: 2037409405}
+  m_GameObject: {fileID: 1464265565}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 108551521}
+  m_RootOrder: 0
+  m_AnchorMin: {x: .5, y: .5}
+  m_AnchorMax: {x: .5, y: .5}
+  m_AnchoredPosition: {x: 1.89999998, y: 99.5}
+  m_SizeDelta: {x: 227.800003, y: 41}
+  m_Pivot: {x: .5, y: .5}
+--- !u!114 &1464265567
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400016, guid: 5a1faa1dfa6c2b1438a5235ba45c395a,
+    type: 2}
+  m_PrefabInternal: {fileID: 2037409405}
+  m_GameObject: {fileID: 1464265565}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: .1953125, g: .1953125, b: .1953125, a: 1}
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 30
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 4
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: Name
+--- !u!222 &1464265568
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 22200010, guid: 5a1faa1dfa6c2b1438a5235ba45c395a,
+    type: 2}
+  m_PrefabInternal: {fileID: 2037409405}
+  m_GameObject: {fileID: 1464265565}
+  m_HideIfInvisible: 1
 --- !u!1 &1464529769
 GameObject:
   m_ObjectHideFlags: 0
@@ -47060,7 +48158,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 45f2d90be16d2e449b58877f3a20b415, type: 2}
       propertyPath: m_RootOrder
-      value: 0
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 45f2d90be16d2e449b58877f3a20b415, type: 2}
@@ -47206,7 +48304,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: e133f7feb0a24394c81b8792639bc794, type: 2}
       propertyPath: m_RootOrder
-      value: 74
+      value: 79
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e133f7feb0a24394c81b8792639bc794, type: 2}
@@ -47308,7 +48406,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22400002, guid: 9fb4932043690d04f98ba9f9902561d6, type: 2}
       propertyPath: m_RootOrder
-      value: 29
+      value: 33
       objectReference: {fileID: 0}
     - target: {fileID: 22400002, guid: 9fb4932043690d04f98ba9f9902561d6, type: 2}
       propertyPath: m_AnchoredPosition.x
@@ -47552,6 +48650,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
+  inventorySprite: {fileID: 21300000, guid: 92e68bc38ce3bad498b44364730e3b85, type: 3}
 --- !u!23 &1480058889
 Renderer:
   m_ObjectHideFlags: 0
@@ -47592,7 +48691,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 132
+  m_RootOrder: 133
 --- !u!1 &1483069765
 GameObject:
   m_ObjectHideFlags: 0
@@ -47757,7 +48856,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0859fe67e4985764eb41dda1a1e2b743, type: 2}
       propertyPath: m_RootOrder
-      value: 160
+      value: 169
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0859fe67e4985764eb41dda1a1e2b743, type: 2}
@@ -47801,7 +48900,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 19a8ec6a2b6d3844bbb20fc1a5f63060, type: 2}
       propertyPath: m_RootOrder
-      value: 58
+      value: 66
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 19a8ec6a2b6d3844bbb20fc1a5f63060, type: 2}
@@ -47845,7 +48944,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c02b499ca49ee4b4194a1a0e7aa7bdf8, type: 2}
       propertyPath: m_RootOrder
-      value: 99
+      value: 108
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: c02b499ca49ee4b4194a1a0e7aa7bdf8, type: 2}
       propertyPath: InteractionRadius
@@ -48159,7 +49258,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0244d14266c8ee544804b1d988a45262, type: 2}
       propertyPath: m_RootOrder
-      value: 146
+      value: 155
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0244d14266c8ee544804b1d988a45262, type: 2}
@@ -48203,7 +49302,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: a9ba180a0917e05429324554a3f66868, type: 2}
       propertyPath: m_RootOrder
-      value: 124
+      value: 133
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: a9ba180a0917e05429324554a3f66868, type: 2}
       propertyPath: InteractionRadius
@@ -48292,7 +49391,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: e133f7feb0a24394c81b8792639bc794, type: 2}
       propertyPath: m_RootOrder
-      value: 72
+      value: 77
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e133f7feb0a24394c81b8792639bc794, type: 2}
@@ -48692,6 +49791,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
+  inventorySprite: {fileID: 21300000, guid: fabb0cdf7e49f934bbf1838c19808412, type: 3}
 --- !u!23 &1512766455
 Renderer:
   m_ObjectHideFlags: 0
@@ -48732,7 +49832,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 100
+  m_RootOrder: 101
 --- !u!1001 &1513327500
 Prefab:
   m_ObjectHideFlags: 0
@@ -48770,7 +49870,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 369e3e9680f1aa545bc9272e60d12bf8, type: 2}
       propertyPath: m_RootOrder
-      value: 11
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: 369e3e9680f1aa545bc9272e60d12bf8, type: 2}
       propertyPath: m_Name
@@ -48862,7 +49962,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 842528d34c2e16540a628ef6977ab911, type: 2}
       propertyPath: m_RootOrder
-      value: 130
+      value: 139
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 842528d34c2e16540a628ef6977ab911, type: 2}
       propertyPath: InteractionRadius
@@ -48979,7 +50079,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0244d14266c8ee544804b1d988a45262, type: 2}
       propertyPath: m_RootOrder
-      value: 120
+      value: 129
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0244d14266c8ee544804b1d988a45262, type: 2}
@@ -49023,7 +50123,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0244d14266c8ee544804b1d988a45262, type: 2}
       propertyPath: m_RootOrder
-      value: 181
+      value: 190
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0244d14266c8ee544804b1d988a45262, type: 2}
@@ -49249,7 +50349,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0fc5837e6b1e9f84387904b402e9481b, type: 2}
       propertyPath: m_RootOrder
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0fc5837e6b1e9f84387904b402e9481b, type: 2}
@@ -49400,6 +50500,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
+  inventorySprite: {fileID: 21300000, guid: 207b26bd2376b694dac1dab972102c4d, type: 3}
 --- !u!114 &1525370424
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -49554,7 +50655,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: e133f7feb0a24394c81b8792639bc794, type: 2}
       propertyPath: m_RootOrder
-      value: 39
+      value: 41
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e133f7feb0a24394c81b8792639bc794, type: 2}
@@ -49872,7 +50973,7 @@ Transform:
   - {fileID: 1615966554}
   - {fileID: 174687617}
   m_Father: {fileID: 0}
-  m_RootOrder: 21
+  m_RootOrder: 22
 --- !u!1001 &1550936250
 Prefab:
   m_ObjectHideFlags: 0
@@ -49910,7 +51011,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: afb3aabb63e95ae4a82750125f7e5019, type: 2}
       propertyPath: m_RootOrder
-      value: 6
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: afb3aabb63e95ae4a82750125f7e5019, type: 2}
       propertyPath: m_LocalScale.x
@@ -49988,6 +51089,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
+  inventorySprite: {fileID: 21300000, guid: 5e909bf71c9b68f4790b0e394b3356a8, type: 3}
 --- !u!23 &1552654379
 Renderer:
   m_ObjectHideFlags: 0
@@ -50028,7 +51130,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 187
+  m_RootOrder: 188
 --- !u!1001 &1556995274
 Prefab:
   m_ObjectHideFlags: 0
@@ -50066,7 +51168,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: a9ba180a0917e05429324554a3f66868, type: 2}
       propertyPath: m_RootOrder
-      value: 155
+      value: 164
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: a9ba180a0917e05429324554a3f66868, type: 2}
       propertyPath: InteractionRadius
@@ -50163,7 +51265,7 @@ Transform:
   m_Children:
   - {fileID: 1205665213}
   m_Father: {fileID: 0}
-  m_RootOrder: 31
+  m_RootOrder: 28
 --- !u!95 &1562870162
 Animator:
   serializedVersion: 3
@@ -50415,7 +51517,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c02b499ca49ee4b4194a1a0e7aa7bdf8, type: 2}
       propertyPath: m_RootOrder
-      value: 107
+      value: 116
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: c02b499ca49ee4b4194a1a0e7aa7bdf8, type: 2}
       propertyPath: InteractionRadius
@@ -50807,7 +51909,7 @@ Transform:
   m_LocalScale: {x: 200, y: 1, z: 200}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 60
+  m_RootOrder: 69
 --- !u!1 &1588582964
 GameObject:
   m_ObjectHideFlags: 0
@@ -50870,7 +51972,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 28
+  m_RootOrder: 30
 --- !u!1 &1588689099
 GameObject:
   m_ObjectHideFlags: 0
@@ -50922,6 +52024,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
+  inventorySprite: {fileID: 21300000, guid: 96ca86d1cbf171a41a9323ffbb42f86b, type: 3}
 --- !u!23 &1588689102
 Renderer:
   m_ObjectHideFlags: 0
@@ -50962,7 +52065,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 125
+  m_RootOrder: 126
 --- !u!1 &1594402476
 GameObject:
   m_ObjectHideFlags: 0
@@ -51082,7 +52185,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 845135208a0fce4488e286eee9113bb1, type: 2}
       propertyPath: m_RootOrder
-      value: 188
+      value: 197
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 845135208a0fce4488e286eee9113bb1, type: 2}
@@ -51243,7 +52346,7 @@ Transform:
   m_Children:
   - {fileID: 1674524101}
   m_Father: {fileID: 0}
-  m_RootOrder: 32
+  m_RootOrder: 29
 --- !u!1001 &1606109886
 Prefab:
   m_ObjectHideFlags: 0
@@ -51488,7 +52591,7 @@ Transform:
   - {fileID: 454489504}
   - {fileID: 1303819853}
   m_Father: {fileID: 0}
-  m_RootOrder: 117
+  m_RootOrder: 118
 --- !u!114 &1609561511
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -51502,6 +52605,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
+  inventorySprite: {fileID: 21300000, guid: df7a38fa81cf6b94787f351862c88c39, type: 3}
 --- !u!114 &1609561512
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -51619,7 +52723,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 29
+  m_RootOrder: 31
 --- !u!1 &1612392427
 GameObject:
   m_ObjectHideFlags: 0
@@ -51648,7 +52752,7 @@ Transform:
   m_Children:
   - {fileID: 1871183507}
   m_Father: {fileID: 0}
-  m_RootOrder: 75
+  m_RootOrder: 76
 --- !u!65 &1612392429
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -51835,6 +52939,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
+  inventorySprite: {fileID: 21300000, guid: f5c39482212e7804abb66b2f11df75ea, type: 3}
 --- !u!23 &1617685590
 Renderer:
   m_ObjectHideFlags: 0
@@ -51875,7 +52980,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 62
+  m_RootOrder: 61
 --- !u!1001 &1619518588
 Prefab:
   m_ObjectHideFlags: 0
@@ -52029,6 +53134,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
+  inventorySprite: {fileID: 21300000, guid: 075a08da52ff47545add5503520059ee, type: 3}
 --- !u!23 &1624993989
 Renderer:
   m_ObjectHideFlags: 0
@@ -52069,7 +53175,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 171
+  m_RootOrder: 172
 --- !u!1 &1627724357
 GameObject:
   m_ObjectHideFlags: 0
@@ -52454,7 +53560,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: fedbf4c7adac46848b6a1a570ac1f584, type: 2}
       propertyPath: m_RootOrder
-      value: 195
+      value: 204
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fedbf4c7adac46848b6a1a570ac1f584, type: 2}
@@ -52581,6 +53687,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
+  inventorySprite: {fileID: 21300000, guid: c96e8e686cd86ad4f8453538bc3ee095, type: 3}
 --- !u!23 &1641545548
 Renderer:
   m_ObjectHideFlags: 0
@@ -52621,7 +53728,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 194
+  m_RootOrder: 195
 --- !u!1 &1642125289
 GameObject:
   m_ObjectHideFlags: 0
@@ -52726,6 +53833,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
+  inventorySprite: {fileID: 21300000, guid: df7a38fa81cf6b94787f351862c88c39, type: 3}
 --- !u!114 &1645423246
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -53163,7 +54271,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: fedbf4c7adac46848b6a1a570ac1f584, type: 2}
       propertyPath: m_RootOrder
-      value: 65
+      value: 70
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fedbf4c7adac46848b6a1a570ac1f584, type: 2}
@@ -53221,6 +54329,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
+  inventorySprite: {fileID: 21300000, guid: 075a08da52ff47545add5503520059ee, type: 3}
 --- !u!23 &1661023530
 Renderer:
   m_ObjectHideFlags: 0
@@ -53261,7 +54370,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 87
+  m_RootOrder: 86
 --- !u!1001 &1661821371
 Prefab:
   m_ObjectHideFlags: 0
@@ -53299,7 +54408,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f6ba98ea6ced8ea479de804d30de9c71, type: 2}
       propertyPath: m_RootOrder
-      value: 140
+      value: 149
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: f6ba98ea6ced8ea479de804d30de9c71, type: 2}
       propertyPath: InteractionRadius
@@ -53578,6 +54687,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
+  inventorySprite: {fileID: 21300000, guid: a86fb142c895f8543a0e9deae93c0257, type: 3}
 --- !u!114 &1665979626
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -53610,6 +54720,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
+  inventorySprite: {fileID: 0}
 --- !u!23 &1665979628
 Renderer:
   m_ObjectHideFlags: 0
@@ -53650,7 +54761,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 198
+  m_RootOrder: 199
 --- !u!1 &1667156904
 GameObject:
   m_ObjectHideFlags: 0
@@ -53784,6 +54895,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
+  inventorySprite: {fileID: 21300000, guid: a86fb142c895f8543a0e9deae93c0257, type: 3}
 --- !u!114 &1667580343
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -53816,6 +54928,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
+  inventorySprite: {fileID: 0}
 --- !u!23 &1667580345
 Renderer:
   m_ObjectHideFlags: 0
@@ -53856,7 +54969,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 193
+  m_RootOrder: 194
 --- !u!1 &1667773181
 GameObject:
   m_ObjectHideFlags: 0
@@ -54066,7 +55179,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 3add72caf4c6658459aa3e76fc2d7cd0, type: 2}
       propertyPath: m_RootOrder
-      value: 178
+      value: 187
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: 3add72caf4c6658459aa3e76fc2d7cd0, type: 2}
       propertyPath: InteractionRadius
@@ -54172,7 +55285,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: a537460f0a3bbbf4cbfec5d0faf04608, type: 2}
       propertyPath: m_RootOrder
-      value: 38
+      value: 39
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: a537460f0a3bbbf4cbfec5d0faf04608, type: 2}
       propertyPath: InteractionRadius
@@ -54346,6 +55459,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
+  inventorySprite: {fileID: 21300000, guid: 79e16ca54f518284b8c8926abc8766d0, type: 3}
 --- !u!23 &1675015253
 Renderer:
   m_ObjectHideFlags: 0
@@ -54386,7 +55500,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 122
+  m_RootOrder: 123
 --- !u!1001 &1678979600
 Prefab:
   m_ObjectHideFlags: 0
@@ -54424,7 +55538,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: e133f7feb0a24394c81b8792639bc794, type: 2}
       propertyPath: m_RootOrder
-      value: 113
+      value: 122
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e133f7feb0a24394c81b8792639bc794, type: 2}
@@ -54770,6 +55884,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
+  inventorySprite: {fileID: 21300000, guid: fabb0cdf7e49f934bbf1838c19808412, type: 3}
 --- !u!23 &1692205143
 Renderer:
   m_ObjectHideFlags: 0
@@ -54810,7 +55925,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 98
+  m_RootOrder: 99
 --- !u!1 &1696373613
 GameObject:
   m_ObjectHideFlags: 0
@@ -54880,7 +55995,7 @@ Transform:
   m_Children:
   - {fileID: 2000443152}
   m_Father: {fileID: 0}
-  m_RootOrder: 205
+  m_RootOrder: 206
 --- !u!65 &1701931911
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -54988,7 +56103,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 842528d34c2e16540a628ef6977ab911, type: 2}
       propertyPath: m_RootOrder
-      value: 131
+      value: 140
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 842528d34c2e16540a628ef6977ab911, type: 2}
       propertyPath: InteractionRadius
@@ -55207,7 +56322,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: e133f7feb0a24394c81b8792639bc794, type: 2}
       propertyPath: m_RootOrder
-      value: 77
+      value: 82
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e133f7feb0a24394c81b8792639bc794, type: 2}
@@ -55389,7 +56504,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 369e3e9680f1aa545bc9272e60d12bf8, type: 2}
       propertyPath: m_RootOrder
-      value: 12
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: 369e3e9680f1aa545bc9272e60d12bf8, type: 2}
       propertyPath: m_Name
@@ -55451,6 +56566,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
+  inventorySprite: {fileID: 21300000, guid: fabb0cdf7e49f934bbf1838c19808412, type: 3}
 --- !u!23 &1709988564
 Renderer:
   m_ObjectHideFlags: 0
@@ -55491,7 +56607,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 103
+  m_RootOrder: 104
 --- !u!1 &1710649531
 GameObject:
   m_ObjectHideFlags: 0
@@ -55683,7 +56799,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 845135208a0fce4488e286eee9113bb1, type: 2}
       propertyPath: m_RootOrder
-      value: 143
+      value: 152
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 845135208a0fce4488e286eee9113bb1, type: 2}
@@ -55727,7 +56843,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 3add72caf4c6658459aa3e76fc2d7cd0, type: 2}
       propertyPath: m_RootOrder
-      value: 177
+      value: 186
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: 3add72caf4c6658459aa3e76fc2d7cd0, type: 2}
       propertyPath: InteractionRadius
@@ -56144,6 +57260,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
+  inventorySprite: {fileID: 21300000, guid: 075a08da52ff47545add5503520059ee, type: 3}
 --- !u!23 &1734345566
 Renderer:
   m_ObjectHideFlags: 0
@@ -56184,7 +57301,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 76
+  m_RootOrder: 77
 --- !u!1 &1735231437
 GameObject:
   m_ObjectHideFlags: 0
@@ -56305,6 +57422,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
+  inventorySprite: {fileID: 21300000, guid: 5e909bf71c9b68f4790b0e394b3356a8, type: 3}
 --- !u!23 &1739808103
 Renderer:
   m_ObjectHideFlags: 0
@@ -56345,7 +57463,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 161
+  m_RootOrder: 162
 --- !u!1 &1748503347
 GameObject:
   m_ObjectHideFlags: 0
@@ -56378,6 +57496,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
+  inventorySprite: {fileID: 21300000, guid: 207b26bd2376b694dac1dab972102c4d, type: 3}
 --- !u!114 &1748503349
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -56437,7 +57556,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 58
+  m_RootOrder: 56
 --- !u!1 &1749073199
 GameObject:
   m_ObjectHideFlags: 0
@@ -56471,6 +57590,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
+  inventorySprite: {fileID: 21300000, guid: a86fb142c895f8543a0e9deae93c0257, type: 3}
 --- !u!114 &1749073201
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -56503,6 +57623,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
+  inventorySprite: {fileID: 0}
 --- !u!23 &1749073203
 Renderer:
   m_ObjectHideFlags: 0
@@ -56543,7 +57664,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 197
+  m_RootOrder: 198
 --- !u!1 &1750254303
 GameObject:
   m_ObjectHideFlags: 0
@@ -56910,7 +58031,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: fedbf4c7adac46848b6a1a570ac1f584, type: 2}
       propertyPath: m_RootOrder
-      value: 70
+      value: 75
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fedbf4c7adac46848b6a1a570ac1f584, type: 2}
@@ -57302,7 +58423,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: e133f7feb0a24394c81b8792639bc794, type: 2}
       propertyPath: m_RootOrder
-      value: 119
+      value: 128
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e133f7feb0a24394c81b8792639bc794, type: 2}
@@ -57346,7 +58467,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 3add72caf4c6658459aa3e76fc2d7cd0, type: 2}
       propertyPath: m_RootOrder
-      value: 153
+      value: 162
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: 3add72caf4c6658459aa3e76fc2d7cd0, type: 2}
       propertyPath: InteractionRadius
@@ -57394,7 +58515,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b62decc40a48fd14f845d8e02ca16e07, type: 2}
       propertyPath: m_RootOrder
-      value: 176
+      value: 185
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: b62decc40a48fd14f845d8e02ca16e07, type: 2}
       propertyPath: InteractionRadius
@@ -57530,7 +58651,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 845135208a0fce4488e286eee9113bb1, type: 2}
       propertyPath: m_RootOrder
-      value: 190
+      value: 199
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 845135208a0fce4488e286eee9113bb1, type: 2}
@@ -57828,6 +58949,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
+  inventorySprite: {fileID: 21300000, guid: 207b26bd2376b694dac1dab972102c4d, type: 3}
 --- !u!114 &1784113546
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -57887,7 +59009,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 114
+  m_RootOrder: 115
 --- !u!1 &1790601706
 GameObject:
   m_ObjectHideFlags: 0
@@ -57939,6 +59061,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
+  inventorySprite: {fileID: 21300000, guid: 74e5e08132e36fa4da8651e50f038972, type: 3}
 --- !u!23 &1790601709
 Renderer:
   m_ObjectHideFlags: 0
@@ -57979,7 +59102,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 112
+  m_RootOrder: 113
 --- !u!1001 &1791891764
 Prefab:
   m_ObjectHideFlags: 0
@@ -58017,7 +59140,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 8a85f714c8fbfc84c817ff00aec894a2, type: 2}
       propertyPath: m_RootOrder
-      value: 90
+      value: 99
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8a85f714c8fbfc84c817ff00aec894a2, type: 2}
@@ -58583,6 +59706,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
+  inventorySprite: {fileID: 21300000, guid: a86fb142c895f8543a0e9deae93c0257, type: 3}
 --- !u!114 &1810927641
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -58615,6 +59739,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
+  inventorySprite: {fileID: 0}
 --- !u!23 &1810927643
 Renderer:
   m_ObjectHideFlags: 0
@@ -58655,7 +59780,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 196
+  m_RootOrder: 197
 --- !u!1 &1812571907
 GameObject:
   m_ObjectHideFlags: 0
@@ -58806,7 +59931,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 8a85f714c8fbfc84c817ff00aec894a2, type: 2}
       propertyPath: m_RootOrder
-      value: 95
+      value: 104
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8a85f714c8fbfc84c817ff00aec894a2, type: 2}
@@ -58977,7 +60102,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: e133f7feb0a24394c81b8792639bc794, type: 2}
       propertyPath: m_RootOrder
-      value: 170
+      value: 179
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e133f7feb0a24394c81b8792639bc794, type: 2}
@@ -59217,6 +60342,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
+  inventorySprite: {fileID: 21300000, guid: 74e5e08132e36fa4da8651e50f038972, type: 3}
 --- !u!23 &1824902618
 Renderer:
   m_ObjectHideFlags: 0
@@ -59257,7 +60383,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 118
+  m_RootOrder: 119
 --- !u!1 &1826047649
 GameObject:
   m_ObjectHideFlags: 0
@@ -59323,7 +60449,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 53
+  m_RootOrder: 59
 --- !u!1 &1826954081
 GameObject:
   m_ObjectHideFlags: 0
@@ -59444,6 +60570,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
+  inventorySprite: {fileID: 21300000, guid: 075a08da52ff47545add5503520059ee, type: 3}
 --- !u!23 &1828374167
 Renderer:
   m_ObjectHideFlags: 0
@@ -59484,7 +60611,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 121
+  m_RootOrder: 122
 --- !u!1 &1832227244
 GameObject:
   m_ObjectHideFlags: 0
@@ -59556,7 +60683,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 30
+  m_RootOrder: 32
 --- !u!1 &1832895641
 GameObject:
   m_ObjectHideFlags: 0
@@ -59707,7 +60834,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: fedbf4c7adac46848b6a1a570ac1f584, type: 2}
       propertyPath: m_RootOrder
-      value: 67
+      value: 72
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fedbf4c7adac46848b6a1a570ac1f584, type: 2}
@@ -59751,7 +60878,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0859fe67e4985764eb41dda1a1e2b743, type: 2}
       propertyPath: m_RootOrder
-      value: 105
+      value: 114
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0859fe67e4985764eb41dda1a1e2b743, type: 2}
@@ -59809,6 +60936,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
+  inventorySprite: {fileID: 21300000, guid: 74e5e08132e36fa4da8651e50f038972, type: 3}
 --- !u!23 &1842498273
 Renderer:
   m_ObjectHideFlags: 0
@@ -59849,7 +60977,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 115
+  m_RootOrder: 116
 --- !u!1 &1843944601
 GameObject:
   m_ObjectHideFlags: 0
@@ -59956,7 +61084,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: fedbf4c7adac46848b6a1a570ac1f584, type: 2}
       propertyPath: m_RootOrder
-      value: 194
+      value: 203
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fedbf4c7adac46848b6a1a570ac1f584, type: 2}
@@ -60384,6 +61512,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
+  inventorySprite: {fileID: 21300000, guid: 6467d26a256321f4d88c7c40f1ddd161, type: 3}
 --- !u!23 &1855933437
 Renderer:
   m_ObjectHideFlags: 0
@@ -60424,7 +61553,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 61
+  m_RootOrder: 60
 --- !u!1001 &1858836052
 Prefab:
   m_ObjectHideFlags: 0
@@ -60462,7 +61591,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 49541db3a066d6e44be76dab4fd9dff3, type: 2}
       propertyPath: m_RootOrder
-      value: 22
+      value: 23
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 49541db3a066d6e44be76dab4fd9dff3, type: 2}
@@ -60564,6 +61693,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
+  inventorySprite: {fileID: 21300000, guid: 74e5e08132e36fa4da8651e50f038972, type: 3}
 --- !u!23 &1863179372
 Renderer:
   m_ObjectHideFlags: 0
@@ -60604,7 +61734,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 59
+  m_RootOrder: 58
 --- !u!1 &1864533762
 GameObject:
   m_ObjectHideFlags: 0
@@ -61082,6 +62212,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
+  inventorySprite: {fileID: 21300000, guid: 79e16ca54f518284b8c8926abc8766d0, type: 3}
 --- !u!23 &1881673822
 Renderer:
   m_ObjectHideFlags: 0
@@ -61122,7 +62253,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 52
+  m_RootOrder: 51
 --- !u!1 &1882904342
 GameObject:
   m_ObjectHideFlags: 0
@@ -61250,7 +62381,7 @@ Transform:
   m_Children:
   - {fileID: 1512318407}
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 18
 --- !u!1 &1886651642
 GameObject:
   m_ObjectHideFlags: 0
@@ -61371,6 +62502,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
+  inventorySprite: {fileID: 21300000, guid: 207b26bd2376b694dac1dab972102c4d, type: 3}
 --- !u!23 &1892181408
 Renderer:
   m_ObjectHideFlags: 0
@@ -61411,7 +62543,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 64
+  m_RootOrder: 63
 --- !u!1 &1894789443
 GameObject:
   m_ObjectHideFlags: 0
@@ -61518,7 +62650,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f84c4cfd572907c4aa9c37592eaf95e5, type: 2}
       propertyPath: m_RootOrder
-      value: 186
+      value: 195
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: f84c4cfd572907c4aa9c37592eaf95e5, type: 2}
       propertyPath: InteractionRadius
@@ -61846,7 +62978,7 @@ Transform:
   - {fileID: 1606557867}
   - {fileID: 1214813911}
   m_Father: {fileID: 0}
-  m_RootOrder: 43
+  m_RootOrder: 46
 --- !u!1 &1905854063
 GameObject:
   m_ObjectHideFlags: 0
@@ -61898,6 +63030,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
+  inventorySprite: {fileID: 21300000, guid: 5e909bf71c9b68f4790b0e394b3356a8, type: 3}
 --- !u!23 &1905854066
 Renderer:
   m_ObjectHideFlags: 0
@@ -61938,7 +63071,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 165
+  m_RootOrder: 166
 --- !u!1 &1912405391
 GameObject:
   m_ObjectHideFlags: 0
@@ -62148,6 +63281,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
+  inventorySprite: {fileID: 21300000, guid: 92e68bc38ce3bad498b44364730e3b85, type: 3}
 --- !u!23 &1915496703
 Renderer:
   m_ObjectHideFlags: 0
@@ -62188,7 +63322,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 136
+  m_RootOrder: 137
 --- !u!1 &1917301979
 GameObject:
   m_ObjectHideFlags: 0
@@ -62598,6 +63732,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
+  inventorySprite: {fileID: 21300000, guid: 6467d26a256321f4d88c7c40f1ddd161, type: 3}
 --- !u!23 &1922083431
 Renderer:
   m_ObjectHideFlags: 0
@@ -62802,7 +63937,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: edd970519df8ff648a3a49ee2ad875bd, type: 2}
       propertyPath: m_RootOrder
-      value: 122
+      value: 131
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: edd970519df8ff648a3a49ee2ad875bd, type: 2}
       propertyPath: InteractionRadius
@@ -62850,7 +63985,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7207b2dd750de074e964129ba9f48173, type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: 7207b2dd750de074e964129ba9f48173, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -62903,7 +64038,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: d9a89992e402d2b4e92faa99f0b52dbf, type: 2}
       propertyPath: m_RootOrder
-      value: 23
+      value: 24
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d9a89992e402d2b4e92faa99f0b52dbf, type: 2}
@@ -62988,7 +64123,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 8a85f714c8fbfc84c817ff00aec894a2, type: 2}
       propertyPath: m_RootOrder
-      value: 97
+      value: 106
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8a85f714c8fbfc84c817ff00aec894a2, type: 2}
@@ -63046,6 +64181,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
+  inventorySprite: {fileID: 21300000, guid: 075a08da52ff47545add5503520059ee, type: 3}
 --- !u!23 &1938469332
 Renderer:
   m_ObjectHideFlags: 0
@@ -63086,7 +64222,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 179
+  m_RootOrder: 180
 --- !u!1 &1939157701
 GameObject:
   m_ObjectHideFlags: 0
@@ -63223,7 +64359,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 19a8ec6a2b6d3844bbb20fc1a5f63060, type: 2}
       propertyPath: m_RootOrder
-      value: 57
+      value: 65
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 19a8ec6a2b6d3844bbb20fc1a5f63060, type: 2}
@@ -63437,6 +64573,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
+  inventorySprite: {fileID: 21300000, guid: a86fb142c895f8543a0e9deae93c0257, type: 3}
 --- !u!114 &1946501097
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -63469,6 +64606,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
+  inventorySprite: {fileID: 0}
 --- !u!23 &1946501099
 Renderer:
   m_ObjectHideFlags: 0
@@ -63509,7 +64647,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 57
+  m_RootOrder: 55
 --- !u!1001 &1946675502
 Prefab:
   m_ObjectHideFlags: 0
@@ -63547,7 +64685,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400006, guid: a2b4b6ac6bf32da4bbfc272a6a036afd, type: 2}
       propertyPath: m_RootOrder
-      value: 37
+      value: 38
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a2b4b6ac6bf32da4bbfc272a6a036afd, type: 2}
@@ -63586,6 +64724,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
+  inventorySprite: {fileID: 21300000, guid: 207b26bd2376b694dac1dab972102c4d, type: 3}
 --- !u!114 &1946915236
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -63645,7 +64784,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 170
+  m_RootOrder: 171
 --- !u!1 &1949339365
 GameObject:
   m_ObjectHideFlags: 0
@@ -63697,6 +64836,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
+  inventorySprite: {fileID: 21300000, guid: 6467d26a256321f4d88c7c40f1ddd161, type: 3}
 --- !u!23 &1949339368
 Renderer:
   m_ObjectHideFlags: 0
@@ -63737,7 +64877,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 92
+  m_RootOrder: 91
 --- !u!1 &1954935161
 GameObject:
   m_ObjectHideFlags: 0
@@ -63835,6 +64975,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
+  inventorySprite: {fileID: 21300000, guid: 207b26bd2376b694dac1dab972102c4d, type: 3}
 --- !u!114 &1955418618
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -63894,7 +65035,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 169
+  m_RootOrder: 170
 --- !u!1001 &1957160046
 Prefab:
   m_ObjectHideFlags: 0
@@ -63932,7 +65073,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: e133f7feb0a24394c81b8792639bc794, type: 2}
       propertyPath: m_RootOrder
-      value: 60
+      value: 68
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e133f7feb0a24394c81b8792639bc794, type: 2}
@@ -63990,6 +65131,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
+  inventorySprite: {fileID: 21300000, guid: fabb0cdf7e49f934bbf1838c19808412, type: 3}
 --- !u!23 &1958378497
 Renderer:
   m_ObjectHideFlags: 0
@@ -64030,7 +65172,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 97
+  m_RootOrder: 98
 --- !u!1 &1959969706
 GameObject:
   m_ObjectHideFlags: 0
@@ -64263,6 +65405,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
+  inventorySprite: {fileID: 21300000, guid: fabb0cdf7e49f934bbf1838c19808412, type: 3}
 --- !u!23 &1967508039
 Renderer:
   m_ObjectHideFlags: 0
@@ -64378,7 +65521,7 @@ Transform:
   m_Children:
   - {fileID: 704972772}
   m_Father: {fileID: 0}
-  m_RootOrder: 203
+  m_RootOrder: 204
 --- !u!65 &1969132409
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -64579,7 +65722,7 @@ Transform:
   m_Children:
   - {fileID: 1667301768}
   m_Father: {fileID: 0}
-  m_RootOrder: 74
+  m_RootOrder: 75
 --- !u!65 &1973834460
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -64756,7 +65899,7 @@ Transform:
   - {fileID: 2023759374}
   - {fileID: 585236523}
   m_Father: {fileID: 0}
-  m_RootOrder: 40
+  m_RootOrder: 42
 --- !u!1 &1976497612
 GameObject:
   m_ObjectHideFlags: 0
@@ -64801,7 +65944,7 @@ Transform:
   m_Children:
   - {fileID: 1850384251}
   m_Father: {fileID: 0}
-  m_RootOrder: 25
+  m_RootOrder: 24
 --- !u!1001 &1976887924
 Prefab:
   m_ObjectHideFlags: 0
@@ -64924,13 +66067,85 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 8a85f714c8fbfc84c817ff00aec894a2, type: 2}
       propertyPath: m_RootOrder
-      value: 92
+      value: 101
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8a85f714c8fbfc84c817ff00aec894a2, type: 2}
   m_RootGameObject: {fileID: 1512766452}
   m_IsPrefabParent: 0
   m_IsExploded: 1
+--- !u!1 &1981337441
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100006, guid: 5a1faa1dfa6c2b1438a5235ba45c395a, type: 2}
+  m_PrefabInternal: {fileID: 2037409405}
+  serializedVersion: 4
+  m_Component:
+  - 224: {fileID: 1981337442}
+  - 222: {fileID: 1981337444}
+  - 114: {fileID: 1981337443}
+  m_Layer: 5
+  m_Name: ItemAmount
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1981337442
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 22400006, guid: 5a1faa1dfa6c2b1438a5235ba45c395a,
+    type: 2}
+  m_PrefabInternal: {fileID: 2037409405}
+  m_GameObject: {fileID: 1981337441}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 108551521}
+  m_RootOrder: 2
+  m_AnchorMin: {x: .5, y: .5}
+  m_AnchorMax: {x: .5, y: .5}
+  m_AnchoredPosition: {x: 1.90009999, y: -101.169998}
+  m_SizeDelta: {x: 227.800003, y: 41}
+  m_Pivot: {x: .5, y: .5}
+--- !u!114 &1981337443
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400012, guid: 5a1faa1dfa6c2b1438a5235ba45c395a,
+    type: 2}
+  m_PrefabInternal: {fileID: 2037409405}
+  m_GameObject: {fileID: 1981337441}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: .1953125, g: .1953125, b: .1953125, a: 1}
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 30
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 4
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: '0
+
+'
+--- !u!222 &1981337444
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 22200006, guid: 5a1faa1dfa6c2b1438a5235ba45c395a,
+    type: 2}
+  m_PrefabInternal: {fileID: 2037409405}
+  m_GameObject: {fileID: 1981337441}
+  m_HideIfInvisible: 1
 --- !u!1001 &1983946906
 Prefab:
   m_ObjectHideFlags: 0
@@ -64968,7 +66183,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: e133f7feb0a24394c81b8792639bc794, type: 2}
       propertyPath: m_RootOrder
-      value: 138
+      value: 147
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e133f7feb0a24394c81b8792639bc794, type: 2}
@@ -65081,7 +66296,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: a9ba180a0917e05429324554a3f66868, type: 2}
       propertyPath: m_RootOrder
-      value: 128
+      value: 137
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: a9ba180a0917e05429324554a3f66868, type: 2}
       propertyPath: InteractionRadius
@@ -65228,7 +66443,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0244d14266c8ee544804b1d988a45262, type: 2}
       propertyPath: m_RootOrder
-      value: 116
+      value: 125
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0244d14266c8ee544804b1d988a45262, type: 2}
@@ -65555,6 +66770,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
+  inventorySprite: {fileID: 21300000, guid: 075a08da52ff47545add5503520059ee, type: 3}
 --- !u!23 &1994062700
 Renderer:
   m_ObjectHideFlags: 0
@@ -66015,7 +67231,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0244d14266c8ee544804b1d988a45262, type: 2}
       propertyPath: m_RootOrder
-      value: 180
+      value: 189
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0244d14266c8ee544804b1d988a45262, type: 2}
@@ -66073,6 +67289,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
+  inventorySprite: {fileID: 21300000, guid: fabb0cdf7e49f934bbf1838c19808412, type: 3}
 --- !u!23 &2005768394
 Renderer:
   m_ObjectHideFlags: 0
@@ -66113,7 +67330,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 102
+  m_RootOrder: 103
 --- !u!1 &2006575853
 GameObject:
   m_ObjectHideFlags: 0
@@ -66165,6 +67382,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
+  inventorySprite: {fileID: 21300000, guid: 74e5e08132e36fa4da8651e50f038972, type: 3}
 --- !u!23 &2006575856
 Renderer:
   m_ObjectHideFlags: 0
@@ -66205,7 +67423,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 177
+  m_RootOrder: 178
 --- !u!1 &2006804605
 GameObject:
   m_ObjectHideFlags: 0
@@ -66328,7 +67546,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 270cc1d03d521674db351e9b916d8ea8, type: 3}
       propertyPath: m_RootOrder
-      value: 27
+      value: 29
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: 270cc1d03d521674db351e9b916d8ea8, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -66565,7 +67783,7 @@ Transform:
   m_Children:
   - {fileID: 1623746177}
   m_Father: {fileID: 0}
-  m_RootOrder: 73
+  m_RootOrder: 74
 --- !u!65 &2016252750
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -66615,7 +67833,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: e133f7feb0a24394c81b8792639bc794, type: 2}
       propertyPath: m_RootOrder
-      value: 73
+      value: 78
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e133f7feb0a24394c81b8792639bc794, type: 2}
@@ -67031,6 +68249,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
+  inventorySprite: {fileID: 21300000, guid: 5e909bf71c9b68f4790b0e394b3356a8, type: 3}
 --- !u!23 &2022924024
 Renderer:
   m_ObjectHideFlags: 0
@@ -67071,7 +68290,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 185
+  m_RootOrder: 186
 --- !u!1 &2023577111
 GameObject:
   m_ObjectHideFlags: 0
@@ -67243,6 +68462,102 @@ Prefab:
   m_RootGameObject: {fileID: 462246587}
   m_IsPrefabParent: 0
   m_IsExploded: 1
+--- !u!1001 &2037409405
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 22400026, guid: 5a1faa1dfa6c2b1438a5235ba45c395a, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22400026, guid: 5a1faa1dfa6c2b1438a5235ba45c395a, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22400026, guid: 5a1faa1dfa6c2b1438a5235ba45c395a, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22400026, guid: 5a1faa1dfa6c2b1438a5235ba45c395a, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22400026, guid: 5a1faa1dfa6c2b1438a5235ba45c395a, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22400026, guid: 5a1faa1dfa6c2b1438a5235ba45c395a, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22400026, guid: 5a1faa1dfa6c2b1438a5235ba45c395a, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 22400026, guid: 5a1faa1dfa6c2b1438a5235ba45c395a, type: 2}
+      propertyPath: m_RootOrder
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 22400026, guid: 5a1faa1dfa6c2b1438a5235ba45c395a, type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22400026, guid: 5a1faa1dfa6c2b1438a5235ba45c395a, type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22400026, guid: 5a1faa1dfa6c2b1438a5235ba45c395a, type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22400026, guid: 5a1faa1dfa6c2b1438a5235ba45c395a, type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22400026, guid: 5a1faa1dfa6c2b1438a5235ba45c395a, type: 2}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22400026, guid: 5a1faa1dfa6c2b1438a5235ba45c395a, type: 2}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22400026, guid: 5a1faa1dfa6c2b1438a5235ba45c395a, type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22400026, guid: 5a1faa1dfa6c2b1438a5235ba45c395a, type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22400026, guid: 5a1faa1dfa6c2b1438a5235ba45c395a, type: 2}
+      propertyPath: m_Pivot.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22400026, guid: 5a1faa1dfa6c2b1438a5235ba45c395a, type: 2}
+      propertyPath: m_Pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22400024, guid: 5a1faa1dfa6c2b1438a5235ba45c395a, type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: -398.499939
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400018, guid: 5a1faa1dfa6c2b1438a5235ba45c395a, type: 2}
+      propertyPath: m_Value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400018, guid: 5a1faa1dfa6c2b1438a5235ba45c395a, type: 2}
+      propertyPath: m_Size
+      value: .361889511
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 5a1faa1dfa6c2b1438a5235ba45c395a, type: 2}
+  m_RootGameObject: {fileID: 827458986}
+  m_IsPrefabParent: 0
+  m_IsExploded: 1
 --- !u!1 &2039505928
 GameObject:
   m_ObjectHideFlags: 0
@@ -67349,7 +68664,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 842528d34c2e16540a628ef6977ab911, type: 2}
       propertyPath: m_RootOrder
-      value: 126
+      value: 135
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 842528d34c2e16540a628ef6977ab911, type: 2}
       propertyPath: InteractionRadius
@@ -67593,7 +68908,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: e9c341e1b592c3946b4c43984921ffbc, type: 2}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e9c341e1b592c3946b4c43984921ffbc, type: 2}
@@ -68086,6 +69401,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
+  inventorySprite: {fileID: 21300000, guid: 207b26bd2376b694dac1dab972102c4d, type: 3}
 --- !u!114 &2069465835
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -68509,6 +69825,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
+  inventorySprite: {fileID: 21300000, guid: 075a08da52ff47545add5503520059ee, type: 3}
 --- !u!23 &2077439451
 Renderer:
   m_ObjectHideFlags: 0
@@ -68549,7 +69866,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 86
+  m_RootOrder: 84
 --- !u!1 &2078704155
 GameObject:
   m_ObjectHideFlags: 0
@@ -68601,6 +69918,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
+  inventorySprite: {fileID: 21300000, guid: 207b26bd2376b694dac1dab972102c4d, type: 3}
 --- !u!23 &2078704158
 Renderer:
   m_ObjectHideFlags: 0
@@ -68641,7 +69959,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 46
+  m_RootOrder: 47
 --- !u!1 &2082495888
 GameObject:
   m_ObjectHideFlags: 0
@@ -69138,6 +70456,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
+  inventorySprite: {fileID: 21300000, guid: 075a08da52ff47545add5503520059ee, type: 3}
 --- !u!23 &2098579225
 Renderer:
   m_ObjectHideFlags: 0
@@ -69178,7 +70497,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 144
+  m_RootOrder: 145
 --- !u!1 &2099403004
 GameObject:
   m_ObjectHideFlags: 0
@@ -69246,7 +70565,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 8a85f714c8fbfc84c817ff00aec894a2, type: 2}
       propertyPath: m_RootOrder
-      value: 145
+      value: 154
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8a85f714c8fbfc84c817ff00aec894a2, type: 2}
@@ -69402,7 +70721,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28104475db31d074a93b4e8618cb2653, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InventoryPrintKey: 105
+  InventoryPrintKey: 112
+  InventoryDisplayKey: 105
 --- !u!54 &2108539855
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -69913,6 +71233,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
+  inventorySprite: {fileID: 21300000, guid: 075a08da52ff47545add5503520059ee, type: 3}
 --- !u!23 &2118647731
 Renderer:
   m_ObjectHideFlags: 0
@@ -69953,7 +71274,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 181
+  m_RootOrder: 182
 --- !u!1 &2119896074
 GameObject:
   m_ObjectHideFlags: 0
@@ -70227,6 +71548,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
+  inventorySprite: {fileID: 21300000, guid: 207b26bd2376b694dac1dab972102c4d, type: 3}
 --- !u!114 &2127475980
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -70338,6 +71660,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
+  inventorySprite: {fileID: 21300000, guid: 74e5e08132e36fa4da8651e50f038972, type: 3}
 --- !u!23 &2128710027
 Renderer:
   m_ObjectHideFlags: 0
@@ -70448,7 +71771,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0859fe67e4985764eb41dda1a1e2b743, type: 2}
       propertyPath: m_RootOrder
-      value: 162
+      value: 171
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0859fe67e4985764eb41dda1a1e2b743, type: 2}
@@ -70506,6 +71829,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
+  inventorySprite: {fileID: 21300000, guid: 6467d26a256321f4d88c7c40f1ddd161, type: 3}
 --- !u!23 &2134035392
 Renderer:
   m_ObjectHideFlags: 0
@@ -70546,7 +71870,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 189
+  m_RootOrder: 190
 --- !u!1001 &2138480084
 Prefab:
   m_ObjectHideFlags: 0
@@ -70584,7 +71908,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 845135208a0fce4488e286eee9113bb1, type: 2}
       propertyPath: m_RootOrder
-      value: 185
+      value: 194
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 845135208a0fce4488e286eee9113bb1, type: 2}
