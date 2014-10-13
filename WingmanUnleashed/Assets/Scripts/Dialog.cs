@@ -3,6 +3,11 @@ using System.Collections;
 
 public class Dialog : MonoBehaviour
 {
+	void Start()
+	{
+		npcName = gameObject.GetComponent<Interactable>().InteractableName;
+	}
+
 	public string npcName;
 
 	public string npcText;
@@ -17,15 +22,5 @@ public class Dialog : MonoBehaviour
 
 	public string[] disguiseName;
 
-	public InventoryItem t;
-
-	void Start()
-	{
-
-	}
-
-	void Update()
-	{
-
-	}
+	//public InventoryItem t;
 }

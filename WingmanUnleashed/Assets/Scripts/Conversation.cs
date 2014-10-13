@@ -1,17 +1,8 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 public class Conversation : MonoBehaviour
 {
 	public Dialog start;
-
-	void Start()
-	{
-
-	}
-
-	void Update()
-	{
-
-	}
 }

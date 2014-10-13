@@ -9,6 +9,7 @@ public class Controller_ThirdPerson : MonoBehaviour
 	Vector3 acceleration;
 	Vector3 lift;
 	float windResistance = 1.15f;
+	public bool IsInConversation = false;
 
 	private float horizontal;
 	private float vertical;
@@ -19,7 +20,7 @@ public class Controller_ThirdPerson : MonoBehaviour
 
 	void flightmodeOff()
 	{
-        Camera_ThirdPerson.Instance.usingFlightCamera = false;
+		Camera_ThirdPerson.Instance.usingFlightCamera = false;
 		acceleration = new Vector3(0.0f, 0.0f, 0.0f);
 		lift = new Vector3(0.0f, 0.0f, 0.0f);
 		velocity = new Vector3(0.0f, 0.0f, 0.0f);
@@ -34,7 +35,7 @@ public class Controller_ThirdPerson : MonoBehaviour
 	}
 	void flightmodeOn()
 	{
-        Camera_ThirdPerson.Instance.usingFlightCamera = true;
+		Camera_ThirdPerson.Instance.usingFlightCamera = true;
 		acceleration = new Vector3(0.0f, -9.81f, 0.0f);
 		lift = new Vector3(0.0f, 0.0f, 0.0f);
 		velocity = new Vector3(0.0f, 0.0f, 0.0f);
@@ -49,93 +50,96 @@ public class Controller_ThirdPerson : MonoBehaviour
 
 	void Awake()
 	{
-        Instance = this;
-        Camera_ThirdPerson.checkForCameraCreation();
+		Instance = this;
+		Camera_ThirdPerson.checkForCameraCreation();
 	}
 
 	void Update()
 	{
-		if (Input.GetKeyDown(KeyCode.Space))
+		if (!IsInConversation)
 		{
+			if (Input.GetKeyDown(KeyCode.Space))
+			{
+				if (flightmode)
+				{
+					flightmodeOff();
+				}
+				else
+				{
+					flightmodeOn();
+				}
+			}
+
 			if (flightmode)
 			{
-				flightmodeOff();
+				float airspeed = velocity.magnitude;
+				lift = new Vector3(0.0f, airspeed / 2.0f, airspeed);
+				lift = player.transform.rotation * lift;
+				Vector3 netforce = acceleration + lift;
+				velocity += netforce * Time.deltaTime;
+				velocity *= (1 - (windResistance * Time.deltaTime));
+				print(velocity);
+				player.transform.position += velocity * Time.deltaTime;
+
+				if (Input.GetKey(KeyCode.Q))
+				{
+					player.transform.Rotate(new Vector3(0, 0, 1), 1.0f, Space.Self);
+					//player.transform.GetChild(0).transform.Rotate(new Vector3(0,1,0),2);
+				}
+				if (Input.GetKey(KeyCode.E))
+				{
+					player.transform.Rotate(new Vector3(0, 0, 1), -1.0f, Space.Self);
+					//player.transform.GetChild(0).transform.Rotate(new Vector3(0,1,0),-2);
+				}
+				if (Input.GetKey(KeyCode.W))
+				{
+					player.transform.Rotate(new Vector3(1, 0, 0), 1.0f, Space.Self);
+				}
+				if (Input.GetKey(KeyCode.S))
+				{
+					player.transform.Rotate(new Vector3(1, 0, 0), -1.0f, Space.Self);
+				}
+				if (Input.GetKey(KeyCode.A))
+				{
+					player.transform.Rotate(new Vector3(0, 1, 0), -1.0f, Space.Self);
+				}
+				if (Input.GetKey(KeyCode.D))
+				{
+					player.transform.Rotate(new Vector3(0, 1, 0), 1.0f, Space.Self);
+				}
 			}
 			else
 			{
-				flightmodeOn();
+				if (Camera.main == null)
+				{
+					Debug.LogError("There needs to be a main camera for the third-person camera");
+				}
+				else
+				{
+					if (inputTaken())
+					{
+						horizontal = Input.GetAxis("Horizontal");
+						vertical = Input.GetAxis("Vertical");
+						Motor_ThirdPerson.Instance.MovementVector = new Vector3(horizontal, 0.0f, vertical);
+						Motor_ThirdPerson.Instance.UpdateMotor();
+					}
+				}
 			}
-		}
-
-		if (flightmode)
-		{
-			float airspeed = velocity.magnitude;
-			lift = new Vector3(0.0f, airspeed / 2.0f, airspeed);
-			lift = player.transform.rotation * lift;
-			Vector3 netforce = acceleration + lift;
-			velocity += netforce * Time.deltaTime;
-			velocity *= (1 - (windResistance * Time.deltaTime));
-			print(velocity);
-			player.transform.position += velocity * Time.deltaTime;
-
-			if (Input.GetKey(KeyCode.Q))
+			if (Input.GetKeyDown(KeyCode.Alpha1))
 			{
-				player.transform.Rotate(new Vector3(0, 0, 1), 1.0f, Space.Self);
-				//player.transform.GetChild(0).transform.Rotate(new Vector3(0,1,0),2);
+				flightmodeOff();
+				player.transform.position = new Vector3(1328.158f, 999.9615f, 165.7299f);
 			}
-			if (Input.GetKey(KeyCode.E))
+			if (Input.GetKeyDown(KeyCode.Alpha2))
 			{
-				player.transform.Rotate(new Vector3(0, 0, 1), -1.0f, Space.Self);
-				//player.transform.GetChild(0).transform.Rotate(new Vector3(0,1,0),-2);
+				flightmodeOff();
+				player.transform.position = new Vector3(240.0185f, 865.9557f, 1163.175f);
 			}
-			if (Input.GetKey(KeyCode.W))
+			if (Input.GetKeyDown(KeyCode.Alpha3))
 			{
-				player.transform.Rotate(new Vector3(1, 0, 0), 1.0f, Space.Self);
+				flightmodeOff();
+				player.transform.position = new Vector3(1814.116f, 719.9808f, 1764.895f);
 			}
-			if (Input.GetKey(KeyCode.S))
-			{
-				player.transform.Rotate(new Vector3(1, 0, 0), -1.0f, Space.Self);
-			}
-			if (Input.GetKey(KeyCode.A))
-			{
-				player.transform.Rotate(new Vector3(0, 1, 0), -1.0f, Space.Self);
-			}
-			if (Input.GetKey(KeyCode.D))
-			{
-				player.transform.Rotate(new Vector3(0, 1, 0), 1.0f, Space.Self);
-			}
-		}
-		else
-		{
-            if (Camera.main == null)
-            {
-                Debug.LogError("There needs to be a main camera for the third-person camera");
-            }
-            else
-            {
-                if (inputTaken())
-                {
-                    horizontal = Input.GetAxis("Horizontal");
-                    vertical = Input.GetAxis("Vertical");
-                    Motor_ThirdPerson.Instance.MovementVector = new Vector3(horizontal, 0.0f, vertical);
-                    Motor_ThirdPerson.Instance.UpdateMotor();
-                }
-            }
-		}
-		if (Input.GetKeyDown(KeyCode.Alpha1))
-		{
-			flightmodeOff();
-			player.transform.position = new Vector3(1328.158f, 999.9615f, 165.7299f);
-		}
-		if (Input.GetKeyDown(KeyCode.Alpha2))
-		{
-			flightmodeOff();
-			player.transform.position = new Vector3(240.0185f, 865.9557f, 1163.175f);
-		}
-		if (Input.GetKeyDown(KeyCode.Alpha3))
-		{
-			flightmodeOff();
-			player.transform.position = new Vector3(1814.116f, 719.9808f, 1764.895f);
 		}
 	}
 
