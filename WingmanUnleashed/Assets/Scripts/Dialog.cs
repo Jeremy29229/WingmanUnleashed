@@ -5,7 +5,10 @@ public class Dialog : MonoBehaviour
 {
 	void Start()
 	{
-		npcName = gameObject.GetComponent<Interactable>().InteractableName;
+		if (gameObject.GetComponent<Interactable>() != null)
+		{
+			npcName = gameObject.GetComponent<Interactable>().InteractableName;
+		}
 	}
 
 	public string npcName;

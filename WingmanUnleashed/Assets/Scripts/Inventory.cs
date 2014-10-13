@@ -7,15 +7,15 @@ public class Inventory : MonoBehaviour
 {
 	public List<InventoryItem> items;
 	public KeyCode InventoryPrintKey;
-    public KeyCode InventoryDisplayKey;
+	public KeyCode InventoryDisplayKey;
 
-    private bool inventoryVisible;
+	private bool inventoryVisible;
 
 	void Start()
 	{
 		items = new List<InventoryItem>();
-        inventoryVisible = false;
-        GameObject.Find("InventoryCanvas").GetComponent<Canvas>().enabled = false;
+		inventoryVisible = false;
+		GameObject.Find("InventoryCanvas").GetComponent<Canvas>().enabled = false;
 	}
 
 	void Update()
@@ -24,17 +24,17 @@ public class Inventory : MonoBehaviour
 		{
 			Debug.Log(ToString());
 		}
-        if (Input.GetKeyDown(InventoryDisplayKey))
-        {
-            DisplayInventory();
-        }
+		if (Input.GetKeyDown(InventoryDisplayKey))
+		{
+			DisplayInventory();
+		}
 	}
 
-    public void DisplayInventory()
-    {
-        inventoryVisible = !inventoryVisible;
-        GameObject.Find("InventoryCanvas").GetComponent<Canvas>().enabled = inventoryVisible;
-    }
+	public void DisplayInventory()
+	{
+		inventoryVisible = !inventoryVisible;
+		GameObject.Find("InventoryCanvas").GetComponent<Canvas>().enabled = inventoryVisible;
+	}
 
 	public void AddItem(string name, Sprite inventoryImage, int amount = 1)
 	{
@@ -42,12 +42,12 @@ public class Inventory : MonoBehaviour
 		if (potentialItem == null)
 		{
 			items.Add(new InventoryItem(name, amount));
-            GameObject.Find("InventoryDisplay").GetComponent<InventoryDisplayScript>().AddItem(name, amount, inventoryImage);
+			GameObject.Find("InventoryDisplay").GetComponent<InventoryDisplayScript>().AddItem(name, amount, inventoryImage);
 		}
 		else
 		{
 			potentialItem.Amount += amount;
-            GameObject.Find("InventoryDisplay").GetComponent<InventoryDisplayScript>().UpdateAmount(name, potentialItem.Amount);
+			GameObject.Find("InventoryDisplay").GetComponent<InventoryDisplayScript>().UpdateAmount(name, potentialItem.Amount);
 		}
 	}
 
