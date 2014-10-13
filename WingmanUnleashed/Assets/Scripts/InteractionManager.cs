@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections.Generic;
 
 public class InteractionManager : MonoBehaviour
@@ -12,6 +13,7 @@ public class InteractionManager : MonoBehaviour
 	void Start()
 	{
 		UI = (Canvas)GameObject.Find("InteractionGUI").GetComponent(typeof(Canvas));
+
 		player = GameObject.Find(PlayerObjectName);
 	}
 
