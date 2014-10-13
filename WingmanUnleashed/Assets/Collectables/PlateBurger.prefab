@@ -83,7 +83,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   InteractionRadius: 1
   InteractionKey: 101
-  PlayerObjectName: CharacterBasic
+  PlayerObjectName: Wingman
   IsRepeatable: 0
   IsActive: 1
   Action: eat
