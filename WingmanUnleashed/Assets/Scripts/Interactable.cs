@@ -18,11 +18,9 @@ public class Interactable : MonoBehaviour
 	public string Action;
 	public string InteractableName;
 
-	// Use this for initialization
 	void Start()
 	{
-		UI = (Canvas)GameObject.FindObjectOfType(typeof(Canvas));
-		//updateGUIText();
+		UI = (Canvas)GameObject.Find("InteractionGUI").GetComponent(typeof(Canvas));
 		UI.enabled = false;
 		Player = GameObject.Find(PlayerObjectName);
 
@@ -39,21 +37,6 @@ public class Interactable : MonoBehaviour
 		}
 
 		GameObject.Find("InteractionManager").GetComponent<InteractionManager>().Interactables.Add(gameObject);
-	}
-
-	// Update is called once per frame
-	void Update()
-	{
-		//UI.enabled = false;
-
-		//if (Vector3.Distance(Player.transform.position, gameObject.transform.position) <= InteractionRadius)
-		//{
-		//	UI.enabled = true;
-		//	if (Input.GetKeyDown(InteractionKey))
-		//	{
-		//		behavior.InteractWith();
-		//	}
-		//}
 	}
 
 	public void InteractionUpdate()
@@ -75,6 +58,6 @@ public class Interactable : MonoBehaviour
 	public void updateGUIText()
 	{
 		UI.GetComponentInChildren<Text>().text = "Press " + InteractionKey.ToString() + " to " + Action + " " + InteractableName;
-		//UI.enabled = false;
+		UI.enabled = false;
 	}
 }
