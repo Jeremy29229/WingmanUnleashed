@@ -26,7 +26,8 @@ public class VisionDetection : MonoBehaviour {
 				if(hit.transform.gameObject == wingMan)
 				{
 					// In Range and visible
-					wingMan.GetComponent<Player>().increaseDetection();
+                    if (wingMan.GetComponent<Outfit>().outfitName=="wingsuit") wingMan.GetComponent<Player>().increaseDetection(0.1f);
+                    else wingMan.GetComponent<Player>().increaseDetection(0.025f);
 					print("VISIBLE");
 					print (wingMan.GetComponent<Player>().getDetectionLevel());
 				}

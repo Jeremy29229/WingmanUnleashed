@@ -6,6 +6,7 @@ public class Player : MonoBehaviour {
 	private Canvas HUD;
 	private Image detectionBar;
 	private Image eye;
+    public int numDetectors;
 	
 	private float detectionLevel;
 
@@ -26,9 +27,9 @@ public class Player : MonoBehaviour {
 
 	}
 
-	public void increaseDetection()
+	public void increaseDetection(float amount)
 	{
-		detectionLevel += 0.1f * Time.deltaTime;
+		detectionLevel += amount * Time.deltaTime;
 		
 	}
 
