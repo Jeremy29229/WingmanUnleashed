@@ -56,8 +56,8 @@ public class Camera_ThirdPerson : MonoBehaviour
         if (usingFlightCamera)
         {
             Vector3 abovePlayer = TargetObjectLookAt.up * cameraDistance;
-            Vector3 belowPlayer = TargetObjectLookAt.forward * cameraDistance;
-            Vector3 newPosition = TargetObjectLookAt.position + abovePlayer - belowPlayer;
+            Vector3 behindPlayer = TargetObjectLookAt.forward * cameraDistance;
+            Vector3 newPosition = (TargetObjectLookAt.position + abovePlayer) - behindPlayer;
 
             transform.position = Vector3.Lerp(transform.position, newPosition, distanceSmoothing);
 
