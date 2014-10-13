@@ -308,6 +308,7 @@ MonoBehaviour:
   m_LightmapIndex: -1
   m_LightmapSize: 1024
   m_DrawTreesAndFoliage: 1
+  m_CollectDetailPatches: 1
   m_MaterialTemplate: {fileID: 0}
 --- !u!4 &19303781
 Transform:
@@ -3952,6 +3953,7 @@ Canvas:
   m_PlaneDistance: 100
   m_PixelPerfect: 1
   m_ReceivesEvents: 1
+  m_OverrideSorting: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
 --- !u!1 &371683778
@@ -4068,7 +4070,7 @@ MonoBehaviour:
   m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Mat: {fileID: 0}
+  m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Sprite: {fileID: 21300000, guid: e45e666cfc029794cb23d198ee5c4cce, type: 3}
   m_Type: 0
@@ -4084,6 +4086,7 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 376156290}
+  m_HideIfInvisible: 0
 --- !u!1 &383631840
 GameObject:
   m_ObjectHideFlags: 0
@@ -7709,7 +7712,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   InteractionRadius: 1
   InteractionKey: 101
-  PlayerObjectName: CharacterBasic
+  PlayerObjectName: Wingman
   IsRepeatable: 1
   IsActive: 1
   Action: take
@@ -7726,7 +7729,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df116ace559f5b24f9d58aed763fad90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerObjectName: CharacterBasic
+  PlayerObjectName: Wingman
 --- !u!23 &714114523
 Renderer:
   m_ObjectHideFlags: 0
@@ -7820,6 +7823,7 @@ MonoBehaviour:
   m_LightmapIndex: -1
   m_LightmapSize: 1024
   m_DrawTreesAndFoliage: 1
+  m_CollectDetailPatches: 1
   m_MaterialTemplate: {fileID: 0}
 --- !u!4 &716663686
 Transform:
@@ -9292,7 +9296,7 @@ MonoBehaviour:
   m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Mat: {fileID: 0}
+  m_Material: {fileID: 0}
   m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
@@ -9314,6 +9318,7 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 1472801360}
   m_GameObject: {fileID: 881848743}
+  m_HideIfInvisible: 0
 --- !u!224 &881848746
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9332,6 +9337,75 @@ RectTransform:
   m_AnchoredPosition: {x: 40.8999023, y: 6.10351562e-05}
   m_SizeDelta: {x: 181.800003, y: 100}
   m_Pivot: {x: .5, y: .5}
+--- !u!1 &883225671
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 883225675}
+  - 33: {fileID: 883225674}
+  - 65: {fileID: 883225673}
+  - 23: {fileID: 883225672}
+  m_Layer: 0
+  m_Name: Cube
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!23 &883225672
+Renderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 883225671}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 2100000, guid: dd688994451074a4b8d00b7fa569d658, type: 2}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+--- !u!65 &883225673
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 883225671}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!33 &883225674
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 883225671}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &883225675
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 883225671}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1492.90002, y: 242.75, z: 541.25}
+  m_LocalScale: {x: .44896701, y: .0884588659, z: .44896701}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 273
 --- !u!1 &887292847
 GameObject:
   m_ObjectHideFlags: 0
@@ -9731,7 +9805,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   InteractionRadius: 1
   InteractionKey: 101
-  PlayerObjectName: CharacterBasic
+  PlayerObjectName: Wingman
   IsRepeatable: 1
   IsActive: 1
   Action: take
@@ -9748,7 +9822,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df116ace559f5b24f9d58aed763fad90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerObjectName: CharacterBasic
+  PlayerObjectName: Wingman
 --- !u!23 &919152844
 Renderer:
   m_ObjectHideFlags: 0
@@ -12140,6 +12214,7 @@ Canvas:
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
+  m_OverrideSorting: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
 --- !u!1 &1137722215
@@ -13881,6 +13956,7 @@ MonoBehaviour:
   m_LightmapIndex: -1
   m_LightmapSize: 1024
   m_DrawTreesAndFoliage: 1
+  m_CollectDetailPatches: 1
   m_MaterialTemplate: {fileID: 0}
 --- !u!4 &1290936509
 Transform:
@@ -18109,7 +18185,7 @@ MonoBehaviour:
   m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Mat: {fileID: 0}
+  m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Sprite: {fileID: 21300000, guid: 585df725e33359c419c747a4c01b480b, type: 3}
   m_Type: 3
@@ -18125,6 +18201,7 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1668022260}
+  m_HideIfInvisible: 0
 --- !u!1 &1668079449
 GameObject:
   m_ObjectHideFlags: 0
@@ -19812,6 +19889,7 @@ MonoBehaviour:
   m_LightmapIndex: -1
   m_LightmapSize: 1024
   m_DrawTreesAndFoliage: 1
+  m_CollectDetailPatches: 1
   m_MaterialTemplate: {fileID: 0}
 --- !u!4 &1826047652
 Transform:
@@ -19953,6 +20031,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_FirstSelected: {fileID: 0}
+  m_sendNavigationEvents: 1
 --- !u!4 &1832227248
 Transform:
   m_ObjectHideFlags: 0
@@ -20666,7 +20745,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   InteractionRadius: 1
   InteractionKey: 101
-  PlayerObjectName: CharacterBasic
+  PlayerObjectName: Wingman
   IsRepeatable: 1
   IsActive: 1
   Action: take
@@ -20683,7 +20762,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df116ace559f5b24f9d58aed763fad90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerObjectName: CharacterBasic
+  PlayerObjectName: Wingman
 --- !u!23 &1892181408
 Renderer:
   m_ObjectHideFlags: 0
@@ -21668,7 +21747,7 @@ MonoBehaviour:
   m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Mat: {fileID: 0}
+  m_Material: {fileID: 0}
   m_Color: {r: .25, g: .602941155, b: 1, a: .588235319}
   m_Sprite: {fileID: 0}
   m_Type: 0
@@ -21685,6 +21764,7 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 1472801360}
   m_GameObject: {fileID: 1954935161}
+  m_HideIfInvisible: 0
 --- !u!1001 &1957160046
 Prefab:
   m_ObjectHideFlags: 0
@@ -23107,7 +23187,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   InteractionRadius: 1
   InteractionKey: 101
-  PlayerObjectName: CharacterBasic
+  PlayerObjectName: Wingman
   IsRepeatable: 1
   IsActive: 1
   Action: take
@@ -23124,7 +23204,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df116ace559f5b24f9d58aed763fad90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerObjectName: CharacterBasic
+  PlayerObjectName: Wingman
 --- !u!23 &2078704158
 Renderer:
   m_ObjectHideFlags: 0

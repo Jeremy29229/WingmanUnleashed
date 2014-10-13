@@ -10,7 +10,7 @@ public class Interactable : MonoBehaviour
 	private IInteractable behavior;
 	public float InteractionRadius = 1.0f;
 	public KeyCode InteractionKey = KeyCode.E;
-	public string PlayerObjectName = "CharacterBasic";
+	public string PlayerObjectName = "Wingman";
 	private GameObject Player;
 	public bool IsRepeatable = false;
 	public bool IsActive = true;
