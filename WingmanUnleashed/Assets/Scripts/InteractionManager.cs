@@ -5,7 +5,7 @@ using System.Collections.Generic;
 public class InteractionManager : MonoBehaviour
 {
 	public List<GameObject> Interactables;
-    public string PlayerObjectName = "Wingman";
+	public string PlayerObjectName = "Wingman";
 
 	private GameObject player;
 	private Canvas UI;

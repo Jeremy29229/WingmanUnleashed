@@ -71,7 +71,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   InteractionRadius: 1
   InteractionKey: 101
-  PlayerObjectName: CharacterBasic
+  PlayerObjectName: Wingman
   IsRepeatable: 0
   IsActive: 1
   Action: procure
@@ -87,7 +87,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df116ace559f5b24f9d58aed763fad90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerObjectName: CharacterBasic
+  PlayerObjectName: Wingman
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
