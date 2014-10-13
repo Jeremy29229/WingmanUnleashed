@@ -70,6 +70,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
+  inventorySprite: {fileID: 21300000, guid: 79e16ca54f518284b8c8926abc8766d0, type: 3}
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1

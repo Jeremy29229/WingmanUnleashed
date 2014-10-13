@@ -4,6 +4,7 @@ public class Collectable : MonoBehaviour, IInteractable
 {
 	public string PlayerObjectName = "Wingman";
 	private Inventory inventory;
+    public Sprite inventorySprite;
 
 	void Start()
 	{
@@ -12,7 +13,7 @@ public class Collectable : MonoBehaviour, IInteractable
 
 	void IInteractable.InteractWith()
 	{
-		inventory.AddItem(gameObject.GetComponent<Interactable>().InteractableName);
+		inventory.AddItem(gameObject.GetComponent<Interactable>().InteractableName, inventorySprite);
 		Destroy(gameObject);
 	}
 }
