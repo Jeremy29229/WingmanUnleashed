@@ -2595,7 +2595,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 281960419}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1812127807}
+        m_MethodName: ProcessDialog
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &281960419
@@ -4880,6 +4892,10 @@ GameObject:
   - 95: {fileID: 440859835}
   - 114: {fileID: 440859837}
   - 114: {fileID: 440859836}
+  - 114: {fileID: 440859839}
+  - 114: {fileID: 440859838}
+  - 114: {fileID: 440859841}
+  - 114: {fileID: 440859840}
   m_Layer: 0
   m_Name: NPC1
   m_TagString: Untagged
@@ -4945,6 +4961,78 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1471c0d5e76a8b348ada14537337c60e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &440859838
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 440859833}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 152c028ba9883f44aad8faeed999ab82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  npcName: 
+  npcText: I'm having a really good time man!
+  responseText:
+  - Me too!
+  - Good for you weirdo.
+  responseObject:
+  - {fileID: 440859841}
+  - {fileID: 440859840}
+  requiredItemName: []
+  requiredItemAmount: 
+  disguiseName: []
+--- !u!114 &440859839
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 440859833}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2dc234e3a2651b44b883d0e587984c45, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  start: {fileID: 440859838}
+--- !u!114 &440859840
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 440859833}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 152c028ba9883f44aad8faeed999ab82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  npcName: 
+  npcText: Wow what a jerk.
+  responseText:
+  - <Leave>
+  responseObject: []
+  requiredItemName: []
+  requiredItemAmount: 
+  disguiseName: []
+--- !u!114 &440859841
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 440859833}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 152c028ba9883f44aad8faeed999ab82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  npcName: 
+  npcText: <wink>
+  responseText:
+  - <Leave>
+  responseObject: []
+  requiredItemName: []
+  requiredItemAmount: 
+  disguiseName: []
 --- !u!1 &443574334
 GameObject:
   m_ObjectHideFlags: 0
@@ -12729,7 +12817,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1160173038}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1812127807}
+        m_MethodName: ProcessDialog
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1160173038
@@ -14885,7 +14985,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1340529611}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1812127807}
+        m_MethodName: ProcessDialog
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+          m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1340529611
@@ -15025,6 +15137,7 @@ MonoBehaviour:
   x_Smooth: .00999999978
   y_Smooth: .100000001
   usingFlightCamera: 0
+  IsInConversation: 0
 --- !u!1 &1347957244
 GameObject:
   m_ObjectHideFlags: 0
@@ -19407,7 +19520,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1757884148}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1812127807}
+        m_MethodName: ProcessDialog
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1757884148
@@ -19819,6 +19944,7 @@ GameObject:
   - 224: {fileID: 1812127804}
   - 223: {fileID: 1812127806}
   - 114: {fileID: 1812127805}
+  - 114: {fileID: 1812127807}
   m_Layer: 5
   m_Name: ConvoGUI
   m_TagString: Untagged
@@ -19883,6 +20009,17 @@ Canvas:
   m_OverrideSorting: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
+--- !u!114 &1812127807
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1812127803}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d331e1b455244124ead3763a61dc5d10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1812571907
 GameObject:
   m_ObjectHideFlags: 0
@@ -23950,6 +24087,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 2108539851}
+  IsInConversation: 0
 --- !u!114 &2108539858
 MonoBehaviour:
   m_ObjectHideFlags: 0
