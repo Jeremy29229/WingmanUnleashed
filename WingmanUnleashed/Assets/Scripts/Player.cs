@@ -20,7 +20,10 @@ public class Player : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		detectionLevel -= 0.01f * Time.deltaTime;
+		if (detectionLevel > 0.0f)
+		{
+			detectionLevel -= 0.01f * Time.deltaTime;
+		}
 		detectionBar.fillAmount = detectionLevel;
 		detectionBar.color = Color.red * (detectionLevel+ 0.2f);
 		eye.color = Color.red * (detectionLevel + 0.2f);
