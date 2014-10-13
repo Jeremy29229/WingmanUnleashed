@@ -26,10 +26,10 @@ public class Controller_ThirdPerson : MonoBehaviour
 		velocity = new Vector3(0.0f, 0.0f, 0.0f);
 		flightmode = false;
 		player.transform.rotation = new Quaternion(0.0f, player.transform.rotation.y, 0.0f, player.transform.rotation.w);
-		player.transform.GetChild(0).transform.localRotation = Quaternion.identity;
-		BoxCollider coll = (BoxCollider)player.GetComponent("BoxCollider");
-		coll.center = new Vector3(0.0f, 0.9f, 0.0f);
-		coll.size = new Vector3(1.5f, 1.8f, 0.4f);
+		player.transform.GetChild(1).transform.localRotation = Quaternion.identity;
+        CapsuleCollider coll = (CapsuleCollider)player.GetComponent("CapsuleCollider");
+		coll.center = new Vector3(0.0f, 0.97f, 0.0f);
+        coll.direction = 1;
 		Rigidbody rig = (Rigidbody)player.GetComponent("Rigidbody");
 		rig.useGravity = true;
 	}
@@ -40,10 +40,10 @@ public class Controller_ThirdPerson : MonoBehaviour
 		lift = new Vector3(0.0f, 0.0f, 0.0f);
 		velocity = new Vector3(0.0f, 0.0f, 0.0f);
 		flightmode = true;
-		player.transform.GetChild(0).transform.Rotate(new Vector3(1, 0, 0), 90);
-		BoxCollider coll = (BoxCollider)player.GetComponent("BoxCollider");
-		coll.center = new Vector3(0.0f, 0.0f, 0.9f);
-		coll.size = new Vector3(1.5f, 0.4f, 1.8f);
+		player.transform.GetChild(1).transform.Rotate(new Vector3(1, 0, 0), 90);
+        CapsuleCollider coll = (CapsuleCollider)player.GetComponent("CapsuleCollider");
+		coll.center = new Vector3(0.0f, 0.0f, 0.97f);
+        coll.direction = 2;
 		Rigidbody rig = (Rigidbody)player.GetComponent("Rigidbody");
 		rig.useGravity = false;
 	}
