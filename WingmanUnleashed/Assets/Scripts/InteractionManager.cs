@@ -4,7 +4,7 @@ using System.Collections.Generic;
 public class InteractionManager : MonoBehaviour
 {
 	public List<GameObject> Interactables;
-	public string PlayerObjectName = "Wingman";
+    public string PlayerObjectName = "Wingman";
 
 	private GameObject player;
 	private Canvas UI;
@@ -12,7 +12,7 @@ public class InteractionManager : MonoBehaviour
 	void Start()
 	{
 		UI = (Canvas)GameObject.Find("InteractionGUI").GetComponent(typeof(Canvas));
-		player = GameObject.Find(PlayerObjectName);
+        player = GameObject.Find("Wingman");
 	}
 
 	void Update()
