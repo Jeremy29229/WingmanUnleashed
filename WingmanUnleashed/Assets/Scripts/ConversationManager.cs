@@ -2,6 +2,7 @@
 using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 
 public class ConversationManager : MonoBehaviour
 {
@@ -15,12 +16,19 @@ public class ConversationManager : MonoBehaviour
 	private Text npcText;
 	private Text npcName;
 
+	private Inventory inventory;
+	private GameObject player;
+	private Dialog last;
+
 	void Start()
 	{
 		UI = gameObject.GetComponent<Canvas>();
 		UI.enabled = false;
 		camera = Camera_ThirdPerson.Instance;
 		controller = Controller_ThirdPerson.Instance;
+
+		player = GameObject.Find("Wingman");
+		inventory = GameObject.Find("Wingman").GetComponent<Inventory>();
 
 		response = new Dialog[4];
 
@@ -38,11 +46,15 @@ public class ConversationManager : MonoBehaviour
 
 		npcText = GameObject.Find("NPCText").GetComponent<Text>();
 		npcName = GameObject.Find("NPCName").GetComponent<Text>();
-
 	}
 
 	public void ProcessDialog(Dialog d)
 	{
+		if (d != null)
+		{
+			last = d;
+		}
+
 		if (d == null)
 		{
 			UI.enabled = false;
@@ -78,12 +90,36 @@ public class ConversationManager : MonoBehaviour
 				{
 					response[i] = null;
 				}
+
+				if (i < d.disguiseName.Length && d.disguiseName[i] != null && d.disguiseName[i] != "")
+				{
+					if (player.GetComponent<Outfit>().outfitName != d.disguiseName[i])
+					{
+						buttons[i].SetActive(false);
+					}
+				}
+
+				if (i < d.requiredItemName.Length && d.requiredItemName[i] != null && d.requiredItemName[i] != "")
+				{
+					if(inventory.items.FirstOrDefault(x => x.Name == d.requiredItemName[i]) == null || (inventory.items.FirstOrDefault(x => x.Name == d.requiredItemName[i]) != null &&  inventory.items.FirstOrDefault(x => x.Name == d.requiredItemName[i]).Amount > d.requiredItemAmount[i]))
+					{
+		
+							buttons[i].SetActive(false);
+					}
+				}
 			}
 		}
 	}
 
 	public void ProcessDialog(int choice)
 	{
+
+		if (last != null && choice < last.requiredItemName.Length && last.requiredItemName[choice] != null && last.requiredItemName[choice] != "")
+		{
+
+			inventory.items.Remove(inventory.items.FirstOrDefault(x => x.Name == last.requiredItemName[choice]));
+		}
+
 		ProcessDialog(response[choice]);
 	}
 }
