@@ -13436,7 +13436,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: 26dabecb2fa15c44c87f9ac3f2d9e132, type: 2}
+  - {fileID: 2100000, guid: aa0fcba1fe03bc0459648eb23d9cfb2b, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -15872,6 +15872,10 @@ Prefab:
       propertyPath: m_Name
       value: NPC1
       objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 369e3e9680f1aa545bc9272e60d12bf8, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: aa0fcba1fe03bc0459648eb23d9cfb2b, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 369e3e9680f1aa545bc9272e60d12bf8, type: 2}
   m_RootGameObject: {fileID: 2126471478}
@@ -23380,7 +23384,7 @@ MeshCollider:
   serializedVersion: 2
   m_SmoothSphereCollisions: 0
   m_Convex: 0
-  m_Mesh: {fileID: 4300000, guid: addea391d476c8149a2ad15b3790812b, type: 3}
+  m_Mesh: {fileID: 4300000, guid: 82b8a7482ca9e4c45add0914717177c7, type: 3}
 --- !u!95 &2073372414
 Animator:
   serializedVersion: 3
