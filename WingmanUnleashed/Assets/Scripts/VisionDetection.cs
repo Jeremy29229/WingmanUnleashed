@@ -16,9 +16,10 @@ public class VisionDetection : MonoBehaviour {
 		Debug.DrawRay(transform.position+ new Vector3(0,1.5f,0), ((wingMan.transform.position ) - transform.position), Color.cyan);
 		if(playerInRange)
 		{
+            var layerMask = 1 << 8;
 			RaycastHit hit;
 			print("Player is in view range");
-			if(Physics.Raycast(transform.position+ new Vector3(0,1.5f,0), ((wingMan.transform.position ) - transform.position), out hit, 1000000))
+			if(Physics.Raycast(transform.position+ new Vector3(0,1.5f,0), ((wingMan.transform.position ) - transform.position), out hit, 1000000,layerMask))
 			{
 				//print (hit.collider.gameObject.transform.parent.gameObject.name);
 				print(hit.collider.gameObject.name);
