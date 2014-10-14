@@ -20665,8 +20665,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 852464707}
   m_HandleRect: {fileID: 852464706}
   m_Direction: 2
-  m_Value: .994498372
-  m_Size: .393404007
+  m_Value: .970443368
+  m_Size: .341977298
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -24771,6 +24771,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 68
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 0859fe67e4985764eb41dda1a1e2b743, type: 2}
+      propertyPath: InteractionRadius
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0859fe67e4985764eb41dda1a1e2b743, type: 2}
   m_RootGameObject: {fileID: 1105722405}
@@ -25111,7 +25115,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 351dde2e14cdf1d488edc8e5b31449f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InteractionRadius: 1
+  InteractionRadius: 3
   InteractionKey: 101
   PlayerObjectName: Wingman
   IsRepeatable: 1
@@ -30610,7 +30614,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 883225671}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1444.09998, y: 242.740005, z: 554.539978}
+  m_LocalPosition: {x: 1470.90002, y: 242.740005, z: 565.400024}
   m_LocalScale: {x: .44896701, y: .0884588659, z: .44896701}
   m_Children: []
   m_Father: {fileID: 0}
@@ -31861,7 +31865,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 351dde2e14cdf1d488edc8e5b31449f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InteractionRadius: 1
+  InteractionRadius: 3
   InteractionKey: 101
   PlayerObjectName: Wingman
   IsRepeatable: 1
@@ -33880,6 +33884,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 52
       objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: 19a8ec6a2b6d3844bbb20fc1a5f63060, type: 2}
+      propertyPath: InteractionRadius
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 19a8ec6a2b6d3844bbb20fc1a5f63060, type: 2}
   m_RootGameObject: {fileID: 2078704155}
@@ -35861,6 +35869,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: d20daf4652b51fb45bf041dc67bd6284, type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d20daf4652b51fb45bf041dc67bd6284, type: 2}
   m_RootGameObject: {fileID: 640467953}
@@ -36298,6 +36310,10 @@ Prefab:
     - target: {fileID: 400000, guid: a537460f0a3bbbf4cbfec5d0faf04608, type: 2}
       propertyPath: m_RootOrder
       value: 62
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: a537460f0a3bbbf4cbfec5d0faf04608, type: 2}
+      propertyPath: InteractionRadius
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a537460f0a3bbbf4cbfec5d0faf04608, type: 2}
@@ -37377,7 +37393,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 351dde2e14cdf1d488edc8e5b31449f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InteractionRadius: 1
+  InteractionRadius: 3
   InteractionKey: 101
   PlayerObjectName: Wingman
   IsRepeatable: 0
@@ -42376,7 +42392,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 351dde2e14cdf1d488edc8e5b31449f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InteractionRadius: 10
+  InteractionRadius: 5
   InteractionKey: 101
   PlayerObjectName: Wingman
   IsRepeatable: 0
@@ -42433,7 +42449,7 @@ Transform:
   m_PrefabInternal: {fileID: 1894673812}
   m_GameObject: {fileID: 1234365474}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1473.40002, y: 242.850006, z: 560.299988}
+  m_LocalPosition: {x: 1473.59998, y: 242.850006, z: 560.299988}
   m_LocalScale: {x: 2.93416953, y: 2.93416882, z: 2.93416882}
   m_Children: []
   m_Father: {fileID: 0}
@@ -51546,7 +51562,7 @@ Transform:
   m_Children:
   - {fileID: 469343459}
   m_Father: {fileID: 0}
-  m_RootOrder: 19
+  m_RootOrder: 20
 --- !u!114 &1474363727
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -51937,6 +51953,10 @@ Prefab:
     - target: {fileID: 400000, guid: 19a8ec6a2b6d3844bbb20fc1a5f63060, type: 2}
       propertyPath: m_RootOrder
       value: 72
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: 19a8ec6a2b6d3844bbb20fc1a5f63060, type: 2}
+      propertyPath: InteractionRadius
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 19a8ec6a2b6d3844bbb20fc1a5f63060, type: 2}
@@ -52991,7 +53011,7 @@ RectTransform:
   m_Children:
   - {fileID: 479806438}
   m_Father: {fileID: 0}
-  m_RootOrder: 20
+  m_RootOrder: 19
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
@@ -60833,7 +60853,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 351dde2e14cdf1d488edc8e5b31449f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InteractionRadius: 1
+  InteractionRadius: 3
   InteractionKey: 101
   PlayerObjectName: Wingman
   IsRepeatable: 0
@@ -66036,7 +66056,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400000, guid: 1463e12de96c6434f9cd33badf4d0a9b, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 1473.40002
+      value: 1473.59998
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 1463e12de96c6434f9cd33badf4d0a9b, type: 2}
       propertyPath: m_LocalPosition.y
@@ -66092,7 +66112,7 @@ Prefab:
       objectReference: {fileID: 2100000, guid: 102401625a4375641831476aa140ae16, type: 2}
     - target: {fileID: 11400002, guid: 1463e12de96c6434f9cd33badf4d0a9b, type: 2}
       propertyPath: InteractionRadius
-      value: 10
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: 1463e12de96c6434f9cd33badf4d0a9b, type: 2}
       propertyPath: Action
@@ -67923,6 +67943,10 @@ Prefab:
     - target: {fileID: 400000, guid: 19a8ec6a2b6d3844bbb20fc1a5f63060, type: 2}
       propertyPath: m_RootOrder
       value: 71
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: 19a8ec6a2b6d3844bbb20fc1a5f63060, type: 2}
+      propertyPath: InteractionRadius
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 19a8ec6a2b6d3844bbb20fc1a5f63060, type: 2}
@@ -73629,7 +73653,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 351dde2e14cdf1d488edc8e5b31449f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InteractionRadius: 1
+  InteractionRadius: 3
   InteractionKey: 101
   PlayerObjectName: Wingman
   IsRepeatable: 1
