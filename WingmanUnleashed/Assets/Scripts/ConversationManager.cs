@@ -101,7 +101,7 @@ public class ConversationManager : MonoBehaviour
 
 				if (i < d.requiredItemName.Length && d.requiredItemName[i] != null && d.requiredItemName[i] != "")
 				{
-					if(inventory.items.FirstOrDefault(x => x.Name == d.requiredItemName[i]) == null || (inventory.items.FirstOrDefault(x => x.Name == d.requiredItemName[i]) != null &&  inventory.items.FirstOrDefault(x => x.Name == d.requiredItemName[i]).Amount < d.requiredItemAmount[i]))
+					if(inventory.items.FirstOrDefault(x => x.Name == d.requiredItemName[i]) == null || (inventory.items.FirstOrDefault(x => x.Name == d.requiredItemName[i]) != null &&  inventory.items.FirstOrDefault(x => x.Name == d.requiredItemName[i]).Amount > d.requiredItemAmount[i]))
 					{
 		
 							buttons[i].SetActive(false);
