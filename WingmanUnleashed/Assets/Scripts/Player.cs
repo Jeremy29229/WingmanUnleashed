@@ -6,6 +6,7 @@ public class Player : MonoBehaviour {
 	private Canvas HUD;
 	private Image detectionBar;
 	private Image eye;
+    public bool wingmanVisionActive;
     public int numDetectors;
 	
 	private float detectionLevel;
@@ -28,6 +29,18 @@ public class Player : MonoBehaviour {
 		detectionBar.color = Color.red * (detectionLevel+ 0.2f);
 		eye.color = Color.red * (detectionLevel + 0.2f);
 
+        if(Input.GetKeyDown(KeyCode.Q))
+        {
+            if (wingmanVisionActive)
+            {
+                deactivateWingmanVision();
+            }
+            else
+            {
+                activateWingmanVision();
+            }
+        }
+
 	}
 
 	public void increaseDetection(float amount)
@@ -43,6 +56,16 @@ public class Player : MonoBehaviour {
 
     public void activateWingmanVision()
     {
+        //Activate color lights
+        RenderSettings.ambientLight =  new Color(0.28f,0.76f,0.75f,1);
+        RenderSettings.fogDensity = 0.08f;
+        wingmanVisionActive = true;
+    }
 
+    public void deactivateWingmanVision()
+    {
+        RenderSettings.ambientLight = new Color(.12f, .12f, .12f, 1);
+        RenderSettings.fogDensity = 0.01f;
+        wingmanVisionActive = false;
     }
 }

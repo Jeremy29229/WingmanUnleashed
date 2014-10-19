@@ -21436,8 +21436,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 852464707}
   m_HandleRect: {fileID: 852464706}
   m_Direction: 2
-  m_Value: .856842577
-  m_Size: 0
+  m_Value: .980503142
+  m_Size: .36450839
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -77388,6 +77388,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41ef5c9b0d30d9d4cafdc99e29d0f472, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  wingmanVisionActive: 0
   numDetectors: 0
 --- !u!114 &2108539859
 MonoBehaviour:
