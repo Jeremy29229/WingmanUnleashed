@@ -855,7 +855,7 @@ GameObject:
   - 108: {fileID: 20371447}
   m_Layer: 0
   m_Name: GreenWVLight
-  m_TagString: Untagged
+  m_TagString: WMVLight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14370,7 +14370,7 @@ GameObject:
   - 108: {fileID: 398392926}
   m_Layer: 0
   m_Name: YellowWVLight
-  m_TagString: Untagged
+  m_TagString: WMVLight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -57314,7 +57314,7 @@ GameObject:
   - 108: {fileID: 1596143133}
   m_Layer: 0
   m_Name: RedWVLight
-  m_TagString: Untagged
+  m_TagString: WMVLight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -63936,7 +63936,7 @@ GameObject:
   - 108: {fileID: 1768538938}
   m_Layer: 0
   m_Name: RedWVLight
-  m_TagString: Untagged
+  m_TagString: WMVLight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -69064,7 +69064,7 @@ GameObject:
   - 108: {fileID: 1915087845}
   m_Layer: 0
   m_Name: RedWVLight
-  m_TagString: Untagged
+  m_TagString: WMVLight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
