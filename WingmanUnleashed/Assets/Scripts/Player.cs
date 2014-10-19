@@ -31,7 +31,7 @@ public class Player : MonoBehaviour {
 		detectionBar.color = Color.red * (detectionLevel+ 0.2f);
 		eye.color = Color.red * (detectionLevel + 0.2f);
 
-        if(Input.GetKeyDown(KeyCode.Q))
+        if(Input.GetKeyDown(KeyCode.Q)&&!((Controller_ThirdPerson)gameObject.GetComponent("Controller_ThirdPerson")).flightmode)
         {
             if (wingmanVisionActive)
             {
@@ -77,7 +77,7 @@ public class Player : MonoBehaviour {
             temp.enabled = false;
         }
         RenderSettings.ambientLight = new Color(.12f, .12f, .12f, 1);
-        RenderSettings.fogDensity = 0.01f;
+        RenderSettings.fogDensity = 0.002f;
         wingmanVisionActive = false;
     }
 }

@@ -4,7 +4,7 @@ using System.Collections;
 public class Controller_ThirdPerson : MonoBehaviour
 {
 	public GameObject player;
-	bool flightmode = false;
+	public bool flightmode = false;
 	Vector3 velocity;
 	Vector3 acceleration;
 	Vector3 lift;
@@ -21,6 +21,7 @@ public class Controller_ThirdPerson : MonoBehaviour
 	void flightmodeOff()
 	{
 		Camera_ThirdPerson.Instance.usingFlightCamera = false;
+        Camera_ThirdPerson.Instance.distanceSmoothing = 0.1f;
 		acceleration = new Vector3(0.0f, 0.0f, 0.0f);
 		lift = new Vector3(0.0f, 0.0f, 0.0f);
 		velocity = new Vector3(0.0f, 0.0f, 0.0f);
@@ -36,6 +37,7 @@ public class Controller_ThirdPerson : MonoBehaviour
 	void flightmodeOn()
 	{
 		Camera_ThirdPerson.Instance.usingFlightCamera = true;
+        Camera_ThirdPerson.Instance.distanceSmoothing = 0.05f;
 		acceleration = new Vector3(0.0f, -9.81f, 0.0f);
 		lift = new Vector3(0.0f, 0.0f, 0.0f);
 		velocity = new Vector3(0.0f, 0.0f, 0.0f);
@@ -84,12 +86,10 @@ public class Controller_ThirdPerson : MonoBehaviour
 				if (Input.GetKey(KeyCode.Q))
 				{
 					player.transform.Rotate(new Vector3(0, 0, 1), 1.0f, Space.Self);
-					//player.transform.GetChild(0).transform.Rotate(new Vector3(0,1,0),2);
 				}
 				if (Input.GetKey(KeyCode.E))
 				{
 					player.transform.Rotate(new Vector3(0, 0, 1), -1.0f, Space.Self);
-					//player.transform.GetChild(0).transform.Rotate(new Vector3(0,1,0),-2);
 				}
 				if (Input.GetKey(KeyCode.W))
 				{

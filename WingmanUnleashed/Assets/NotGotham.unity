@@ -15,7 +15,7 @@ RenderSettings:
   m_Fog: 1
   m_FogColor: {r: .0187030379, g: .0162197277, b: .0882353187, a: 1}
   m_FogMode: 3
-  m_FogDensity: .00999999978
+  m_FogDensity: .00200000009
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
   m_AmbientLight: {r: .200000003, g: .200000003, b: .200000003, a: 1}
@@ -21436,8 +21436,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 852464707}
   m_HandleRect: {fileID: 852464706}
   m_Direction: 2
-  m_Value: .980503142
-  m_Size: .36450839
+  m_Value: .856842577
+  m_Size: 0
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -77376,6 +77376,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 2108539851}
+  flightmode: 0
   IsInConversation: 0
 --- !u!114 &2108539858
 MonoBehaviour:
