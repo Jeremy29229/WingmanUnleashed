@@ -54,5 +54,9 @@ public class VisionDetection : MonoBehaviour {
 		}
 	}
 
+    public bool getPlayerInRange()
+    {
+        return playerInRange;
+    }
 
 }
