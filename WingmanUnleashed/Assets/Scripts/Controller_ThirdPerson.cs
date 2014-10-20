@@ -4,11 +4,11 @@ using System.Collections;
 public class Controller_ThirdPerson : MonoBehaviour
 {
 	public GameObject player;
-	bool flightmode = false;
+	public bool flightmode = false;
 	Vector3 velocity;
 	Vector3 acceleration;
 	Vector3 lift;
-	float windResistance = 1.15f;
+	float windResistance = 0.5f;
 	public bool IsInConversation = false;
 
 	private float horizontal;
@@ -21,6 +21,7 @@ public class Controller_ThirdPerson : MonoBehaviour
 	void flightmodeOff()
 	{
 		Camera_ThirdPerson.Instance.usingFlightCamera = false;
+        Camera_ThirdPerson.Instance.distanceSmoothing = 0.1f;
 		acceleration = new Vector3(0.0f, 0.0f, 0.0f);
 		lift = new Vector3(0.0f, 0.0f, 0.0f);
 		velocity = new Vector3(0.0f, 0.0f, 0.0f);
@@ -36,6 +37,8 @@ public class Controller_ThirdPerson : MonoBehaviour
 	void flightmodeOn()
 	{
 		Camera_ThirdPerson.Instance.usingFlightCamera = true;
+        Camera_ThirdPerson.Instance.distanceSmoothing = 0.02f;
+        if (gameObject.GetComponent<Player>().wingmanVisionActive) gameObject.GetComponent<Player>().deactivateWingmanVision();
 		acceleration = new Vector3(0.0f, -9.81f, 0.0f);
 		lift = new Vector3(0.0f, 0.0f, 0.0f);
 		velocity = new Vector3(0.0f, 0.0f, 0.0f);
@@ -73,23 +76,27 @@ public class Controller_ThirdPerson : MonoBehaviour
 			if (flightmode)
 			{
 				float airspeed = velocity.magnitude;
-				lift = new Vector3(0.0f, airspeed / 2.0f, airspeed);
+                windResistance = airspeed / 100.0f;
+                print(airspeed);
+				lift = new Vector3(0.0f, 1.0f, 0.0f);
 				lift = player.transform.rotation * lift;
+                lift = lift * Mathf.Abs(Vector3.Dot(lift, Vector3.up)) * (airspeed/2.0f);
+                if (lift.y < 0.0f) lift = lift * -1.0f;
 				Vector3 netforce = acceleration + lift;
 				velocity += netforce * Time.deltaTime;
 				velocity *= (1 - (windResistance * Time.deltaTime));
-				print(velocity);
 				player.transform.position += velocity * Time.deltaTime;
 
-				if (Input.GetKey(KeyCode.Q))
+                float correctionForce = Quaternion.Angle(player.transform.rotation, Quaternion.LookRotation(velocity, Vector3.up))*(airspeed/20.0f);
+                player.transform.rotation = Quaternion.RotateTowards(player.transform.rotation, Quaternion.LookRotation(velocity, Vector3.up), correctionForce * Time.deltaTime);
+
+				if (Input.GetKey(KeyCode.A))
 				{
 					player.transform.Rotate(new Vector3(0, 0, 1), 1.0f, Space.Self);
-					//player.transform.GetChild(0).transform.Rotate(new Vector3(0,1,0),2);
 				}
-				if (Input.GetKey(KeyCode.E))
+				if (Input.GetKey(KeyCode.D))
 				{
 					player.transform.Rotate(new Vector3(0, 0, 1), -1.0f, Space.Self);
-					//player.transform.GetChild(0).transform.Rotate(new Vector3(0,1,0),-2);
 				}
 				if (Input.GetKey(KeyCode.W))
 				{
@@ -99,11 +106,11 @@ public class Controller_ThirdPerson : MonoBehaviour
 				{
 					player.transform.Rotate(new Vector3(1, 0, 0), -1.0f, Space.Self);
 				}
-				if (Input.GetKey(KeyCode.A))
+				if (Input.GetKey(KeyCode.Q))
 				{
 					player.transform.Rotate(new Vector3(0, 1, 0), -1.0f, Space.Self);
 				}
-				if (Input.GetKey(KeyCode.D))
+				if (Input.GetKey(KeyCode.E))
 				{
 					player.transform.Rotate(new Vector3(0, 1, 0), 1.0f, Space.Self);
 				}
