@@ -17,6 +17,7 @@ public class Interactable : MonoBehaviour
 	private Canvas UI;
 	public string Action;
 	public string InteractableName;
+	public string AdditionalInformation = "";
 
 	void Start()
 	{
@@ -58,6 +59,11 @@ public class Interactable : MonoBehaviour
 	public void updateGUIText()
 	{
 		UI.GetComponentInChildren<Text>().text = "Press " + InteractionKey.ToString() + " to " + Action + " " + InteractableName;
+		if (!string.IsNullOrEmpty(AdditionalInformation))
+		{
+			UI.GetComponentInChildren<Text>().text += " " + AdditionalInformation;
+		}
+
 		UI.enabled = false;
 	}
 }

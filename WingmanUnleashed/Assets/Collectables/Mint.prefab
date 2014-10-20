@@ -71,6 +71,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
   inventorySprite: {fileID: 21300000, guid: f5c39482212e7804abb66b2f11df75ea, type: 3}
+  SellValue: 100
+  IsKeepableItem: 0
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -89,6 +91,7 @@ MonoBehaviour:
   IsActive: 1
   Action: roll
   InteractableName: Dice
+  AdditionalInformation: 
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
