@@ -97,7 +97,6 @@ public class Controller_ThirdPerson : MonoBehaviour
                 player.transform.rotation = Quaternion.RotateTowards(player.transform.rotation, Quaternion.LookRotation(velocity, Vector3.up), correctionForce * Time.deltaTime);
 
                 windSound.volume = Mathf.Pow((airspeed / 30.0f),4);
-
 				if (Input.GetKey(KeyCode.A))
 				{
 					player.transform.Rotate(new Vector3(0, 0, 1), 1.0f, Space.Self);

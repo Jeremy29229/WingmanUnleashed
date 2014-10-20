@@ -16,6 +16,7 @@ public class Collectable : MonoBehaviour, IInteractable
 
 	void IInteractable.InteractWith()
 	{
+        AudioSource.PlayClipAtPoint(Resources.LoadAssetAtPath<AudioClip>("Sounds/Effects/cashMoney"), transform.position);
 		inventory.AddItem(gameObject.GetComponent<Interactable>().InteractableName, inventorySprite);
 		Destroy(gameObject);
 	}
