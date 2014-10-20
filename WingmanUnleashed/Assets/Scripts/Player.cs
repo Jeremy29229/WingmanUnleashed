@@ -9,6 +9,7 @@ public class Player : MonoBehaviour {
     public bool wingmanVisionActive;
     public int numDetectors;
     private GameObject[] WMVLights;
+    private string currentObjective;
 	
 	private float detectionLevel;
 
@@ -58,7 +59,6 @@ public class Player : MonoBehaviour {
 
     public void activateWingmanVision()
     {
-        //Activate color lights
         foreach (GameObject o in WMVLights)
         {
             Light temp = o.GetComponent<Light>();
@@ -80,4 +80,6 @@ public class Player : MonoBehaviour {
         RenderSettings.fogDensity = 0.002f;
         wingmanVisionActive = false;
     }
+
+    
 }
