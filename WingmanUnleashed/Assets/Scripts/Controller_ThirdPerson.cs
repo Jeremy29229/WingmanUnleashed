@@ -9,6 +9,8 @@ public class Controller_ThirdPerson : MonoBehaviour
 	Vector3 acceleration;
 	Vector3 lift;
 	float windResistance = 0.5f;
+    public AudioSource windSound;
+
 	public bool IsInConversation = false;
 
 	private float horizontal;
@@ -33,6 +35,8 @@ public class Controller_ThirdPerson : MonoBehaviour
         coll.direction = 1;
 		Rigidbody rig = (Rigidbody)player.GetComponent("Rigidbody");
 		rig.useGravity = true;
+
+        windSound.Stop();
 	}
 	void flightmodeOn()
 	{
@@ -49,6 +53,8 @@ public class Controller_ThirdPerson : MonoBehaviour
         coll.direction = 2;
 		Rigidbody rig = (Rigidbody)player.GetComponent("Rigidbody");
 		rig.useGravity = false;
+
+        windSound.Play();
 	}
 
 	void Awake()
@@ -89,6 +95,8 @@ public class Controller_ThirdPerson : MonoBehaviour
 
                 float correctionForce = Quaternion.Angle(player.transform.rotation, Quaternion.LookRotation(velocity, Vector3.up))*(airspeed/20.0f);
                 player.transform.rotation = Quaternion.RotateTowards(player.transform.rotation, Quaternion.LookRotation(velocity, Vector3.up), correctionForce * Time.deltaTime);
+
+                windSound.volume = Mathf.Pow((airspeed / 30.0f),4);
 
 				if (Input.GetKey(KeyCode.A))
 				{
