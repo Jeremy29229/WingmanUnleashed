@@ -72,6 +72,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
   inventorySprite: {fileID: 0}
+  SellValue: 1
+  IsKeepableItem: 0
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -90,6 +92,7 @@ MonoBehaviour:
   IsActive: 1
   Action: take
   InteractableName: Bowl
+  AdditionalInformation: 
 --- !u!114 &11400004
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -103,6 +106,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
   inventorySprite: {fileID: 21300000, guid: a86fb142c895f8543a0e9deae93c0257, type: 3}
+  SellValue: 0
+  IsKeepableItem: 0
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

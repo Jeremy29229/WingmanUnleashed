@@ -76,6 +76,7 @@ MonoBehaviour:
   IsActive: 1
   Action: procure
   InteractableName: Gem
+  AdditionalInformation: 
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -89,6 +90,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
   inventorySprite: {fileID: 21300000, guid: 2b9c3da8bedbdb646a6c00fbef7a4728, type: 3}
+  SellValue: 10
+  IsKeepableItem: 0
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

@@ -71,6 +71,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PlayerObjectName: Wingman
   inventorySprite: {fileID: 21300000, guid: 96ca86d1cbf171a41a9323ffbb42f86b, type: 3}
+  SellValue: 50
+  IsKeepableItem: 0
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -89,6 +91,7 @@ MonoBehaviour:
   IsActive: 1
   Action: steal
   InteractableName: Camera
+  AdditionalInformation: 
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
