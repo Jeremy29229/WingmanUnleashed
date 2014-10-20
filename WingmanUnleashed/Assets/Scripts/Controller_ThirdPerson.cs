@@ -38,6 +38,7 @@ public class Controller_ThirdPerson : MonoBehaviour
 	{
 		Camera_ThirdPerson.Instance.usingFlightCamera = true;
         Camera_ThirdPerson.Instance.distanceSmoothing = 0.05f;
+        if (gameObject.GetComponent<Player>().wingmanVisionActive) gameObject.GetComponent<Player>().deactivateWingmanVision();
 		acceleration = new Vector3(0.0f, -9.81f, 0.0f);
 		lift = new Vector3(0.0f, 0.0f, 0.0f);
 		velocity = new Vector3(0.0f, 0.0f, 0.0f);
