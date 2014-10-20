@@ -38974,7 +38974,7 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -.0124880001, y: -349.749939}
+  m_AnchoredPosition: {x: -.0124880001, y: -348.749939}
   m_SizeDelta: {x: 931.049988, y: 2046}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &1112062358
@@ -74777,7 +74777,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22400024, guid: 5a1faa1dfa6c2b1438a5235ba45c395a, type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -349.749939
+      value: -348.749939
       objectReference: {fileID: 0}
     - target: {fileID: 11400018, guid: 5a1faa1dfa6c2b1438a5235ba45c395a, type: 2}
       propertyPath: m_Value
