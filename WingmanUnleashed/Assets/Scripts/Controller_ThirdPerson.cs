@@ -8,7 +8,7 @@ public class Controller_ThirdPerson : MonoBehaviour
 	Vector3 velocity;
 	Vector3 acceleration;
 	Vector3 lift;
-	float windResistance = 1.15f;
+	float windResistance = 0.5f;
 	public bool IsInConversation = false;
 
 	private float horizontal;
@@ -37,7 +37,7 @@ public class Controller_ThirdPerson : MonoBehaviour
 	void flightmodeOn()
 	{
 		Camera_ThirdPerson.Instance.usingFlightCamera = true;
-        Camera_ThirdPerson.Instance.distanceSmoothing = 0.05f;
+        Camera_ThirdPerson.Instance.distanceSmoothing = 0.02f;
         if (gameObject.GetComponent<Player>().wingmanVisionActive) gameObject.GetComponent<Player>().deactivateWingmanVision();
 		acceleration = new Vector3(0.0f, -9.81f, 0.0f);
 		lift = new Vector3(0.0f, 0.0f, 0.0f);
@@ -76,12 +76,13 @@ public class Controller_ThirdPerson : MonoBehaviour
 			if (flightmode)
 			{
 				float airspeed = velocity.magnitude;
-				lift = new Vector3(0.0f, airspeed / 2.0f, airspeed);
+				lift = new Vector3(0.0f, 1.0f, 0.0f);
 				lift = player.transform.rotation * lift;
+                lift = lift * Mathf.Abs(Vector3.Dot(lift, Vector3.up)) * airspeed;
+                if (lift.y < 0.0f) lift = lift * -1.0f;
 				Vector3 netforce = acceleration + lift;
 				velocity += netforce * Time.deltaTime;
 				velocity *= (1 - (windResistance * Time.deltaTime));
-				print(velocity);
 				player.transform.position += velocity * Time.deltaTime;
 
 				if (Input.GetKey(KeyCode.Q))

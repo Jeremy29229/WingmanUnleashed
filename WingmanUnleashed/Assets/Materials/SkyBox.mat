@@ -32,7 +32,7 @@ Material:
           name: _FrontTex
         second:
           m_Texture: {fileID: 2800000, guid: 268f678ff169f104196d33598f395cd2, type: 3}
-          m_Scale: {x: 1, y: 1}
+          m_Scale: {x: 0, y: 0}
           m_Offset: {x: 0, y: 0}
       data:
         first:
@@ -46,8 +46,8 @@ Material:
           name: _LeftTex
         second:
           m_Texture: {fileID: 2800000, guid: e0fd0387a4e3aba4e831be695e89f479, type: 3}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
+          m_Scale: {x: 0, y: 0}
+          m_Offset: {x: 100, y: 1}
       data:
         first:
           name: _RightTex

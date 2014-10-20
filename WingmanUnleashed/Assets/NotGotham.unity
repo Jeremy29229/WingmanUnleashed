@@ -21436,8 +21436,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 852464707}
   m_HandleRect: {fileID: 852464706}
   m_Direction: 2
-  m_Value: .856842577
-  m_Size: 0
+  m_Value: 1
+  m_Size: .482758611
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -38974,7 +38974,7 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -.0124880001, y: -381.999939}
+  m_AnchoredPosition: {x: -.0124880001, y: -349.749939}
   m_SizeDelta: {x: 931.049988, y: 2046}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &1112062358
@@ -74777,7 +74777,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22400024, guid: 5a1faa1dfa6c2b1438a5235ba45c395a, type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -381.999939
+      value: -349.749939
       objectReference: {fileID: 0}
     - target: {fileID: 11400018, guid: 5a1faa1dfa6c2b1438a5235ba45c395a, type: 2}
       propertyPath: m_Value
@@ -77299,7 +77299,7 @@ Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 5cea7a7e253a5f547b4d1222c862b4ef, type: 3}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2108539851}
-  m_LocalRotation: {x: 0, y: 1, z: 0, w: -4.37113883e-08}
+  m_LocalRotation: {x: 0, y: -1, z: 0, w: -4.37113883e-08}
   m_LocalPosition: {x: 1446.09998, y: 241.580002, z: 555.77002}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
