@@ -23,7 +23,7 @@ public class BouncerAI : MonoBehaviour
         currentWaypoint = 0;
     }
 
-    void Update()
+    void LateUpdate()
     {
         if (!detection.getPlayerInRange())
         {
@@ -39,30 +39,31 @@ public class BouncerAI : MonoBehaviour
     public void Patrolling()
     {
         nav.speed = patrolSpeed;
-        Vector3 distanceVector = waypoints[currentWaypoint].position - transform.position;
-
-        print("distanceVector.magnitude: " + distanceVector.magnitude);
-        print("stopZone: " + stopZone);
-
-        if (distanceVector.magnitude <= stopZone)
+        if (waypoints[currentWaypoint] != null)
         {
-            patrolPointWait_Timer += Time.deltaTime;
+            Vector3 wayPointVector = waypoints[currentWaypoint].position;
+            Vector3 distanceVector = wayPointVector - transform.position;
 
-            if (patrolPointWait_Timer >= patrolPointWaitTime)
+            if (distanceVector.magnitude <= stopZone)
             {
-                if (currentWaypoint == waypoints.Length - 1)
-                {
-                    currentWaypoint = 0;
-                }
-                else
-                {
-                    currentWaypoint++;
-                }
+                patrolPointWait_Timer += Time.deltaTime;
 
-                patrolPointWait_Timer = 0.0f;
+                if (patrolPointWait_Timer >= patrolPointWaitTime)
+                {
+                    if (currentWaypoint == waypoints.Length - 1)
+                    {
+                        currentWaypoint = 0;
+                    }
+                    else
+                    {
+                        currentWaypoint++;
+                    }
+
+                    patrolPointWait_Timer = 0.0f;
+                }
             }
-        }
 
-        nav.destination = waypoints[currentWaypoint].position;
+            nav.destination = waypoints[currentWaypoint].position;
+        }
     }
 }
