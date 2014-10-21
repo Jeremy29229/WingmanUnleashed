@@ -10,6 +10,7 @@ public class Controller_ThirdPerson : MonoBehaviour
 	Vector3 lift;
 	float windResistance = 0.5f;
     public AudioSource windSound;
+    float jumpHeight = 200.0f;
 
 	public bool IsInConversation = false;
 
@@ -135,7 +136,8 @@ public class Controller_ThirdPerson : MonoBehaviour
 						Motor_ThirdPerson.Instance.MovementVector = new Vector3(horizontal, 0.0f, vertical);
                         if (Input.GetKeyDown(KeyCode.Space))
                         {
-                            Motor_ThirdPerson.Instance.MovementVector += new Vector3(0.0f, 1.0f, 0.0f);
+                            Rigidbody rig = (Rigidbody)player.GetComponent("Rigidbody");
+                            rig.AddForce(new Vector3(0.0f, jumpHeight, 0.0f));
                         }
 						Motor_ThirdPerson.Instance.UpdateMotor();
 					}

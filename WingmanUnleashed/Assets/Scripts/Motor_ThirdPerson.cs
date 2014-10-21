@@ -4,7 +4,6 @@ using System.Collections;
 public class Motor_ThirdPerson : MonoBehaviour 
 {
     public float movementSpeed = 10.0f;
-    float jumpHeight = 1.0f;
 	public static Motor_ThirdPerson Instance;
 
     public Vector3 MovementVector { get; set; }
@@ -21,7 +20,6 @@ public class Motor_ThirdPerson : MonoBehaviour
         MovementVector = transform.TransformDirection(MovementVector);
         MovementVector = Vector3.Normalize(MovementVector);
         MovementVector = (MovementVector * movementSpeed) * Time.deltaTime;
-        if (MovementVector.y > 0.0f) MovementVector += new Vector3(0.0f, jumpHeight, 0.0f);
         transform.position += MovementVector;
         MovementVector = new Vector3(0, 0, 0);
 	}
