@@ -10,7 +10,7 @@ public class Player : MonoBehaviour {
     public int numDetectors;
     private GameObject[] WMVLights;
     private string currentObjective;
-	
+    public AudioSource DetectionSound;
 	private float detectionLevel;
 
 	// Use this for initialization
@@ -27,6 +27,9 @@ public class Player : MonoBehaviour {
 		if (detectionLevel > 0.0f)
 		{
 			detectionLevel -= 0.01f * Time.deltaTime;
+            DetectionSound.volume = detectionLevel;
+            DetectionSound.pitch = detectionLevel*2;
+            if (detectionLevel <= 0.0f) DetectionSound.Stop();
 		}
 		detectionBar.fillAmount = detectionLevel;
 		detectionBar.color = Color.red * (detectionLevel+ 0.2f);
@@ -48,8 +51,8 @@ public class Player : MonoBehaviour {
 
 	public void increaseDetection(float amount)
 	{
+        if (detectionLevel <= 0.0f) DetectionSound.Play();
 		detectionLevel += amount * Time.deltaTime;
-		
 	}
 
 	public float getDetectionLevel()
