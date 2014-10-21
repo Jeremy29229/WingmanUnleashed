@@ -45,7 +45,7 @@ public class Controller_ThirdPerson : MonoBehaviour
         if (gameObject.GetComponent<Player>().wingmanVisionActive) gameObject.GetComponent<Player>().deactivateWingmanVision();
 		acceleration = new Vector3(0.0f, -9.81f, 0.0f);
 		lift = new Vector3(0.0f, 0.0f, 0.0f);
-		velocity = new Vector3(0.0f, 0.0f, 0.0f);
+		velocity = new Vector3(0.0f, 16.5f, 0.0f) + player.transform.forward*5.5f;
 		flightmode = true;
 		player.transform.GetChild(1).transform.Rotate(new Vector3(1, 0, 0), 90);
         player.transform.GetChild(1).transform.localPosition = new Vector3(0.0f, 0.97f,-0.97f);
@@ -53,7 +53,6 @@ public class Controller_ThirdPerson : MonoBehaviour
         coll.direction = 2;
 		Rigidbody rig = (Rigidbody)player.GetComponent("Rigidbody");
 		rig.useGravity = false;
-
         windSound.Play();
 	}
 
@@ -83,7 +82,6 @@ public class Controller_ThirdPerson : MonoBehaviour
 			{
 				float airspeed = velocity.magnitude;
                 windResistance = airspeed / 100.0f;
-                print(airspeed);
 				lift = new Vector3(0.0f, 1.0f, 0.0f);
 				lift = player.transform.rotation * lift;
                 lift = lift * Mathf.Abs(Vector3.Dot(lift, Vector3.up)) * (airspeed/2.0f);
@@ -147,12 +145,12 @@ public class Controller_ThirdPerson : MonoBehaviour
 			if (Input.GetKeyDown(KeyCode.Alpha2))
 			{
 				flightmodeOff();
-				player.transform.position = new Vector3(240.0185f, 865.9557f, 1163.175f);
+				player.transform.position = new Vector3(310.0185f, 880.5f, 1143.175f);
 			}
 			if (Input.GetKeyDown(KeyCode.Alpha3))
 			{
 				flightmodeOff();
-				player.transform.position = new Vector3(1814.116f, 719.9808f, 1764.895f);
+				player.transform.position = new Vector3(1764.116f, 818.00f, 1764.895f);
 			}
 		}
 	}
