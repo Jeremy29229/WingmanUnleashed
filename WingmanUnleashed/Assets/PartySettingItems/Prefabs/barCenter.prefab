@@ -8,6 +8,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400000}
+  - 64: {fileID: 6400000}
   m_Layer: 0
   m_Name: barCenter
   m_TagString: Untagged
@@ -83,6 +84,19 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100002}
+  m_Mesh: {fileID: 4300002, guid: bb75e113f42407449bae4a574f42219c, type: 3}
+--- !u!64 &6400000
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_SmoothSphereCollisions: 0
+  m_Convex: 0
   m_Mesh: {fileID: 4300002, guid: bb75e113f42407449bae4a574f42219c, type: 3}
 --- !u!1001 &100100000
 Prefab:
