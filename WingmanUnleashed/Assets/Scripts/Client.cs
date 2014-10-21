@@ -20,7 +20,7 @@ public class Client : MonoBehaviour {
 
     public void increaseConfidence(float amount)
     {
-        AudioSource.PlayClipAtPoint(Resources.LoadAssetAtPath<AudioClip>("Sounds/Effects/smallSuccess"), transform.position);
+        GameObject.Find("SoundManager").GetComponent<SoundManager>().PlaySoundAt("SmallSuccess", gameObject.transform.position);
         confidence += amount;
     }
 

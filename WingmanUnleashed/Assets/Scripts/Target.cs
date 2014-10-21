@@ -20,7 +20,7 @@ public class Target : MonoBehaviour {
 
     public void increaseInterest(float amount)
     {
-        AudioSource.PlayClipAtPoint(Resources.LoadAssetAtPath<AudioClip>("Sounds/Effects/smallSuccess"), transform.position);
+        GameObject.Find("SoundManager").GetComponent<SoundManager>().PlaySoundAt("SmallSuccess", gameObject.transform.position);
         interest += amount;
     }
 
