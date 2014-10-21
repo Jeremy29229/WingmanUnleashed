@@ -20,6 +20,7 @@ public class Client : MonoBehaviour {
 
     public void increaseConfidence(float amount)
     {
+        GameObject.Find("SoundManager").GetComponent<SoundManager>().PlaySoundAt("SmallSuccess", gameObject.transform.position);
         confidence += amount;
     }
 

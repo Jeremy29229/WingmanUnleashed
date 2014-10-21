@@ -20,6 +20,7 @@ public class Target : MonoBehaviour {
 
     public void increaseInterest(float amount)
     {
+        GameObject.Find("SoundManager").GetComponent<SoundManager>().PlaySoundAt("SmallSuccess", gameObject.transform.position);
         interest += amount;
     }
 

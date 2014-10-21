@@ -9,7 +9,7 @@ public class Wanderer : MonoBehaviour {
 	void Start () {
         basePosition = gameObject.transform.position;
         targetPosition = basePosition + new Vector3((Random.value * (2 * range)) - range, 0, (Random.value * (2 * range)) - range);
-        gameObject.GetComponent<NavMeshAgent>().SetDestination(targetPosition);
+        //gameObject.GetComponent<NavMeshAgent>().SetDestination(targetPosition);
 	}
 	
 	void Update () {

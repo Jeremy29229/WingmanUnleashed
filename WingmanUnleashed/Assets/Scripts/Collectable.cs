@@ -16,6 +16,7 @@ public class Collectable : MonoBehaviour, IInteractable
 
 	void IInteractable.InteractWith()
 	{
+        GameObject.Find("SoundManager").GetComponent<SoundManager>().PlaySoundAt("cashGrab", gameObject.transform.position);
 		inventory.AddItem(gameObject.GetComponent<Interactable>().InteractableName, inventorySprite);
 		Destroy(gameObject);
 	}
