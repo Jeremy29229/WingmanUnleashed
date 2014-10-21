@@ -14,6 +14,10 @@ GameObject:
   - 114: {fileID: 11400006}
   - 114: {fileID: 11400004}
   - 114: {fileID: 11400002}
+  - 114: {fileID: 11400014}
+  - 114: {fileID: 11400012}
+  - 114: {fileID: 11400010}
+  - 114: {fileID: 11400000}
   m_Layer: 8
   m_Name: TurtleneckWoman1
   m_TagString: Untagged
@@ -29,10 +33,10 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400002}
-  - 114: {fileID: 11400000}
+  - 114: {fileID: 11400016}
   - 64: {fileID: 6400000}
   m_Layer: 0
-  m_Name: DetectionCone
+  m_Name: PartygoerDetectionCone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -44,8 +48,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
-  m_LocalRotation: {x: 0, y: .951471627, z: 0, w: .307736546}
-  m_LocalPosition: {x: 1484, y: 241.570007, z: 560.969971}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1477.90002, y: 241.679993, z: 576.900024}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400002}
@@ -57,9 +61,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100002}
-  m_LocalRotation: {x: 0, y: -.951471627, z: 0, w: .307736546}
-  m_LocalPosition: {x: 13.3751488, y: .660507202, z: 12.5117664}
-  m_LocalScale: {x: 1.27728987, y: .581780016, z: .165389985}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: .0115970001, y: .596920013, z: -.0636589974}
+  m_LocalScale: {x: 1.27729011, y: .581779599, z: .16538997}
   m_Children: []
   m_Father: {fileID: 400000}
   m_RootOrder: 0
@@ -97,7 +101,7 @@ MeshCollider:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100002}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_SmoothSphereCollisions: 0
@@ -108,15 +112,23 @@ MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100002}
+  m_GameObject: {fileID: 100000}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5a95480042c5c5443b7afc95428a42ea, type: 3}
+  m_Script: {fileID: 11500000, guid: 152c028ba9883f44aad8faeed999ab82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IsPlayInRangeAndVisable: 0
-  SuitDectectionRate: .0250000004
-  WingSuitDectectionRate: .100000001
+  npcName: 
+  npcText: "<BURP> Hey\u2026 can you\u2026 uh... well...you see\u2026uuuuuuuuhhhh...
+    beer and"
+  responseText:
+  - Well said, inebriated partygoer. <LEAVE>
+  - Walk it off, champ. <LEAVE>
+  - Thanks for the tip, citizen. <LEAVE>
+  responseObject: []
+  requiredItemName: []
+  requiredItemAmount: 
+  disguiseName: []
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -181,6 +193,64 @@ MonoBehaviour:
   Action: talk to
   InteractableName: Partygoer
   AdditionalInformation: 
+--- !u!114 &11400010
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2dc234e3a2651b44b883d0e587984c45, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  start: {fileID: 11400000}
+--- !u!114 &11400012
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1471c0d5e76a8b348ada14537337c60e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &11400014
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 351dde2e14cdf1d488edc8e5b31449f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  InteractionRadius: 3
+  InteractionKey: 101
+  PlayerObjectName: Wingman
+  IsRepeatable: 0
+  IsActive: 1
+  Action: talk to
+  InteractableName: Partygoer
+  AdditionalInformation: 
+--- !u!114 &11400016
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a95480042c5c5443b7afc95428a42ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsPlayInRangeAndVisable: 0
+  SuitDectectionRate: 0
+  WingSuitDectectionRate: .0500000007
+  npcOffset: {x: 0, y: .899999976, z: 0}
+  playerOffset: {x: 0, y: 1.5, z: 0}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

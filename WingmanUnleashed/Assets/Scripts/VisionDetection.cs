@@ -7,6 +7,8 @@ public class VisionDetection : MonoBehaviour {
 	public bool IsPlayInRangeAndVisable = false;
 	public float SuitDectectionRate = 0.025f;
 	public float WingSuitDectectionRate = 0.1f;
+	public Vector3 npcOffset = new Vector3(0, 1.5f, 0);
+	public Vector3 playerOffset = new Vector3(0, 0, 0);
 
 	// Use this for initialization
 	void Start () {
@@ -16,13 +18,13 @@ public class VisionDetection : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		Debug.DrawRay(transform.position+ new Vector3(0,1.5f,0), ((wingMan.transform.position ) - transform.position), Color.cyan);
+		Debug.DrawRay(transform.position + npcOffset, ((wingMan.transform.position) - (transform.position + npcOffset) + playerOffset), Color.cyan);
 		if (playerInRange)
 		{
 			var layerMask = 1 << 8;
 			RaycastHit hit;
 			print("Player is in view range");
-			if (Physics.Raycast(transform.position + new Vector3(0, 1.5f, 0), ((wingMan.transform.position) - transform.position), out hit, 1000000, layerMask))
+			if (Physics.Raycast(transform.position + npcOffset, ((wingMan.transform.position) - (transform.position + npcOffset)), out hit, 1000000, layerMask))
 			{
 				//print (hit.collider.gameObject.transform.parent.gameObject.name);
 				print(hit.collider.gameObject.name);
