@@ -20,7 +20,7 @@ public class Controller_ThirdPerson : MonoBehaviour
 
 	public static Controller_ThirdPerson Instance;
 
-	void flightmodeOff()
+	public void flightmodeOff()
 	{
 		Camera_ThirdPerson.Instance.usingFlightCamera = false;
         Camera_ThirdPerson.Instance.distanceSmoothing = 0.1f;
@@ -38,14 +38,14 @@ public class Controller_ThirdPerson : MonoBehaviour
 
         windSound.Stop();
 	}
-	void flightmodeOn()
+	public void flightmodeOn()
 	{
 		Camera_ThirdPerson.Instance.usingFlightCamera = true;
         Camera_ThirdPerson.Instance.distanceSmoothing = 0.02f;
         if (gameObject.GetComponent<Player>().wingmanVisionActive) gameObject.GetComponent<Player>().deactivateWingmanVision();
 		acceleration = new Vector3(0.0f, -9.81f, 0.0f);
 		lift = new Vector3(0.0f, 0.0f, 0.0f);
-		velocity = new Vector3(0.0f, 16.5f, 0.0f) + player.transform.forward*5.5f;
+		//velocity = new Vector3(0.0f, 16.5f, 0.0f) + player.transform.forward*5.5f;
 		flightmode = true;
 		player.transform.GetChild(1).transform.Rotate(new Vector3(1, 0, 0), 90);
         player.transform.GetChild(1).transform.localPosition = new Vector3(0.0f, 0.97f,-0.97f);
@@ -66,17 +66,17 @@ public class Controller_ThirdPerson : MonoBehaviour
 	{
 		if (!IsInConversation)
 		{
-			if (Input.GetKeyDown(KeyCode.Space))
-			{
-				if (flightmode)
-				{
-					flightmodeOff();
-				}
-				else
-				{
-					flightmodeOn();
-				}
-			}
+			//if (Input.GetKeyDown(KeyCode.Space))
+			//{
+			//	if (flightmode)
+			//	{
+			//		flightmodeOff();
+			//	}
+			//	else
+			//	{
+			//		flightmodeOn();
+			//	}
+			//}
 
 			if (flightmode)
 			{
@@ -133,8 +133,13 @@ public class Controller_ThirdPerson : MonoBehaviour
 						horizontal = Input.GetAxis("Horizontal");
 						vertical = Input.GetAxis("Vertical");
 						Motor_ThirdPerson.Instance.MovementVector = new Vector3(horizontal, 0.0f, vertical);
+                        if (Input.GetKeyDown(KeyCode.Space))
+                        {
+                            Motor_ThirdPerson.Instance.MovementVector += new Vector3(0.0f, 1.0f, 0.0f);
+                        }
 						Motor_ThirdPerson.Instance.UpdateMotor();
 					}
+                    
 				}
 			}
 			if (Input.GetKeyDown(KeyCode.Alpha1))
@@ -157,6 +162,6 @@ public class Controller_ThirdPerson : MonoBehaviour
 
 	private bool inputTaken()
 	{
-		return (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D));
+		return (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.Space));
 	}
 }

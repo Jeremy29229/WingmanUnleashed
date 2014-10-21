@@ -16488,6 +16488,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 346185535}
   - 65: {fileID: 346185534}
+  - 114: {fileID: 346185536}
   m_Layer: 0
   m_Name: WalkZone
   m_TagString: Untagged
@@ -16519,6 +16520,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 406
+--- !u!114 &346185536
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 346185533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0540b4072f38624498e89bf8e49c7698, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &351377525
 GameObject:
   m_ObjectHideFlags: 0
@@ -29494,6 +29506,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 623545571}
   - 65: {fileID: 623545570}
+  - 114: {fileID: 623545572}
   m_Layer: 0
   m_Name: WalkZone
   m_TagString: Untagged
@@ -29525,6 +29538,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 405
+--- !u!114 &623545572
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 623545569}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0540b4072f38624498e89bf8e49c7698, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &626563325
 GameObject:
   m_ObjectHideFlags: 0
