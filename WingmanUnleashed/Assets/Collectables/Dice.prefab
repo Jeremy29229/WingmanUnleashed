@@ -268,7 +268,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 351dde2e14cdf1d488edc8e5b31449f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InteractionRadius: 1
+  InteractionRadius: 2
   InteractionKey: 101
   PlayerObjectName: Wingman
   IsRepeatable: 0

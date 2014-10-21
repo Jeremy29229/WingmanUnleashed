@@ -3,12 +3,12 @@ using System.Collections;
 
 public class VisionDetection : MonoBehaviour {
 	private GameObject wingMan;
-	private bool playerInRange;
+	public bool playerInRange = false;
 	public bool IsPlayInRangeAndVisable = false;
 	public float SuitDectectionRate = 0.025f;
 	public float WingSuitDectectionRate = 0.1f;
 	public Vector3 npcOffset = new Vector3(0, 1.5f, 0);
-	public Vector3 playerOffset = new Vector3(0, 0, 0);
+	public Vector3 playerOffset = new Vector3(0, 1.5f, 0);
 
 	// Use this for initialization
 	void Start () {
@@ -23,34 +23,48 @@ public class VisionDetection : MonoBehaviour {
 		{
 			var layerMask = 1 << 8;
 			RaycastHit hit;
-			print("Player is in view range");
-			if (Physics.Raycast(transform.position + npcOffset, ((wingMan.transform.position) - (transform.position + npcOffset)), out hit, 1000000, layerMask))
+			if (Physics.Raycast(transform.position + npcOffset, ((wingMan.transform.position) - (transform.position + npcOffset) + playerOffset), out hit, 1000000, layerMask))
 			{
 				//print (hit.collider.gameObject.transform.parent.gameObject.name);
-				print(hit.collider.gameObject.name);
+				//print(hit.collider.gameObject.name);
 				//Player p = hit.collider.gameObject.transform.parent.gameObject.GetComponent<Player>();
 
 				if (hit.transform.gameObject == wingMan)
 				{
 					// In Range and visible
+					if (!IsPlayInRangeAndVisable)
+					{
+						wingMan.GetComponent<Player>().numDetectors++;
+					}
 					IsPlayInRangeAndVisable = true;
 					if (wingMan.GetComponent<Outfit>().outfitName == "wingsuit") wingMan.GetComponent<Player>().increaseDetection(WingSuitDectectionRate);
 					else wingMan.GetComponent<Player>().increaseDetection(SuitDectectionRate);
-					print("VISIBLE");
 					print(wingMan.GetComponent<Player>().getDetectionLevel());
 				}
 				else
 				{
+					if (IsPlayInRangeAndVisable)
+					{
+						wingMan.GetComponent<Player>().numDetectors--;
+					}
 					IsPlayInRangeAndVisable = false;
 				}
 			}
 			else
 			{
+				if (IsPlayInRangeAndVisable)
+				{
+					wingMan.GetComponent<Player>().numDetectors--;
+				}
 				IsPlayInRangeAndVisable = false;
 			}
 		}
 		else
 		{
+			if (IsPlayInRangeAndVisable)
+			{
+				wingMan.GetComponent<Player>().numDetectors--;
+			}
 			IsPlayInRangeAndVisable = false;
 		}
 
