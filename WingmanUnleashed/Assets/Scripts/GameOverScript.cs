@@ -29,6 +29,7 @@ public class GameOverScript : MonoBehaviour {
     }
     public void ShowGameOVerLose(string message = "You Lose")
     {
+        //GameObject.Find("SoundManager").GetComponent<SoundManager>().PlaySound("RecordScratch");
         Show(message);
     }
     private void Show(string message)
