@@ -4,6 +4,8 @@ using System.Collections;
 
 public class GameOverScript : MonoBehaviour {
 
+    bool end = false;
+
 	// Use this for initialization
 	void Start () 
     {
@@ -29,8 +31,13 @@ public class GameOverScript : MonoBehaviour {
     }
     public void ShowGameOVerLose(string message = "You Lose")
     {
-        //GameObject.Find("SoundManager").GetComponent<SoundManager>().PlaySound("RecordScratch");
-        Show(message);
+        if (!end)
+        {
+            GameObject.Find("Wingman").GetComponent<Rigidbody>().AddForce(new Vector3(1000.0f, 1000.0f, -1000.0f));
+            GameObject.Find("SoundManager").GetComponent<SoundManager>().PlaySound("RecordScratch");
+            Show(message);
+            end = true;
+        }
     }
     private void Show(string message)
     {
