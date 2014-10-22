@@ -35,6 +35,7 @@ public class GameOverScript : MonoBehaviour {
         {
             GameObject.Find("Wingman").GetComponent<Rigidbody>().AddForce(new Vector3(1000.0f, 1000.0f, -1000.0f));
             GameObject.Find("SoundManager").GetComponent<SoundManager>().PlaySound("RecordScratch");
+            GameObject.Find("Detection").audio.Stop();
             Show(message);
             end = true;
         }
