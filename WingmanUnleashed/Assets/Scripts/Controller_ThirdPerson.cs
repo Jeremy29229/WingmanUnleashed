@@ -42,7 +42,7 @@ public class Controller_ThirdPerson : MonoBehaviour
 	public void flightmodeOn()
 	{
 		Camera_ThirdPerson.Instance.usingFlightCamera = true;
-        Camera_ThirdPerson.Instance.distanceSmoothing = 0.02f;
+        Camera_ThirdPerson.Instance.distanceSmoothing = 0.03f;
         if (gameObject.GetComponent<Player>().wingmanVisionActive) gameObject.GetComponent<Player>().deactivateWingmanVision();
 		acceleration = new Vector3(0.0f, -9.81f, 0.0f);
 		lift = new Vector3(0.0f, 0.0f, 0.0f);
@@ -92,7 +92,7 @@ public class Controller_ThirdPerson : MonoBehaviour
 				velocity *= (1 - (windResistance * Time.deltaTime));
 				player.transform.position += velocity * Time.deltaTime;
 
-                float correctionForce = Quaternion.Angle(player.transform.rotation, Quaternion.LookRotation(velocity, Vector3.up))*(airspeed/20.0f);
+                float correctionForce = Quaternion.Angle(player.transform.rotation, Quaternion.LookRotation(velocity, Vector3.up))*(airspeed/30.0f);
                 player.transform.rotation = Quaternion.RotateTowards(player.transform.rotation, Quaternion.LookRotation(velocity, Vector3.up), correctionForce * Time.deltaTime);
 
                 windSound.volume = Mathf.Pow((airspeed / 30.0f),4);
@@ -146,18 +146,18 @@ public class Controller_ThirdPerson : MonoBehaviour
 			}
 			if (Input.GetKeyDown(KeyCode.Alpha1))
 			{
-				flightmodeOff();
-				player.transform.position = new Vector3(1328.158f, 999.9615f, 165.7299f);
+				player.transform.position = new Vector3(1328.158f, 1010.9615f, 162.7299f);
+                flightmodeOff();
 			}
 			if (Input.GetKeyDown(KeyCode.Alpha2))
 			{
-				flightmodeOff();
-				player.transform.position = new Vector3(310.0185f, 880.5f, 1143.175f);
+				player.transform.position = new Vector3(310.0185f, 890.5f, 1143.175f);
+                flightmodeOff();
 			}
 			if (Input.GetKeyDown(KeyCode.Alpha3))
 			{
-				flightmodeOff();
-				player.transform.position = new Vector3(1764.116f, 818.00f, 1764.895f);
+				player.transform.position = new Vector3(1764.116f, 828.00f, 1764.895f);
+                flightmodeOff();
 			}
 		}
 	}
