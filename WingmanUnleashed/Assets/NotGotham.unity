@@ -16531,7 +16531,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0540b4072f38624498e89bf8e49c7698, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  music: {fileID: 0}
+  music: {fileID: 8300000, guid: 0ab23cc6d6fd43f459b6a3c27362c5b3, type: 3}
 --- !u!1 &351377525
 GameObject:
   m_ObjectHideFlags: 0
@@ -28550,6 +28550,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b6f7d1437f019a4fbcc5c3c454f61f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 602276525}
+  wingman: {fileID: 8300000, guid: 38949de3084f9644aabe2521a1634445, type: 3}
 --- !u!82 &602276525
 AudioSource:
   m_ObjectHideFlags: 0
@@ -29648,7 +29650,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0540b4072f38624498e89bf8e49c7698, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  music: {fileID: 0}
+  music: {fileID: 8300000, guid: ffced5c5d36d0be4abe479667de71b7a, type: 3}
 --- !u!1 &626563325
 GameObject:
   m_ObjectHideFlags: 0
@@ -46032,7 +46034,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0540b4072f38624498e89bf8e49c7698, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  music: {fileID: 0}
+  music: {fileID: 8300000, guid: 0ab23cc6d6fd43f459b6a3c27362c5b3, type: 3}
 --- !u!65 &1015425265
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -47219,7 +47221,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0540b4072f38624498e89bf8e49c7698, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  music: {fileID: 0}
+  music: {fileID: 8300000, guid: 0ab23cc6d6fd43f459b6a3c27362c5b3, type: 3}
 --- !u!65 &1036273828
 BoxCollider:
   m_ObjectHideFlags: 0

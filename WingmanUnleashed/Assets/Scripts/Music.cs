@@ -2,8 +2,8 @@
 using System.Collections;
 
 public class Music : MonoBehaviour {
-    AudioSource player;
-    AudioClip wingman;
+    public AudioSource player;
+    public AudioClip wingman;
     // Use this for initialization
     void Start()
     {
