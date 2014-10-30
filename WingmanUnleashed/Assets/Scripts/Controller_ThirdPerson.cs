@@ -5,7 +5,7 @@ public class Controller_ThirdPerson : MonoBehaviour
 {
 	public GameObject player;
 	public bool flightmode = false;
-	Vector3 velocity;
+	public Vector3 velocity;
 	Vector3 acceleration;
 	Vector3 lift;
 	float windResistance = 0.5f;
@@ -46,7 +46,6 @@ public class Controller_ThirdPerson : MonoBehaviour
         if (gameObject.GetComponent<Player>().wingmanVisionActive) gameObject.GetComponent<Player>().deactivateWingmanVision();
 		acceleration = new Vector3(0.0f, -9.81f, 0.0f);
 		lift = new Vector3(0.0f, 0.0f, 0.0f);
-		//velocity = new Vector3(0.0f, 16.5f, 0.0f) + player.transform.forward*5.5f;
 		flightmode = true;
 		player.transform.GetChild(1).transform.Rotate(new Vector3(1, 0, 0), 90);
         player.transform.GetChild(1).transform.localPosition = new Vector3(0.0f, 0.97f,-0.97f);
@@ -91,7 +90,7 @@ public class Controller_ThirdPerson : MonoBehaviour
 				velocity += netforce * Time.deltaTime;
 				velocity *= (1 - (windResistance * Time.deltaTime));
 				player.transform.position += velocity * Time.deltaTime;
-
+               
                 float correctionForce = Quaternion.Angle(player.transform.rotation, Quaternion.LookRotation(velocity, Vector3.up))*(airspeed/30.0f);
                 player.transform.rotation = Quaternion.RotateTowards(player.transform.rotation, Quaternion.LookRotation(velocity, Vector3.up), correctionForce * Time.deltaTime);
 

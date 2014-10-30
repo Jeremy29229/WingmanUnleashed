@@ -3,10 +3,10 @@ using System.Collections;
 
 public class WalkZone : MonoBehaviour {
     public AudioClip music;
-
+    GameObject wingman;
 	// Use this for initialization
 	void Start () {
-	    
+        wingman = GameObject.Find("Wingman");
 	}
 	
 	// Update is called once per frame
@@ -16,13 +16,19 @@ public class WalkZone : MonoBehaviour {
 
     void OnTriggerEnter(Collider c)
     {
-        GameObject.Find("Wingman").GetComponent<Controller_ThirdPerson>().flightmodeOff();
-        GameObject.Find("MusicManager").GetComponent<Music>().PlayMusic(music);
+        if (c.gameObject == wingman)
+        {
+            GameObject.Find("Wingman").GetComponent<Controller_ThirdPerson>().flightmodeOff();
+            GameObject.Find("MusicManager").GetComponent<Music>().PlayMusic(music);
+        }
     }
 
     void OnTriggerExit(Collider c)
     {
-        GameObject.Find("Wingman").GetComponent<Controller_ThirdPerson>().flightmodeOn();
-        GameObject.Find("MusicManager").GetComponent<Music>().PlayDefault();
+        if (c.gameObject == wingman)
+        {
+            GameObject.Find("Wingman").GetComponent<Controller_ThirdPerson>().flightmodeOn();
+            GameObject.Find("MusicManager").GetComponent<Music>().PlayDefault();
+        }
     }
 }

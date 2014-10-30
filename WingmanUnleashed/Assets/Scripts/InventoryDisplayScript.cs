@@ -18,14 +18,14 @@ public class InventoryDisplayScript : MonoBehaviour {
 	    
 	}
 
-    public void AddItem(string name, int amount, Sprite image)
+    public void AddItem(string name, string objectName, int amount, Sprite image)
     {
         var id = (GameObject)Instantiate(ItemDisplay);
         id.name = name + "Display";
+        id.GetComponent<InventoryButton>().objectName = objectName;
         id.transform.FindChild("ItemName").GetComponent<Text>().text = name;
         id.transform.FindChild("ItemAmount").GetComponent<Text>().text = ""+amount;
         id.transform.FindChild("ItemImage").GetComponent<Image>().sprite = image;
-        
         id.transform.SetParent(GameObject.Find("ItemsDisplay").transform, false);
 
     }
