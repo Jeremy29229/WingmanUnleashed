@@ -23,7 +23,9 @@ public class Player : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void Update () 
+    {
+        Debug.Log("detectionLevel: " + detectionLevel);
 		if (detectionLevel > 0.0f)
 		{
 			detectionLevel -= 0.01f * Time.deltaTime;
