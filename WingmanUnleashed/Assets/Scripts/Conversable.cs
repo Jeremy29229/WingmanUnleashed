@@ -6,13 +6,29 @@ public class Conversable : MonoBehaviour, IInteractable
 {
 	private Conversation conversation;
 	private ConversationManager cm;
-	private GameObject Player;
+	private Player Wingman;
+	private bool isChatBubbleDisplayed = false;
+	private bool wasChatBubbleDisplayed = false;
+	private Canvas chatBubbleDisplay;
 
 	void Start()
 	{
-		Player = GameObject.Find("Wingman");
+		Wingman = GameObject.Find("Wingman").GetComponent<Player>();
 		conversation = gameObject.GetComponent<Conversation>();
 		cm = GameObject.Find("ConvoGUI").GetComponent<ConversationManager>();
+		chatBubbleDisplay = GetComponentInChildren<Canvas>();
+		chatBubbleDisplay.enabled = false;
+	}
+
+	void Update()
+	{
+		isChatBubbleDisplayed = Wingman.wingmanVisionActive;
+
+		if (isChatBubbleDisplayed != wasChatBubbleDisplayed)
+		{
+			chatBubbleDisplay.enabled = isChatBubbleDisplayed;
+			wasChatBubbleDisplayed = isChatBubbleDisplayed;
+		}
 	}
 
 	public void InteractWith()
