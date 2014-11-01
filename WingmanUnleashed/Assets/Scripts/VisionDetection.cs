@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class VisionDetection : MonoBehaviour {
+public class VisionDetection : MonoBehaviour
+{
 	private GameObject wingMan;
 	public bool playerInRange = false;
 	public bool IsPlayInRangeAndVisable = false;
@@ -11,13 +12,15 @@ public class VisionDetection : MonoBehaviour {
 	public Vector3 playerOffset = new Vector3(0, 1.5f, 0);
 
 	// Use this for initialization
-	void Start () {
-		wingMan = GameObject.Find ("Wingman");
+	void Start()
+	{
+		wingMan = GameObject.Find("Wingman");
 		playerInRange = false;
 	}
-	
+
 	// Update is called once per frame
-	void Update () {
+	void Update()
+	{
 		Debug.DrawRay(transform.position + npcOffset, ((wingMan.transform.position) - (transform.position + npcOffset) + playerOffset), Color.cyan);
 		if (playerInRange)
 		{
@@ -39,7 +42,7 @@ public class VisionDetection : MonoBehaviour {
 					IsPlayInRangeAndVisable = true;
 					if (wingMan.GetComponent<Outfit>().outfitName == "wingsuit") wingMan.GetComponent<Player>().increaseDetection(WingSuitDectectionRate);
 					else wingMan.GetComponent<Player>().increaseDetection(SuitDectectionRate);
-//					print(wingMan.GetComponent<Player>().getDetectionLevel());
+					//					print(wingMan.GetComponent<Player>().getDetectionLevel());
 				}
 				else
 				{
@@ -72,7 +75,7 @@ public class VisionDetection : MonoBehaviour {
 
 	void OnTriggerEnter(Collider other)
 	{
-		if(other.gameObject.Equals(wingMan))
+		if (other.gameObject.Equals(wingMan))
 		{
 			playerInRange = true;
 		}
@@ -80,7 +83,7 @@ public class VisionDetection : MonoBehaviour {
 
 	void OnTriggerExit(Collider other)
 	{
-		if(other.gameObject.Equals(wingMan))
+		if (other.gameObject.Equals(wingMan))
 		{
 			playerInRange = false;
 		}

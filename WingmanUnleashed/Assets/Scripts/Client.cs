@@ -2,19 +2,22 @@
 using UnityEngine.UI;
 using System.Collections;
 
-public class Client : MonoBehaviour {
+public class Client : MonoBehaviour
+{
 
 	private float confidence;
 	private Image confidenceBar;
 
 	// Use this for initialization
-	void Start () {
+	void Start()
+	{
 		confidenceBar = (Image)GameObject.Find("ConfidenceBar").GetComponent(typeof(Image));
 
 	}
-	
+
 	// Update is called once per frame
-	void Update () {
+	void Update()
+	{
 		confidenceBar.fillAmount = confidence;
 	}
 

@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class ejector : MonoBehaviour
+public class Ejector : MonoBehaviour
 {
 	private GameObject wingman;
 
