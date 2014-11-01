@@ -5,22 +5,29 @@ using System.Collections;
 public class ObjectiveDisplayScript : MonoBehaviour {
 
     public GameObject ObjectiveBar;
+    bool on;
 	// Use this for initialization
 	void Start () {
         gameObject.GetComponentInParent<Canvas>().enabled = false;
-        AddObjective("Start", "Talk to the client.");
+        //AddObjective("Start", "Talk to the client."); //Test: Add demo objective
 
 	}
 	
 	// Update is called once per frame
 	void Update () {
-        if (Input.GetKeyDown(KeyCode.O))
+        //if (Input.GetKeyDown(KeyCode.O))
+        //{
+        //    gameObject.GetComponent<Canvas>().enabled = true;
+        //}
+        //else 
+        if (Input.GetKeyUp(KeyCode.O))
         {
-            gameObject.GetComponent<Canvas>().enabled = true;
-        }
-        else if (Input.GetKeyUp(KeyCode.O))
-        {
+            if(on)
             gameObject.GetComponent<Canvas>().enabled = false;
+            else
+            gameObject.GetComponent<Canvas>().enabled = true;
+            on = !on;
+
         }
 	}
 
