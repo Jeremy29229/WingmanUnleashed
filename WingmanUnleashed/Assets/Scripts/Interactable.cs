@@ -8,7 +8,7 @@ using UnityEngine.UI;
 public class Interactable : MonoBehaviour
 {
 	private IInteractable behavior;
-	public float InteractionRadius = 1.0f;
+	public float InteractionRadius = 2.0f;
 	public KeyCode InteractionKey = KeyCode.E;
 	public string PlayerObjectName = "Wingman";
 	private GameObject Player;
@@ -31,7 +31,7 @@ public class Interactable : MonoBehaviour
 		}
 
 		behavior = (IInteractable)gameObject.GetComponent("IInteractable");
-		
+
 		if (behavior == null)
 		{
 			throw new UnassignedReferenceException("A script that implements IInteractable must be a component in the same GameObject as this script.");

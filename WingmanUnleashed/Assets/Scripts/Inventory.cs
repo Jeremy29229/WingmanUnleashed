@@ -36,13 +36,13 @@ public class Inventory : MonoBehaviour
 		GameObject.Find("InventoryCanvas").GetComponent<Canvas>().enabled = inventoryVisible;
 	}
 
-	public void AddItem(string name, Sprite inventoryImage, int amount = 1)
+	public void AddItem(string name, string objectName, Sprite inventoryImage, int amount = 1)
 	{
 		var potentialItem = items.FirstOrDefault(x => x.Name == name);
 		if (potentialItem == null)
 		{
-			items.Add(new InventoryItem(name, amount));
-			GameObject.Find("InventoryDisplay").GetComponent<InventoryDisplayScript>().AddItem(name, amount, inventoryImage);
+			items.Add(new InventoryItem(name, objectName, amount));
+			GameObject.Find("InventoryDisplay").GetComponent<InventoryDisplayScript>().AddItem(name, objectName, amount, inventoryImage);
 		}
 		else
 		{

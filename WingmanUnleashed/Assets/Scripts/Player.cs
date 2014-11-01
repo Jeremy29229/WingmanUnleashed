@@ -2,8 +2,9 @@
 using UnityEngine.UI;
 using System.Collections;
 
-public class Player : MonoBehaviour {
-	private Canvas HUD;
+public class Player : MonoBehaviour
+{
+	//private Canvas HUD;
 	private Image detectionBar;
 	private Image eye;
 	public bool wingmanVisionActive;
@@ -12,30 +13,55 @@ public class Player : MonoBehaviour {
 	private string currentObjective;
 	public AudioSource DetectionSound;
 	private float detectionLevel;
+	public float TimeTilUnlocked = 10.0f;
+	private bool lockDetection = false;
+	private float timeLocked = 0.0f;
 
 	// Use this for initialization
-	void Start () {
+	void Start()
+	{
 		detectionLevel = 0f;
-		HUD = (Canvas)GameObject.Find("HUD").GetComponent(typeof(Canvas));
+		//HUD = (Canvas)GameObject.Find("HUD").GetComponent(typeof(Canvas));
 		detectionBar = (Image)GameObject.Find("DetectionBar").GetComponent(typeof(Image));
 		eye = (Image)GameObject.Find("Eye").GetComponent(typeof(Image));
 		WMVLights = GameObject.FindGameObjectsWithTag("WMVLight");
 	}
-	
+
 	// Update is called once per frame
-	void Update () {
-		if (detectionLevel > 0.0f)
+	void Update()
+	{
+		//        Debug.Log("detectionLevel: " + detectionLevel);
+		if (detectionLevel >= 1.0f)
+		{
+			if (lockDetection)
+			{
+				timeLocked += Time.deltaTime;
+				if (timeLocked >= TimeTilUnlocked)
+				{
+					lockDetection = false;
+					detectionLevel = 0.95f;
+				}
+			}
+			else
+			{
+				detectionLevel = 1.0f;
+				lockDetection = true;
+				timeLocked = 0.0f;
+			}
+		}
+
+		if (detectionLevel > 0.0f && !lockDetection)
 		{
 			detectionLevel -= 0.01f * Time.deltaTime;
 			DetectionSound.volume = detectionLevel;
-			DetectionSound.pitch = detectionLevel*2;
+			DetectionSound.pitch = detectionLevel * 2;
 			if (detectionLevel <= 0.0f) DetectionSound.Stop();
 		}
 		detectionBar.fillAmount = detectionLevel;
-		detectionBar.color = Color.red * (detectionLevel+ 0.2f);
+		detectionBar.color = Color.red * (detectionLevel + 0.2f);
 		eye.color = Color.red * (detectionLevel + 0.2f);
 
-		if(Input.GetKeyDown(KeyCode.Q)&&!((Controller_ThirdPerson)gameObject.GetComponent("Controller_ThirdPerson")).flightmode)
+		if (Input.GetKeyDown(KeyCode.Q) && !((Controller_ThirdPerson)gameObject.GetComponent("Controller_ThirdPerson")).flightmode)
 		{
 			if (wingmanVisionActive)
 			{
@@ -73,7 +99,7 @@ public class Player : MonoBehaviour {
 			Light temp = o.GetComponent<Light>();
 			temp.enabled = true;
 		}
-		RenderSettings.ambientLight =  new Color(0.28f,0.76f,0.75f,1);
+		RenderSettings.ambientLight = new Color(0.28f, 0.76f, 0.75f, 1);
 		RenderSettings.fogDensity = 0.08f;
 		wingmanVisionActive = true;
 	}
