@@ -12,6 +12,9 @@ public class Player : MonoBehaviour {
 	private string currentObjective;
 	public AudioSource DetectionSound;
 	private float detectionLevel;
+	public float TimeTilUnlocked = 10.0f;
+	private bool lockDetection = false;
+	private float timeLocked = 0.0f;
 
 	// Use this for initialization
 	void Start () {
@@ -24,9 +27,28 @@ public class Player : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () 
-    {
-        Debug.Log("detectionLevel: " + detectionLevel);
-		if (detectionLevel > 0.0f)
+	{
+//        Debug.Log("detectionLevel: " + detectionLevel);
+		if (detectionLevel >= 1.0f)
+		{
+			if (lockDetection)
+			{
+				timeLocked += Time.deltaTime;
+				if (timeLocked >= TimeTilUnlocked)
+				{
+					lockDetection = false;
+					detectionLevel = 0.95f;
+				}
+			}
+			else
+			{
+				detectionLevel = 1.0f;
+				lockDetection = true;
+				timeLocked = 0.0f;
+			}
+		}
+
+		if (detectionLevel > 0.0f && !lockDetection)
 		{
 			detectionLevel -= 0.01f * Time.deltaTime;
 			DetectionSound.volume = detectionLevel;

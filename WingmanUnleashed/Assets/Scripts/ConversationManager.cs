@@ -66,8 +66,8 @@ public class ConversationManager : MonoBehaviour
 			UI.enabled = true;
 			camera.IsInConversation = true;
 			controller.IsInConversation = true;
-			
-			npcText.text = d.npcText;
+
+			npcText.text = "\"" + d.npcText + "\"";
 			npcName.text = d.npcName;
 
 			for (int i = 0; i < buttons.Length; i++ )

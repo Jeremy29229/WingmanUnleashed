@@ -39,7 +39,7 @@ public class VisionDetection : MonoBehaviour {
 					IsPlayInRangeAndVisable = true;
 					if (wingMan.GetComponent<Outfit>().outfitName == "wingsuit") wingMan.GetComponent<Player>().increaseDetection(WingSuitDectectionRate);
 					else wingMan.GetComponent<Player>().increaseDetection(SuitDectectionRate);
-					print(wingMan.GetComponent<Player>().getDetectionLevel());
+//					print(wingMan.GetComponent<Player>().getDetectionLevel());
 				}
 				else
 				{

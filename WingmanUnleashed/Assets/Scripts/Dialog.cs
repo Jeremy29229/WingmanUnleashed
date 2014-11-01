@@ -3,6 +3,8 @@ using System.Collections;
 
 public class Dialog : MonoBehaviour
 {
+	public bool IsOneTimeOption = false;
+	public int NumTimesSelected;
 	void Start()
 	{
 		if (gameObject.GetComponent<Interactable>() != null)

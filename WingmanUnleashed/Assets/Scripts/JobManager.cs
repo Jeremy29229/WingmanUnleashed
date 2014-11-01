@@ -111,7 +111,7 @@ public class JobManager : MonoBehaviour
 
 		if (addedInt1 && addedInt2 && addedConfidence1 && addedConfidence2)
 		{
-			gameover.GetComponent<GameOverScript>().ShowGameOverWin();
+//			gameover.GetComponent<GameOverScript>().ShowGameOverWin();
 		}
 
 		if(wingman.GetComponent<Player>().getDetectionLevel() >= 1.0f)
