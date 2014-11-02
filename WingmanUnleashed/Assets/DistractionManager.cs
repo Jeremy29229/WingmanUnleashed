@@ -6,7 +6,7 @@ public class DistractionManager : MonoBehaviour {
     List<GameObject> distractions;
 	// Use this for initialization
 	void Start () {
-	
+        distractions = new List<GameObject>();
 	}
 	
 	// Update is called once per frame
