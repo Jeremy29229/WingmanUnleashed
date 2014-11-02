@@ -19,11 +19,11 @@ public class InventoryDisplayScript : MonoBehaviour
 
 	}
 
-	public void AddItem(string name, string objectName, int amount, Sprite image)
+	public void AddItem(string name, GameObject gobject, int amount, Sprite image)
 	{
 		var id = (GameObject)Instantiate(ItemDisplay);
 		id.name = name + "Display";
-		id.GetComponent<InventoryButton>().objectName = objectName;
+		id.GetComponent<InventoryButton>().gobject = gobject;
 		id.transform.FindChild("ItemName").GetComponent<Text>().text = name;
 		id.transform.FindChild("ItemAmount").GetComponent<Text>().text = "" + amount;
 		id.transform.FindChild("ItemImage").GetComponent<Image>().sprite = image;
@@ -33,7 +33,7 @@ public class InventoryDisplayScript : MonoBehaviour
 	public void RemoveItem(string name)
 	{
 		var id = GameObject.Find("ItemsDisplay").transform.FindChild(name + "Display");
-		Destroy(id);
+		Destroy(id.gameObject);
 	}
 	public void UpdateAmount(string name, int amount)
 	{

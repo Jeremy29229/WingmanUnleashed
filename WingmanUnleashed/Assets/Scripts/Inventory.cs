@@ -5,7 +5,7 @@ using System.Linq;
 
 public class Inventory : MonoBehaviour
 {
-	public List<InventoryItem> items;
+    public List<InventoryItem> items;
 	public KeyCode InventoryPrintKey;
 	public KeyCode InventoryDisplayKey;
 
@@ -36,16 +36,18 @@ public class Inventory : MonoBehaviour
 		GameObject.Find("InventoryCanvas").GetComponent<Canvas>().enabled = inventoryVisible;
 	}
 
-	public void AddItem(string name, string objectName, Sprite inventoryImage, int amount = 1)
+	public void AddItem(string name, GameObject gobject, Sprite inventoryImage, int amount = 1)
 	{
 		var potentialItem = items.FirstOrDefault(x => x.Name == name);
 		if (potentialItem == null)
 		{
-			items.Add(new InventoryItem(name, objectName, amount));
-			GameObject.Find("InventoryDisplay").GetComponent<InventoryDisplayScript>().AddItem(name, objectName, amount, inventoryImage);
+            gobject.transform.position = new Vector3(0, 0, 0);
+			items.Add(new InventoryItem(name, gobject, amount));
+			GameObject.Find("InventoryDisplay").GetComponent<InventoryDisplayScript>().AddItem(name, gobject, amount, inventoryImage);
 		}
 		else
 		{
+            Destroy(gobject);
 			potentialItem.Amount += amount;
 			GameObject.Find("InventoryDisplay").GetComponent<InventoryDisplayScript>().UpdateAmount(name, potentialItem.Amount);
 		}
@@ -63,6 +65,22 @@ public class Inventory : MonoBehaviour
 			potentialItem.Amount += i.Amount;
 		}
 	}
+
+    public bool RemoveItem(GameObject gobject, int amount = 1)
+    {
+        bool result = false;
+        InventoryItem item = items.First<InventoryItem>(i => i.Gob == gobject);
+        item.Amount -= amount;
+        GameObject.Find("InventoryDisplay").GetComponent<InventoryDisplayScript>().UpdateAmount(item.Name, item.Amount);
+        
+        if(item.Amount<=0)
+        {
+            result = true;
+            GameObject.Find("InventoryDisplay").GetComponent<InventoryDisplayScript>().RemoveItem(item.Name);
+            items.Remove(item);
+        }
+        return result;
+    }
 
 	public override string ToString()
 	{

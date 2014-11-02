@@ -1,11 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
 
-public class DistractionManager : MonoBehaviour {
-
+public class DistractionManager : MonoBehaviour{
+    public static DistractionManager Instance;
     List<GameObject> distractions;
 	// Use this for initialization
-	void Start () {
+    void Start()
+    {
+        Instance = this;
         distractions = new List<GameObject>();
 	}
 	
@@ -21,13 +23,12 @@ public class DistractionManager : MonoBehaviour {
         }
 	}
 
-    void AddDistraction(float radius, float time, Vector3 position)
+    public void AddDistraction(float radius, float time, Vector3 position)
     {
         GameObject temp = (GameObject)Object.Instantiate(GameObject.Find("Distraction"));
         temp.transform.GetComponent<Distraction>().radius = radius;
         temp.transform.GetComponent<Distraction>().time = time;
         temp.transform.position = position;
-        temp.transform.GetComponent<SphereCollider>().radius = radius;
         distractions.Add(temp);
     }
 

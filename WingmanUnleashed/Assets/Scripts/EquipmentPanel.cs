@@ -4,12 +4,12 @@ using System.Collections;
 
 public class EquipmentPanel : MonoBehaviour
 {
-
-	Equipment item;
+    private Inventory inventory;
+	GameObject item;
 	// Use this for initialization
 	void Start()
 	{
-
+        inventory = GameObject.Find("Wingman").GetComponent<Inventory>();
 	}
 
 	// Update is called once per frame
@@ -21,20 +21,28 @@ public class EquipmentPanel : MonoBehaviour
 		}
 	}
 
-	public void Equip(string name, Sprite image)
+	public void Equip(GameObject gobject, Sprite image)
 	{
 		gameObject.transform.FindChild("EquipImage").GetComponent<Image>().sprite = image;
-		if (name == "RocketJump") item = new RocketJump();
-		else item = new Throwable(name);
+        item = gobject;
+
 	}
 
 	public void Unequip()
 	{
-		item = null;
+        gameObject.transform.FindChild("EquipImage").GetComponent<Image>().sprite = GameObject.Find("ItemDisplay").transform.FindChild("ItemImage").GetComponent<Image>().sprite;
+        Destroy(item);
 	}
 
 	public void Use()
 	{
-		if (item != null) item.Use();
+        if (item != null && item.GetComponent<Throwable>() != null)
+        {
+            item.GetComponent<Throwable>().Use();
+            if (inventory.RemoveItem(item))
+            {
+                Unequip();
+            }
+        }
 	}
 }

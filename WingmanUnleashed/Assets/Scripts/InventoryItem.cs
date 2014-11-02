@@ -3,13 +3,13 @@
 public class InventoryItem
 {
 	public string Name;
-	public string ObjectName;
+    public GameObject Gob;
 	public int Amount;
 
-	public InventoryItem(string name = "unknown", string objectName = "unknown", int amount = 1)
+	public InventoryItem(string name = "unknown", GameObject gobject = null, int amount = 1)
 	{
 		Name = name;
-		ObjectName = objectName;
+		Gob = gobject;
 		Amount = amount;
 	}
 
