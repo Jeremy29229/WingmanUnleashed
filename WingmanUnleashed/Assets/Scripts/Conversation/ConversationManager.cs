@@ -19,6 +19,7 @@ public class ConversationManager : MonoBehaviour
 	private GameObject player;
 	private Dialog last;
 	private int optionCount = 0;
+	private bool ignoreSelection = false;
 
 	private Target targetScript;
 	private Client clientScript;
@@ -69,6 +70,7 @@ public class ConversationManager : MonoBehaviour
 			UI.enabled = true;
 			cam.IsInConversation = true;
 			controller.IsInConversation = true;
+			ignoreSelection = false;
 
 			for (int i = 0; i < buttons.Length; i++)
 			{
@@ -93,6 +95,7 @@ public class ConversationManager : MonoBehaviour
 				buttons[0].GetComponentInChildren<Text>().text ="<Leave>";
 				npcText.text = "\"" + d.NPCDialog + "\"";
 				npcName.text = d.GetNPCName();
+				ignoreSelection = true;
 			}
 		}
 	}
@@ -107,12 +110,15 @@ public class ConversationManager : MonoBehaviour
 		if (choiceIndex < last.Responses.Length)
 		{
 			choice = last.Responses[choiceIndex];
-			choice.NumTimesSelected++;
+			if (!ignoreSelection)
+			{
+				choice.NumTimesSelected++;
+			}
 			next = choice.Resulting;
 
-			if (choice.NewCurrent != null)
+			if (choice != null && choice.NewCurrent != null)
 			{
-				GetComponent<Correspondence>().Current = choice.NewCurrent;
+				choice.gameObject.GetComponent<Correspondence>().Current = choice.NewCurrent;
 			}
 		}
 
@@ -121,7 +127,8 @@ public class ConversationManager : MonoBehaviour
 
 	private bool IsDialogVisiable(DialogResponse d)
 	{
-		return HasRequiredItems(d) 
+		return d != null
+			&& HasRequiredItems(d) 
 			&& HasRequiredObjectives(d)
 			&& HasCorrectSelectionState(d)
 			&& HasRequiredDisguise(d)
@@ -133,13 +140,16 @@ public class ConversationManager : MonoBehaviour
 	{
 		bool hasItems = true;
 
-		foreach (var itemRequirement in d.Items)
+		if (d.Items != null)
 		{
-			var item = inventory.items.FirstOrDefault(x => x.Name == itemRequirement.ItemName);
-
-			if (item == null || item.Amount < itemRequirement.Amount)
+			foreach (var itemRequirement in d.Items)
 			{
-				hasItems = false;
+				var item = inventory.items.FirstOrDefault(x => x.Name == itemRequirement.ItemName);
+
+				if (item == null || item.Amount < itemRequirement.Amount)
+				{
+					hasItems = false;
+				}
 			}
 		}
 
