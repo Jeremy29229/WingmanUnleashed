@@ -445,19 +445,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 152c028ba9883f44aad8faeed999ab82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IsOneTimeOption: 0
-  NumTimesSelected: 0
-  npcName: 
-  npcText: "<BURP> Hey\u2026 can you\u2026 uh... well...you see\u2026uuuuuuuuhhhh...
-    beer and"
-  responseText:
-  - Well said, inebriated partygoer. <LEAVE>
-  - Walk it off, champ. <LEAVE>
-  - Thanks for the tip, citizen. <LEAVE>
-  responseObject: []
-  requiredItemName: []
-  requiredItemAmount: 
-  disguiseName: []
+  NPCDialog: 
+  Responses:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!114 &7606209
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -469,7 +462,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dc234e3a2651b44b883d0e587984c45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  start: {fileID: 7606208}
+  Beginning: {fileID: 0}
 --- !u!114 &7606210
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2134,6 +2127,7 @@ GameObject:
   - 4: {fileID: 44345733}
   - 114: {fileID: 44345730}
   - 114: {fileID: 44345729}
+  - 114: {fileID: 44345734}
   m_Layer: 0
   m_Name: Bottle2
   m_TagString: Untagged
@@ -2221,6 +2215,18 @@ Transform:
   - {fileID: 510857770}
   m_Father: {fileID: 0}
   m_RootOrder: 212
+--- !u!114 &44345734
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400010, guid: a537460f0a3bbbf4cbfec5d0faf04608,
+    type: 2}
+  m_PrefabInternal: {fileID: 1593471421}
+  m_GameObject: {fileID: 44345728}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0a576d944354bf4a92b1c570af7529e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &45306198
 GameObject:
   m_ObjectHideFlags: 0
@@ -3945,6 +3951,7 @@ GameObject:
   - 4: {fileID: 78921212}
   - 114: {fileID: 78921208}
   - 114: {fileID: 78921209}
+  - 114: {fileID: 78921213}
   m_Layer: 8
   m_Name: PlateSalad1
   m_TagString: Untagged
@@ -4032,6 +4039,18 @@ Transform:
   - {fileID: 399780650}
   m_Father: {fileID: 0}
   m_RootOrder: 309
+--- !u!114 &78921213
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400010, guid: c02b499ca49ee4b4194a1a0e7aa7bdf8,
+    type: 2}
+  m_PrefabInternal: {fileID: 261966096}
+  m_GameObject: {fileID: 78921207}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0a576d944354bf4a92b1c570af7529e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &80938471
 GameObject:
   m_ObjectHideFlags: 0
@@ -4304,6 +4323,7 @@ GameObject:
   - 4: {fileID: 86826373}
   - 114: {fileID: 86826370}
   - 114: {fileID: 86826369}
+  - 114: {fileID: 86826374}
   m_Layer: 0
   m_Name: Bottle3
   m_TagString: Untagged
@@ -4391,6 +4411,18 @@ Transform:
   - {fileID: 2120813141}
   m_Father: {fileID: 0}
   m_RootOrder: 37
+--- !u!114 &86826374
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400010, guid: 0859fe67e4985764eb41dda1a1e2b743,
+    type: 2}
+  m_PrefabInternal: {fileID: 1048430000}
+  m_GameObject: {fileID: 86826368}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0a576d944354bf4a92b1c570af7529e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &88533032
 GameObject:
   m_ObjectHideFlags: 0
@@ -4401,6 +4433,7 @@ GameObject:
   - 4: {fileID: 88533033}
   - 114: {fileID: 88533034}
   - 114: {fileID: 88533035}
+  - 114: {fileID: 88533038}
   m_Layer: 8
   m_Name: SoloCup1
   m_TagString: Untagged
@@ -4488,6 +4521,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 514174699}
   m_GameObject: {fileID: 682574100}
   m_Mesh: {fileID: 4300000, guid: 4396b22a05f4dd244a39256eade96e79, type: 3}
+--- !u!114 &88533038
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400010, guid: edd970519df8ff648a3a49ee2ad875bd,
+    type: 2}
+  m_PrefabInternal: {fileID: 514174699}
+  m_GameObject: {fileID: 88533032}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0a576d944354bf4a92b1c570af7529e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &89330801
 Prefab:
   m_ObjectHideFlags: 0
@@ -4550,6 +4595,7 @@ GameObject:
   - 4: {fileID: 89514005}
   - 114: {fileID: 89514001}
   - 114: {fileID: 89514002}
+  - 114: {fileID: 89514006}
   m_Layer: 8
   m_Name: Bowl1
   m_TagString: Untagged
@@ -4649,6 +4695,18 @@ Transform:
   - {fileID: 1390715539}
   m_Father: {fileID: 0}
   m_RootOrder: 189
+--- !u!114 &89514006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400010, guid: 845135208a0fce4488e286eee9113bb1,
+    type: 2}
+  m_PrefabInternal: {fileID: 173359488}
+  m_GameObject: {fileID: 89513999}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0a576d944354bf4a92b1c570af7529e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &90894181
 GameObject:
   m_ObjectHideFlags: 0
@@ -4845,6 +4903,7 @@ GameObject:
   - 4: {fileID: 92088513}
   - 114: {fileID: 92088509}
   - 114: {fileID: 92088510}
+  - 114: {fileID: 92088514}
   m_Layer: 8
   m_Name: SoloCup1
   m_TagString: Untagged
@@ -4932,6 +4991,18 @@ Transform:
   - {fileID: 1575006362}
   m_Father: {fileID: 0}
   m_RootOrder: 148
+--- !u!114 &92088514
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400010, guid: edd970519df8ff648a3a49ee2ad875bd,
+    type: 2}
+  m_PrefabInternal: {fileID: 1928866156}
+  m_GameObject: {fileID: 92088508}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0a576d944354bf4a92b1c570af7529e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &93149515
 Prefab:
   m_ObjectHideFlags: 0
@@ -5260,6 +5331,7 @@ GameObject:
   - 4: {fileID: 100226529}
   - 114: {fileID: 100226525}
   - 114: {fileID: 100226526}
+  - 114: {fileID: 100226530}
   m_Layer: 8
   m_Name: PlateSalad1
   m_TagString: Untagged
@@ -5347,6 +5419,18 @@ Transform:
   - {fileID: 1492642479}
   m_Father: {fileID: 0}
   m_RootOrder: 25
+--- !u!114 &100226530
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400010, guid: c02b499ca49ee4b4194a1a0e7aa7bdf8,
+    type: 2}
+  m_PrefabInternal: {fileID: 360409228}
+  m_GameObject: {fileID: 100226524}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0a576d944354bf4a92b1c570af7529e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &101479076
 GameObject:
   m_ObjectHideFlags: 0
@@ -5865,7 +5949,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a41c27c65b3fa44449d21986c6cb1b5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectName: 
+  gobject: {fileID: 0}
 --- !u!114 &108551525
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6202,6 +6286,7 @@ GameObject:
   - 4: {fileID: 113464441}
   - 114: {fileID: 113464437}
   - 114: {fileID: 113464438}
+  - 114: {fileID: 113464442}
   m_Layer: 8
   m_Name: PlateSalad1
   m_TagString: Untagged
@@ -6289,6 +6374,18 @@ Transform:
   - {fileID: 2042298358}
   m_Father: {fileID: 0}
   m_RootOrder: 130
+--- !u!114 &113464442
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400010, guid: c02b499ca49ee4b4194a1a0e7aa7bdf8,
+    type: 2}
+  m_PrefabInternal: {fileID: 719548350}
+  m_GameObject: {fileID: 113464436}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0a576d944354bf4a92b1c570af7529e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &113798523
 GameObject:
   m_ObjectHideFlags: 0
@@ -7188,6 +7285,7 @@ GameObject:
   - 4: {fileID: 129329237}
   - 114: {fileID: 129329233}
   - 114: {fileID: 129329234}
+  - 114: {fileID: 129329238}
   m_Layer: 8
   m_Name: PlateSteak1
   m_TagString: Untagged
@@ -7275,6 +7373,18 @@ Transform:
   - {fileID: 1800851124}
   m_Father: {fileID: 0}
   m_RootOrder: 20
+--- !u!114 &129329238
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400010, guid: 8a85f714c8fbfc84c817ff00aec894a2,
+    type: 2}
+  m_PrefabInternal: {fileID: 709431701}
+  m_GameObject: {fileID: 129329232}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0a576d944354bf4a92b1c570af7529e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &133141307
 Prefab:
   m_ObjectHideFlags: 0
@@ -8595,6 +8705,7 @@ GameObject:
   - 4: {fileID: 167981885}
   - 114: {fileID: 167981881}
   - 114: {fileID: 167981882}
+  - 114: {fileID: 167981886}
   m_Layer: 8
   m_Name: Purse1
   m_TagString: Untagged
@@ -8682,6 +8793,18 @@ Transform:
   - {fileID: 1575320496}
   m_Father: {fileID: 0}
   m_RootOrder: 145
+--- !u!114 &167981886
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400010, guid: 0244d14266c8ee544804b1d988a45262,
+    type: 2}
+  m_PrefabInternal: {fileID: 1517372288}
+  m_GameObject: {fileID: 167981880}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0a576d944354bf4a92b1c570af7529e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &168372683
 GameObject:
   m_ObjectHideFlags: 0
@@ -9077,6 +9200,7 @@ GameObject:
   - 4: {fileID: 173105468}
   - 114: {fileID: 173105464}
   - 114: {fileID: 173105465}
+  - 114: {fileID: 173105469}
   m_Layer: 0
   m_Name: Bottle1
   m_TagString: Untagged
@@ -9164,6 +9288,18 @@ Transform:
   - {fileID: 658489662}
   m_Father: {fileID: 0}
   m_RootOrder: 215
+--- !u!114 &173105469
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400010, guid: 19a8ec6a2b6d3844bbb20fc1a5f63060,
+    type: 2}
+  m_PrefabInternal: {fileID: 1765773464}
+  m_GameObject: {fileID: 173105463}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0a576d944354bf4a92b1c570af7529e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &173359488
 Prefab:
   m_ObjectHideFlags: 0
@@ -11286,7 +11422,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dc234e3a2651b44b883d0e587984c45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  start: {fileID: 0}
+  Beginning: {fileID: 0}
 --- !u!114 &222397115
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11430,6 +11566,7 @@ GameObject:
   - 4: {fileID: 227309337}
   - 114: {fileID: 227309333}
   - 114: {fileID: 227309334}
+  - 114: {fileID: 227309338}
   m_Layer: 8
   m_Name: PlateSteak1
   m_TagString: Untagged
@@ -11517,6 +11654,18 @@ Transform:
   - {fileID: 1596914894}
   m_Father: {fileID: 0}
   m_RootOrder: 232
+--- !u!114 &227309338
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400010, guid: 8a85f714c8fbfc84c817ff00aec894a2,
+    type: 2}
+  m_PrefabInternal: {fileID: 663343077}
+  m_GameObject: {fileID: 227309332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0a576d944354bf4a92b1c570af7529e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &227345825
 GameObject:
   m_ObjectHideFlags: 0
@@ -12696,7 +12845,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dc234e3a2651b44b883d0e587984c45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  start: {fileID: 705746564}
+  Beginning: {fileID: 0}
 --- !u!114 &239459648
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12993,6 +13142,7 @@ GameObject:
   - 4: {fileID: 240867015}
   - 114: {fileID: 240867011}
   - 114: {fileID: 240867012}
+  - 114: {fileID: 240867016}
   m_Layer: 0
   m_Name: PlateEmpty1
   m_TagString: Untagged
@@ -13080,6 +13230,18 @@ Transform:
   - {fileID: 104880880}
   m_Father: {fileID: 0}
   m_RootOrder: 30
+--- !u!114 &240867016
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400010, guid: 689c2df9286d11b44b9683ea3b2fa712,
+    type: 2}
+  m_PrefabInternal: {fileID: 666510016}
+  m_GameObject: {fileID: 240867010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0a576d944354bf4a92b1c570af7529e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &241544567
 GameObject:
   m_ObjectHideFlags: 0
@@ -13246,6 +13408,7 @@ GameObject:
   - 4: {fileID: 242948490}
   - 114: {fileID: 242948486}
   - 114: {fileID: 242948487}
+  - 114: {fileID: 242948491}
   m_Layer: 8
   m_Name: WineGlass1
   m_TagString: Untagged
@@ -13333,6 +13496,18 @@ Transform:
   - {fileID: 1663056392}
   m_Father: {fileID: 0}
   m_RootOrder: 170
+--- !u!114 &242948491
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400010, guid: e133f7feb0a24394c81b8792639bc794,
+    type: 2}
+  m_PrefabInternal: {fileID: 759006173}
+  m_GameObject: {fileID: 242948485}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0a576d944354bf4a92b1c570af7529e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &243112875
 GameObject:
   m_ObjectHideFlags: 0
@@ -13343,6 +13518,7 @@ GameObject:
   - 4: {fileID: 243112880}
   - 114: {fileID: 243112876}
   - 114: {fileID: 243112877}
+  - 114: {fileID: 243112881}
   m_Layer: 8
   m_Name: Purse1
   m_TagString: Untagged
@@ -13430,6 +13606,18 @@ Transform:
   - {fileID: 136882483}
   m_Father: {fileID: 0}
   m_RootOrder: 119
+--- !u!114 &243112881
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400010, guid: 0244d14266c8ee544804b1d988a45262,
+    type: 2}
+  m_PrefabInternal: {fileID: 825073912}
+  m_GameObject: {fileID: 243112875}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0a576d944354bf4a92b1c570af7529e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &243637764
 Prefab:
   m_ObjectHideFlags: 0
@@ -14037,6 +14225,7 @@ GameObject:
   - 4: {fileID: 265657860}
   - 114: {fileID: 265657856}
   - 114: {fileID: 265657857}
+  - 114: {fileID: 265657861}
   m_Layer: 8
   m_Name: PlateSteak1
   m_TagString: Untagged
@@ -14124,6 +14313,18 @@ Transform:
   - {fileID: 547678015}
   m_Father: {fileID: 0}
   m_RootOrder: 231
+--- !u!114 &265657861
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400010, guid: 8a85f714c8fbfc84c817ff00aec894a2,
+    type: 2}
+  m_PrefabInternal: {fileID: 418099746}
+  m_GameObject: {fileID: 265657855}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0a576d944354bf4a92b1c570af7529e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &266080037
 GameObject:
   m_ObjectHideFlags: 0
@@ -15391,6 +15592,7 @@ GameObject:
   - 4: {fileID: 291611291}
   - 114: {fileID: 291611288}
   - 114: {fileID: 291611287}
+  - 114: {fileID: 291611292}
   m_Layer: 8
   m_Name: Bottle3
   m_TagString: Untagged
@@ -15478,6 +15680,18 @@ Transform:
   - {fileID: 2013882734}
   m_Father: {fileID: 0}
   m_RootOrder: 136
+--- !u!114 &291611292
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400010, guid: 0859fe67e4985764eb41dda1a1e2b743,
+    type: 2}
+  m_PrefabInternal: {fileID: 1840697562}
+  m_GameObject: {fileID: 291611286}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0a576d944354bf4a92b1c570af7529e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &292607312
 Prefab:
   m_ObjectHideFlags: 0
@@ -15561,6 +15775,7 @@ GameObject:
   - 4: {fileID: 293104790}
   - 114: {fileID: 293104787}
   - 114: {fileID: 293104786}
+  - 114: {fileID: 293104791}
   m_Layer: 8
   m_Name: Gem1
   m_TagString: Untagged
@@ -15648,6 +15863,18 @@ Transform:
   - {fileID: 1170572770}
   m_Father: {fileID: 0}
   m_RootOrder: 100
+--- !u!114 &293104791
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400010, guid: 842528d34c2e16540a628ef6977ab911,
+    type: 2}
+  m_PrefabInternal: {fileID: 1127353006}
+  m_GameObject: {fileID: 293104785}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0a576d944354bf4a92b1c570af7529e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &295733525
 Prefab:
   m_ObjectHideFlags: 0
@@ -15702,6 +15929,7 @@ GameObject:
   - 4: {fileID: 296851898}
   - 114: {fileID: 296851894}
   - 114: {fileID: 296851895}
+  - 114: {fileID: 296851899}
   m_Layer: 8
   m_Name: WineGlass1
   m_TagString: Untagged
@@ -15789,6 +16017,18 @@ Transform:
   - {fileID: 1665140983}
   m_Father: {fileID: 0}
   m_RootOrder: 176
+--- !u!114 &296851899
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400010, guid: e133f7feb0a24394c81b8792639bc794,
+    type: 2}
+  m_PrefabInternal: {fileID: 1191347274}
+  m_GameObject: {fileID: 296851893}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0a576d944354bf4a92b1c570af7529e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &297637185
 GameObject:
   m_ObjectHideFlags: 0
@@ -15828,6 +16068,7 @@ GameObject:
   - 4: {fileID: 298499830}
   - 114: {fileID: 298499826}
   - 114: {fileID: 298499827}
+  - 114: {fileID: 298499831}
   m_Layer: 8
   m_Name: PlateSalad1
   m_TagString: Untagged
@@ -15915,6 +16156,18 @@ Transform:
   - {fileID: 1998954280}
   m_Father: {fileID: 0}
   m_RootOrder: 134
+--- !u!114 &298499831
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400010, guid: c02b499ca49ee4b4194a1a0e7aa7bdf8,
+    type: 2}
+  m_PrefabInternal: {fileID: 1239310105}
+  m_GameObject: {fileID: 298499825}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0a576d944354bf4a92b1c570af7529e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &299452182
 Prefab:
   m_ObjectHideFlags: 0
@@ -16223,6 +16476,7 @@ GameObject:
   - 4: {fileID: 305127303}
   - 114: {fileID: 305127299}
   - 114: {fileID: 305127300}
+  - 114: {fileID: 305127304}
   m_Layer: 8
   m_Name: WineGlass1
   m_TagString: Untagged
@@ -16310,6 +16564,18 @@ Transform:
   - {fileID: 1727159400}
   m_Father: {fileID: 0}
   m_RootOrder: 141
+--- !u!114 &305127304
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400010, guid: e133f7feb0a24394c81b8792639bc794,
+    type: 2}
+  m_PrefabInternal: {fileID: 996195198}
+  m_GameObject: {fileID: 305127298}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0a576d944354bf4a92b1c570af7529e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &305853448
 GameObject:
   m_ObjectHideFlags: 0
@@ -16384,6 +16650,7 @@ GameObject:
   - 4: {fileID: 306526520}
   - 114: {fileID: 306526516}
   - 114: {fileID: 306526517}
+  - 114: {fileID: 306526521}
   m_Layer: 8
   m_Name: PlateSalad1
   m_TagString: Untagged
@@ -16471,6 +16738,18 @@ Transform:
   - {fileID: 9475339}
   m_Father: {fileID: 0}
   m_RootOrder: 32
+--- !u!114 &306526521
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400010, guid: c02b499ca49ee4b4194a1a0e7aa7bdf8,
+    type: 2}
+  m_PrefabInternal: {fileID: 99451392}
+  m_GameObject: {fileID: 306526515}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0a576d944354bf4a92b1c570af7529e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &308325867
 GameObject:
   m_ObjectHideFlags: 0
@@ -18136,6 +18415,7 @@ GameObject:
   - 4: {fileID: 338339741}
   - 114: {fileID: 338339742}
   - 114: {fileID: 338339743}
+  - 114: {fileID: 338339746}
   m_Layer: 8
   m_Name: Camera1
   m_TagString: Untagged
@@ -18223,6 +18503,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 731303595}
   m_GameObject: {fileID: 39752451}
   m_Mesh: {fileID: 4300000, guid: e104b38fedca76d41996c38b3b19b351, type: 3}
+--- !u!114 &338339746
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400010, guid: b62decc40a48fd14f845d8e02ca16e07,
+    type: 2}
+  m_PrefabInternal: {fileID: 731303595}
+  m_GameObject: {fileID: 338339740}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0a576d944354bf4a92b1c570af7529e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &339203327
 GameObject:
   m_ObjectHideFlags: 0
@@ -18938,6 +19230,7 @@ GameObject:
   - 4: {fileID: 356877284}
   - 114: {fileID: 356877281}
   - 114: {fileID: 356877280}
+  - 114: {fileID: 356877285}
   m_Layer: 0
   m_Name: Bottle3
   m_TagString: Untagged
@@ -19025,6 +19318,18 @@ Transform:
   - {fileID: 1476994416}
   m_Father: {fileID: 0}
   m_RootOrder: 211
+--- !u!114 &356877285
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400010, guid: 0859fe67e4985764eb41dda1a1e2b743,
+    type: 2}
+  m_PrefabInternal: {fileID: 1455549661}
+  m_GameObject: {fileID: 356877279}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0a576d944354bf4a92b1c570af7529e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &359459303
 GameObject:
   m_ObjectHideFlags: 0
@@ -20522,6 +20827,7 @@ GameObject:
   - 4: {fileID: 402769145}
   - 114: {fileID: 402769141}
   - 114: {fileID: 402769142}
+  - 114: {fileID: 402769146}
   m_Layer: 8
   m_Name: Camera1
   m_TagString: Untagged
@@ -20609,6 +20915,18 @@ Transform:
   - {fileID: 1313082220}
   m_Father: {fileID: 0}
   m_RootOrder: 177
+--- !u!114 &402769146
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400010, guid: b62decc40a48fd14f845d8e02ca16e07,
+    type: 2}
+  m_PrefabInternal: {fileID: 56585232}
+  m_GameObject: {fileID: 402769140}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0a576d944354bf4a92b1c570af7529e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &403524432
 GameObject:
   m_ObjectHideFlags: 0
@@ -20619,6 +20937,7 @@ GameObject:
   - 4: {fileID: 403524437}
   - 114: {fileID: 403524433}
   - 114: {fileID: 403524434}
+  - 114: {fileID: 403524438}
   m_Layer: 0
   m_Name: PlateBurger1
   m_TagString: Untagged
@@ -20706,6 +21025,18 @@ Transform:
   - {fileID: 1103515692}
   m_Father: {fileID: 0}
   m_RootOrder: 223
+--- !u!114 &403524438
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400010, guid: 6106a7230b94a4045b99c2ee7eee0b76,
+    type: 2}
+  m_PrefabInternal: {fileID: 1674747279}
+  m_GameObject: {fileID: 403524432}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0a576d944354bf4a92b1c570af7529e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &403649968
 GameObject:
   m_ObjectHideFlags: 0
@@ -20780,6 +21111,7 @@ GameObject:
   - 4: {fileID: 405221738}
   - 114: {fileID: 405221734}
   - 114: {fileID: 405221735}
+  - 114: {fileID: 405221739}
   m_Layer: 0
   m_Name: PlateBurger1
   m_TagString: Untagged
@@ -20867,6 +21199,18 @@ Transform:
   - {fileID: 1124462183}
   m_Father: {fileID: 0}
   m_RootOrder: 17
+--- !u!114 &405221739
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400010, guid: 6106a7230b94a4045b99c2ee7eee0b76,
+    type: 2}
+  m_PrefabInternal: {fileID: 1791880780}
+  m_GameObject: {fileID: 405221733}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0a576d944354bf4a92b1c570af7529e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &407878997
 GameObject:
   m_ObjectHideFlags: 0
@@ -21070,6 +21414,7 @@ GameObject:
   - 4: {fileID: 411503318}
   - 114: {fileID: 411503314}
   - 114: {fileID: 411503315}
+  - 114: {fileID: 411503319}
   m_Layer: 0
   m_Name: PlateBurger1
   m_TagString: Untagged
@@ -21157,6 +21502,18 @@ Transform:
   - {fileID: 487433977}
   m_Father: {fileID: 0}
   m_RootOrder: 240
+--- !u!114 &411503319
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400010, guid: 6106a7230b94a4045b99c2ee7eee0b76,
+    type: 2}
+  m_PrefabInternal: {fileID: 1139866803}
+  m_GameObject: {fileID: 411503313}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0a576d944354bf4a92b1c570af7529e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &411566638
 GameObject:
   m_ObjectHideFlags: 0
@@ -21796,6 +22153,7 @@ GameObject:
   - 4: {fileID: 418877251}
   - 114: {fileID: 418877247}
   - 114: {fileID: 418877248}
+  - 114: {fileID: 418877252}
   m_Layer: 8
   m_Name: Gem4
   m_TagString: Untagged
@@ -21883,6 +22241,18 @@ Transform:
   - {fileID: 1812389979}
   m_Father: {fileID: 0}
   m_RootOrder: 104
+--- !u!114 &418877252
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400010, guid: 3add72caf4c6658459aa3e76fc2d7cd0,
+    type: 2}
+  m_PrefabInternal: {fileID: 603802927}
+  m_GameObject: {fileID: 418877246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0a576d944354bf4a92b1c570af7529e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &418911046
 GameObject:
   m_ObjectHideFlags: 0
@@ -22152,18 +22522,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 152c028ba9883f44aad8faeed999ab82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IsOneTimeOption: 0
-  NumTimesSelected: 0
-  npcName: 
-  npcText: "Hey have you seen my girlfriend around here? I think she\u2026"
-  responseText:
-  - WHERE IS SHE!? <LEAVE>
-  - "I don\u2019t have time time for this right now. <LEAVE>"
-  - Thanks for the tip, citizen. <LEAVE>
-  responseObject: []
-  requiredItemName: []
-  requiredItemAmount: 
-  disguiseName: []
+  NPCDialog: 
+  Responses:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!114 &422521262
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22175,7 +22539,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dc234e3a2651b44b883d0e587984c45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  start: {fileID: 422521261}
+  Beginning: {fileID: 0}
 --- !u!114 &422521263
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22426,6 +22790,7 @@ GameObject:
   - 4: {fileID: 425697582}
   - 114: {fileID: 425697578}
   - 114: {fileID: 425697579}
+  - 114: {fileID: 425697583}
   m_Layer: 8
   m_Name: PlateSalad1
   m_TagString: Untagged
@@ -22513,6 +22878,18 @@ Transform:
   - {fileID: 49393448}
   m_Father: {fileID: 0}
   m_RootOrder: 235
+--- !u!114 &425697583
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400010, guid: c02b499ca49ee4b4194a1a0e7aa7bdf8,
+    type: 2}
+  m_PrefabInternal: {fileID: 1089819734}
+  m_GameObject: {fileID: 425697577}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0a576d944354bf4a92b1c570af7529e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &426803506
 GameObject:
   m_ObjectHideFlags: 0
@@ -24123,18 +24500,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 152c028ba9883f44aad8faeed999ab82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IsOneTimeOption: 0
-  NumTimesSelected: 0
-  npcName: 
-  npcText: "If someone brought me a drink, I\u2019d be way interested in them. Nawmean?"
-  responseText:
-  - No one will buy you a drink, ugly.<LEAVE>
-  - Good luck with that. <LEAVE>
-  - Thanks for the tip, citizen. <LEAVE>
-  responseObject: []
-  requiredItemName: []
-  requiredItemAmount: 
-  disguiseName: []
+  NPCDialog: 
+  Responses:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!114 &458405376
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24146,7 +24517,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dc234e3a2651b44b883d0e587984c45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  start: {fileID: 458405375}
+  Beginning: {fileID: 0}
 --- !u!114 &458405377
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24259,6 +24630,7 @@ GameObject:
   - 4: {fileID: 461244332}
   - 114: {fileID: 461244328}
   - 114: {fileID: 461244329}
+  - 114: {fileID: 461244333}
   m_Layer: 0
   m_Name: Mint1
   m_TagString: Untagged
@@ -24346,6 +24718,18 @@ Transform:
   - {fileID: 1166775204}
   m_Father: {fileID: 0}
   m_RootOrder: 33
+--- !u!114 &461244333
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400010, guid: 1463e12de96c6434f9cd33badf4d0a9b,
+    type: 2}
+  m_PrefabInternal: {fileID: 796142177}
+  m_GameObject: {fileID: 461244327}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0a576d944354bf4a92b1c570af7529e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &462246587
 GameObject:
   m_ObjectHideFlags: 0
@@ -24518,18 +24902,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 152c028ba9883f44aad8faeed999ab82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IsOneTimeOption: 0
-  NumTimesSelected: 0
-  npcName: 
-  npcText: 'You''re a #$%#%#^#^#!'
-  responseText:
-  - Check your privilege. <LEAVE>
-  - Good one, bro. <LEAVE>
-  - Thanks for the tip, citizen. <LEAVE>
-  responseObject: []
-  requiredItemName: []
-  requiredItemAmount: 
-  disguiseName: []
+  NPCDialog: 
+  Responses:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!114 &465213775
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24541,7 +24919,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dc234e3a2651b44b883d0e587984c45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  start: {fileID: 465213774}
+  Beginning: {fileID: 0}
 --- !u!114 &465213776
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24653,6 +25031,7 @@ GameObject:
   - 4: {fileID: 465665060}
   - 114: {fileID: 465665056}
   - 114: {fileID: 465665057}
+  - 114: {fileID: 465665061}
   m_Layer: 8
   m_Name: WineGlass1
   m_TagString: Untagged
@@ -24740,6 +25119,18 @@ Transform:
   - {fileID: 233093032}
   m_Father: {fileID: 0}
   m_RootOrder: 174
+--- !u!114 &465665061
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400010, guid: e133f7feb0a24394c81b8792639bc794,
+    type: 2}
+  m_PrefabInternal: {fileID: 56023096}
+  m_GameObject: {fileID: 465665055}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0a576d944354bf4a92b1c570af7529e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &466168536
 GameObject:
   m_ObjectHideFlags: 0
@@ -25353,6 +25744,7 @@ GameObject:
   - 4: {fileID: 473573092}
   - 114: {fileID: 473573088}
   - 114: {fileID: 473573089}
+  - 114: {fileID: 473573093}
   m_Layer: 8
   m_Name: RingGem1
   m_TagString: Untagged
@@ -25440,6 +25832,18 @@ Transform:
   - {fileID: 903311415}
   m_Father: {fileID: 0}
   m_RootOrder: 101
+--- !u!114 &473573093
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400010, guid: f84c4cfd572907c4aa9c37592eaf95e5,
+    type: 2}
+  m_PrefabInternal: {fileID: 879315968}
+  m_GameObject: {fileID: 473573087}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0a576d944354bf4a92b1c570af7529e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &475011872
 GameObject:
   m_ObjectHideFlags: 0
@@ -25648,20 +26052,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 152c028ba9883f44aad8faeed999ab82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IsOneTimeOption: 0
-  NumTimesSelected: 0
-  npcName: 
-  npcText: That <b>Mint</b> at the bar looks SUPER fresh. I sure hope no one steals
-    it, because it is completely stealable.
-  responseText:
-  - "I\u2019ll keep an eye on it for you.\t<LEAVE>\t"
-  - "The <b>Mint</b> will be mine! And there\u2019s nothing you can do to stop me!
-    <LEAVE>"
-  - Thanks for the tip, citizen. <LEAVE>
-  responseObject: []
-  requiredItemName: []
-  requiredItemAmount: 
-  disguiseName: []
+  NPCDialog: 
+  Responses:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!114 &478852549
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25673,7 +26069,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dc234e3a2651b44b883d0e587984c45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  start: {fileID: 478852548}
+  Beginning: {fileID: 0}
 --- !u!114 &478852550
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26187,6 +26583,7 @@ GameObject:
   - 4: {fileID: 486538449}
   - 114: {fileID: 486538445}
   - 114: {fileID: 486538446}
+  - 114: {fileID: 486538450}
   m_Layer: 8
   m_Name: PlateSteak1
   m_TagString: Untagged
@@ -26274,6 +26671,18 @@ Transform:
   - {fileID: 78051459}
   m_Father: {fileID: 0}
   m_RootOrder: 307
+--- !u!114 &486538450
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400010, guid: 8a85f714c8fbfc84c817ff00aec894a2,
+    type: 2}
+  m_PrefabInternal: {fileID: 1399974437}
+  m_GameObject: {fileID: 486538444}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0a576d944354bf4a92b1c570af7529e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &486645320
 GameObject:
   m_ObjectHideFlags: 0
@@ -26553,6 +26962,7 @@ GameObject:
   - 4: {fileID: 492812855}
   - 114: {fileID: 492812851}
   - 114: {fileID: 492812852}
+  - 114: {fileID: 492812856}
   m_Layer: 0
   m_Name: PlateBurger1
   m_TagString: Untagged
@@ -26640,6 +27050,18 @@ Transform:
   - {fileID: 898839431}
   m_Father: {fileID: 0}
   m_RootOrder: 248
+--- !u!114 &492812856
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400010, guid: 6106a7230b94a4045b99c2ee7eee0b76,
+    type: 2}
+  m_PrefabInternal: {fileID: 561761684}
+  m_GameObject: {fileID: 492812850}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0a576d944354bf4a92b1c570af7529e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &494537419
 GameObject:
   m_ObjectHideFlags: 0
@@ -26981,6 +27403,7 @@ GameObject:
   - 4: {fileID: 505535754}
   - 114: {fileID: 505535750}
   - 114: {fileID: 505535751}
+  - 114: {fileID: 505535755}
   m_Layer: 8
   m_Name: PlateSteak1
   m_TagString: Untagged
@@ -27068,6 +27491,18 @@ Transform:
   - {fileID: 1624592111}
   m_Father: {fileID: 0}
   m_RootOrder: 243
+--- !u!114 &505535755
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400010, guid: 8a85f714c8fbfc84c817ff00aec894a2,
+    type: 2}
+  m_PrefabInternal: {fileID: 194097697}
+  m_GameObject: {fileID: 505535749}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0a576d944354bf4a92b1c570af7529e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &506790124
 GameObject:
   m_ObjectHideFlags: 0
@@ -27874,6 +28309,7 @@ GameObject:
   - 4: {fileID: 518235950}
   - 114: {fileID: 518235946}
   - 114: {fileID: 518235947}
+  - 114: {fileID: 518235951}
   m_Layer: 0
   m_Name: PlateBurger1
   m_TagString: Untagged
@@ -27961,6 +28397,18 @@ Transform:
   - {fileID: 1510947658}
   m_Father: {fileID: 0}
   m_RootOrder: 226
+--- !u!114 &518235951
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400010, guid: 6106a7230b94a4045b99c2ee7eee0b76,
+    type: 2}
+  m_PrefabInternal: {fileID: 1191626605}
+  m_GameObject: {fileID: 518235945}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0a576d944354bf4a92b1c570af7529e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &518385885
 GameObject:
   m_ObjectHideFlags: 0
@@ -27971,6 +28419,7 @@ GameObject:
   - 4: {fileID: 518385890}
   - 114: {fileID: 518385886}
   - 114: {fileID: 518385887}
+  - 114: {fileID: 518385891}
   m_Layer: 0
   m_Name: PlateBurger1
   m_TagString: Untagged
@@ -28058,6 +28507,18 @@ Transform:
   - {fileID: 918469659}
   m_Father: {fileID: 0}
   m_RootOrder: 319
+--- !u!114 &518385891
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400010, guid: 6106a7230b94a4045b99c2ee7eee0b76,
+    type: 2}
+  m_PrefabInternal: {fileID: 2047325634}
+  m_GameObject: {fileID: 518385885}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0a576d944354bf4a92b1c570af7529e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &521137962
 GameObject:
   m_ObjectHideFlags: 0
@@ -28068,6 +28529,7 @@ GameObject:
   - 4: {fileID: 521137967}
   - 114: {fileID: 521137963}
   - 114: {fileID: 521137964}
+  - 114: {fileID: 521137968}
   m_Layer: 8
   m_Name: PlateSteak1
   m_TagString: Untagged
@@ -28155,6 +28617,18 @@ Transform:
   - {fileID: 1217111430}
   m_Father: {fileID: 0}
   m_RootOrder: 242
+--- !u!114 &521137968
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400010, guid: 8a85f714c8fbfc84c817ff00aec894a2,
+    type: 2}
+  m_PrefabInternal: {fileID: 1621161403}
+  m_GameObject: {fileID: 521137962}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0a576d944354bf4a92b1c570af7529e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &526458003
 Prefab:
   m_ObjectHideFlags: 0
@@ -28393,6 +28867,7 @@ GameObject:
   - 4: {fileID: 532004459}
   - 114: {fileID: 532004461}
   - 114: {fileID: 532004460}
+  - 114: {fileID: 532004464}
   m_Layer: 8
   m_Name: Bottle3
   m_TagString: Untagged
@@ -28480,6 +28955,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 277142721}
   m_GameObject: {fileID: 855703986}
   m_Mesh: {fileID: 4300000, guid: 6f88db35150971d41a4cae8e7b8184f0, type: 3}
+--- !u!114 &532004464
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400010, guid: 0859fe67e4985764eb41dda1a1e2b743,
+    type: 2}
+  m_PrefabInternal: {fileID: 277142721}
+  m_GameObject: {fileID: 532004458}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0a576d944354bf4a92b1c570af7529e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &536011146
 GameObject:
   m_ObjectHideFlags: 0
@@ -31833,6 +32320,7 @@ GameObject:
   - 4: {fileID: 600805324}
   - 114: {fileID: 600805320}
   - 114: {fileID: 600805321}
+  - 114: {fileID: 600805325}
   m_Layer: 8
   m_Name: SoloCup1
   m_TagString: Untagged
@@ -31920,6 +32408,18 @@ Transform:
   - {fileID: 2129366741}
   m_Father: {fileID: 0}
   m_RootOrder: 143
+--- !u!114 &600805325
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400010, guid: edd970519df8ff648a3a49ee2ad875bd,
+    type: 2}
+  m_PrefabInternal: {fileID: 1393538841}
+  m_GameObject: {fileID: 600805319}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0a576d944354bf4a92b1c570af7529e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &601531465
 GameObject:
   m_ObjectHideFlags: 0
@@ -32549,6 +33049,7 @@ GameObject:
   - 4: {fileID: 604823469}
   - 114: {fileID: 604823465}
   - 114: {fileID: 604823466}
+  - 114: {fileID: 604823470}
   m_Layer: 0
   m_Name: SoloCup1
   m_TagString: Untagged
@@ -32636,6 +33137,18 @@ Transform:
   - {fileID: 1175271370}
   m_Father: {fileID: 0}
   m_RootOrder: 220
+--- !u!114 &604823470
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400010, guid: edd970519df8ff648a3a49ee2ad875bd,
+    type: 2}
+  m_PrefabInternal: {fileID: 1962846136}
+  m_GameObject: {fileID: 604823464}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0a576d944354bf4a92b1c570af7529e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &607539360
 GameObject:
   m_ObjectHideFlags: 0
@@ -32944,6 +33457,7 @@ GameObject:
   - 4: {fileID: 609914690}
   - 114: {fileID: 609914686}
   - 114: {fileID: 609914687}
+  - 114: {fileID: 609914691}
   m_Layer: 8
   m_Name: PlateSalad1
   m_TagString: Untagged
@@ -33031,6 +33545,18 @@ Transform:
   - {fileID: 1949924884}
   m_Father: {fileID: 0}
   m_RootOrder: 318
+--- !u!114 &609914691
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400010, guid: c02b499ca49ee4b4194a1a0e7aa7bdf8,
+    type: 2}
+  m_PrefabInternal: {fileID: 1354444508}
+  m_GameObject: {fileID: 609914685}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0a576d944354bf4a92b1c570af7529e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &611544147
 GameObject:
   m_ObjectHideFlags: 0
@@ -34529,6 +35055,7 @@ MonoBehaviour:
   patrolSpeed: 3
   pursueSpeed: 4
   patrolPointWaitTime: 1.29999995
+  pauseWaitTime: 1
   timeSearching: 3
   waypoints:
   - {fileID: 791708661}
@@ -35739,6 +36266,7 @@ GameObject:
   - 4: {fileID: 675000439}
   - 114: {fileID: 675000435}
   - 114: {fileID: 675000436}
+  - 114: {fileID: 675000440}
   m_Layer: 0
   m_Name: Bottle1
   m_TagString: Untagged
@@ -35826,6 +36354,18 @@ Transform:
   - {fileID: 1462175182}
   m_Father: {fileID: 0}
   m_RootOrder: 218
+--- !u!114 &675000440
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400010, guid: 19a8ec6a2b6d3844bbb20fc1a5f63060,
+    type: 2}
+  m_PrefabInternal: {fileID: 341633310}
+  m_GameObject: {fileID: 675000434}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0a576d944354bf4a92b1c570af7529e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &676612972
 GameObject:
   m_ObjectHideFlags: 0
@@ -36175,6 +36715,7 @@ GameObject:
   - 4: {fileID: 685877074}
   - 114: {fileID: 685877070}
   - 114: {fileID: 685877071}
+  - 114: {fileID: 685877075}
   m_Layer: 8
   m_Name: PlateSalad1
   m_TagString: Untagged
@@ -36262,6 +36803,18 @@ Transform:
   - {fileID: 940104484}
   m_Father: {fileID: 0}
   m_RootOrder: 313
+--- !u!114 &685877075
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400010, guid: c02b499ca49ee4b4194a1a0e7aa7bdf8,
+    type: 2}
+  m_PrefabInternal: {fileID: 18793034}
+  m_GameObject: {fileID: 685877069}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0a576d944354bf4a92b1c570af7529e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &688252363
 GameObject:
   m_ObjectHideFlags: 0
@@ -36644,6 +37197,7 @@ GameObject:
   - 4: {fileID: 697047071}
   - 33: {fileID: 697047070}
   - 23: {fileID: 697047069}
+  - 95: {fileID: 697047076}
   - 114: {fileID: 697047075}
   - 114: {fileID: 697047074}
   - 114: {fileID: 697047073}
@@ -36709,19 +37263,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 152c028ba9883f44aad8faeed999ab82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IsOneTimeOption: 0
-  NumTimesSelected: 0
-  npcName: 
-  npcText: People are most likely to hit it off when they are both sufficiently confident
-    and interested.
-  responseText:
-  - Wow could you be any more obvious about dropping hints? <LEAVE>
-  - "Looks like I have some confidence and interest levels to raise\u2026 <LEAVE>"
-  - Thanks for the tip, citizen. <LEAVE>
-  responseObject: []
-  requiredItemName: []
-  requiredItemAmount: 
-  disguiseName: []
+  NPCDialog: 
+  Responses:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!114 &697047073
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36733,7 +37280,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dc234e3a2651b44b883d0e587984c45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  start: {fileID: 697047072}
+  Beginning: {fileID: 0}
 --- !u!114 &697047074
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36764,6 +37311,22 @@ MonoBehaviour:
   Action: talk to
   InteractableName: Partygoer
   AdditionalInformation: 
+--- !u!95 &697047076
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 9500000, guid: 5d79a78a45c083046937b5c78d26822b,
+    type: 2}
+  m_PrefabInternal: {fileID: 1460688475}
+  m_GameObject: {fileID: 697047068}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 1e506c657ec6d214c999a0e96201fb5a, type: 3}
+  m_Controller: {fileID: 9100000, guid: 5632e90e2ed4f2249a5f3a9b93831350, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &698436323
 GameObject:
   m_ObjectHideFlags: 0
@@ -37178,18 +37741,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 152c028ba9883f44aad8faeed999ab82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IsOneTimeOption: 0
-  NumTimesSelected: 0
-  npcName: 
-  npcText: "Kangaroos are like\u2026 deer T-Rexes."
-  responseText:
-  - You are so high right now. <LEAVE>
-  - Dude, whoa. <LEAVE>
-  - Thanks for the tip, citizen. <LEAVE>
-  responseObject: []
-  requiredItemName: []
-  requiredItemAmount: 
-  disguiseName: []
+  NPCDialog: 
+  Responses:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!4 &705746565
 Transform:
   m_ObjectHideFlags: 0
@@ -37536,6 +38093,7 @@ GameObject:
   - 4: {fileID: 714114525}
   - 114: {fileID: 714114521}
   - 114: {fileID: 714114522}
+  - 114: {fileID: 714114526}
   m_Layer: 8
   m_Name: Bottle1
   m_TagString: Untagged
@@ -37623,6 +38181,18 @@ Transform:
   - {fileID: 725933021}
   m_Father: {fileID: 0}
   m_RootOrder: 108
+--- !u!114 &714114526
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400010, guid: 19a8ec6a2b6d3844bbb20fc1a5f63060,
+    type: 2}
+  m_PrefabInternal: {fileID: 1943021615}
+  m_GameObject: {fileID: 714114520}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0a576d944354bf4a92b1c570af7529e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &714260870
 GameObject:
   m_ObjectHideFlags: 0
@@ -39868,6 +40438,7 @@ GameObject:
   - 4: {fileID: 771486360}
   - 114: {fileID: 771486356}
   - 114: {fileID: 771486357}
+  - 114: {fileID: 771486361}
   m_Layer: 8
   m_Name: PlateSalad1
   m_TagString: Untagged
@@ -39955,6 +40526,18 @@ Transform:
   - {fileID: 150301010}
   m_Father: {fileID: 0}
   m_RootOrder: 131
+--- !u!114 &771486361
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400010, guid: c02b499ca49ee4b4194a1a0e7aa7bdf8,
+    type: 2}
+  m_PrefabInternal: {fileID: 1484106473}
+  m_GameObject: {fileID: 771486355}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0a576d944354bf4a92b1c570af7529e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &771532674
 GameObject:
   m_ObjectHideFlags: 0
@@ -40709,18 +41292,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 152c028ba9883f44aad8faeed999ab82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IsOneTimeOption: 0
-  NumTimesSelected: 0
-  npcName: 
-  npcText: Watch out for those bouncers. They seem mean.
-  responseText:
-  - "I\u2019m meaner. Grrr. <LEAVE>"
-  - "They can\u2019t be that bad. I mean, they let you in. <LEAVE>\t"
-  - Thanks for the tip, citizen. <LEAVE>
-  responseObject: []
-  requiredItemName: []
-  requiredItemAmount: 
-  disguiseName: []
+  NPCDialog: 
+  Responses:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!114 &785326616
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40732,7 +41309,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dc234e3a2651b44b883d0e587984c45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  start: {fileID: 785326615}
+  Beginning: {fileID: 0}
 --- !u!114 &785326617
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41427,6 +42004,7 @@ GameObject:
   - 4: {fileID: 802211942}
   - 114: {fileID: 802211938}
   - 114: {fileID: 802211939}
+  - 114: {fileID: 802211943}
   m_Layer: 8
   m_Name: PlateSteak1
   m_TagString: Untagged
@@ -41514,6 +42092,18 @@ Transform:
   - {fileID: 641576762}
   m_Father: {fileID: 0}
   m_RootOrder: 146
+--- !u!114 &802211943
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400010, guid: 8a85f714c8fbfc84c817ff00aec894a2,
+    type: 2}
+  m_PrefabInternal: {fileID: 1094922066}
+  m_GameObject: {fileID: 802211937}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0a576d944354bf4a92b1c570af7529e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &804357198
 GameObject:
   m_ObjectHideFlags: 0
@@ -43131,6 +43721,7 @@ GameObject:
   - 4: {fileID: 842574674}
   - 114: {fileID: 842574670}
   - 114: {fileID: 842574671}
+  - 114: {fileID: 842574675}
   m_Layer: 8
   m_Name: PlateSteak1
   m_TagString: Untagged
@@ -43218,6 +43809,18 @@ Transform:
   - {fileID: 2099905798}
   m_Father: {fileID: 0}
   m_RootOrder: 230
+--- !u!114 &842574675
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400010, guid: 8a85f714c8fbfc84c817ff00aec894a2,
+    type: 2}
+  m_PrefabInternal: {fileID: 622961569}
+  m_GameObject: {fileID: 842574669}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0a576d944354bf4a92b1c570af7529e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &845055796
 GameObject:
   m_ObjectHideFlags: 0
@@ -45064,6 +45667,7 @@ GameObject:
   - 4: {fileID: 879103329}
   - 114: {fileID: 879103325}
   - 114: {fileID: 879103326}
+  - 114: {fileID: 879103330}
   m_Layer: 0
   m_Name: PlateEmpty1
   m_TagString: Untagged
@@ -45151,6 +45755,18 @@ Transform:
   - {fileID: 1952272918}
   m_Father: {fileID: 0}
   m_RootOrder: 31
+--- !u!114 &879103330
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400010, guid: 689c2df9286d11b44b9683ea3b2fa712,
+    type: 2}
+  m_PrefabInternal: {fileID: 1034438780}
+  m_GameObject: {fileID: 879103324}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0a576d944354bf4a92b1c570af7529e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &879315968
 Prefab:
   m_ObjectHideFlags: 0
@@ -45588,6 +46204,7 @@ GameObject:
   - 4: {fileID: 888415213}
   - 114: {fileID: 888415209}
   - 114: {fileID: 888415210}
+  - 114: {fileID: 888415214}
   m_Layer: 8
   m_Name: PlateSteak1
   m_TagString: Untagged
@@ -45675,6 +46292,18 @@ Transform:
   - {fileID: 2139864293}
   m_Father: {fileID: 0}
   m_RootOrder: 320
+--- !u!114 &888415214
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400010, guid: 8a85f714c8fbfc84c817ff00aec894a2,
+    type: 2}
+  m_PrefabInternal: {fileID: 226772371}
+  m_GameObject: {fileID: 888415208}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0a576d944354bf4a92b1c570af7529e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &890880742
 GameObject:
   m_ObjectHideFlags: 0
@@ -46890,6 +47519,7 @@ GameObject:
   - 4: {fileID: 914596318}
   - 114: {fileID: 914596314}
   - 114: {fileID: 914596315}
+  - 114: {fileID: 914596319}
   m_Layer: 8
   m_Name: WineGlass1
   m_TagString: Untagged
@@ -46977,6 +47607,18 @@ Transform:
   - {fileID: 1258745351}
   m_Father: {fileID: 0}
   m_RootOrder: 14
+--- !u!114 &914596319
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400010, guid: e133f7feb0a24394c81b8792639bc794,
+    type: 2}
+  m_PrefabInternal: {fileID: 703469504}
+  m_GameObject: {fileID: 914596313}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0a576d944354bf4a92b1c570af7529e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &915243924
 GameObject:
   m_ObjectHideFlags: 0
@@ -46987,6 +47629,7 @@ GameObject:
   - 4: {fileID: 915243929}
   - 114: {fileID: 915243925}
   - 114: {fileID: 915243926}
+  - 114: {fileID: 915243930}
   m_Layer: 8
   m_Name: PlateSalad1
   m_TagString: Untagged
@@ -47074,6 +47717,18 @@ Transform:
   - {fileID: 1420745656}
   m_Father: {fileID: 0}
   m_RootOrder: 171
+--- !u!114 &915243930
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400010, guid: c02b499ca49ee4b4194a1a0e7aa7bdf8,
+    type: 2}
+  m_PrefabInternal: {fileID: 1376319797}
+  m_GameObject: {fileID: 915243924}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0a576d944354bf4a92b1c570af7529e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &916337570
 GameObject:
   m_ObjectHideFlags: 0
@@ -47304,6 +47959,7 @@ GameObject:
   - 4: {fileID: 919152846}
   - 114: {fileID: 919152842}
   - 114: {fileID: 919152843}
+  - 114: {fileID: 919152847}
   m_Layer: 8
   m_Name: Bottle1
   m_TagString: Untagged
@@ -47391,6 +48047,18 @@ Transform:
   - {fileID: 2114002132}
   m_Father: {fileID: 0}
   m_RootOrder: 111
+--- !u!114 &919152847
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400010, guid: 19a8ec6a2b6d3844bbb20fc1a5f63060,
+    type: 2}
+  m_PrefabInternal: {fileID: 1483952041}
+  m_GameObject: {fileID: 919152841}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0a576d944354bf4a92b1c570af7529e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &921355625
 GameObject:
   m_ObjectHideFlags: 0
@@ -47964,6 +48632,7 @@ GameObject:
   - 4: {fileID: 925837703}
   - 114: {fileID: 925837699}
   - 114: {fileID: 925837700}
+  - 114: {fileID: 925837704}
   m_Layer: 8
   m_Name: WineGlass1
   m_TagString: Untagged
@@ -48051,6 +48720,18 @@ Transform:
   - {fileID: 232545529}
   m_Father: {fileID: 0}
   m_RootOrder: 156
+--- !u!114 &925837704
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400010, guid: e133f7feb0a24394c81b8792639bc794,
+    type: 2}
+  m_PrefabInternal: {fileID: 743857137}
+  m_GameObject: {fileID: 925837698}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0a576d944354bf4a92b1c570af7529e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &934071104
 GameObject:
   m_ObjectHideFlags: 0
@@ -48162,6 +48843,7 @@ GameObject:
   - 4: {fileID: 934242018}
   - 114: {fileID: 934242014}
   - 114: {fileID: 934242015}
+  - 114: {fileID: 934242019}
   m_Layer: 8
   m_Name: PlateSteak1
   m_TagString: Untagged
@@ -48249,6 +48931,18 @@ Transform:
   - {fileID: 1384395147}
   m_Father: {fileID: 0}
   m_RootOrder: 125
+--- !u!114 &934242019
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400010, guid: 8a85f714c8fbfc84c817ff00aec894a2,
+    type: 2}
+  m_PrefabInternal: {fileID: 1352809264}
+  m_GameObject: {fileID: 934242013}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0a576d944354bf4a92b1c570af7529e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &936205822
 GameObject:
   m_ObjectHideFlags: 0
@@ -48669,6 +49363,7 @@ GameObject:
   - 4: {fileID: 953287508}
   - 114: {fileID: 953287504}
   - 114: {fileID: 953287505}
+  - 114: {fileID: 953287509}
   m_Layer: 0
   m_Name: PlateBurger1
   m_TagString: Untagged
@@ -48756,6 +49451,18 @@ Transform:
   - {fileID: 215920664}
   m_Father: {fileID: 0}
   m_RootOrder: 224
+--- !u!114 &953287509
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400010, guid: 6106a7230b94a4045b99c2ee7eee0b76,
+    type: 2}
+  m_PrefabInternal: {fileID: 1162833213}
+  m_GameObject: {fileID: 953287503}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0a576d944354bf4a92b1c570af7529e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &953475388
 GameObject:
   m_ObjectHideFlags: 0
@@ -50110,6 +50817,7 @@ GameObject:
   - 4: {fileID: 980297724}
   - 114: {fileID: 980297720}
   - 114: {fileID: 980297721}
+  - 114: {fileID: 980297725}
   m_Layer: 0
   m_Name: PlateBurger1
   m_TagString: Untagged
@@ -50197,6 +50905,18 @@ Transform:
   - {fileID: 2033543047}
   m_Father: {fileID: 0}
   m_RootOrder: 26
+--- !u!114 &980297725
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400010, guid: 6106a7230b94a4045b99c2ee7eee0b76,
+    type: 2}
+  m_PrefabInternal: {fileID: 29288075}
+  m_GameObject: {fileID: 980297719}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0a576d944354bf4a92b1c570af7529e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &981748866
 Prefab:
   m_ObjectHideFlags: 0
@@ -51461,6 +52181,7 @@ GameObject:
   - 4: {fileID: 1010959054}
   - 114: {fileID: 1010959050}
   - 114: {fileID: 1010959051}
+  - 114: {fileID: 1010959055}
   m_Layer: 8
   m_Name: PlateSalad1
   m_TagString: Untagged
@@ -51548,6 +52269,18 @@ Transform:
   - {fileID: 1159906467}
   m_Father: {fileID: 0}
   m_RootOrder: 237
+--- !u!114 &1010959055
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400010, guid: c02b499ca49ee4b4194a1a0e7aa7bdf8,
+    type: 2}
+  m_PrefabInternal: {fileID: 562801887}
+  m_GameObject: {fileID: 1010959049}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0a576d944354bf4a92b1c570af7529e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1011778137
 GameObject:
   m_ObjectHideFlags: 0
@@ -52280,6 +53013,7 @@ GameObject:
   - 4: {fileID: 1028624021}
   - 114: {fileID: 1028624017}
   - 114: {fileID: 1028624018}
+  - 114: {fileID: 1028624022}
   m_Layer: 8
   m_Name: PlateSalad1
   m_TagString: Untagged
@@ -52367,6 +53101,18 @@ Transform:
   - {fileID: 1054322795}
   m_Father: {fileID: 0}
   m_RootOrder: 312
+--- !u!114 &1028624022
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400010, guid: c02b499ca49ee4b4194a1a0e7aa7bdf8,
+    type: 2}
+  m_PrefabInternal: {fileID: 1973316736}
+  m_GameObject: {fileID: 1028624016}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0a576d944354bf4a92b1c570af7529e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1030160660
 GameObject:
   m_ObjectHideFlags: 0
@@ -53506,6 +54252,7 @@ GameObject:
   - 4: {fileID: 1051461487}
   - 114: {fileID: 1051461484}
   - 114: {fileID: 1051461483}
+  - 114: {fileID: 1051461488}
   m_Layer: 8
   m_Name: Gem1
   m_TagString: Untagged
@@ -53593,6 +54340,18 @@ Transform:
   - {fileID: 168372684}
   m_Father: {fileID: 0}
   m_RootOrder: 152
+--- !u!114 &1051461488
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400010, guid: 842528d34c2e16540a628ef6977ab911,
+    type: 2}
+  m_PrefabInternal: {fileID: 2039578772}
+  m_GameObject: {fileID: 1051461482}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0a576d944354bf4a92b1c570af7529e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1052774660
 GameObject:
   m_ObjectHideFlags: 0
@@ -53632,6 +54391,7 @@ GameObject:
   - 4: {fileID: 1054112816}
   - 114: {fileID: 1054112812}
   - 114: {fileID: 1054112813}
+  - 114: {fileID: 1054112817}
   m_Layer: 8
   m_Name: PlateSteak1
   m_TagString: Untagged
@@ -53719,6 +54479,18 @@ Transform:
   - {fileID: 2030367230}
   m_Father: {fileID: 0}
   m_RootOrder: 122
+--- !u!114 &1054112817
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400010, guid: 8a85f714c8fbfc84c817ff00aec894a2,
+    type: 2}
+  m_PrefabInternal: {fileID: 967577399}
+  m_GameObject: {fileID: 1054112811}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0a576d944354bf4a92b1c570af7529e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1054322791
 GameObject:
   m_ObjectHideFlags: 0
@@ -53813,6 +54585,7 @@ GameObject:
   - 4: {fileID: 1055988316}
   - 114: {fileID: 1055988313}
   - 114: {fileID: 1055988312}
+  - 114: {fileID: 1055988317}
   m_Layer: 0
   m_Name: Bottle2
   m_TagString: Untagged
@@ -53900,6 +54673,18 @@ Transform:
   - {fileID: 2024152448}
   m_Father: {fileID: 0}
   m_RootOrder: 216
+--- !u!114 &1055988317
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400010, guid: a537460f0a3bbbf4cbfec5d0faf04608,
+    type: 2}
+  m_PrefabInternal: {fileID: 1141821385}
+  m_GameObject: {fileID: 1055988311}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0a576d944354bf4a92b1c570af7529e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1057453254
 GameObject:
   m_ObjectHideFlags: 0
@@ -53910,6 +54695,7 @@ GameObject:
   - 4: {fileID: 1057453259}
   - 114: {fileID: 1057453256}
   - 114: {fileID: 1057453255}
+  - 114: {fileID: 1057453260}
   m_Layer: 8
   m_Name: Gem1
   m_TagString: Untagged
@@ -53997,6 +54783,18 @@ Transform:
   - {fileID: 1127102612}
   m_Father: {fileID: 0}
   m_RootOrder: 151
+--- !u!114 &1057453260
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400010, guid: 842528d34c2e16540a628ef6977ab911,
+    type: 2}
+  m_PrefabInternal: {fileID: 787579749}
+  m_GameObject: {fileID: 1057453254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0a576d944354bf4a92b1c570af7529e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1065190560
 GameObject:
   m_ObjectHideFlags: 0
@@ -55649,6 +56447,7 @@ GameObject:
   - 4: {fileID: 1107178533}
   - 114: {fileID: 1107178535}
   - 114: {fileID: 1107178534}
+  - 114: {fileID: 1107178538}
   m_Layer: 8
   m_Name: Bottle3
   m_TagString: Untagged
@@ -55736,6 +56535,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 428298058}
   m_GameObject: {fileID: 636489912}
   m_Mesh: {fileID: 4300000, guid: 6f88db35150971d41a4cae8e7b8184f0, type: 3}
+--- !u!114 &1107178538
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400010, guid: 0859fe67e4985764eb41dda1a1e2b743,
+    type: 2}
+  m_PrefabInternal: {fileID: 428298058}
+  m_GameObject: {fileID: 1107178532}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0a576d944354bf4a92b1c570af7529e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1108908013
 Prefab:
   m_ObjectHideFlags: 0
@@ -55973,6 +56784,7 @@ GameObject:
   - 4: {fileID: 1112725512}
   - 114: {fileID: 1112725508}
   - 114: {fileID: 1112725509}
+  - 114: {fileID: 1112725513}
   m_Layer: 8
   m_Name: PlateSteak1
   m_TagString: Untagged
@@ -56060,6 +56872,18 @@ Transform:
   - {fileID: 1856389516}
   m_Father: {fileID: 1343321441}
   m_RootOrder: 4
+--- !u!114 &1112725513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400010, guid: 8a85f714c8fbfc84c817ff00aec894a2,
+    type: 2}
+  m_PrefabInternal: {fileID: 1323842386}
+  m_GameObject: {fileID: 1112725507}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0a576d944354bf4a92b1c570af7529e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1114621599
 GameObject:
   m_ObjectHideFlags: 0
@@ -56571,18 +57395,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 152c028ba9883f44aad8faeed999ab82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IsOneTimeOption: 0
-  NumTimesSelected: 0
-  npcName: 
-  npcText: Wanna dance?
-  responseText:
-  - No. <LEAVE>
-  - Hell no. <LEAVE>
-  - Thanks for the tip, citizen. <LEAVE>
-  responseObject: []
-  requiredItemName: []
-  requiredItemAmount: 
-  disguiseName: []
+  NPCDialog: 
+  Responses:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!114 &1119973010
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -56594,7 +57412,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dc234e3a2651b44b883d0e587984c45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  start: {fileID: 1119973009}
+  Beginning: {fileID: 0}
 --- !u!114 &1119973011
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -56775,6 +57593,7 @@ GameObject:
   - 4: {fileID: 1124570140}
   - 114: {fileID: 1124570136}
   - 114: {fileID: 1124570137}
+  - 114: {fileID: 1124570141}
   m_Layer: 8
   m_Name: PlateSteak1
   m_TagString: Untagged
@@ -56862,6 +57681,18 @@ Transform:
   - {fileID: 417247973}
   m_Father: {fileID: 0}
   m_RootOrder: 241
+--- !u!114 &1124570141
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400010, guid: 8a85f714c8fbfc84c817ff00aec894a2,
+    type: 2}
+  m_PrefabInternal: {fileID: 1280222699}
+  m_GameObject: {fileID: 1124570135}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0a576d944354bf4a92b1c570af7529e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1126290542
 GameObject:
   m_ObjectHideFlags: 0
@@ -56872,6 +57703,7 @@ GameObject:
   - 4: {fileID: 1126290547}
   - 114: {fileID: 1126290543}
   - 114: {fileID: 1126290544}
+  - 114: {fileID: 1126290548}
   m_Layer: 0
   m_Name: PlateBurger1
   m_TagString: Untagged
@@ -56959,6 +57791,18 @@ Transform:
   - {fileID: 168931104}
   m_Father: {fileID: 0}
   m_RootOrder: 317
+--- !u!114 &1126290548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400010, guid: 6106a7230b94a4045b99c2ee7eee0b76,
+    type: 2}
+  m_PrefabInternal: {fileID: 1004201508}
+  m_GameObject: {fileID: 1126290542}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0a576d944354bf4a92b1c570af7529e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1127102611
 GameObject:
   m_ObjectHideFlags: 0
@@ -57498,6 +58342,7 @@ GameObject:
   - 4: {fileID: 1134199174}
   - 114: {fileID: 1134199170}
   - 114: {fileID: 1134199171}
+  - 114: {fileID: 1134199175}
   m_Layer: 8
   m_Name: PlateSalad1
   m_TagString: Untagged
@@ -57585,6 +58430,18 @@ Transform:
   - {fileID: 239072753}
   m_Father: {fileID: 0}
   m_RootOrder: 234
+--- !u!114 &1134199175
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400010, guid: c02b499ca49ee4b4194a1a0e7aa7bdf8,
+    type: 2}
+  m_PrefabInternal: {fileID: 408101827}
+  m_GameObject: {fileID: 1134199169}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0a576d944354bf4a92b1c570af7529e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1135185578
 GameObject:
   m_ObjectHideFlags: 0
@@ -58533,6 +59390,7 @@ GameObject:
   - 4: {fileID: 1144577214}
   - 114: {fileID: 1144577210}
   - 114: {fileID: 1144577211}
+  - 114: {fileID: 1144577215}
   m_Layer: 0
   m_Name: PlateBurger1
   m_TagString: Untagged
@@ -58620,6 +59478,18 @@ Transform:
   - {fileID: 2069250782}
   m_Father: {fileID: 0}
   m_RootOrder: 308
+--- !u!114 &1144577215
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400010, guid: 6106a7230b94a4045b99c2ee7eee0b76,
+    type: 2}
+  m_PrefabInternal: {fileID: 9721240}
+  m_GameObject: {fileID: 1144577209}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0a576d944354bf4a92b1c570af7529e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1146741961
 GameObject:
   m_ObjectHideFlags: 0
@@ -58820,6 +59690,7 @@ GameObject:
   - 4: {fileID: 1153531807}
   - 114: {fileID: 1153531803}
   - 114: {fileID: 1153531804}
+  - 114: {fileID: 1153531808}
   m_Layer: 8
   m_Name: Gem5
   m_TagString: Untagged
@@ -58907,6 +59778,18 @@ Transform:
   - {fileID: 1356768262}
   m_Father: {fileID: 0}
   m_RootOrder: 162
+--- !u!114 &1153531808
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400010, guid: a9ba180a0917e05429324554a3f66868,
+    type: 2}
+  m_PrefabInternal: {fileID: 1556995274}
+  m_GameObject: {fileID: 1153531802}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0a576d944354bf4a92b1c570af7529e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1154217242
 GameObject:
   m_ObjectHideFlags: 0
@@ -59426,6 +60309,7 @@ GameObject:
   - 4: {fileID: 1162422835}
   - 114: {fileID: 1162422832}
   - 114: {fileID: 1162422831}
+  - 114: {fileID: 1162422836}
   m_Layer: 0
   m_Name: Bottle3
   m_TagString: Untagged
@@ -59513,6 +60397,18 @@ Transform:
   - {fileID: 1623476702}
   m_Father: {fileID: 0}
   m_RootOrder: 214
+--- !u!114 &1162422836
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400010, guid: 0859fe67e4985764eb41dda1a1e2b743,
+    type: 2}
+  m_PrefabInternal: {fileID: 336722579}
+  m_GameObject: {fileID: 1162422830}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0a576d944354bf4a92b1c570af7529e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1162833213
 Prefab:
   m_ObjectHideFlags: 0
@@ -60085,6 +60981,7 @@ GameObject:
   - 4: {fileID: 1174963039}
   - 114: {fileID: 1174963035}
   - 114: {fileID: 1174963036}
+  - 114: {fileID: 1174963040}
   m_Layer: 8
   m_Name: Gem5
   m_TagString: Untagged
@@ -60172,6 +61069,18 @@ Transform:
   - {fileID: 747442827}
   m_Father: {fileID: 0}
   m_RootOrder: 159
+--- !u!114 &1174963040
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400010, guid: a9ba180a0917e05429324554a3f66868,
+    type: 2}
+  m_PrefabInternal: {fileID: 539090656}
+  m_GameObject: {fileID: 1174963034}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0a576d944354bf4a92b1c570af7529e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1175271369
 GameObject:
   m_ObjectHideFlags: 0
@@ -60377,6 +61286,7 @@ GameObject:
   - 4: {fileID: 1178138308}
   - 114: {fileID: 1178138304}
   - 114: {fileID: 1178138305}
+  - 114: {fileID: 1178138309}
   m_Layer: 8
   m_Name: PlateSalad1
   m_TagString: Untagged
@@ -60464,6 +61374,18 @@ Transform:
   - {fileID: 2105695391}
   m_Father: {fileID: 0}
   m_RootOrder: 133
+--- !u!114 &1178138309
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400010, guid: c02b499ca49ee4b4194a1a0e7aa7bdf8,
+    type: 2}
+  m_PrefabInternal: {fileID: 188065434}
+  m_GameObject: {fileID: 1178138303}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0a576d944354bf4a92b1c570af7529e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1178859899
 Prefab:
   m_ObjectHideFlags: 0
@@ -60742,6 +61664,7 @@ GameObject:
   - 4: {fileID: 1182252580}
   - 114: {fileID: 1182252576}
   - 114: {fileID: 1182252577}
+  - 114: {fileID: 1182252581}
   m_Layer: 8
   m_Name: Ring1
   m_TagString: Untagged
@@ -60829,6 +61752,18 @@ Transform:
   - {fileID: 1703562729}
   m_Father: {fileID: 0}
   m_RootOrder: 175
+--- !u!114 &1182252581
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400010, guid: f6ba98ea6ced8ea479de804d30de9c71,
+    type: 2}
+  m_PrefabInternal: {fileID: 1001628498}
+  m_GameObject: {fileID: 1182252575}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0a576d944354bf4a92b1c570af7529e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1182942733
 GameObject:
   m_ObjectHideFlags: 0
@@ -61436,6 +62371,7 @@ GameObject:
   - 4: {fileID: 1191918768}
   - 114: {fileID: 1191918764}
   - 114: {fileID: 1191918765}
+  - 114: {fileID: 1191918769}
   m_Layer: 8
   m_Name: WineGlass1
   m_TagString: Untagged
@@ -61523,6 +62459,18 @@ Transform:
   - {fileID: 966792105}
   m_Father: {fileID: 0}
   m_RootOrder: 169
+--- !u!114 &1191918769
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400010, guid: e133f7feb0a24394c81b8792639bc794,
+    type: 2}
+  m_PrefabInternal: {fileID: 647781803}
+  m_GameObject: {fileID: 1191918763}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0a576d944354bf4a92b1c570af7529e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1195713309
 GameObject:
   m_ObjectHideFlags: 0
@@ -62017,6 +62965,7 @@ GameObject:
   - 4: {fileID: 1209840196}
   - 114: {fileID: 1209840192}
   - 114: {fileID: 1209840193}
+  - 114: {fileID: 1209840197}
   m_Layer: 8
   m_Name: Bowl1
   m_TagString: Untagged
@@ -62116,6 +63065,18 @@ Transform:
   - {fileID: 1490484341}
   m_Father: {fileID: 0}
   m_RootOrder: 188
+--- !u!114 &1209840197
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400010, guid: 845135208a0fce4488e286eee9113bb1,
+    type: 2}
+  m_PrefabInternal: {fileID: 222596795}
+  m_GameObject: {fileID: 1209840190}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0a576d944354bf4a92b1c570af7529e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1210762448
 GameObject:
   m_ObjectHideFlags: 0
@@ -62155,6 +63116,7 @@ GameObject:
   - 4: {fileID: 1212483831}
   - 114: {fileID: 1212483827}
   - 114: {fileID: 1212483828}
+  - 114: {fileID: 1212483832}
   m_Layer: 8
   m_Name: PlateSteak1
   m_TagString: Untagged
@@ -62242,6 +63204,18 @@ Transform:
   - {fileID: 1459092231}
   m_Father: {fileID: 0}
   m_RootOrder: 123
+--- !u!114 &1212483832
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400010, guid: 8a85f714c8fbfc84c817ff00aec894a2,
+    type: 2}
+  m_PrefabInternal: {fileID: 1440225446}
+  m_GameObject: {fileID: 1212483826}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0a576d944354bf4a92b1c570af7529e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1214520953
 GameObject:
   m_ObjectHideFlags: 0
@@ -62731,6 +63705,7 @@ GameObject:
   - 4: {fileID: 1221504516}
   - 114: {fileID: 1221504512}
   - 114: {fileID: 1221504513}
+  - 114: {fileID: 1221504517}
   m_Layer: 8
   m_Name: PlateSalad1
   m_TagString: Untagged
@@ -62818,6 +63793,18 @@ Transform:
   - {fileID: 553089795}
   m_Father: {fileID: 0}
   m_RootOrder: 315
+--- !u!114 &1221504517
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400010, guid: c02b499ca49ee4b4194a1a0e7aa7bdf8,
+    type: 2}
+  m_PrefabInternal: {fileID: 851856069}
+  m_GameObject: {fileID: 1221504511}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0a576d944354bf4a92b1c570af7529e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1221881842
 GameObject:
   m_ObjectHideFlags: 0
@@ -63600,6 +64587,7 @@ GameObject:
   - 4: {fileID: 1234365479}
   - 114: {fileID: 1234365475}
   - 114: {fileID: 1234365476}
+  - 114: {fileID: 1234365480}
   m_Layer: 0
   m_Name: Mint1
   m_TagString: Untagged
@@ -63687,6 +64675,18 @@ Transform:
   - {fileID: 602576438}
   m_Father: {fileID: 0}
   m_RootOrder: 64
+--- !u!114 &1234365480
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400010, guid: 1463e12de96c6434f9cd33badf4d0a9b,
+    type: 2}
+  m_PrefabInternal: {fileID: 1894673812}
+  m_GameObject: {fileID: 1234365474}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0a576d944354bf4a92b1c570af7529e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1235816157
 GameObject:
   m_ObjectHideFlags: 0
@@ -64568,6 +65568,7 @@ GameObject:
   - 4: {fileID: 1249158218}
   - 114: {fileID: 1249158214}
   - 114: {fileID: 1249158215}
+  - 114: {fileID: 1249158219}
   m_Layer: 8
   m_Name: WineGlass1
   m_TagString: Untagged
@@ -64655,6 +65656,18 @@ Transform:
   - {fileID: 676612973}
   m_Father: {fileID: 0}
   m_RootOrder: 118
+--- !u!114 &1249158219
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400010, guid: e133f7feb0a24394c81b8792639bc794,
+    type: 2}
+  m_PrefabInternal: {fileID: 809737306}
+  m_GameObject: {fileID: 1249158213}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0a576d944354bf4a92b1c570af7529e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1251353514
 Prefab:
   m_ObjectHideFlags: 0
@@ -64941,6 +65954,7 @@ GameObject:
   - 4: {fileID: 1255580125}
   - 114: {fileID: 1255580121}
   - 114: {fileID: 1255580122}
+  - 114: {fileID: 1255580126}
   m_Layer: 0
   m_Name: Bottle1
   m_TagString: Untagged
@@ -65028,6 +66042,18 @@ Transform:
   - {fileID: 896152776}
   m_Father: {fileID: 0}
   m_RootOrder: 217
+--- !u!114 &1255580126
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400010, guid: 19a8ec6a2b6d3844bbb20fc1a5f63060,
+    type: 2}
+  m_PrefabInternal: {fileID: 1789608059}
+  m_GameObject: {fileID: 1255580120}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0a576d944354bf4a92b1c570af7529e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1256281591
 GameObject:
   m_ObjectHideFlags: 0
@@ -65948,18 +66974,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 152c028ba9883f44aad8faeed999ab82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IsOneTimeOption: 0
-  NumTimesSelected: 0
-  npcName: 
-  npcText: ROOOOFTOP PAAAAARTY!
-  responseText:
-  - Stop yelling at me, peasant.<LEAVE>
-  - WOOOOO YEAH ROOFTOP PARTY! <LEAVE>
-  - Thanks for the tip, citizen. <LEAVE>
-  responseObject: []
-  requiredItemName: []
-  requiredItemAmount: 
-  disguiseName: []
+  NPCDialog: 
+  Responses:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!114 &1278408610
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -65971,7 +66991,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dc234e3a2651b44b883d0e587984c45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  start: {fileID: 1278408609}
+  Beginning: {fileID: 0}
 --- !u!114 &1278408611
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -66157,6 +67177,7 @@ GameObject:
   - 4: {fileID: 1280708863}
   - 114: {fileID: 1280708859}
   - 114: {fileID: 1280708860}
+  - 114: {fileID: 1280708864}
   m_Layer: 8
   m_Name: WineGlass1
   m_TagString: Untagged
@@ -66244,6 +67265,18 @@ Transform:
   - {fileID: 717320957}
   m_Father: {fileID: 0}
   m_RootOrder: 155
+--- !u!114 &1280708864
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400010, guid: e133f7feb0a24394c81b8792639bc794,
+    type: 2}
+  m_PrefabInternal: {fileID: 1155384678}
+  m_GameObject: {fileID: 1280708858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0a576d944354bf4a92b1c570af7529e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1282226251
 GameObject:
   m_ObjectHideFlags: 0
@@ -66451,6 +67484,7 @@ GameObject:
   - 4: {fileID: 1284898680}
   - 114: {fileID: 1284898676}
   - 114: {fileID: 1284898677}
+  - 114: {fileID: 1284898681}
   m_Layer: 8
   m_Name: Bowl1
   m_TagString: Untagged
@@ -66550,6 +67584,18 @@ Transform:
   - {fileID: 108090129}
   m_Father: {fileID: 0}
   m_RootOrder: 181
+--- !u!114 &1284898681
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400010, guid: 845135208a0fce4488e286eee9113bb1,
+    type: 2}
+  m_PrefabInternal: {fileID: 704183809}
+  m_GameObject: {fileID: 1284898674}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0a576d944354bf4a92b1c570af7529e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1285794447
 GameObject:
   m_ObjectHideFlags: 0
@@ -66800,6 +67846,7 @@ GameObject:
   - 4: {fileID: 1293221251}
   - 114: {fileID: 1293221247}
   - 114: {fileID: 1293221248}
+  - 114: {fileID: 1293221252}
   m_Layer: 0
   m_Name: PlateEmpty1
   m_TagString: Untagged
@@ -66887,6 +67934,18 @@ Transform:
   - {fileID: 1260465875}
   m_Father: {fileID: 0}
   m_RootOrder: 29
+--- !u!114 &1293221252
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400010, guid: 689c2df9286d11b44b9683ea3b2fa712,
+    type: 2}
+  m_PrefabInternal: {fileID: 643701527}
+  m_GameObject: {fileID: 1293221246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0a576d944354bf4a92b1c570af7529e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1294015863
 Prefab:
   m_ObjectHideFlags: 0
@@ -67005,7 +68064,6 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1295848156}
-  - 114: {fileID: 1295848155}
   - 114: {fileID: 1295848154}
   - 114: {fileID: 1295848153}
   - 114: {fileID: 1295848152}
@@ -67044,27 +68102,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 152c028ba9883f44aad8faeed999ab82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IsOneTimeOption: 0
-  NumTimesSelected: 0
-  npcName: Sam Smitherson
-  npcText: Need something?
-  responseText:
-  - Tell me more about Aileen.
-  - How are you feeling?
-  - Bro, you look classy as hell
-  - 'This should cure your stank breath. '
-  responseObject:
-  - {fileID: 1295848169}
-  - {fileID: 1295848168}
-  - {fileID: 1295848167}
-  - {fileID: 1295848166}
-  requiredItemName:
-  - 
-  - 
-  - con1
-  - Mint
-  requiredItemAmount: 00000000000000000100000001000000
-  disguiseName: []
+  NPCDialog: 
+  Responses:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!114 &1295848149
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -67076,17 +68119,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 152c028ba9883f44aad8faeed999ab82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IsOneTimeOption: 0
-  NumTimesSelected: 0
-  npcName: Sam Smitherson
-  npcText: "Thanks Wingman! You\u2019re the best!"
-  responseText:
-  - <LEAVE>
-  responseObject: []
-  requiredItemName:
-  - client1
-  requiredItemAmount: 01000000
-  disguiseName: []
+  NPCDialog: 
+  Responses:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!114 &1295848150
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -67098,7 +68136,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dc234e3a2651b44b883d0e587984c45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  start: {fileID: 1295848164}
+  Beginning: {fileID: 0}
 --- !u!114 &1295848151
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -67110,7 +68148,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dc234e3a2651b44b883d0e587984c45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  start: {fileID: 1295848165}
+  Beginning: {fileID: 0}
 --- !u!114 &1295848152
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -67122,7 +68160,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dc234e3a2651b44b883d0e587984c45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  start: {fileID: 0}
+  Beginning: {fileID: 0}
 --- !u!114 &1295848153
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -67134,7 +68172,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dc234e3a2651b44b883d0e587984c45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  start: {fileID: 1295848148}
+  Beginning: {fileID: 0}
 --- !u!114 &1295848154
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -67146,25 +68184,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dc234e3a2651b44b883d0e587984c45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  start: {fileID: 1295848158}
---- !u!114 &1295848155
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1295848147}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3c52a5697ebc2124fae80d74cd8b7149, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  clientCons:
-  - {fileID: 1295848154}
-  - {fileID: 1295848153}
-  - {fileID: 1295848153}
-  targetCons:
-  - {fileID: 1295848151}
-  - {fileID: 1295848150}
+  Beginning: {fileID: 0}
 --- !u!4 &1295848156
 Transform:
   m_ObjectHideFlags: 0
@@ -67188,19 +68208,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 152c028ba9883f44aad8faeed999ab82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IsOneTimeOption: 0
-  NumTimesSelected: 0
-  npcName: Sam Smitherson
-  npcText: "Great! I really need your help, Wingman. I\u2019m desperate. I\u2019ve
-    been putting the moves on Aileen all night long, but I just have no game lately.
-    If you can get me a date with Aileen, I\u2019ll pay you handsomely."
-  responseText:
-  - Acknowledged
-  responseObject:
-  - {fileID: 1295848149}
-  requiredItemName: []
-  requiredItemAmount: 
-  disguiseName: []
+  NPCDialog: 
+  Responses:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!114 &1295848158
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -67212,17 +68225,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 152c028ba9883f44aad8faeed999ab82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IsOneTimeOption: 0
-  NumTimesSelected: 0
-  npcName: Dad Cop 2
-  npcText: Hey! You the Wingman?
-  responseText:
-  - Yes. Tell me about the job.
-  responseObject:
-  - {fileID: 1295848157}
-  requiredItemName: []
-  requiredItemAmount: 
-  disguiseName: []
+  NPCDialog: 
+  Responses:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!114 &1295848159
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -67234,16 +68242,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 152c028ba9883f44aad8faeed999ab82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IsOneTimeOption: 0
-  NumTimesSelected: 0
-  npcName: Aileen Cathasaigh
-  npcText: "I\u2019d like that very much."
-  responseText:
-  - <LEAVE>
-  responseObject: []
-  requiredItemName: []
-  requiredItemAmount: 
-  disguiseName: []
+  NPCDialog: 
+  Responses:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!114 &1295848160
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -67255,18 +68259,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 152c028ba9883f44aad8faeed999ab82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IsOneTimeOption: 0
-  NumTimesSelected: 0
-  npcName: Aileen Cathasaigh
-  npcText: "Oh it\u2019s beautiful! I love <b>Gems</b>! I think I need to meet this
-    intriguing man."
-  responseText:
-  - <LEAVE>
-  responseObject: []
-  requiredItemName:
-  - int2
-  requiredItemAmount: 01000000
-  disguiseName: []
+  NPCDialog: 
+  Responses:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!114 &1295848161
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -67278,17 +68276,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 152c028ba9883f44aad8faeed999ab82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IsOneTimeOption: 0
-  NumTimesSelected: 0
-  npcName: Aileen Cathasaigh
-  npcText: <CHUGS VIOLENTLY> Mmmmm. Thanks <3
-  responseText:
-  - <LEAVE>
-  responseObject: []
-  requiredItemName:
-  - int1
-  requiredItemAmount: 01000000
-  disguiseName: []
+  NPCDialog: 
+  Responses:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!114 &1295848162
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -67300,17 +68293,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 152c028ba9883f44aad8faeed999ab82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IsOneTimeOption: 0
-  NumTimesSelected: 0
-  npcName: Aileen Cathasaigh
-  npcText: Wow. I was talking to him earlier. If he had some more confidence he might
-    be fun to dance with.
-  responseText:
-  - <LEAVE>
-  responseObject: []
-  requiredItemName: []
-  requiredItemAmount: 
-  disguiseName: []
+  NPCDialog: 
+  Responses:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!114 &1295848163
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -67322,17 +68310,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 152c028ba9883f44aad8faeed999ab82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IsOneTimeOption: 0
-  NumTimesSelected: 0
-  npcName: Aileen Cathasaigh
-  npcText: "I\u2019d be enjoying it more if someone would bring me a <b>Bottle</b>."
-  responseText:
-  - I believe my friend, Sam, would like to satiate your thirst.
-  responseObject:
-  - {fileID: 1295848159}
-  requiredItemName: []
-  requiredItemAmount: 
-  disguiseName: []
+  NPCDialog: 
+  Responses:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!114 &1295848164
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -67344,30 +68327,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 152c028ba9883f44aad8faeed999ab82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IsOneTimeOption: 0
-  NumTimesSelected: 0
-  npcName: Aileen Cathasaigh
-  npcText: Hello.
-  responseText:
-  - How are you enjoying this party?
-  - "See my friend, Sam, over there? I just don\u2019t understand how one guy can
-    be so lucky. I mean, no one should be that rich AND have a huge . . . personality.
-    Its just not fair."
-  - My friend, Sam, sends his regards and this <b>Bottle</b>. Enjoy.
-  - "Sam thinks you would look ravishing wearing this <b>Gem</b>. Why don\u2019t you
-    try it on?"
-  responseObject:
-  - {fileID: 1295848163}
-  - {fileID: 1295848162}
-  - {fileID: 1295848161}
-  - {fileID: 1295848160}
-  requiredItemName:
-  - 
-  - 
-  - Bottle
-  - Gem
-  requiredItemAmount: 00000000000000000100000001000000
-  disguiseName: []
+  NPCDialog: 
+  Responses:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!114 &1295848165
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -67379,16 +68344,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 152c028ba9883f44aad8faeed999ab82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IsOneTimeOption: 0
-  NumTimesSelected: 0
-  npcName: Aileen Cathasaigh
-  npcText: Can I help you?
-  responseText:
-  - What? No! Get on my level scrub. <LEAVE>
-  responseObject: []
-  requiredItemName: []
-  requiredItemAmount: 
-  disguiseName: []
+  NPCDialog: 
+  Responses:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!114 &1295848166
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -67400,19 +68361,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 152c028ba9883f44aad8faeed999ab82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IsOneTimeOption: 0
-  NumTimesSelected: 0
-  npcName: Sam Smitherson
-  npcText: Thanks! Where did you even find <b>Mints</b> this fresh? My mouth has never
-    experienced such an intense cleansing chill. No woman will be able to resist breath
-    this fresh!
-  responseText:
-  - <LEAVE>
-  responseObject: []
-  requiredItemName:
-  - con2
-  requiredItemAmount: 01000000
-  disguiseName: []
+  NPCDialog: 
+  Responses:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!114 &1295848167
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -67424,17 +68378,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 152c028ba9883f44aad8faeed999ab82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IsOneTimeOption: 0
-  NumTimesSelected: 0
-  npcName: Sam Smitherson
-  npcText: 'Thanks, man! I tried really hard to look good tonight and it feels good
-    to get some validation. '
-  responseText:
-  - <LEAVE>
-  responseObject: []
-  requiredItemName: []
-  requiredItemAmount: 
-  disguiseName: []
+  NPCDialog: 
+  Responses:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!114 &1295848168
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -67446,18 +68395,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 152c028ba9883f44aad8faeed999ab82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IsOneTimeOption: 0
-  NumTimesSelected: 0
-  npcName: Sam Smitherson
-  npcText: "I\u2019d be feeling much more confident if I could get rid of this damn
-    onion breath. I should have brought some <b>Mints</b> or something. It feels like
-    I\u2019m repelling everyone at this party, especially Aileen."
-  responseText:
-  - <LEAVE>
-  responseObject: []
-  requiredItemName: []
-  requiredItemAmount: 
-  disguiseName: []
+  NPCDialog: 
+  Responses:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!114 &1295848169
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -67469,18 +68412,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 152c028ba9883f44aad8faeed999ab82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IsOneTimeOption: 0
-  NumTimesSelected: 0
-  npcName: Sam Smitherson
-  npcText: "We made some small talk earlier and she mentioned she was into <b>Gems</b>.
-    I\u2019d give her some if I had any. If you could give her some on my behalf I'd
-    be greatful."
-  responseText:
-  - <LEAVE>
-  responseObject: []
-  requiredItemName: []
-  requiredItemAmount: 
-  disguiseName: []
+  NPCDialog: 
+  Responses:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &1297665967
 GameObject:
   m_ObjectHideFlags: 0
@@ -67518,6 +68455,7 @@ GameObject:
   - 4: {fileID: 1297773017}
   - 114: {fileID: 1297773018}
   - 114: {fileID: 1297773019}
+  - 114: {fileID: 1297773022}
   m_Layer: 8
   m_Name: SoloCup1
   m_TagString: Untagged
@@ -67605,6 +68543,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 894740817}
   m_GameObject: {fileID: 242201765}
   m_Mesh: {fileID: 4300000, guid: 4396b22a05f4dd244a39256eade96e79, type: 3}
+--- !u!114 &1297773022
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400010, guid: edd970519df8ff648a3a49ee2ad875bd,
+    type: 2}
+  m_PrefabInternal: {fileID: 894740817}
+  m_GameObject: {fileID: 1297773016}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0a576d944354bf4a92b1c570af7529e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1299030483
 GameObject:
   m_ObjectHideFlags: 0
@@ -68639,6 +69589,7 @@ GameObject:
   - 4: {fileID: 1322255859}
   - 114: {fileID: 1322255855}
   - 114: {fileID: 1322255856}
+  - 114: {fileID: 1322255860}
   m_Layer: 8
   m_Name: Gem4
   m_TagString: Untagged
@@ -68726,6 +69677,18 @@ Transform:
   - {fileID: 692779245}
   m_Father: {fileID: 0}
   m_RootOrder: 179
+--- !u!114 &1322255860
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400010, guid: 3add72caf4c6658459aa3e76fc2d7cd0,
+    type: 2}
+  m_PrefabInternal: {fileID: 1669874435}
+  m_GameObject: {fileID: 1322255854}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0a576d944354bf4a92b1c570af7529e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1323658392
 GameObject:
   m_ObjectHideFlags: 0
@@ -70918,6 +71881,7 @@ GameObject:
   - 4: {fileID: 1361242653}
   - 114: {fileID: 1361242649}
   - 114: {fileID: 1361242650}
+  - 114: {fileID: 1361242654}
   m_Layer: 0
   m_Name: Bottle1
   m_TagString: Untagged
@@ -71005,6 +71969,18 @@ Transform:
   - {fileID: 2020295782}
   m_Father: {fileID: 0}
   m_RootOrder: 36
+--- !u!114 &1361242654
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400010, guid: 19a8ec6a2b6d3844bbb20fc1a5f63060,
+    type: 2}
+  m_PrefabInternal: {fileID: 1804495391}
+  m_GameObject: {fileID: 1361242648}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0a576d944354bf4a92b1c570af7529e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1361603056
 GameObject:
   m_ObjectHideFlags: 0
@@ -71566,19 +72542,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 152c028ba9883f44aad8faeed999ab82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IsOneTimeOption: 0
-  NumTimesSelected: 0
-  npcName: 
-  npcText: Have you heard about the new party moon? It sounds sick, no scratch that,
-    its ill. The illest.
-  responseText:
-  - Party moon? Sounds awesome.<LEAVE>
-  - "But why? Why would there be parties on the moon? That\u2019s nonsense. <LEAVE>"
-  - Thanks for the tip, citizen. <LEAVE>
-  responseObject: []
-  requiredItemName: []
-  requiredItemAmount: 
-  disguiseName: []
+  NPCDialog: 
+  Responses:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!114 &1377237042
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -71590,7 +72559,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dc234e3a2651b44b883d0e587984c45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  start: {fileID: 1377237041}
+  Beginning: {fileID: 0}
 --- !u!114 &1377237043
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -71959,18 +72928,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 152c028ba9883f44aad8faeed999ab82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IsOneTimeOption: 0
-  NumTimesSelected: 0
-  npcName: 
-  npcText: "Kangaroos are like\u2026 deer T-Rexes."
-  responseText:
-  - You are so high right now. <LEAVE>
-  - Dude, whoa. <LEAVE>
-  - Thanks for the tip, citizen. <LEAVE>
-  responseObject: []
-  requiredItemName: []
-  requiredItemAmount: 
-  disguiseName: []
+  NPCDialog: 
+  Responses:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!114 &1381438074
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -71982,7 +72945,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dc234e3a2651b44b883d0e587984c45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  start: {fileID: 1381438073}
+  Beginning: {fileID: 0}
 --- !u!114 &1381438075
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -72401,6 +73364,7 @@ GameObject:
   - 4: {fileID: 1390549717}
   - 114: {fileID: 1390549718}
   - 114: {fileID: 1390549719}
+  - 114: {fileID: 1390549722}
   m_Layer: 8
   m_Name: PlateSteak1
   m_TagString: Untagged
@@ -72488,6 +73452,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 2120090876}
   m_GameObject: {fileID: 379663130}
   m_Mesh: {fileID: 4300000, guid: 00c883c2561bc654294776d7be07e482, type: 3}
+--- !u!114 &1390549722
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400010, guid: 8a85f714c8fbfc84c817ff00aec894a2,
+    type: 2}
+  m_PrefabInternal: {fileID: 2120090876}
+  m_GameObject: {fileID: 1390549716}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0a576d944354bf4a92b1c570af7529e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1390715538
 GameObject:
   m_ObjectHideFlags: 0
@@ -74017,6 +74993,7 @@ GameObject:
   - 4: {fileID: 1429114046}
   - 114: {fileID: 1429114042}
   - 114: {fileID: 1429114043}
+  - 114: {fileID: 1429114047}
   m_Layer: 0
   m_Name: Bottle1
   m_TagString: Untagged
@@ -74104,6 +75081,18 @@ Transform:
   - {fileID: 2032002776}
   m_Father: {fileID: 0}
   m_RootOrder: 213
+--- !u!114 &1429114047
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400010, guid: 19a8ec6a2b6d3844bbb20fc1a5f63060,
+    type: 2}
+  m_PrefabInternal: {fileID: 1239828910}
+  m_GameObject: {fileID: 1429114041}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0a576d944354bf4a92b1c570af7529e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1430661468
 GameObject:
   m_ObjectHideFlags: 0
@@ -74186,6 +75175,7 @@ GameObject:
   - 4: {fileID: 1432699978}
   - 114: {fileID: 1432699974}
   - 114: {fileID: 1432699975}
+  - 114: {fileID: 1432699979}
   m_Layer: 0
   m_Name: Bottle1
   m_TagString: Untagged
@@ -74273,6 +75263,18 @@ Transform:
   - {fileID: 1834983310}
   m_Father: {fileID: 0}
   m_RootOrder: 219
+--- !u!114 &1432699979
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400010, guid: 19a8ec6a2b6d3844bbb20fc1a5f63060,
+    type: 2}
+  m_PrefabInternal: {fileID: 1538598411}
+  m_GameObject: {fileID: 1432699973}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0a576d944354bf4a92b1c570af7529e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1434739753
 GameObject:
   m_ObjectHideFlags: 0
@@ -74283,6 +75285,7 @@ GameObject:
   - 4: {fileID: 1434739758}
   - 114: {fileID: 1434739754}
   - 114: {fileID: 1434739755}
+  - 114: {fileID: 1434739759}
   m_Layer: 8
   m_Name: Gem5
   m_TagString: Untagged
@@ -74370,6 +75373,18 @@ Transform:
   - {fileID: 393181607}
   m_Father: {fileID: 0}
   m_RootOrder: 161
+--- !u!114 &1434739759
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400010, guid: a9ba180a0917e05429324554a3f66868,
+    type: 2}
+  m_PrefabInternal: {fileID: 2106010343}
+  m_GameObject: {fileID: 1434739753}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0a576d944354bf4a92b1c570af7529e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1435300929
 GameObject:
   m_ObjectHideFlags: 0
@@ -74449,6 +75464,7 @@ GameObject:
   - 4: {fileID: 1438322862}
   - 114: {fileID: 1438322858}
   - 114: {fileID: 1438322859}
+  - 114: {fileID: 1438322863}
   m_Layer: 8
   m_Name: WineGlass1
   m_TagString: Untagged
@@ -74536,6 +75552,18 @@ Transform:
   - {fileID: 12234976}
   m_Father: {fileID: 0}
   m_RootOrder: 11
+--- !u!114 &1438322863
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400010, guid: e133f7feb0a24394c81b8792639bc794,
+    type: 2}
+  m_PrefabInternal: {fileID: 2104334182}
+  m_GameObject: {fileID: 1438322857}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0a576d944354bf4a92b1c570af7529e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1438347044
 GameObject:
   m_ObjectHideFlags: 0
@@ -75368,6 +76396,7 @@ GameObject:
   - 4: {fileID: 1452630691}
   - 114: {fileID: 1452630687}
   - 114: {fileID: 1452630688}
+  - 114: {fileID: 1452630692}
   m_Layer: 0
   m_Name: PlateBurger1
   m_TagString: Untagged
@@ -75455,6 +76484,18 @@ Transform:
   - {fileID: 612471147}
   m_Father: {fileID: 0}
   m_RootOrder: 238
+--- !u!114 &1452630692
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400010, guid: 6106a7230b94a4045b99c2ee7eee0b76,
+    type: 2}
+  m_PrefabInternal: {fileID: 568161808}
+  m_GameObject: {fileID: 1452630686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0a576d944354bf4a92b1c570af7529e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1454949909
 GameObject:
   m_ObjectHideFlags: 0
@@ -75927,6 +76968,7 @@ GameObject:
   - 4: {fileID: 1462839318}
   - 114: {fileID: 1462839314}
   - 114: {fileID: 1462839315}
+  - 114: {fileID: 1462839319}
   m_Layer: 8
   m_Name: PlateSteak1
   m_TagString: Untagged
@@ -76014,6 +77056,18 @@ Transform:
   - {fileID: 762521214}
   m_Father: {fileID: 0}
   m_RootOrder: 229
+--- !u!114 &1462839319
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400010, guid: 8a85f714c8fbfc84c817ff00aec894a2,
+    type: 2}
+  m_PrefabInternal: {fileID: 1837969490}
+  m_GameObject: {fileID: 1462839313}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0a576d944354bf4a92b1c570af7529e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1464145961
 GameObject:
   m_ObjectHideFlags: 0
@@ -76664,6 +77718,7 @@ GameObject:
   - 4: {fileID: 1472356301}
   - 114: {fileID: 1472356297}
   - 114: {fileID: 1472356298}
+  - 114: {fileID: 1472356302}
   m_Layer: 0
   m_Name: PlateBurger1
   m_TagString: Untagged
@@ -76751,6 +77806,18 @@ Transform:
   - {fileID: 824547519}
   m_Father: {fileID: 0}
   m_RootOrder: 239
+--- !u!114 &1472356302
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400010, guid: 6106a7230b94a4045b99c2ee7eee0b76,
+    type: 2}
+  m_PrefabInternal: {fileID: 218654329}
+  m_GameObject: {fileID: 1472356296}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0a576d944354bf4a92b1c570af7529e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1472801360
 Prefab:
   m_ObjectHideFlags: 0
@@ -78697,6 +79764,7 @@ GameObject:
   - 4: {fileID: 1511390169}
   - 114: {fileID: 1511390165}
   - 114: {fileID: 1511390166}
+  - 114: {fileID: 1511390170}
   m_Layer: 0
   m_Name: PlateBurger1
   m_TagString: Untagged
@@ -78784,6 +79852,18 @@ Transform:
   - {fileID: 541671847}
   m_Father: {fileID: 0}
   m_RootOrder: 225
+--- !u!114 &1511390170
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400010, guid: 6106a7230b94a4045b99c2ee7eee0b76,
+    type: 2}
+  m_PrefabInternal: {fileID: 655517988}
+  m_GameObject: {fileID: 1511390164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0a576d944354bf4a92b1c570af7529e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1512318405
 GameObject:
   m_ObjectHideFlags: 0
@@ -78857,6 +79937,7 @@ GameObject:
   - 4: {fileID: 1512766457}
   - 114: {fileID: 1512766453}
   - 114: {fileID: 1512766454}
+  - 114: {fileID: 1512766458}
   m_Layer: 8
   m_Name: PlateSteak1
   m_TagString: Untagged
@@ -78944,6 +80025,18 @@ Transform:
   - {fileID: 200517548}
   m_Father: {fileID: 0}
   m_RootOrder: 128
+--- !u!114 &1512766458
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400010, guid: 8a85f714c8fbfc84c817ff00aec894a2,
+    type: 2}
+  m_PrefabInternal: {fileID: 1716817409}
+  m_GameObject: {fileID: 1512766452}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0a576d944354bf4a92b1c570af7529e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1515709940
 GameObject:
   m_ObjectHideFlags: 0
@@ -79710,6 +80803,7 @@ GameObject:
   - 4: {fileID: 1525370422}
   - 114: {fileID: 1525370424}
   - 114: {fileID: 1525370423}
+  - 114: {fileID: 1525370427}
   m_Layer: 8
   m_Name: Bottle3
   m_TagString: Untagged
@@ -79797,6 +80891,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 2019861828}
   m_GameObject: {fileID: 423731666}
   m_Mesh: {fileID: 4300000, guid: 6f88db35150971d41a4cae8e7b8184f0, type: 3}
+--- !u!114 &1525370427
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400010, guid: 0859fe67e4985764eb41dda1a1e2b743,
+    type: 2}
+  m_PrefabInternal: {fileID: 2019861828}
+  m_GameObject: {fileID: 1525370421}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0a576d944354bf4a92b1c570af7529e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1525839098
 GameObject:
   m_ObjectHideFlags: 0
@@ -80847,6 +81953,7 @@ GameObject:
   - 4: {fileID: 1552654381}
   - 114: {fileID: 1552654377}
   - 114: {fileID: 1552654378}
+  - 114: {fileID: 1552654382}
   m_Layer: 8
   m_Name: Gem4
   m_TagString: Untagged
@@ -80934,6 +82041,18 @@ Transform:
   - {fileID: 328075345}
   m_Father: {fileID: 0}
   m_RootOrder: 180
+--- !u!114 &1552654382
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400010, guid: 3add72caf4c6658459aa3e76fc2d7cd0,
+    type: 2}
+  m_PrefabInternal: {fileID: 1592889313}
+  m_GameObject: {fileID: 1552654376}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0a576d944354bf4a92b1c570af7529e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1556995274
 Prefab:
   m_ObjectHideFlags: 0
@@ -81332,6 +82451,7 @@ MonoBehaviour:
   patrolSpeed: 3
   pursueSpeed: 4
   patrolPointWaitTime: .800000012
+  pauseWaitTime: 1
   timeSearching: 3
   waypoints:
   - {fileID: 407878998}
@@ -83123,6 +84243,7 @@ GameObject:
   - 4: {fileID: 1593595009}
   - 114: {fileID: 1593595005}
   - 114: {fileID: 1593595006}
+  - 114: {fileID: 1593595010}
   m_Layer: 0
   m_Name: PlateEmpty1
   m_TagString: Untagged
@@ -83210,6 +84331,18 @@ Transform:
   - {fileID: 1095760441}
   m_Father: {fileID: 0}
   m_RootOrder: 18
+--- !u!114 &1593595010
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400010, guid: 689c2df9286d11b44b9683ea3b2fa712,
+    type: 2}
+  m_PrefabInternal: {fileID: 181649193}
+  m_GameObject: {fileID: 1593595004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0a576d944354bf4a92b1c570af7529e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1594402476
 GameObject:
   m_ObjectHideFlags: 0
@@ -84122,6 +85255,7 @@ GameObject:
   - 4: {fileID: 1609561510}
   - 114: {fileID: 1609561512}
   - 114: {fileID: 1609561511}
+  - 114: {fileID: 1609561513}
   m_Layer: 8
   m_Name: Dice2
   m_TagString: Untagged
@@ -84180,6 +85314,18 @@ MonoBehaviour:
   Action: steal
   InteractableName: Dice
   AdditionalInformation: 
+--- !u!114 &1609561513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400010, guid: a2b4b6ac6bf32da4bbfc272a6a036afd,
+    type: 2}
+  m_PrefabInternal: {fileID: 983740784}
+  m_GameObject: {fileID: 1609561509}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0a576d944354bf4a92b1c570af7529e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1611701830
 Prefab:
   m_ObjectHideFlags: 0
@@ -84317,6 +85463,7 @@ GameObject:
   - 4: {fileID: 1613714355}
   - 114: {fileID: 1613714351}
   - 114: {fileID: 1613714352}
+  - 114: {fileID: 1613714356}
   m_Layer: 8
   m_Name: PlateSalad1
   m_TagString: Untagged
@@ -84404,6 +85551,18 @@ Transform:
   - {fileID: 1223002657}
   m_Father: {fileID: 0}
   m_RootOrder: 314
+--- !u!114 &1613714356
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400010, guid: c02b499ca49ee4b4194a1a0e7aa7bdf8,
+    type: 2}
+  m_PrefabInternal: {fileID: 787569546}
+  m_GameObject: {fileID: 1613714350}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0a576d944354bf4a92b1c570af7529e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1615966553
 GameObject:
   m_ObjectHideFlags: 0
@@ -84864,6 +86023,7 @@ GameObject:
   - 4: {fileID: 1624993991}
   - 114: {fileID: 1624993987}
   - 114: {fileID: 1624993988}
+  - 114: {fileID: 1624993992}
   m_Layer: 8
   m_Name: WineGlass1
   m_TagString: Untagged
@@ -84951,6 +86111,18 @@ Transform:
   - {fileID: 1989376507}
   m_Father: {fileID: 0}
   m_RootOrder: 168
+--- !u!114 &1624993992
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400010, guid: e133f7feb0a24394c81b8792639bc794,
+    type: 2}
+  m_PrefabInternal: {fileID: 1456779016}
+  m_GameObject: {fileID: 1624993986}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0a576d944354bf4a92b1c570af7529e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1625288741
 GameObject:
   m_ObjectHideFlags: 0
@@ -85397,6 +86569,7 @@ GameObject:
   - 4: {fileID: 1635192043}
   - 114: {fileID: 1635192039}
   - 114: {fileID: 1635192040}
+  - 114: {fileID: 1635192044}
   m_Layer: 8
   m_Name: WineGlass1
   m_TagString: Untagged
@@ -85484,6 +86657,18 @@ Transform:
   - {fileID: 235576135}
   m_Father: {fileID: 0}
   m_RootOrder: 12
+--- !u!114 &1635192044
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400010, guid: e133f7feb0a24394c81b8792639bc794,
+    type: 2}
+  m_PrefabInternal: {fileID: 1827100917}
+  m_GameObject: {fileID: 1635192038}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0a576d944354bf4a92b1c570af7529e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1641181269
 GameObject:
   m_ObjectHideFlags: 0
@@ -86056,6 +87241,7 @@ GameObject:
   - 4: {fileID: 1661023532}
   - 114: {fileID: 1661023528}
   - 114: {fileID: 1661023529}
+  - 114: {fileID: 1661023533}
   m_Layer: 8
   m_Name: WineGlass1
   m_TagString: Untagged
@@ -86143,6 +87329,18 @@ Transform:
   - {fileID: 1242449772}
   m_Father: {fileID: 0}
   m_RootOrder: 117
+--- !u!114 &1661023533
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400010, guid: e133f7feb0a24394c81b8792639bc794,
+    type: 2}
+  m_PrefabInternal: {fileID: 577921261}
+  m_GameObject: {fileID: 1661023527}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0a576d944354bf4a92b1c570af7529e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1662155157
 GameObject:
   m_ObjectHideFlags: 0
@@ -87259,6 +88457,7 @@ GameObject:
   - 4: {fileID: 1675015255}
   - 114: {fileID: 1675015251}
   - 114: {fileID: 1675015252}
+  - 114: {fileID: 1675015256}
   m_Layer: 8
   m_Name: SoloCup1
   m_TagString: Untagged
@@ -87346,6 +88545,18 @@ Transform:
   - {fileID: 176249936}
   m_Father: {fileID: 0}
   m_RootOrder: 142
+--- !u!114 &1675015256
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400010, guid: edd970519df8ff648a3a49ee2ad875bd,
+    type: 2}
+  m_PrefabInternal: {fileID: 1180891143}
+  m_GameObject: {fileID: 1675015250}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0a576d944354bf4a92b1c570af7529e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1676266223
 Prefab:
   m_ObjectHideFlags: 0
@@ -87840,6 +89051,7 @@ GameObject:
   - 4: {fileID: 1692205145}
   - 114: {fileID: 1692205141}
   - 114: {fileID: 1692205142}
+  - 114: {fileID: 1692205146}
   m_Layer: 8
   m_Name: PlateSteak1
   m_TagString: Untagged
@@ -87927,6 +89139,18 @@ Transform:
   - {fileID: 691374477}
   m_Father: {fileID: 0}
   m_RootOrder: 126
+--- !u!114 &1692205146
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400010, guid: 8a85f714c8fbfc84c817ff00aec894a2,
+    type: 2}
+  m_PrefabInternal: {fileID: 1791891764}
+  m_GameObject: {fileID: 1692205140}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0a576d944354bf4a92b1c570af7529e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1693255777
 Prefab:
   m_ObjectHideFlags: 0
@@ -87981,6 +89205,7 @@ GameObject:
   - 4: {fileID: 1695346429}
   - 114: {fileID: 1695346425}
   - 114: {fileID: 1695346426}
+  - 114: {fileID: 1695346430}
   m_Layer: 0
   m_Name: PlateBurger1
   m_TagString: Untagged
@@ -88068,6 +89293,18 @@ Transform:
   - {fileID: 783590600}
   m_Father: {fileID: 0}
   m_RootOrder: 227
+--- !u!114 &1695346430
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400010, guid: 6106a7230b94a4045b99c2ee7eee0b76,
+    type: 2}
+  m_PrefabInternal: {fileID: 227521353}
+  m_GameObject: {fileID: 1695346424}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0a576d944354bf4a92b1c570af7529e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1696373613
 GameObject:
   m_ObjectHideFlags: 0
@@ -88288,6 +89525,7 @@ GameObject:
   - 4: {fileID: 1702883837}
   - 114: {fileID: 1702883833}
   - 114: {fileID: 1702883834}
+  - 114: {fileID: 1702883838}
   m_Layer: 0
   m_Name: PlateEmpty1
   m_TagString: Untagged
@@ -88375,6 +89613,18 @@ Transform:
   - {fileID: 970408080}
   m_Father: {fileID: 0}
   m_RootOrder: 24
+--- !u!114 &1702883838
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400010, guid: 689c2df9286d11b44b9683ea3b2fa712,
+    type: 2}
+  m_PrefabInternal: {fileID: 326310223}
+  m_GameObject: {fileID: 1702883832}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0a576d944354bf4a92b1c570af7529e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1703562728
 GameObject:
   m_ObjectHideFlags: 0
@@ -89306,18 +90556,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 152c028ba9883f44aad8faeed999ab82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IsOneTimeOption: 0
-  NumTimesSelected: 0
-  npcName: 
-  npcText: "Kangaroos are like\u2026 deer T-Rexes."
-  responseText:
-  - You are so high right now. <LEAVE>
-  - Dude, whoa. <LEAVE>
-  - Thanks for the tip, citizen. <LEAVE>
-  responseObject: []
-  requiredItemName: []
-  requiredItemAmount: 
-  disguiseName: []
+  NPCDialog: 
+  Responses:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!4 &1715434448
 Transform:
   m_ObjectHideFlags: 0
@@ -90809,6 +92053,7 @@ GameObject:
   - 4: {fileID: 1749073205}
   - 114: {fileID: 1749073201}
   - 114: {fileID: 1749073202}
+  - 114: {fileID: 1749073206}
   m_Layer: 8
   m_Name: Bowl1
   m_TagString: Untagged
@@ -90908,6 +92153,18 @@ Transform:
   - {fileID: 1336192116}
   m_Father: {fileID: 0}
   m_RootOrder: 187
+--- !u!114 &1749073206
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400010, guid: 845135208a0fce4488e286eee9113bb1,
+    type: 2}
+  m_PrefabInternal: {fileID: 1912475089}
+  m_GameObject: {fileID: 1749073199}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0a576d944354bf4a92b1c570af7529e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1750254303
 GameObject:
   m_ObjectHideFlags: 0
@@ -91420,7 +92677,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dc234e3a2651b44b883d0e587984c45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  start: {fileID: 0}
+  Beginning: {fileID: 0}
 --- !u!114 &1759372704
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -91518,18 +92775,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 152c028ba9883f44aad8faeed999ab82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IsOneTimeOption: 0
-  NumTimesSelected: 0
-  npcName: 
-  npcText: "Kangaroos are like\u2026 deer T-Rexes."
-  responseText:
-  - You are so high right now. <LEAVE>
-  - Dude, whoa. <LEAVE>
-  - Thanks for the tip, citizen. <LEAVE>
-  responseObject: []
-  requiredItemName: []
-  requiredItemAmount: 
-  disguiseName: []
+  NPCDialog: 
+  Responses:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!114 &1759372711
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -91542,7 +92793,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dc234e3a2651b44b883d0e587984c45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  start: {fileID: 1759372710}
+  Beginning: {fileID: 0}
 --- !u!114 &1759372712
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -91587,7 +92838,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dc234e3a2651b44b883d0e587984c45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  start: {fileID: 1715434447}
+  Beginning: {fileID: 0}
 --- !u!114 &1759372715
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -92302,6 +93553,7 @@ GameObject:
   - 4: {fileID: 1781627977}
   - 114: {fileID: 1781627973}
   - 114: {fileID: 1781627974}
+  - 114: {fileID: 1781627978}
   m_Layer: 0
   m_Name: PlateBurger1
   m_TagString: Untagged
@@ -92389,6 +93641,18 @@ Transform:
   - {fileID: 1422535358}
   m_Father: {fileID: 0}
   m_RootOrder: 35
+--- !u!114 &1781627978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400010, guid: 6106a7230b94a4045b99c2ee7eee0b76,
+    type: 2}
+  m_PrefabInternal: {fileID: 1414527938}
+  m_GameObject: {fileID: 1781627972}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0a576d944354bf4a92b1c570af7529e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1781751761
 Prefab:
   m_ObjectHideFlags: 0
@@ -92451,6 +93715,7 @@ GameObject:
   - 4: {fileID: 1784113549}
   - 114: {fileID: 1784113546}
   - 114: {fileID: 1784113545}
+  - 114: {fileID: 1784113550}
   m_Layer: 8
   m_Name: Bottle3
   m_TagString: Untagged
@@ -92538,6 +93803,18 @@ Transform:
   - {fileID: 1228975798}
   m_Father: {fileID: 0}
   m_RootOrder: 138
+--- !u!114 &1784113550
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400010, guid: 0859fe67e4985764eb41dda1a1e2b743,
+    type: 2}
+  m_PrefabInternal: {fileID: 877955688}
+  m_GameObject: {fileID: 1784113544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0a576d944354bf4a92b1c570af7529e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1789608059
 Prefab:
   m_ObjectHideFlags: 0
@@ -92592,6 +93869,7 @@ GameObject:
   - 4: {fileID: 1790601711}
   - 114: {fileID: 1790601707}
   - 114: {fileID: 1790601708}
+  - 114: {fileID: 1790601712}
   m_Layer: 8
   m_Name: PlateSalad1
   m_TagString: Untagged
@@ -92679,6 +93957,18 @@ Transform:
   - {fileID: 1146773417}
   m_Father: {fileID: 0}
   m_RootOrder: 135
+--- !u!114 &1790601712
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400010, guid: c02b499ca49ee4b4194a1a0e7aa7bdf8,
+    type: 2}
+  m_PrefabInternal: {fileID: 1766027800}
+  m_GameObject: {fileID: 1790601706}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0a576d944354bf4a92b1c570af7529e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1790950987
 Prefab:
   m_ObjectHideFlags: 0
@@ -93408,6 +94698,7 @@ GameObject:
   - 4: {fileID: 1805891237}
   - 114: {fileID: 1805891233}
   - 114: {fileID: 1805891234}
+  - 114: {fileID: 1805891238}
   m_Layer: 8
   m_Name: PlateSalad1
   m_TagString: Untagged
@@ -93495,6 +94786,18 @@ Transform:
   - {fileID: 166922430}
   m_Father: {fileID: 0}
   m_RootOrder: 13
+--- !u!114 &1805891238
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400010, guid: c02b499ca49ee4b4194a1a0e7aa7bdf8,
+    type: 2}
+  m_PrefabInternal: {fileID: 2095344417}
+  m_GameObject: {fileID: 1805891232}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0a576d944354bf4a92b1c570af7529e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1806013201
 Prefab:
   m_ObjectHideFlags: 0
@@ -93725,6 +95028,7 @@ GameObject:
   - 4: {fileID: 1810313032}
   - 114: {fileID: 1810313028}
   - 114: {fileID: 1810313029}
+  - 114: {fileID: 1810313033}
   m_Layer: 8
   m_Name: PlateSteak1
   m_TagString: Untagged
@@ -93812,6 +95116,18 @@ Transform:
   - {fileID: 1047169405}
   m_Father: {fileID: 0}
   m_RootOrder: 228
+--- !u!114 &1810313033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400010, guid: 8a85f714c8fbfc84c817ff00aec894a2,
+    type: 2}
+  m_PrefabInternal: {fileID: 1918246874}
+  m_GameObject: {fileID: 1810313027}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0a576d944354bf4a92b1c570af7529e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1810927639
 GameObject:
   m_ObjectHideFlags: 0
@@ -93822,6 +95138,7 @@ GameObject:
   - 4: {fileID: 1810927645}
   - 114: {fileID: 1810927641}
   - 114: {fileID: 1810927642}
+  - 114: {fileID: 1810927646}
   m_Layer: 8
   m_Name: Bowl1
   m_TagString: Untagged
@@ -93921,6 +95238,18 @@ Transform:
   - {fileID: 1881507032}
   m_Father: {fileID: 0}
   m_RootOrder: 184
+--- !u!114 &1810927646
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400010, guid: 845135208a0fce4488e286eee9113bb1,
+    type: 2}
+  m_PrefabInternal: {fileID: 1600327262}
+  m_GameObject: {fileID: 1810927639}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0a576d944354bf4a92b1c570af7529e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1812389978
 GameObject:
   m_ObjectHideFlags: 0
@@ -94500,6 +95829,7 @@ GameObject:
   - 4: {fileID: 1818998091}
   - 114: {fileID: 1818998087}
   - 114: {fileID: 1818998088}
+  - 114: {fileID: 1818998092}
   m_Layer: 8
   m_Name: PlateSteak1
   m_TagString: Untagged
@@ -94587,6 +95917,18 @@ Transform:
   - {fileID: 604057063}
   m_Father: {fileID: 0}
   m_RootOrder: 34
+--- !u!114 &1818998092
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400010, guid: 8a85f714c8fbfc84c817ff00aec894a2,
+    type: 2}
+  m_PrefabInternal: {fileID: 857077181}
+  m_GameObject: {fileID: 1818998086}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0a576d944354bf4a92b1c570af7529e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1819633826
 GameObject:
   m_ObjectHideFlags: 0
@@ -94597,6 +95939,7 @@ GameObject:
   - 4: {fileID: 1819633831}
   - 114: {fileID: 1819633827}
   - 114: {fileID: 1819633828}
+  - 114: {fileID: 1819633832}
   m_Layer: 0
   m_Name: PlateEmpty1
   m_TagString: Untagged
@@ -94684,6 +96027,18 @@ Transform:
   - {fileID: 1234085087}
   m_Father: {fileID: 0}
   m_RootOrder: 27
+--- !u!114 &1819633832
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400010, guid: 689c2df9286d11b44b9683ea3b2fa712,
+    type: 2}
+  m_PrefabInternal: {fileID: 1679558746}
+  m_GameObject: {fileID: 1819633826}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0a576d944354bf4a92b1c570af7529e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1821972459
 GameObject:
   m_ObjectHideFlags: 0
@@ -94932,6 +96287,7 @@ GameObject:
   - 4: {fileID: 1824902620}
   - 114: {fileID: 1824902616}
   - 114: {fileID: 1824902617}
+  - 114: {fileID: 1824902621}
   m_Layer: 8
   m_Name: PlateSalad1
   m_TagString: Untagged
@@ -95019,6 +96375,18 @@ Transform:
   - {fileID: 1518158217}
   m_Father: {fileID: 0}
   m_RootOrder: 140
+--- !u!114 &1824902621
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400010, guid: c02b499ca49ee4b4194a1a0e7aa7bdf8,
+    type: 2}
+  m_PrefabInternal: {fileID: 433912575}
+  m_GameObject: {fileID: 1824902615}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0a576d944354bf4a92b1c570af7529e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1825545768
 GameObject:
   m_ObjectHideFlags: 0
@@ -95564,6 +96932,7 @@ GameObject:
   - 4: {fileID: 1835861538}
   - 114: {fileID: 1835861534}
   - 114: {fileID: 1835861535}
+  - 114: {fileID: 1835861539}
   m_Layer: 0
   m_Name: PlateBurger1
   m_TagString: Untagged
@@ -95651,6 +97020,18 @@ Transform:
   - {fileID: 2080312407}
   m_Father: {fileID: 0}
   m_RootOrder: 22
+--- !u!114 &1835861539
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400010, guid: 6106a7230b94a4045b99c2ee7eee0b76,
+    type: 2}
+  m_PrefabInternal: {fileID: 237869193}
+  m_GameObject: {fileID: 1835861533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0a576d944354bf4a92b1c570af7529e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1837410943
 GameObject:
   m_ObjectHideFlags: 0
@@ -96277,6 +97658,7 @@ GameObject:
   - 4: {fileID: 1846532280}
   - 114: {fileID: 1846532276}
   - 114: {fileID: 1846532277}
+  - 114: {fileID: 1846532281}
   m_Layer: 0
   m_Name: SoloCup1
   m_TagString: Untagged
@@ -96364,6 +97746,18 @@ Transform:
   - {fileID: 1156955849}
   m_Father: {fileID: 0}
   m_RootOrder: 221
+--- !u!114 &1846532281
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400010, guid: edd970519df8ff648a3a49ee2ad875bd,
+    type: 2}
+  m_PrefabInternal: {fileID: 1401110348}
+  m_GameObject: {fileID: 1846532275}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0a576d944354bf4a92b1c570af7529e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1848713551
 GameObject:
   m_ObjectHideFlags: 0
@@ -96776,6 +98170,7 @@ GameObject:
   - 4: {fileID: 1854779194}
   - 114: {fileID: 1854779190}
   - 114: {fileID: 1854779191}
+  - 114: {fileID: 1854779195}
   m_Layer: 8
   m_Name: PlateSteak1
   m_TagString: Untagged
@@ -96863,6 +98258,18 @@ Transform:
   - {fileID: 438807568}
   m_Father: {fileID: 0}
   m_RootOrder: 16
+--- !u!114 &1854779195
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400010, guid: 8a85f714c8fbfc84c817ff00aec894a2,
+    type: 2}
+  m_PrefabInternal: {fileID: 1667354619}
+  m_GameObject: {fileID: 1854779189}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0a576d944354bf4a92b1c570af7529e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1855208190
 GameObject:
   m_ObjectHideFlags: 0
@@ -96942,6 +98349,7 @@ GameObject:
   - 4: {fileID: 1855933439}
   - 114: {fileID: 1855933435}
   - 114: {fileID: 1855933436}
+  - 114: {fileID: 1855933440}
   m_Layer: 8
   m_Name: Purse1
   m_TagString: Untagged
@@ -97029,6 +98437,18 @@ Transform:
   - {fileID: 1117724298}
   m_Father: {fileID: 0}
   m_RootOrder: 105
+--- !u!114 &1855933440
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400010, guid: 0244d14266c8ee544804b1d988a45262,
+    type: 2}
+  m_PrefabInternal: {fileID: 2144798381}
+  m_GameObject: {fileID: 1855933434}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0a576d944354bf4a92b1c570af7529e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1856389515
 GameObject:
   m_ObjectHideFlags: 0
@@ -98518,6 +99938,7 @@ GameObject:
   - 4: {fileID: 1894802862}
   - 114: {fileID: 1894802858}
   - 114: {fileID: 1894802859}
+  - 114: {fileID: 1894802863}
   m_Layer: 0
   m_Name: Mint1
   m_TagString: Untagged
@@ -98605,6 +100026,18 @@ Transform:
   - {fileID: 92040060}
   m_Father: {fileID: 0}
   m_RootOrder: 28
+--- !u!114 &1894802863
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400010, guid: 1463e12de96c6434f9cd33badf4d0a9b,
+    type: 2}
+  m_PrefabInternal: {fileID: 31396626}
+  m_GameObject: {fileID: 1894802857}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0a576d944354bf4a92b1c570af7529e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1897706667
 GameObject:
   m_ObjectHideFlags: 0
@@ -99081,6 +100514,7 @@ GameObject:
   - 4: {fileID: 1906258109}
   - 114: {fileID: 1906258105}
   - 114: {fileID: 1906258106}
+  - 114: {fileID: 1906258110}
   m_Layer: 8
   m_Name: PlateSalad1
   m_TagString: Untagged
@@ -99168,6 +100602,18 @@ Transform:
   - {fileID: 979965458}
   m_Father: {fileID: 0}
   m_RootOrder: 233
+--- !u!114 &1906258110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400010, guid: c02b499ca49ee4b4194a1a0e7aa7bdf8,
+    type: 2}
+  m_PrefabInternal: {fileID: 1935524800}
+  m_GameObject: {fileID: 1906258104}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0a576d944354bf4a92b1c570af7529e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1906550643
 Prefab:
   m_ObjectHideFlags: 0
@@ -100072,6 +101518,7 @@ GameObject:
   - 4: {fileID: 1920454303}
   - 114: {fileID: 1920454299}
   - 114: {fileID: 1920454300}
+  - 114: {fileID: 1920454304}
   m_Layer: 8
   m_Name: PlateSteak1
   m_TagString: Untagged
@@ -100159,6 +101606,18 @@ Transform:
   - {fileID: 284921139}
   m_Father: {fileID: 0}
   m_RootOrder: 245
+--- !u!114 &1920454304
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400010, guid: 8a85f714c8fbfc84c817ff00aec894a2,
+    type: 2}
+  m_PrefabInternal: {fileID: 1357519446}
+  m_GameObject: {fileID: 1920454298}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0a576d944354bf4a92b1c570af7529e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1920850366
 GameObject:
   m_ObjectHideFlags: 0
@@ -100372,6 +101831,7 @@ GameObject:
   - 4: {fileID: 1922083428}
   - 114: {fileID: 1922083429}
   - 114: {fileID: 1922083430}
+  - 114: {fileID: 1922083433}
   m_Layer: 8
   m_Name: Purse1
   m_TagString: Untagged
@@ -100459,6 +101919,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1116690817}
   m_GameObject: {fileID: 1961595701}
   m_Mesh: {fileID: 4300000, guid: 7931279b5820dc4418e512de541146de, type: 3}
+--- !u!114 &1922083433
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400010, guid: 0244d14266c8ee544804b1d988a45262,
+    type: 2}
+  m_PrefabInternal: {fileID: 1116690817}
+  m_GameObject: {fileID: 1922083427}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0a576d944354bf4a92b1c570af7529e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1926221607
 GameObject:
   m_ObjectHideFlags: 0
@@ -100837,6 +102309,7 @@ GameObject:
   - 4: {fileID: 1930511119}
   - 114: {fileID: 1930511115}
   - 114: {fileID: 1930511116}
+  - 114: {fileID: 1930511120}
   m_Layer: 8
   m_Name: WineGlass1
   m_TagString: Untagged
@@ -100924,6 +102397,18 @@ Transform:
   - {fileID: 1408327080}
   m_Father: {fileID: 0}
   m_RootOrder: 15
+--- !u!114 &1930511120
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400010, guid: e133f7feb0a24394c81b8792639bc794,
+    type: 2}
+  m_PrefabInternal: {fileID: 963823947}
+  m_GameObject: {fileID: 1930511114}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0a576d944354bf4a92b1c570af7529e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1931932893
 Prefab:
   m_ObjectHideFlags: 0
@@ -100986,6 +102471,7 @@ GameObject:
   - 4: {fileID: 1932868182}
   - 114: {fileID: 1932868178}
   - 114: {fileID: 1932868179}
+  - 114: {fileID: 1932868183}
   m_Layer: 0
   m_Name: PlateBurger1
   m_TagString: Untagged
@@ -101073,6 +102559,18 @@ Transform:
   - {fileID: 2079268365}
   m_Father: {fileID: 0}
   m_RootOrder: 244
+--- !u!114 &1932868183
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400010, guid: 6106a7230b94a4045b99c2ee7eee0b76,
+    type: 2}
+  m_PrefabInternal: {fileID: 288058554}
+  m_GameObject: {fileID: 1932868177}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0a576d944354bf4a92b1c570af7529e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1933518667
 GameObject:
   m_ObjectHideFlags: 0
@@ -101331,6 +102829,7 @@ GameObject:
   - 4: {fileID: 1938469334}
   - 114: {fileID: 1938469330}
   - 114: {fileID: 1938469331}
+  - 114: {fileID: 1938469335}
   m_Layer: 8
   m_Name: WineGlass1
   m_TagString: Untagged
@@ -101418,6 +102917,18 @@ Transform:
   - {fileID: 812598591}
   m_Father: {fileID: 0}
   m_RootOrder: 173
+--- !u!114 &1938469335
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400010, guid: e133f7feb0a24394c81b8792639bc794,
+    type: 2}
+  m_PrefabInternal: {fileID: 705225864}
+  m_GameObject: {fileID: 1938469329}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0a576d944354bf4a92b1c570af7529e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1939997407
 GameObject:
   m_ObjectHideFlags: 0
@@ -101933,6 +103444,7 @@ GameObject:
   - 4: {fileID: 1948192501}
   - 114: {fileID: 1948192497}
   - 114: {fileID: 1948192498}
+  - 114: {fileID: 1948192502}
   m_Layer: 8
   m_Name: PlateSalad1
   m_TagString: Untagged
@@ -102020,6 +103532,18 @@ Transform:
   - {fileID: 491441662}
   m_Father: {fileID: 0}
   m_RootOrder: 236
+--- !u!114 &1948192502
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400010, guid: c02b499ca49ee4b4194a1a0e7aa7bdf8,
+    type: 2}
+  m_PrefabInternal: {fileID: 795091662}
+  m_GameObject: {fileID: 1948192496}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0a576d944354bf4a92b1c570af7529e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1949924883
 GameObject:
   m_ObjectHideFlags: 0
@@ -102335,6 +103859,7 @@ GameObject:
   - 4: {fileID: 1958378499}
   - 114: {fileID: 1958378495}
   - 114: {fileID: 1958378496}
+  - 114: {fileID: 1958378500}
   m_Layer: 8
   m_Name: PlateSteak1
   m_TagString: Untagged
@@ -102422,6 +103947,18 @@ Transform:
   - {fileID: 1417873706}
   m_Father: {fileID: 0}
   m_RootOrder: 124
+--- !u!114 &1958378500
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400010, guid: 8a85f714c8fbfc84c817ff00aec894a2,
+    type: 2}
+  m_PrefabInternal: {fileID: 1178859899}
+  m_GameObject: {fileID: 1958378494}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0a576d944354bf4a92b1c570af7529e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1959969706
 GameObject:
   m_ObjectHideFlags: 0
@@ -102702,6 +104239,7 @@ GameObject:
   - 4: {fileID: 1967508036}
   - 114: {fileID: 1967508037}
   - 114: {fileID: 1967508038}
+  - 114: {fileID: 1967508041}
   m_Layer: 8
   m_Name: PlateSteak1
   m_TagString: Untagged
@@ -102789,6 +104327,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 276395351}
   m_GameObject: {fileID: 938543937}
   m_Mesh: {fileID: 4300000, guid: 00c883c2561bc654294776d7be07e482, type: 3}
+--- !u!114 &1967508041
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400010, guid: 8a85f714c8fbfc84c817ff00aec894a2,
+    type: 2}
+  m_PrefabInternal: {fileID: 276395351}
+  m_GameObject: {fileID: 1967508035}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0a576d944354bf4a92b1c570af7529e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1967773463
 GameObject:
   m_ObjectHideFlags: 0
@@ -103033,6 +104583,7 @@ GameObject:
   - 4: {fileID: 1973031919}
   - 114: {fileID: 1973031915}
   - 114: {fileID: 1973031916}
+  - 114: {fileID: 1973031920}
   m_Layer: 8
   m_Name: PlateSalad1
   m_TagString: Untagged
@@ -103120,6 +104671,18 @@ Transform:
   - {fileID: 1674155469}
   m_Father: {fileID: 0}
   m_RootOrder: 246
+--- !u!114 &1973031920
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400010, guid: c02b499ca49ee4b4194a1a0e7aa7bdf8,
+    type: 2}
+  m_PrefabInternal: {fileID: 921753297}
+  m_GameObject: {fileID: 1973031914}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0a576d944354bf4a92b1c570af7529e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1973207463
 GameObject:
   m_ObjectHideFlags: 0
@@ -104018,6 +105581,7 @@ GameObject:
   - 4: {fileID: 1986915866}
   - 114: {fileID: 1986915862}
   - 114: {fileID: 1986915863}
+  - 114: {fileID: 1986915867}
   m_Layer: 8
   m_Name: PlateSalad1
   m_TagString: Untagged
@@ -104105,6 +105669,18 @@ Transform:
   - {fileID: 1363239911}
   m_Father: {fileID: 0}
   m_RootOrder: 247
+--- !u!114 &1986915867
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400010, guid: c02b499ca49ee4b4194a1a0e7aa7bdf8,
+    type: 2}
+  m_PrefabInternal: {fileID: 1535366221}
+  m_GameObject: {fileID: 1986915861}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0a576d944354bf4a92b1c570af7529e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1987978455
 GameObject:
   m_ObjectHideFlags: 0
@@ -104514,19 +106090,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 152c028ba9883f44aad8faeed999ab82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IsOneTimeOption: 0
-  NumTimesSelected: 0
-  npcName: 
-  npcText: "<BURP> Hey\u2026 can you\u2026 uh... well...you see\u2026uuuuuuuuhhhh...
-    beer and"
-  responseText:
-  - Well said, inebriated partygoer. <LEAVE>
-  - Walk it off, champ. <LEAVE>
-  - Thanks for the tip, citizen. <LEAVE>
-  responseObject: []
-  requiredItemName: []
-  requiredItemAmount: 
-  disguiseName: []
+  NPCDialog: 
+  Responses:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!114 &1993491008
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -104539,7 +106108,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dc234e3a2651b44b883d0e587984c45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  start: {fileID: 1993491007}
+  Beginning: {fileID: 0}
 --- !u!114 &1993491012
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -104700,6 +106269,7 @@ GameObject:
   - 4: {fileID: 1994062697}
   - 114: {fileID: 1994062698}
   - 114: {fileID: 1994062699}
+  - 114: {fileID: 1994062702}
   m_Layer: 8
   m_Name: WineGlass1
   m_TagString: Untagged
@@ -104787,6 +106357,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1991052854}
   m_GameObject: {fileID: 319040762}
   m_Mesh: {fileID: 4300000, guid: 357e5ca5aaad93d4fbee1921a3e8a164, type: 3}
+--- !u!114 &1994062702
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400010, guid: e133f7feb0a24394c81b8792639bc794,
+    type: 2}
+  m_PrefabInternal: {fileID: 1991052854}
+  m_GameObject: {fileID: 1994062696}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0a576d944354bf4a92b1c570af7529e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1997895890
 GameObject:
   m_ObjectHideFlags: 0
@@ -105361,6 +106943,7 @@ GameObject:
   - 4: {fileID: 2006575858}
   - 114: {fileID: 2006575854}
   - 114: {fileID: 2006575855}
+  - 114: {fileID: 2006575859}
   m_Layer: 8
   m_Name: PlateSalad1
   m_TagString: Untagged
@@ -105448,6 +107031,18 @@ Transform:
   - {fileID: 1216197309}
   m_Father: {fileID: 0}
   m_RootOrder: 172
+--- !u!114 &2006575859
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400010, guid: c02b499ca49ee4b4194a1a0e7aa7bdf8,
+    type: 2}
+  m_PrefabInternal: {fileID: 1348373579}
+  m_GameObject: {fileID: 2006575853}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0a576d944354bf4a92b1c570af7529e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2006804605
 GameObject:
   m_ObjectHideFlags: 0
@@ -106367,6 +107962,7 @@ GameObject:
   - 4: {fileID: 2022924026}
   - 114: {fileID: 2022924022}
   - 114: {fileID: 2022924023}
+  - 114: {fileID: 2022924027}
   m_Layer: 8
   m_Name: Gem4
   m_TagString: Untagged
@@ -106454,6 +108050,18 @@ Transform:
   - {fileID: 2107888435}
   m_Father: {fileID: 0}
   m_RootOrder: 178
+--- !u!114 &2022924027
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400010, guid: 3add72caf4c6658459aa3e76fc2d7cd0,
+    type: 2}
+  m_PrefabInternal: {fileID: 1712871279}
+  m_GameObject: {fileID: 2022924021}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0a576d944354bf4a92b1c570af7529e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2023577111
 GameObject:
   m_ObjectHideFlags: 0
@@ -108829,6 +110437,7 @@ GameObject:
   - 4: {fileID: 2077439453}
   - 114: {fileID: 2077439449}
   - 114: {fileID: 2077439450}
+  - 114: {fileID: 2077439454}
   m_Layer: 8
   m_Name: WineGlass1
   m_TagString: Untagged
@@ -108916,6 +110525,18 @@ Transform:
   - {fileID: 1317717743}
   m_Father: {fileID: 0}
   m_RootOrder: 116
+--- !u!114 &2077439454
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400010, guid: e133f7feb0a24394c81b8792639bc794,
+    type: 2}
+  m_PrefabInternal: {fileID: 25683895}
+  m_GameObject: {fileID: 2077439448}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0a576d944354bf4a92b1c570af7529e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2078070763
 GameObject:
   m_ObjectHideFlags: 0
@@ -109015,6 +110636,7 @@ MonoBehaviour:
   patrolSpeed: 3
   pursueSpeed: 4
   patrolPointWaitTime: 1.29999995
+  pauseWaitTime: 1
   timeSearching: 3
   waypoints:
   - {fileID: 574034871}
@@ -109698,6 +111320,7 @@ GameObject:
   - 4: {fileID: 2091665889}
   - 114: {fileID: 2091665885}
   - 114: {fileID: 2091665886}
+  - 114: {fileID: 2091665890}
   m_Layer: 0
   m_Name: PlateEmpty1
   m_TagString: Untagged
@@ -109785,6 +111408,18 @@ Transform:
   - {fileID: 1791093113}
   m_Father: {fileID: 0}
   m_RootOrder: 23
+--- !u!114 &2091665890
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400010, guid: 689c2df9286d11b44b9683ea3b2fa712,
+    type: 2}
+  m_PrefabInternal: {fileID: 1645919810}
+  m_GameObject: {fileID: 2091665884}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0a576d944354bf4a92b1c570af7529e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2091785457
 GameObject:
   m_ObjectHideFlags: 0
@@ -111389,6 +113024,7 @@ GameObject:
   - 4: {fileID: 2118367780}
   - 114: {fileID: 2118367776}
   - 114: {fileID: 2118367777}
+  - 114: {fileID: 2118367781}
   m_Layer: 0
   m_Name: PlateBurger1
   m_TagString: Untagged
@@ -111476,6 +113112,18 @@ Transform:
   - {fileID: 778296532}
   m_Father: {fileID: 0}
   m_RootOrder: 310
+--- !u!114 &2118367781
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400010, guid: 6106a7230b94a4045b99c2ee7eee0b76,
+    type: 2}
+  m_PrefabInternal: {fileID: 144150651}
+  m_GameObject: {fileID: 2118367775}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0a576d944354bf4a92b1c570af7529e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2118523261
 Prefab:
   m_ObjectHideFlags: 0
@@ -112090,6 +113738,7 @@ GameObject:
   - 4: {fileID: 2128710024}
   - 114: {fileID: 2128710025}
   - 114: {fileID: 2128710026}
+  - 114: {fileID: 2128710029}
   m_Layer: 8
   m_Name: PlateSalad1
   m_TagString: Untagged
@@ -112177,6 +113826,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1989355344}
   m_GameObject: {fileID: 1984438520}
   m_Mesh: {fileID: 4300000, guid: 3e65670c736a59142a2f7fbfd717623f, type: 3}
+--- !u!114 &2128710029
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400010, guid: c02b499ca49ee4b4194a1a0e7aa7bdf8,
+    type: 2}
+  m_PrefabInternal: {fileID: 1989355344}
+  m_GameObject: {fileID: 2128710023}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0a576d944354bf4a92b1c570af7529e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2128871727
 GameObject:
   m_ObjectHideFlags: 0
