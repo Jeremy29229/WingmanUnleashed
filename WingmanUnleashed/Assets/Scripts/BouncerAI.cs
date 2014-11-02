@@ -6,10 +6,12 @@ public class BouncerAI : MonoBehaviour
 	public float patrolSpeed = 2.0f;
 	public float pursueSpeed = 4.0f;
 	public float patrolPointWaitTime = 1.0f;
+    public float pauseWaitTime = 1.0f;
     public float timeSearching = 3.0f;
 	public Transform[] waypoints;
 
 	private VisionDetection detection;
+    private DistractionManager distractions;
 	private NavMeshAgent nav;
 	private Transform playerWingman;
 	private Player player;
@@ -22,11 +24,16 @@ public class BouncerAI : MonoBehaviour
     private bool searching;
     private bool lastPositionKnown;
     private float totalTimeSearching;
+    private float totalTimePausing;
     private Vector3 lastKnownPlayerPosition;
+    private Vector3 distractionPos;
+    private bool checkingDistraction;
 
 	void Awake()
 	{
 		detection = GetComponentInChildren<VisionDetection>();
+        GameObject distractionManager = GameObject.Find("DistractionManager");
+        distractions = distractionManager.GetComponent<DistractionManager>();
 		nav = GetComponent<NavMeshAgent>();
 		playerWingman = GameObject.Find("Wingman").transform;
 		player = GameObject.Find("Wingman").GetComponent<Player>() as Player;
@@ -39,11 +46,13 @@ public class BouncerAI : MonoBehaviour
         lastPositionKnown = false;
         totalTimeSearching = 0.0f;
         lastKnownPlayerPosition = Vector3.zero;
+        checkingDistraction = false;
 	}
 
 	void LateUpdate()
 	{
 		float currentDetectionLevel = player.getDetectionLevel();
+
 		if (currentDetectionLevel >= 0.0f && currentDetectionLevel <= maxStopToLookLevel)
 		{
 			Patrolling();
@@ -70,6 +79,7 @@ public class BouncerAI : MonoBehaviour
             nav.destination = playerWingman.position;
             lastPositionKnown = false;
             searching = false;
+            totalTimePausing = 0.0f;
             totalTimeSearching = 0.0f;
         }
         else if (!detection.IsPlayInRangeAndVisable && !lastPositionKnown)
@@ -77,6 +87,7 @@ public class BouncerAI : MonoBehaviour
             lastKnownPlayerPosition = playerWingman.position;
             lastPositionKnown = true;
             searching = false;
+            totalTimePausing = 0.0f;
             totalTimeSearching = 0.0f;
         }
         else if (!detection.IsPlayInRangeAndVisable && lastPositionKnown)
@@ -86,9 +97,10 @@ public class BouncerAI : MonoBehaviour
             Vector3 distanceVector = lastKnownPlayerPosition - transform.position;
             if (distanceVector.magnitude <= stopZone && !searching)
             {
-                totalTimeSearching += Time.deltaTime;
-                if (totalTimeSearching >= timeSearching)
+                totalTimePausing += Time.deltaTime;
+                if (totalTimePausing >= pauseWaitTime)
                 {
+                    totalTimePausing = 0.0f;
                     totalTimeSearching = 0.0f;
                     searching = true;
                 }
@@ -136,7 +148,7 @@ public class BouncerAI : MonoBehaviour
             }
             else
             {
-                FollowPath();
+                OnPatrol();
             }
 		}
         else
@@ -155,7 +167,7 @@ public class BouncerAI : MonoBehaviour
 	{
 		if (!detection.IsPlayInRangeAndVisable)
 		{
-			FollowPath();
+            OnPatrol();
 		}
 		else
 		{
@@ -168,7 +180,7 @@ public class BouncerAI : MonoBehaviour
 	{
 		if (!detection.IsPlayInRangeAndVisable)
 		{
-			FollowPath();
+            OnPatrol();
 		}
 		else
 		{
@@ -211,4 +223,38 @@ public class BouncerAI : MonoBehaviour
 			nav.destination = waypoints[currentWaypoint].position;
 		}
 	}
+
+    private void OnPatrol()
+    {
+        if (!checkingDistraction)
+        {
+            distractionPos = distractions.CheckForDistractions(transform.position);
+        }
+
+        if (distractionPos == new Vector3(-1.0f, -1.0f, -1.0f))
+        {
+            FollowPath();
+        }
+        else if (distractionPos != new Vector3(-1.0f, -1.0f, -1.0f) && !checkingDistraction)
+        {
+            checkingDistraction = true;
+            totalTimePausing = 0.0f;
+        }
+        else if(checkingDistraction)
+        {
+            transform.LookAt(distractionPos);
+            nav.destination = distractionPos;
+
+            Vector3 distanceVector = distractionPos - transform.position;
+            if (distanceVector.magnitude <= stopZone)
+            {
+                totalTimePausing += Time.deltaTime;
+                if (totalTimePausing >= pauseWaitTime)
+                {
+                    checkingDistraction = false;
+                    totalTimePausing = 0.0f;
+                }
+            }
+        }
+    }
 }

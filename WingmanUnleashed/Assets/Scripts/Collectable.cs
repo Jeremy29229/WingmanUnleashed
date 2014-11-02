@@ -5,7 +5,7 @@ public class Collectable : MonoBehaviour, IInteractable
 {
 	public string PlayerObjectName = "Wingman";
 	private Player wingman;
-	//private Inventory inventory;
+	private Inventory inventory;
 	public Sprite inventorySprite;
 	public int SellValue = 0;
 	public bool IsKeepableItem = false;
@@ -16,7 +16,7 @@ public class Collectable : MonoBehaviour, IInteractable
 
 	void Start()
 	{
-		//inventory = GameObject.Find(PlayerObjectName).GetComponent<Inventory>();
+		inventory = GameObject.Find(PlayerObjectName).GetComponent<Inventory>();
 		wingman = GameObject.Find(PlayerObjectName).GetComponent<Player>();
 		itemImportanceDisplay = GetComponentInChildren<Canvas>();
 		itemImportanceDisplay.enabled = false;
@@ -40,12 +40,12 @@ public class Collectable : MonoBehaviour, IInteractable
 	void IInteractable.InteractWith()
 	{
 		GameObject.Find("SoundManager").GetComponent<SoundManager>().PlaySoundAt("cashGrab", gameObject.transform.position);
-		//inventory.AddItem(gameObject.GetComponent<Interactable>().InteractableName, inventorySprite);
+
+        inventory.AddItem(gameObject.GetComponent<Interactable>().InteractableName, gameObject, inventorySprite);
 
 		if (wingman.numDetectors > 0)
 		{
 			wingman.increaseDetectionFlat(0.3f);
 		}
-		Destroy(gameObject);
 	}
 }

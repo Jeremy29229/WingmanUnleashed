@@ -17,21 +17,21 @@ public class WalkZone : MonoBehaviour
 
 	}
 
-	void OnTriggerEnter(Collider c)
-	{
-		if (c.gameObject == wingman)
-		{
-			GameObject.Find("Wingman").GetComponent<Controller_ThirdPerson>().flightmodeOff();
-			GameObject.Find("MusicManager").GetComponent<Music>().PlayMusic(music);
-		}
-	}
+    void OnTriggerEnter(Collider c)
+    {
+        if (c.gameObject == wingman)
+        {
+            wingman.GetComponent<Controller_ThirdPerson>().flightmodeOff();
+            GameObject.Find("MusicManager").GetComponent<Music>().PlayMusic(music);
+        }
+    }
 
-	void OnTriggerExit(Collider c)
-	{
-		if (c.gameObject == wingman)
-		{
-			GameObject.Find("Wingman").GetComponent<Controller_ThirdPerson>().flightmodeOn();
-			GameObject.Find("MusicManager").GetComponent<Music>().PlayDefault();
-		}
-	}
+    void OnTriggerExit(Collider c)
+    {
+        if (c.gameObject == wingman)
+        {
+            wingman.GetComponent<Controller_ThirdPerson>().flightmodeOn();
+            GameObject.Find("MusicManager").GetComponent<Music>().PlayDefault();
+        }
+    }
 }

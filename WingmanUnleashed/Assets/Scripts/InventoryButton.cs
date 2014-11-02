@@ -4,7 +4,7 @@ using System.Collections;
 
 public class InventoryButton : MonoBehaviour
 {
-	public string objectName;
+	public GameObject gobject;
 	// Use this for initialization
 	void Start()
 	{
@@ -20,6 +20,6 @@ public class InventoryButton : MonoBehaviour
 	public void equip()
 	{
 		Sprite image = gameObject.transform.FindChild("ItemImage").GetComponent<Image>().sprite;
-		GameObject.Find("EquipmentPanel").GetComponent<EquipmentPanel>().Equip(objectName, image);
+		GameObject.Find("EquipmentPanel").GetComponent<EquipmentPanel>().Equip(gobject, image);
 	}
 }
