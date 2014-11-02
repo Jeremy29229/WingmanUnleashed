@@ -40,7 +40,7 @@ public class Collectable : MonoBehaviour, IInteractable
 	void IInteractable.InteractWith()
 	{
 		GameObject.Find("SoundManager").GetComponent<SoundManager>().PlaySoundAt("cashGrab", gameObject.transform.position);
-		inventory.AddItem(gameObject.GetComponent<Interactable>().InteractableName, inventorySprite);
+        inventory.AddItem(gameObject.GetComponent<Interactable>().InteractableName, gameObject.name, inventorySprite);
 		if (wingman.numDetectors > 0)
 		{
 			wingman.increaseDetectionFlat(0.3f);

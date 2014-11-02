@@ -36,7 +36,7 @@ public class Controller_ThirdPerson : MonoBehaviour
         coll.direction = 1;
 		Rigidbody rig = (Rigidbody)player.GetComponent("Rigidbody");
 		rig.useGravity = true;
-
+        rig.velocity = new Vector3(0, 0, 0);
         windSound.Stop();
 	}
 	public void flightmodeOn()
@@ -54,6 +54,7 @@ public class Controller_ThirdPerson : MonoBehaviour
 		Rigidbody rig = (Rigidbody)player.GetComponent("Rigidbody");
 		rig.useGravity = false;
         windSound.Play();
+        player.GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
 	}
 
 	void Awake()
