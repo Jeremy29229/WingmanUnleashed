@@ -14,11 +14,16 @@ public class Commandable : MonoBehaviour {
         startPosition = gameObject.transform.position;
         destinationReached = true;
         following = false;
+        //followCharacter(GameObject.Find("Wingman")); //Test: follow Wingman
         //sendToLocation(new Vector3(1471.9f, 241.59f, 554.71f)); //Test: go to target
 	}
 	
 	// Update is called once per frame
 	void Update () {
+        if (following)
+        {
+            sendToLocation(leader.transform.position);
+        }
         if (!destinationReached)
         {
             if (Vector3.Distance(gameObject.transform.position, currentDestination) < 1)
@@ -41,9 +46,15 @@ public class Commandable : MonoBehaviour {
         sendToLocation(startPosition);
     }
 
-    public void followCharacter()
+    public void followCharacter(GameObject character)
     {
+        leader = character;
+        following = true;
+    }
 
+    public void stopFollowing()
+    {
+        following = false;
     }
 
     //Not yet implemented
