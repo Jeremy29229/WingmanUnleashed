@@ -31,7 +31,7 @@ public class DistractionManager : MonoBehaviour {
         distractions.Add(temp);
     }
 
-    Vector3 CheckForDistractions(Vector3 position)
+    public Vector3 CheckForDistractions(Vector3 position)
     {
         foreach (GameObject d in distractions)
         {
