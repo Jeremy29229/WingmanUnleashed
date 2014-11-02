@@ -32,4 +32,9 @@ public class Client : MonoBehaviour
 		confidence -= amount;
 	}
 
+	public float GetConfidence()
+	{
+		return confidence;
+	}
+
 }

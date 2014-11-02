@@ -6,11 +6,14 @@ public class Commandable : MonoBehaviour {
     private Vector3 startPosition;
     private Vector3 currentDestination;
     private bool destinationReached;
+    private GameObject leader;
+    bool following;
 	// Use this for initialization
 	void Start () {
         agent = gameObject.GetComponent<NavMeshAgent>();
         startPosition = gameObject.transform.position;
         destinationReached = true;
+        following = false;
         //sendToLocation(new Vector3(1471.9f, 241.59f, 554.71f)); //Test: go to target
 	}
 	
@@ -36,6 +39,11 @@ public class Commandable : MonoBehaviour {
     public void sendToStartPosition()
     {
         sendToLocation(startPosition);
+    }
+
+    public void followCharacter()
+    {
+
     }
 
     //Not yet implemented

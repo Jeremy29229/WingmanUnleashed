@@ -31,4 +31,9 @@ public class Target : MonoBehaviour
 	{
 		interest -= amount;
 	}
+
+	public float GetInterest()
+	{
+		return interest;
+	}
 }
