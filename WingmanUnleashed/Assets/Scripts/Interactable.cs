@@ -12,7 +12,6 @@ public class Interactable : MonoBehaviour
 	public KeyCode InteractionKey = KeyCode.E;
 	public string PlayerObjectName = "Wingman";
 	private GameObject Player;
-	public bool IsRepeatable = false;
 	public bool IsActive = true;
 	private Canvas UI;
 	public string Action;

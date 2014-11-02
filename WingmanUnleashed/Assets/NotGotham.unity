@@ -488,7 +488,6 @@ MonoBehaviour:
   InteractionRadius: 3
   InteractionKey: 101
   PlayerObjectName: Wingman
-  IsRepeatable: 0
   IsActive: 1
   Action: talk to
   InteractableName: Partygoer
@@ -2167,7 +2166,6 @@ MonoBehaviour:
   InteractionRadius: 2
   InteractionKey: 101
   PlayerObjectName: Wingman
-  IsRepeatable: 0
   IsActive: 1
   Action: steal
   InteractableName: Bottle
@@ -3974,7 +3972,6 @@ MonoBehaviour:
   InteractionRadius: 2
   InteractionKey: 101
   PlayerObjectName: Wingman
-  IsRepeatable: 0
   IsActive: 1
   Action: steal
   InteractableName: Plate
@@ -4363,7 +4360,6 @@ MonoBehaviour:
   InteractionRadius: 2
   InteractionKey: 101
   PlayerObjectName: Wingman
-  IsRepeatable: 0
   IsActive: 1
   Action: steal
   InteractableName: Bottle
@@ -4470,7 +4466,6 @@ MonoBehaviour:
   InteractionRadius: 2
   InteractionKey: 101
   PlayerObjectName: Wingman
-  IsRepeatable: 0
   IsActive: 1
   Action: steal
   InteractableName: Solo Cup
@@ -4630,7 +4625,6 @@ MonoBehaviour:
   InteractionRadius: 2
   InteractionKey: 101
   PlayerObjectName: Wingman
-  IsRepeatable: 0
   IsActive: 1
   Action: steal
   InteractableName: Bowl
@@ -4926,7 +4920,6 @@ MonoBehaviour:
   InteractionRadius: 2
   InteractionKey: 101
   PlayerObjectName: Wingman
-  IsRepeatable: 0
   IsActive: 1
   Action: steal
   InteractableName: Solo Cup
@@ -5354,7 +5347,6 @@ MonoBehaviour:
   InteractionRadius: 2
   InteractionKey: 101
   PlayerObjectName: Wingman
-  IsRepeatable: 0
   IsActive: 1
   Action: steal
   InteractableName: Plate
@@ -6309,7 +6301,6 @@ MonoBehaviour:
   InteractionRadius: 2
   InteractionKey: 101
   PlayerObjectName: Wingman
-  IsRepeatable: 0
   IsActive: 1
   Action: steal
   InteractableName: Plate
@@ -7308,7 +7299,6 @@ MonoBehaviour:
   InteractionRadius: 2
   InteractionKey: 101
   PlayerObjectName: Wingman
-  IsRepeatable: 0
   IsActive: 1
   Action: steal
   InteractableName: Plate
@@ -8728,7 +8718,6 @@ MonoBehaviour:
   InteractionRadius: 2
   InteractionKey: 101
   PlayerObjectName: Wingman
-  IsRepeatable: 0
   IsActive: 1
   Action: steal
   InteractableName: Purse
@@ -9223,7 +9212,6 @@ MonoBehaviour:
   InteractionRadius: 2
   InteractionKey: 101
   PlayerObjectName: Wingman
-  IsRepeatable: 0
   IsActive: 1
   Action: steal
   InteractableName: Bottle
@@ -11448,7 +11436,6 @@ MonoBehaviour:
   InteractionRadius: 3
   InteractionKey: 101
   PlayerObjectName: Wingman
-  IsRepeatable: 0
   IsActive: 1
   Action: talk to
   InteractableName: Sam Smitherson
@@ -11589,7 +11576,6 @@ MonoBehaviour:
   InteractionRadius: 2
   InteractionKey: 101
   PlayerObjectName: Wingman
-  IsRepeatable: 0
   IsActive: 1
   Action: steal
   InteractableName: Plate
@@ -12873,7 +12859,6 @@ MonoBehaviour:
   InteractionRadius: 3
   InteractionKey: 101
   PlayerObjectName: Wingman
-  IsRepeatable: 0
   IsActive: 1
   Action: talk to
   InteractableName: PartyGoer
@@ -13165,7 +13150,6 @@ MonoBehaviour:
   InteractionRadius: 2
   InteractionKey: 101
   PlayerObjectName: Wingman
-  IsRepeatable: 0
   IsActive: 1
   Action: steal
   InteractableName: Plate
@@ -13431,7 +13415,6 @@ MonoBehaviour:
   InteractionRadius: 2
   InteractionKey: 101
   PlayerObjectName: Wingman
-  IsRepeatable: 0
   IsActive: 1
   Action: steal
   InteractableName: Wine Glass
@@ -13541,7 +13524,6 @@ MonoBehaviour:
   InteractionRadius: 2
   InteractionKey: 101
   PlayerObjectName: Wingman
-  IsRepeatable: 0
   IsActive: 1
   Action: steal
   InteractableName: Purse
@@ -14248,7 +14230,6 @@ MonoBehaviour:
   InteractionRadius: 2
   InteractionKey: 101
   PlayerObjectName: Wingman
-  IsRepeatable: 0
   IsActive: 1
   Action: steal
   InteractableName: Plate
@@ -15632,7 +15613,6 @@ MonoBehaviour:
   InteractionRadius: 2
   InteractionKey: 101
   PlayerObjectName: Wingman
-  IsRepeatable: 0
   IsActive: 1
   Action: steal
   InteractableName: Bottle
@@ -15815,7 +15795,6 @@ MonoBehaviour:
   InteractionRadius: 2
   InteractionKey: 101
   PlayerObjectName: Wingman
-  IsRepeatable: 0
   IsActive: 1
   Action: steal
   InteractableName: Gem
@@ -15952,7 +15931,6 @@ MonoBehaviour:
   InteractionRadius: 2
   InteractionKey: 101
   PlayerObjectName: Wingman
-  IsRepeatable: 0
   IsActive: 1
   Action: steal
   InteractableName: Wine Glass
@@ -16091,7 +16069,6 @@ MonoBehaviour:
   InteractionRadius: 2
   InteractionKey: 101
   PlayerObjectName: Wingman
-  IsRepeatable: 0
   IsActive: 1
   Action: steal
   InteractableName: Plate
@@ -16499,7 +16476,6 @@ MonoBehaviour:
   InteractionRadius: 2
   InteractionKey: 101
   PlayerObjectName: Wingman
-  IsRepeatable: 0
   IsActive: 1
   Action: steal
   InteractableName: Wine Glass
@@ -16673,7 +16649,6 @@ MonoBehaviour:
   InteractionRadius: 2
   InteractionKey: 101
   PlayerObjectName: Wingman
-  IsRepeatable: 0
   IsActive: 1
   Action: steal
   InteractableName: Plate
@@ -18452,7 +18427,6 @@ MonoBehaviour:
   InteractionRadius: 2
   InteractionKey: 101
   PlayerObjectName: Wingman
-  IsRepeatable: 0
   IsActive: 1
   Action: steal
   InteractableName: Camera
@@ -19270,7 +19244,6 @@ MonoBehaviour:
   InteractionRadius: 2
   InteractionKey: 101
   PlayerObjectName: Wingman
-  IsRepeatable: 0
   IsActive: 1
   Action: steal
   InteractableName: Bottle
@@ -20850,7 +20823,6 @@ MonoBehaviour:
   InteractionRadius: 2
   InteractionKey: 101
   PlayerObjectName: Wingman
-  IsRepeatable: 0
   IsActive: 1
   Action: steal
   InteractableName: Camera
@@ -20960,7 +20932,6 @@ MonoBehaviour:
   InteractionRadius: 2
   InteractionKey: 101
   PlayerObjectName: Wingman
-  IsRepeatable: 0
   IsActive: 1
   Action: steal
   InteractableName: Plate
@@ -21134,7 +21105,6 @@ MonoBehaviour:
   InteractionRadius: 2
   InteractionKey: 101
   PlayerObjectName: Wingman
-  IsRepeatable: 0
   IsActive: 1
   Action: steal
   InteractableName: Plate
@@ -21437,7 +21407,6 @@ MonoBehaviour:
   InteractionRadius: 2
   InteractionKey: 101
   PlayerObjectName: Wingman
-  IsRepeatable: 0
   IsActive: 1
   Action: steal
   InteractableName: Plate
@@ -22176,7 +22145,6 @@ MonoBehaviour:
   InteractionRadius: 2
   InteractionKey: 101
   PlayerObjectName: Wingman
-  IsRepeatable: 0
   IsActive: 1
   Action: steal
   InteractableName: Gem
@@ -22565,7 +22533,6 @@ MonoBehaviour:
   InteractionRadius: 3
   InteractionKey: 101
   PlayerObjectName: Wingman
-  IsRepeatable: 0
   IsActive: 1
   Action: talkto
   InteractableName: Partygoer
@@ -22813,7 +22780,6 @@ MonoBehaviour:
   InteractionRadius: 2
   InteractionKey: 101
   PlayerObjectName: Wingman
-  IsRepeatable: 0
   IsActive: 1
   Action: steal
   InteractableName: Plate
@@ -24543,7 +24509,6 @@ MonoBehaviour:
   InteractionRadius: 3
   InteractionKey: 101
   PlayerObjectName: Wingman
-  IsRepeatable: 0
   IsActive: 1
   Action: talk to
   InteractableName: Partygoer
@@ -24653,7 +24618,6 @@ MonoBehaviour:
   InteractionRadius: 2
   InteractionKey: 101
   PlayerObjectName: Wingman
-  IsRepeatable: 0
   IsActive: 1
   Action: steal
   InteractableName: Mint
@@ -24815,6 +24779,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 427828bd6d50d3d4dbe0dc1837283baf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ThrowingForce: 1000
 --- !u!4 &464402153
 Transform:
   m_ObjectHideFlags: 0
@@ -24934,7 +24899,6 @@ MonoBehaviour:
   InteractionRadius: 3
   InteractionKey: 101
   PlayerObjectName: Wingman
-  IsRepeatable: 0
   IsActive: 1
   Action: talk to
   InteractableName: GamerGuy88
@@ -25054,7 +25018,6 @@ MonoBehaviour:
   InteractionRadius: 2
   InteractionKey: 101
   PlayerObjectName: Wingman
-  IsRepeatable: 0
   IsActive: 1
   Action: steal
   InteractableName: Wine Glass
@@ -25767,7 +25730,6 @@ MonoBehaviour:
   InteractionRadius: 2
   InteractionKey: 101
   PlayerObjectName: Wingman
-  IsRepeatable: 0
   IsActive: 1
   Action: steal
   InteractableName: Ring
@@ -26095,7 +26057,6 @@ MonoBehaviour:
   InteractionRadius: 3
   InteractionKey: 101
   PlayerObjectName: Wingman
-  IsRepeatable: 0
   IsActive: 1
   Action: talk to
   InteractableName: Partygoer
@@ -26606,7 +26567,6 @@ MonoBehaviour:
   InteractionRadius: 2
   InteractionKey: 101
   PlayerObjectName: Wingman
-  IsRepeatable: 0
   IsActive: 1
   Action: steal
   InteractableName: Plate
@@ -26985,7 +26945,6 @@ MonoBehaviour:
   InteractionRadius: 2
   InteractionKey: 101
   PlayerObjectName: Wingman
-  IsRepeatable: 0
   IsActive: 1
   Action: steal
   InteractableName: Plate
@@ -27426,7 +27385,6 @@ MonoBehaviour:
   InteractionRadius: 2
   InteractionKey: 101
   PlayerObjectName: Wingman
-  IsRepeatable: 0
   IsActive: 1
   Action: steal
   InteractableName: Plate
@@ -28332,7 +28290,6 @@ MonoBehaviour:
   InteractionRadius: 2
   InteractionKey: 101
   PlayerObjectName: Wingman
-  IsRepeatable: 0
   IsActive: 1
   Action: steal
   InteractableName: Plate
@@ -28442,7 +28399,6 @@ MonoBehaviour:
   InteractionRadius: 2
   InteractionKey: 101
   PlayerObjectName: Wingman
-  IsRepeatable: 0
   IsActive: 1
   Action: steal
   InteractableName: Plate
@@ -28552,7 +28508,6 @@ MonoBehaviour:
   InteractionRadius: 2
   InteractionKey: 101
   PlayerObjectName: Wingman
-  IsRepeatable: 0
   IsActive: 1
   Action: steal
   InteractableName: Plate
@@ -28921,7 +28876,6 @@ MonoBehaviour:
   InteractionRadius: 2
   InteractionKey: 101
   PlayerObjectName: Wingman
-  IsRepeatable: 0
   IsActive: 1
   Action: steal
   InteractableName: Bottle
@@ -30915,8 +30869,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 852464707}
   m_HandleRect: {fileID: 852464706}
   m_Direction: 2
-  m_Value: .943702281
-  m_Size: .376190484
+  m_Value: .943984747
+  m_Size: .376834601
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -32343,7 +32297,6 @@ MonoBehaviour:
   InteractionRadius: 2
   InteractionKey: 101
   PlayerObjectName: Wingman
-  IsRepeatable: 0
   IsActive: 1
   Action: steal
   InteractableName: Solo Cup
@@ -33072,7 +33025,6 @@ MonoBehaviour:
   InteractionRadius: 2
   InteractionKey: 101
   PlayerObjectName: Wingman
-  IsRepeatable: 0
   IsActive: 1
   Action: steal
   InteractableName: Solo Cup
@@ -33480,7 +33432,6 @@ MonoBehaviour:
   InteractionRadius: 2
   InteractionKey: 101
   PlayerObjectName: Wingman
-  IsRepeatable: 0
   IsActive: 1
   Action: steal
   InteractableName: Plate
@@ -34167,6 +34118,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 427828bd6d50d3d4dbe0dc1837283baf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ThrowingForce: 1000
 --- !u!1001 &622961569
 Prefab:
   m_ObjectHideFlags: 0
@@ -36289,7 +36241,6 @@ MonoBehaviour:
   InteractionRadius: 2
   InteractionKey: 101
   PlayerObjectName: Wingman
-  IsRepeatable: 0
   IsActive: 1
   Action: steal
   InteractableName: Bottle
@@ -36738,7 +36689,6 @@ MonoBehaviour:
   InteractionRadius: 2
   InteractionKey: 101
   PlayerObjectName: Wingman
-  IsRepeatable: 0
   IsActive: 1
   Action: steal
   InteractableName: Plate
@@ -37306,7 +37256,6 @@ MonoBehaviour:
   InteractionRadius: 3
   InteractionKey: 101
   PlayerObjectName: Wingman
-  IsRepeatable: 0
   IsActive: 1
   Action: talk to
   InteractableName: Partygoer
@@ -38116,7 +38065,6 @@ MonoBehaviour:
   InteractionRadius: 3
   InteractionKey: 101
   PlayerObjectName: Wingman
-  IsRepeatable: 0
   IsActive: 1
   Action: steal
   InteractableName: Bottle
@@ -40461,7 +40409,6 @@ MonoBehaviour:
   InteractionRadius: 2
   InteractionKey: 101
   PlayerObjectName: Wingman
-  IsRepeatable: 0
   IsActive: 1
   Action: steal
   InteractableName: Plate
@@ -41217,9 +41164,12 @@ GameObject:
   - 33: {fileID: 785326612}
   - 23: {fileID: 785326611}
   - 114: {fileID: 785326617}
-  - 114: {fileID: 785326616}
-  - 114: {fileID: 785326615}
   - 114: {fileID: 785326614}
+  - 114: {fileID: 785326615}
+  - 114: {fileID: 785326620}
+  - 114: {fileID: 785326619}
+  - 114: {fileID: 785326618}
+  - 114: {fileID: 785326616}
   m_Layer: 8
   m_Name: RichMan1
   m_TagString: Untagged
@@ -41289,15 +41239,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 785326610}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 152c028ba9883f44aad8faeed999ab82, type: 3}
+  m_Script: {fileID: 11500000, guid: 8d5004510bb39e44bb7bd96cf47486b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NPCDialog: 
-  Responses:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  Current: {fileID: 785326620}
+  Conversations:
+  - {fileID: 785326620}
 --- !u!114 &785326616
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41306,10 +41253,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 785326610}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2dc234e3a2651b44b883d0e587984c45, type: 3}
+  m_Script: {fileID: 11500000, guid: 8e17f620e3a789d4181b8b35170f3757, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Beginning: {fileID: 0}
+  Resulting: {fileID: 0}
+  NewCurrent: {fileID: 0}
+  Text: Thanks for the tip, citizen. <LEAVE>
+  IsOneTimeOption: 1
+  NumTimesSelected: 0
+  Items: []
+  DisguiseNames: []
+  RequiredInterested: 0
+  RequiredConfidence: 0
+  RequiredObjectiveNames: []
 --- !u!114 &785326617
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41324,11 +41280,60 @@ MonoBehaviour:
   InteractionRadius: 3
   InteractionKey: 101
   PlayerObjectName: Wingman
-  IsRepeatable: 0
   IsActive: 1
   Action: talk to
   InteractableName: Master Chef
   AdditionalInformation: 
+--- !u!114 &785326618
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 785326610}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e17f620e3a789d4181b8b35170f3757, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Resulting: {fileID: 0}
+  NewCurrent: {fileID: 0}
+  Text: Wow really? I can't even. <Leave>
+  IsOneTimeOption: 1
+  NumTimesSelected: 0
+  Items: []
+  DisguiseNames: []
+  RequiredInterested: 0
+  RequiredConfidence: 0
+  RequiredObjectiveNames: []
+--- !u!114 &785326619
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 785326610}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 152c028ba9883f44aad8faeed999ab82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NPCDialog: I put the master in grill master, bohy.
+  Responses:
+  - {fileID: 785326618}
+  - {fileID: 785326616}
+  - {fileID: 0}
+  - {fileID: 0}
+--- !u!114 &785326620
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 785326610}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2dc234e3a2651b44b883d0e587984c45, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Beginning: {fileID: 785326619}
 --- !u!1 &785444256
 GameObject:
   m_ObjectHideFlags: 0
@@ -42027,7 +42032,6 @@ MonoBehaviour:
   InteractionRadius: 2
   InteractionKey: 101
   PlayerObjectName: Wingman
-  IsRepeatable: 0
   IsActive: 1
   Action: steal
   InteractableName: Plate
@@ -43744,7 +43748,6 @@ MonoBehaviour:
   InteractionRadius: 2
   InteractionKey: 101
   PlayerObjectName: Wingman
-  IsRepeatable: 0
   IsActive: 1
   Action: steal
   InteractableName: Plate
@@ -45690,7 +45693,6 @@ MonoBehaviour:
   InteractionRadius: 2
   InteractionKey: 101
   PlayerObjectName: Wingman
-  IsRepeatable: 0
   IsActive: 1
   Action: steal
   InteractableName: Plate
@@ -46120,7 +46122,6 @@ MonoBehaviour:
   InteractionRadius: 2
   InteractionKey: 101
   PlayerObjectName: Wingman
-  IsRepeatable: 0
   IsActive: 1
   Action: put on the
   InteractableName: Suit
@@ -46227,7 +46228,6 @@ MonoBehaviour:
   InteractionRadius: 2
   InteractionKey: 101
   PlayerObjectName: Wingman
-  IsRepeatable: 0
   IsActive: 1
   Action: steal
   InteractableName: Plate
@@ -47542,7 +47542,6 @@ MonoBehaviour:
   InteractionRadius: 2
   InteractionKey: 101
   PlayerObjectName: Wingman
-  IsRepeatable: 0
   IsActive: 1
   Action: steal
   InteractableName: Wine Glass
@@ -47652,7 +47651,6 @@ MonoBehaviour:
   InteractionRadius: 2
   InteractionKey: 101
   PlayerObjectName: Wingman
-  IsRepeatable: 0
   IsActive: 1
   Action: steal
   InteractableName: Plate
@@ -47982,7 +47980,6 @@ MonoBehaviour:
   InteractionRadius: 3
   InteractionKey: 101
   PlayerObjectName: Wingman
-  IsRepeatable: 0
   IsActive: 1
   Action: steal
   InteractableName: Bottle
@@ -48655,7 +48652,6 @@ MonoBehaviour:
   InteractionRadius: 2
   InteractionKey: 101
   PlayerObjectName: Wingman
-  IsRepeatable: 0
   IsActive: 1
   Action: steal
   InteractableName: Wine Glass
@@ -48866,7 +48862,6 @@ MonoBehaviour:
   InteractionRadius: 2
   InteractionKey: 101
   PlayerObjectName: Wingman
-  IsRepeatable: 0
   IsActive: 1
   Action: steal
   InteractableName: Plate
@@ -49386,7 +49381,6 @@ MonoBehaviour:
   InteractionRadius: 2
   InteractionKey: 101
   PlayerObjectName: Wingman
-  IsRepeatable: 0
   IsActive: 1
   Action: steal
   InteractableName: Plate
@@ -50840,7 +50834,6 @@ MonoBehaviour:
   InteractionRadius: 2
   InteractionKey: 101
   PlayerObjectName: Wingman
-  IsRepeatable: 0
   IsActive: 1
   Action: steal
   InteractableName: Plate
@@ -52204,7 +52197,6 @@ MonoBehaviour:
   InteractionRadius: 2
   InteractionKey: 101
   PlayerObjectName: Wingman
-  IsRepeatable: 0
   IsActive: 1
   Action: steal
   InteractableName: Plate
@@ -53036,7 +53028,6 @@ MonoBehaviour:
   InteractionRadius: 2
   InteractionKey: 101
   PlayerObjectName: Wingman
-  IsRepeatable: 0
   IsActive: 1
   Action: steal
   InteractableName: Plate
@@ -54292,7 +54283,6 @@ MonoBehaviour:
   InteractionRadius: 2
   InteractionKey: 101
   PlayerObjectName: Wingman
-  IsRepeatable: 0
   IsActive: 1
   Action: steal
   InteractableName: Gem
@@ -54414,7 +54404,6 @@ MonoBehaviour:
   InteractionRadius: 2
   InteractionKey: 101
   PlayerObjectName: Wingman
-  IsRepeatable: 0
   IsActive: 1
   Action: steal
   InteractableName: Plate
@@ -54625,7 +54614,6 @@ MonoBehaviour:
   InteractionRadius: 2
   InteractionKey: 101
   PlayerObjectName: Wingman
-  IsRepeatable: 0
   IsActive: 1
   Action: steal
   InteractableName: Bottle
@@ -54735,7 +54723,6 @@ MonoBehaviour:
   InteractionRadius: 2
   InteractionKey: 101
   PlayerObjectName: Wingman
-  IsRepeatable: 0
   IsActive: 1
   Action: steal
   InteractableName: Gem
@@ -56501,7 +56488,6 @@ MonoBehaviour:
   InteractionRadius: 2
   InteractionKey: 101
   PlayerObjectName: Wingman
-  IsRepeatable: 0
   IsActive: 1
   Action: steal
   InteractableName: Bottle
@@ -56807,7 +56793,6 @@ MonoBehaviour:
   InteractionRadius: 2
   InteractionKey: 101
   PlayerObjectName: Wingman
-  IsRepeatable: 0
   IsActive: 1
   Action: steal
   InteractableName: Plate
@@ -57438,7 +57423,6 @@ MonoBehaviour:
   InteractionRadius: 3
   InteractionKey: 101
   PlayerObjectName: Wingman
-  IsRepeatable: 0
   IsActive: 1
   Action: talk to
   InteractableName: Partygoer
@@ -57616,7 +57600,6 @@ MonoBehaviour:
   InteractionRadius: 2
   InteractionKey: 101
   PlayerObjectName: Wingman
-  IsRepeatable: 0
   IsActive: 1
   Action: steal
   InteractableName: Plate
@@ -57726,7 +57709,6 @@ MonoBehaviour:
   InteractionRadius: 2
   InteractionKey: 101
   PlayerObjectName: Wingman
-  IsRepeatable: 0
   IsActive: 1
   Action: steal
   InteractableName: Plate
@@ -58365,7 +58347,6 @@ MonoBehaviour:
   InteractionRadius: 2
   InteractionKey: 101
   PlayerObjectName: Wingman
-  IsRepeatable: 0
   IsActive: 1
   Action: steal
   InteractableName: Plate
@@ -59413,7 +59394,6 @@ MonoBehaviour:
   InteractionRadius: 2
   InteractionKey: 101
   PlayerObjectName: Wingman
-  IsRepeatable: 0
   IsActive: 1
   Action: steal
   InteractableName: Plate
@@ -59713,7 +59693,6 @@ MonoBehaviour:
   InteractionRadius: 2
   InteractionKey: 101
   PlayerObjectName: Wingman
-  IsRepeatable: 0
   IsActive: 1
   Action: steal
   InteractableName: Gem
@@ -60349,7 +60328,6 @@ MonoBehaviour:
   InteractionRadius: 2
   InteractionKey: 101
   PlayerObjectName: Wingman
-  IsRepeatable: 0
   IsActive: 1
   Action: steal
   InteractableName: Bottle
@@ -61004,7 +60982,6 @@ MonoBehaviour:
   InteractionRadius: 2
   InteractionKey: 101
   PlayerObjectName: Wingman
-  IsRepeatable: 0
   IsActive: 1
   Action: steal
   InteractableName: Gem
@@ -61309,7 +61286,6 @@ MonoBehaviour:
   InteractionRadius: 2
   InteractionKey: 101
   PlayerObjectName: Wingman
-  IsRepeatable: 0
   IsActive: 1
   Action: steal
   InteractableName: Plate
@@ -61687,7 +61663,6 @@ MonoBehaviour:
   InteractionRadius: 2
   InteractionKey: 101
   PlayerObjectName: Wingman
-  IsRepeatable: 0
   IsActive: 1
   Action: steal
   InteractableName: Ring
@@ -62394,7 +62369,6 @@ MonoBehaviour:
   InteractionRadius: 2
   InteractionKey: 101
   PlayerObjectName: Wingman
-  IsRepeatable: 0
   IsActive: 1
   Action: steal
   InteractableName: Wine Glass
@@ -63000,7 +62974,6 @@ MonoBehaviour:
   InteractionRadius: 2
   InteractionKey: 101
   PlayerObjectName: Wingman
-  IsRepeatable: 0
   IsActive: 1
   Action: steal
   InteractableName: Bowl
@@ -63139,7 +63112,6 @@ MonoBehaviour:
   InteractionRadius: 2
   InteractionKey: 101
   PlayerObjectName: Wingman
-  IsRepeatable: 0
   IsActive: 1
   Action: steal
   InteractableName: Plate
@@ -63728,7 +63700,6 @@ MonoBehaviour:
   InteractionRadius: 2
   InteractionKey: 101
   PlayerObjectName: Wingman
-  IsRepeatable: 0
   IsActive: 1
   Action: steal
   InteractableName: Plate
@@ -64610,7 +64581,6 @@ MonoBehaviour:
   InteractionRadius: 2
   InteractionKey: 101
   PlayerObjectName: Wingman
-  IsRepeatable: 0
   IsActive: 1
   Action: steal
   InteractableName: Mint
@@ -65591,7 +65561,6 @@ MonoBehaviour:
   InteractionRadius: 2
   InteractionKey: 101
   PlayerObjectName: Wingman
-  IsRepeatable: 0
   IsActive: 1
   Action: steal
   InteractableName: Wine Glass
@@ -65977,7 +65946,6 @@ MonoBehaviour:
   InteractionRadius: 2
   InteractionKey: 101
   PlayerObjectName: Wingman
-  IsRepeatable: 0
   IsActive: 1
   Action: steal
   InteractableName: Bottle
@@ -67017,7 +66985,6 @@ MonoBehaviour:
   InteractionRadius: 3
   InteractionKey: 101
   PlayerObjectName: Wingman
-  IsRepeatable: 0
   IsActive: 1
   Action: talk to
   InteractableName: Partygoer
@@ -67200,7 +67167,6 @@ MonoBehaviour:
   InteractionRadius: 2
   InteractionKey: 101
   PlayerObjectName: Wingman
-  IsRepeatable: 0
   IsActive: 1
   Action: steal
   InteractableName: Wine Glass
@@ -67519,7 +67485,6 @@ MonoBehaviour:
   InteractionRadius: 2
   InteractionKey: 101
   PlayerObjectName: Wingman
-  IsRepeatable: 0
   IsActive: 1
   Action: steal
   InteractableName: Bowl
@@ -67869,7 +67834,6 @@ MonoBehaviour:
   InteractionRadius: 2
   InteractionKey: 101
   PlayerObjectName: Wingman
-  IsRepeatable: 0
   IsActive: 1
   Action: steal
   InteractableName: Plate
@@ -68492,7 +68456,6 @@ MonoBehaviour:
   InteractionRadius: 2
   InteractionKey: 101
   PlayerObjectName: Wingman
-  IsRepeatable: 0
   IsActive: 1
   Action: steal
   InteractableName: Solo Cup
@@ -69612,7 +69575,6 @@ MonoBehaviour:
   InteractionRadius: 2
   InteractionKey: 101
   PlayerObjectName: Wingman
-  IsRepeatable: 0
   IsActive: 1
   Action: steal
   InteractableName: Gem
@@ -71904,7 +71866,6 @@ MonoBehaviour:
   InteractionRadius: 2
   InteractionKey: 101
   PlayerObjectName: Wingman
-  IsRepeatable: 0
   IsActive: 1
   Action: steal
   InteractableName: Bottle
@@ -72585,7 +72546,6 @@ MonoBehaviour:
   InteractionRadius: 3
   InteractionKey: 101
   PlayerObjectName: Wingman
-  IsRepeatable: 0
   IsActive: 1
   Action: talk to
   InteractableName: Partygoer
@@ -72971,7 +72931,6 @@ MonoBehaviour:
   InteractionRadius: 3
   InteractionKey: 101
   PlayerObjectName: Wingman
-  IsRepeatable: 0
   IsActive: 1
   Action: talk to
   InteractableName: Partygoer
@@ -73401,7 +73360,6 @@ MonoBehaviour:
   InteractionRadius: 2
   InteractionKey: 101
   PlayerObjectName: Wingman
-  IsRepeatable: 0
   IsActive: 1
   Action: steal
   InteractableName: Plate
@@ -75016,7 +74974,6 @@ MonoBehaviour:
   InteractionRadius: 2
   InteractionKey: 101
   PlayerObjectName: Wingman
-  IsRepeatable: 0
   IsActive: 1
   Action: steal
   InteractableName: Bottle
@@ -75198,7 +75155,6 @@ MonoBehaviour:
   InteractionRadius: 2
   InteractionKey: 101
   PlayerObjectName: Wingman
-  IsRepeatable: 0
   IsActive: 1
   Action: steal
   InteractableName: Bottle
@@ -75308,7 +75264,6 @@ MonoBehaviour:
   InteractionRadius: 2
   InteractionKey: 101
   PlayerObjectName: Wingman
-  IsRepeatable: 0
   IsActive: 1
   Action: steal
   InteractableName: Gem
@@ -75487,7 +75442,6 @@ MonoBehaviour:
   InteractionRadius: 2
   InteractionKey: 101
   PlayerObjectName: Wingman
-  IsRepeatable: 0
   IsActive: 1
   Action: steal
   InteractableName: Wine Glass
@@ -76419,7 +76373,6 @@ MonoBehaviour:
   InteractionRadius: 2
   InteractionKey: 101
   PlayerObjectName: Wingman
-  IsRepeatable: 0
   IsActive: 1
   Action: steal
   InteractableName: Plate
@@ -76991,7 +76944,6 @@ MonoBehaviour:
   InteractionRadius: 2
   InteractionKey: 101
   PlayerObjectName: Wingman
-  IsRepeatable: 0
   IsActive: 1
   Action: steal
   InteractableName: Plate
@@ -77563,6 +77515,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 427828bd6d50d3d4dbe0dc1837283baf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ThrowingForce: 1000
 --- !u!1 &1469149291
 GameObject:
   m_ObjectHideFlags: 0
@@ -77741,7 +77694,6 @@ MonoBehaviour:
   InteractionRadius: 2
   InteractionKey: 101
   PlayerObjectName: Wingman
-  IsRepeatable: 0
   IsActive: 1
   Action: steal
   InteractableName: Plate
@@ -79787,7 +79739,6 @@ MonoBehaviour:
   InteractionRadius: 2
   InteractionKey: 101
   PlayerObjectName: Wingman
-  IsRepeatable: 0
   IsActive: 1
   Action: steal
   InteractableName: Plate
@@ -79960,7 +79911,6 @@ MonoBehaviour:
   InteractionRadius: 2
   InteractionKey: 101
   PlayerObjectName: Wingman
-  IsRepeatable: 0
   IsActive: 1
   Action: steal
   InteractableName: Plate
@@ -80857,7 +80807,6 @@ MonoBehaviour:
   InteractionRadius: 2
   InteractionKey: 101
   PlayerObjectName: Wingman
-  IsRepeatable: 0
   IsActive: 1
   Action: steal
   InteractableName: Bottle
@@ -81976,7 +81925,6 @@ MonoBehaviour:
   InteractionRadius: 2
   InteractionKey: 101
   PlayerObjectName: Wingman
-  IsRepeatable: 0
   IsActive: 1
   Action: steal
   InteractableName: Gem
@@ -84266,7 +84214,6 @@ MonoBehaviour:
   InteractionRadius: 2
   InteractionKey: 101
   PlayerObjectName: Wingman
-  IsRepeatable: 0
   IsActive: 1
   Action: steal
   InteractableName: Plate
@@ -85309,7 +85256,6 @@ MonoBehaviour:
   InteractionRadius: 2
   InteractionKey: 101
   PlayerObjectName: Wingman
-  IsRepeatable: 0
   IsActive: 1
   Action: steal
   InteractableName: Dice
@@ -85486,7 +85432,6 @@ MonoBehaviour:
   InteractionRadius: 2
   InteractionKey: 101
   PlayerObjectName: Wingman
-  IsRepeatable: 0
   IsActive: 1
   Action: steal
   InteractableName: Plate
@@ -86046,7 +85991,6 @@ MonoBehaviour:
   InteractionRadius: 2
   InteractionKey: 101
   PlayerObjectName: Wingman
-  IsRepeatable: 0
   IsActive: 1
   Action: steal
   InteractableName: Wine Glass
@@ -86592,7 +86536,6 @@ MonoBehaviour:
   InteractionRadius: 2
   InteractionKey: 101
   PlayerObjectName: Wingman
-  IsRepeatable: 0
   IsActive: 1
   Action: steal
   InteractableName: Wine Glass
@@ -87264,7 +87207,6 @@ MonoBehaviour:
   InteractionRadius: 2
   InteractionKey: 101
   PlayerObjectName: Wingman
-  IsRepeatable: 0
   IsActive: 1
   Action: steal
   InteractableName: Wine Glass
@@ -87990,7 +87932,7 @@ RectTransform:
   m_RootOrder: 1
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: -802, y: 103.699997}
+  m_AnchoredPosition: {x: -912.590027, y: 116.519997}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &1668022262
@@ -88480,7 +88422,6 @@ MonoBehaviour:
   InteractionRadius: 2
   InteractionKey: 101
   PlayerObjectName: Wingman
-  IsRepeatable: 0
   IsActive: 1
   Action: steal
   InteractableName: Solo Cup
@@ -89074,7 +89015,6 @@ MonoBehaviour:
   InteractionRadius: 2
   InteractionKey: 101
   PlayerObjectName: Wingman
-  IsRepeatable: 0
   IsActive: 1
   Action: steal
   InteractableName: Plate
@@ -89228,7 +89168,6 @@ MonoBehaviour:
   InteractionRadius: 2
   InteractionKey: 101
   PlayerObjectName: Wingman
-  IsRepeatable: 0
   IsActive: 1
   Action: steal
   InteractableName: Plate
@@ -89548,7 +89487,6 @@ MonoBehaviour:
   InteractionRadius: 2
   InteractionKey: 101
   PlayerObjectName: Wingman
-  IsRepeatable: 0
   IsActive: 1
   Action: steal
   InteractableName: Plate
@@ -92088,7 +92026,6 @@ MonoBehaviour:
   InteractionRadius: 2
   InteractionKey: 101
   PlayerObjectName: Wingman
-  IsRepeatable: 0
   IsActive: 1
   Action: steal
   InteractableName: Bowl
@@ -92703,7 +92640,6 @@ MonoBehaviour:
   InteractionRadius: 3
   InteractionKey: 101
   PlayerObjectName: Wingman
-  IsRepeatable: 0
   IsActive: 1
   Action: talk to
   InteractableName: Target
@@ -92821,7 +92757,6 @@ MonoBehaviour:
   InteractionRadius: 3
   InteractionKey: 101
   PlayerObjectName: Wingman
-  IsRepeatable: 0
   IsActive: 1
   Action: talk to
   InteractableName: Aileen Cathasaigh
@@ -92866,7 +92801,6 @@ MonoBehaviour:
   InteractionRadius: 3
   InteractionKey: 101
   PlayerObjectName: Wingman
-  IsRepeatable: 0
   IsActive: 1
   Action: talk to
   InteractableName: PartyGoer
@@ -93576,7 +93510,6 @@ MonoBehaviour:
   InteractionRadius: 2
   InteractionKey: 101
   PlayerObjectName: Wingman
-  IsRepeatable: 0
   IsActive: 1
   Action: steal
   InteractableName: Plate
@@ -93755,7 +93688,6 @@ MonoBehaviour:
   InteractionRadius: 2
   InteractionKey: 101
   PlayerObjectName: Wingman
-  IsRepeatable: 0
   IsActive: 1
   Action: steal
   InteractableName: Bottle
@@ -93892,7 +93824,6 @@ MonoBehaviour:
   InteractionRadius: 2
   InteractionKey: 101
   PlayerObjectName: Wingman
-  IsRepeatable: 0
   IsActive: 1
   Action: steal
   InteractableName: Plate
@@ -94721,7 +94652,6 @@ MonoBehaviour:
   InteractionRadius: 2
   InteractionKey: 101
   PlayerObjectName: Wingman
-  IsRepeatable: 0
   IsActive: 1
   Action: steal
   InteractableName: Plate
@@ -95051,7 +94981,6 @@ MonoBehaviour:
   InteractionRadius: 2
   InteractionKey: 101
   PlayerObjectName: Wingman
-  IsRepeatable: 0
   IsActive: 1
   Action: steal
   InteractableName: Plate
@@ -95173,7 +95102,6 @@ MonoBehaviour:
   InteractionRadius: 2
   InteractionKey: 101
   PlayerObjectName: Wingman
-  IsRepeatable: 0
   IsActive: 1
   Action: steal
   InteractableName: Bowl
@@ -95852,7 +95780,6 @@ MonoBehaviour:
   InteractionRadius: 2
   InteractionKey: 101
   PlayerObjectName: Wingman
-  IsRepeatable: 0
   IsActive: 1
   Action: steal
   InteractableName: Plate
@@ -95962,7 +95889,6 @@ MonoBehaviour:
   InteractionRadius: 2
   InteractionKey: 101
   PlayerObjectName: Wingman
-  IsRepeatable: 0
   IsActive: 1
   Action: steal
   InteractableName: Plate
@@ -96310,7 +96236,6 @@ MonoBehaviour:
   InteractionRadius: 2
   InteractionKey: 101
   PlayerObjectName: Wingman
-  IsRepeatable: 0
   IsActive: 1
   Action: steal
   InteractableName: Plate
@@ -96955,7 +96880,6 @@ MonoBehaviour:
   InteractionRadius: 2
   InteractionKey: 101
   PlayerObjectName: Wingman
-  IsRepeatable: 0
   IsActive: 1
   Action: steal
   InteractableName: Plate
@@ -97681,7 +97605,6 @@ MonoBehaviour:
   InteractionRadius: 2
   InteractionKey: 101
   PlayerObjectName: Wingman
-  IsRepeatable: 0
   IsActive: 1
   Action: steal
   InteractableName: Solo Cup
@@ -98193,7 +98116,6 @@ MonoBehaviour:
   InteractionRadius: 2
   InteractionKey: 101
   PlayerObjectName: Wingman
-  IsRepeatable: 0
   IsActive: 1
   Action: steal
   InteractableName: Plate
@@ -98372,7 +98294,6 @@ MonoBehaviour:
   InteractionRadius: 2
   InteractionKey: 101
   PlayerObjectName: Wingman
-  IsRepeatable: 0
   IsActive: 1
   Action: steal
   InteractableName: Purse
@@ -99961,7 +99882,6 @@ MonoBehaviour:
   InteractionRadius: 2
   InteractionKey: 101
   PlayerObjectName: Wingman
-  IsRepeatable: 0
   IsActive: 1
   Action: steal
   InteractableName: Mint
@@ -100537,7 +100457,6 @@ MonoBehaviour:
   InteractionRadius: 2
   InteractionKey: 101
   PlayerObjectName: Wingman
-  IsRepeatable: 0
   IsActive: 1
   Action: steal
   InteractableName: Plate
@@ -101541,7 +101460,6 @@ MonoBehaviour:
   InteractionRadius: 2
   InteractionKey: 101
   PlayerObjectName: Wingman
-  IsRepeatable: 0
   IsActive: 1
   Action: steal
   InteractableName: Plate
@@ -101868,7 +101786,6 @@ MonoBehaviour:
   InteractionRadius: 2
   InteractionKey: 101
   PlayerObjectName: Wingman
-  IsRepeatable: 0
   IsActive: 1
   Action: steal
   InteractableName: Purse
@@ -102332,7 +102249,6 @@ MonoBehaviour:
   InteractionRadius: 2
   InteractionKey: 101
   PlayerObjectName: Wingman
-  IsRepeatable: 0
   IsActive: 1
   Action: steal
   InteractableName: Wine Glass
@@ -102494,7 +102410,6 @@ MonoBehaviour:
   InteractionRadius: 2
   InteractionKey: 101
   PlayerObjectName: Wingman
-  IsRepeatable: 0
   IsActive: 1
   Action: steal
   InteractableName: Plate
@@ -102852,7 +102767,6 @@ MonoBehaviour:
   InteractionRadius: 2
   InteractionKey: 101
   PlayerObjectName: Wingman
-  IsRepeatable: 0
   IsActive: 1
   Action: steal
   InteractableName: Wine Glass
@@ -103467,7 +103381,6 @@ MonoBehaviour:
   InteractionRadius: 2
   InteractionKey: 101
   PlayerObjectName: Wingman
-  IsRepeatable: 0
   IsActive: 1
   Action: steal
   InteractableName: Plate
@@ -103882,7 +103795,6 @@ MonoBehaviour:
   InteractionRadius: 2
   InteractionKey: 101
   PlayerObjectName: Wingman
-  IsRepeatable: 0
   IsActive: 1
   Action: steal
   InteractableName: Plate
@@ -104276,7 +104188,6 @@ MonoBehaviour:
   InteractionRadius: 2
   InteractionKey: 101
   PlayerObjectName: Wingman
-  IsRepeatable: 0
   IsActive: 1
   Action: steal
   InteractableName: Plate
@@ -104606,7 +104517,6 @@ MonoBehaviour:
   InteractionRadius: 2
   InteractionKey: 101
   PlayerObjectName: Wingman
-  IsRepeatable: 0
   IsActive: 1
   Action: steal
   InteractableName: Plate
@@ -105604,7 +105514,6 @@ MonoBehaviour:
   InteractionRadius: 2
   InteractionKey: 101
   PlayerObjectName: Wingman
-  IsRepeatable: 0
   IsActive: 1
   Action: steal
   InteractableName: Plate
@@ -106136,7 +106045,6 @@ MonoBehaviour:
   InteractionRadius: 3
   InteractionKey: 101
   PlayerObjectName: Wingman
-  IsRepeatable: 0
   IsActive: 1
   Action: talk to
   InteractableName: Partygoer
@@ -106306,7 +106214,6 @@ MonoBehaviour:
   InteractionRadius: 2
   InteractionKey: 101
   PlayerObjectName: Wingman
-  IsRepeatable: 0
   IsActive: 1
   Action: steal
   InteractableName: Wine Glass
@@ -106966,7 +106873,6 @@ MonoBehaviour:
   InteractionRadius: 2
   InteractionKey: 101
   PlayerObjectName: Wingman
-  IsRepeatable: 0
   IsActive: 1
   Action: steal
   InteractableName: Plate
@@ -107985,7 +107891,6 @@ MonoBehaviour:
   InteractionRadius: 2
   InteractionKey: 101
   PlayerObjectName: Wingman
-  IsRepeatable: 0
   IsActive: 1
   Action: steal
   InteractableName: Gem
@@ -110460,7 +110365,6 @@ MonoBehaviour:
   InteractionRadius: 2
   InteractionKey: 101
   PlayerObjectName: Wingman
-  IsRepeatable: 0
   IsActive: 1
   Action: steal
   InteractableName: Wine Glass
@@ -111343,7 +111247,6 @@ MonoBehaviour:
   InteractionRadius: 2
   InteractionKey: 101
   PlayerObjectName: Wingman
-  IsRepeatable: 0
   IsActive: 1
   Action: steal
   InteractableName: Plate
@@ -113047,7 +112950,6 @@ MonoBehaviour:
   InteractionRadius: 2
   InteractionKey: 101
   PlayerObjectName: Wingman
-  IsRepeatable: 0
   IsActive: 1
   Action: steal
   InteractableName: Plate
@@ -113775,7 +113677,6 @@ MonoBehaviour:
   InteractionRadius: 2
   InteractionKey: 101
   PlayerObjectName: Wingman
-  IsRepeatable: 0
   IsActive: 1
   Action: steal
   InteractableName: Plate

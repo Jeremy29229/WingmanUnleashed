@@ -31,7 +31,7 @@ public class InteractionManager : MonoBehaviour
 			else
 			{
 				float currentDistance = Vector3.Distance(player.transform.position, v.transform.position);
-				if (currentDistance < minDistance)
+				if (currentDistance < minDistance && v.GetComponent<Interactable>().IsActive)
 				{
 					minDistance = currentDistance;
 					closest = v;

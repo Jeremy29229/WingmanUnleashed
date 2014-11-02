@@ -2,6 +2,8 @@
 
 public class Ejector : MonoBehaviour
 {
+	public float ThrowingForce = 1000.0f;
+
 	private GameObject wingman;
 	private bool IsWingmanInRange = false;
 
@@ -14,10 +16,9 @@ public class Ejector : MonoBehaviour
 	{
 		if (IsWingmanInRange && wingman.GetComponent<Player>().getDetectionLevel() >= 1.0f)
 		{
-			Vector2 direction = Random.insideUnitCircle;
-			GameObject.Find("Wingman").GetComponent<Rigidbody>().AddForce(new Vector3(direction.x * 1000.0f, 1000.0f, direction.y * 1000.0f));
+			GameObject.Find("Wingman").GetComponent<Rigidbody>().AddForce(transform.parent.forward.normalized.x * ThrowingForce, ThrowingForce, transform.parent.forward.normalized.z * ThrowingForce); 
 			GameObject.Find("SoundManager").GetComponent<SoundManager>().PlaySound("RecordScratch");
-            GameObject.Find("Detection").audio.Stop();
+			GameObject.Find("Detection").audio.Stop();
 			IsWingmanInRange = false;
 		}
 	}

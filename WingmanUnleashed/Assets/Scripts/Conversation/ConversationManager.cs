@@ -18,6 +18,7 @@ public class ConversationManager : MonoBehaviour
 	private Inventory inventory;
 	private GameObject player;
 	private Dialog last;
+	private int optionCount = 0;
 
 	private Target targetScript;
 	private Client clientScript;
@@ -63,6 +64,7 @@ public class ConversationManager : MonoBehaviour
 		}
 		else
 		{
+			optionCount = 0;
 			last = d;
 			UI.enabled = true;
 			cam.IsInConversation = true;
@@ -75,13 +77,22 @@ public class ConversationManager : MonoBehaviour
 
 			for (int i = 0; i < d.Responses.Length && i < buttons.Length; i++)
 			{
-				if (IsDialogVisiable(d.Responses[i]))
+				if (d.Responses[i] != null && IsDialogVisiable(d.Responses[i]))
 				{
-					npcText.text = "\"" + d.NPCDialog + "\"";
-					npcName.text = d.GetNPCName();
+					optionCount++;
 					buttons[i].SetActive(true);
 					buttons[i].GetComponentInChildren<Text>().text = d.Responses[i].Text;
+					npcText.text = "\"" + d.NPCDialog + "\"";
+					npcName.text = d.GetNPCName();
 				}
+			}
+
+			if (optionCount == 0)
+			{
+				buttons[0].SetActive(true);
+				buttons[0].GetComponentInChildren<Text>().text ="<Leave>";
+				npcText.text = "\"" + d.NPCDialog + "\"";
+				npcName.text = d.GetNPCName();
 			}
 		}
 	}
@@ -147,7 +158,7 @@ public class ConversationManager : MonoBehaviour
 
 	private bool HasRequiredDisguise(DialogResponse d)
 	{
-		bool hasDisguise = false;
+		bool hasDisguise = d.DisguiseNames.Length < 1;
 
 		foreach (string disguiseName in d.DisguiseNames)
 		{

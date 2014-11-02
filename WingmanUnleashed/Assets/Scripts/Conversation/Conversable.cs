@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 public class Conversable : MonoBehaviour, IInteractable
 {
-	private Conversation conversation;
+	private Correspondence correspondence;
 	private ConversationManager cm;
 	private Player Wingman;
 	private bool isChatBubbleDisplayed = false;
@@ -14,7 +14,7 @@ public class Conversable : MonoBehaviour, IInteractable
 	void Start()
 	{
 		Wingman = GameObject.Find("Wingman").GetComponent<Player>();
-		conversation = gameObject.GetComponent<Conversation>();
+		correspondence = gameObject.GetComponent<Correspondence>();
 		cm = GameObject.Find("ConvoGUI").GetComponent<ConversationManager>();
 		chatBubbleDisplay = GetComponentInChildren<Canvas>();
 		chatBubbleDisplay.enabled = false;
@@ -33,6 +33,6 @@ public class Conversable : MonoBehaviour, IInteractable
 
 	public void InteractWith()
 	{
-		cm.ProcessDialog(conversation.Beginning);
+		cm.ProcessDialog(correspondence.Current.Beginning);
 	}
 }
