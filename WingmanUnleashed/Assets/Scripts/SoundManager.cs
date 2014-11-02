@@ -3,7 +3,7 @@ using System.Collections;
 
 public class SoundManager : MonoBehaviour
 {
-
+    public static SoundManager Instance;
 	public AudioClip Collect;
 	public AudioClip SmallSuccess;
 	public AudioClip Caught;
@@ -11,7 +11,7 @@ public class SoundManager : MonoBehaviour
 	// Use this for initialization
 	void Start()
 	{
-
+        Instance = this;
 	}
 
 	// Update is called once per frame

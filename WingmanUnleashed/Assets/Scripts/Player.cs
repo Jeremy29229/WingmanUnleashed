@@ -77,7 +77,7 @@ public class Player : MonoBehaviour
 
 	public void increaseDetection(float amount)
 	{
-		if (detectionLevel <= 0.0f) DetectionSound.Play();
+		if (!DetectionSound.isPlaying) DetectionSound.Play();
 		detectionLevel += amount * Time.deltaTime;
 	}
 

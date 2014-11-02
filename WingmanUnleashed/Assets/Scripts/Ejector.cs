@@ -17,6 +17,7 @@ public class Ejector : MonoBehaviour
 			Vector2 direction = Random.insideUnitCircle;
 			GameObject.Find("Wingman").GetComponent<Rigidbody>().AddForce(new Vector3(direction.x * 1000.0f, 1000.0f, direction.y * 1000.0f));
 			GameObject.Find("SoundManager").GetComponent<SoundManager>().PlaySound("RecordScratch");
+            GameObject.Find("Detection").audio.Stop();
 			IsWingmanInRange = false;
 		}
 	}
