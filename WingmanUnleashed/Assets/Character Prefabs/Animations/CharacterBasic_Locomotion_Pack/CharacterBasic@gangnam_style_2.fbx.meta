@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 9e83c88ed4f343140a0f9eca082860c2
+guid: 29cb2fa8b39e3164f839af718ccd5dc6
 ModelImporter:
   serializedVersion: 16
   fileIDToRecycleName:
@@ -45,7 +45,6 @@ ModelImporter:
     100078: mixamorig:Spine
     100080: mixamorig:Spine1
     100082: mixamorig:Spine2
-    100084: unamed
     400000: //RootNode
     400002: mixamorig:Head
     400004: mixamorig:HeadTop_End
@@ -88,12 +87,8 @@ ModelImporter:
     400078: mixamorig:Spine
     400080: mixamorig:Spine1
     400082: mixamorig:Spine2
-    400084: unamed
-    4300000: unamed
     7400000: mixamo.com
     9500000: //RootNode
-    11100000: //RootNode
-    13700000: unamed
   materials:
     importMaterials: 1
     materialName: 0
@@ -145,6 +140,6 @@ ModelImporter:
     feetSpacing: 0
     rootMotionBoneName: 
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 1
+  animationType: 2
   additionalBone: 0
   userData: 
