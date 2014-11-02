@@ -17,7 +17,7 @@ public class Inventory : MonoBehaviour
 		inventoryVisible = false;
 		GameObject.Find("InventoryCanvas").GetComponent<Canvas>().enabled = false;
 	}
-   
+
 	void Update()
 	{
 		if (Input.GetKeyDown(InventoryPrintKey))
@@ -41,7 +41,7 @@ public class Inventory : MonoBehaviour
 		var potentialItem = items.FirstOrDefault(x => x.Name == name);
 		if (potentialItem == null)
 		{
-			items.Add(new InventoryItem(name,objectName,amount));
+			items.Add(new InventoryItem(name, objectName, amount));
 			GameObject.Find("InventoryDisplay").GetComponent<InventoryDisplayScript>().AddItem(name, objectName, amount, inventoryImage);
 		}
 		else

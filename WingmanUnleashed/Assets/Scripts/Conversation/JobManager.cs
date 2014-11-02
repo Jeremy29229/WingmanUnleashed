@@ -26,7 +26,7 @@ public class JobManager : MonoBehaviour
 	bool addedInt1 = false;
 	bool addedInt2 = false;
 
-	bool finishedQuest = false;
+	//bool finishedQuest = false;
 
 	bool added = false;
 
@@ -56,7 +56,7 @@ public class JobManager : MonoBehaviour
 
 		if (!finishedC1)
 		{
-			if(inventory.items.FirstOrDefault(x => x.Name == "client1") == null)
+			if (inventory.items.FirstOrDefault(x => x.Name == "client1") == null)
 			{
 				finishedC1 = true;
 				client.GetComponent<Conversation>().start = clientCons[1].start;
@@ -111,10 +111,10 @@ public class JobManager : MonoBehaviour
 
 		if (addedInt1 && addedInt2 && addedConfidence1 && addedConfidence2)
 		{
-			gameover.GetComponent<GameOverScript>().ShowGameOverWin();
+			//			gameover.GetComponent<GameOverScript>().ShowGameOverWin();
 		}
 
-		if(wingman.GetComponent<Player>().getDetectionLevel() >= 1.0f)
+		if (wingman.GetComponent<Player>().getDetectionLevel() >= 1.0f)
 		{
 			gameover.GetComponent<GameOverScript>().ShowGameOVerLose();
 		}

@@ -31,7 +31,7 @@ public class Interactable : MonoBehaviour
 		}
 
 		behavior = (IInteractable)gameObject.GetComponent("IInteractable");
-		
+
 		if (behavior == null)
 		{
 			throw new UnassignedReferenceException("A script that implements IInteractable must be a component in the same GameObject as this script.");

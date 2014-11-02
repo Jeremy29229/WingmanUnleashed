@@ -19,7 +19,7 @@
 //        objectiveBars[3] = GameObject.Find("Objective4");
 
 //    }
-	
+
 //    // Update is called once per frame
 //    void Update () {
 //        if (Input.GetKeyDown(KeyCode.O))
@@ -64,7 +64,7 @@
 //        {
 //            if (s != null)
 //            {
-                
+
 //            }
 //        }
 //    }

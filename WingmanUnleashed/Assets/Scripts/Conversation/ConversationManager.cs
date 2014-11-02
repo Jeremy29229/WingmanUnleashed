@@ -7,7 +7,7 @@ using System.Linq;
 public class ConversationManager : MonoBehaviour
 {
 	private Canvas UI;
-	private Camera_ThirdPerson camera;
+	private Camera_ThirdPerson cam;
 	private Controller_ThirdPerson controller;
 
 	private Dialog[] response;
@@ -24,7 +24,7 @@ public class ConversationManager : MonoBehaviour
 	{
 		UI = gameObject.GetComponent<Canvas>();
 		UI.enabled = false;
-		camera = Camera_ThirdPerson.Instance;
+		cam = Camera_ThirdPerson.Instance;
 		controller = Controller_ThirdPerson.Instance;
 
 		player = GameObject.Find("Wingman");
@@ -58,19 +58,19 @@ public class ConversationManager : MonoBehaviour
 		if (d == null)
 		{
 			UI.enabled = false;
-			camera.IsInConversation = false;
+			cam.IsInConversation = false;
 			controller.IsInConversation = false;
 		}
 		else
 		{
 			UI.enabled = true;
-			camera.IsInConversation = true;
+			cam.IsInConversation = true;
 			controller.IsInConversation = true;
-			
-			npcText.text = d.npcText;
+
+			npcText.text = "\"" + d.npcText + "\"";
 			npcName.text = d.npcName;
 
-			for (int i = 0; i < buttons.Length; i++ )
+			for (int i = 0; i < buttons.Length; i++)
 			{
 				if (i >= d.responseText.Length)
 				{
@@ -101,10 +101,10 @@ public class ConversationManager : MonoBehaviour
 
 				if (i < d.requiredItemName.Length && d.requiredItemName[i] != null && d.requiredItemName[i] != "")
 				{
-					if(inventory.items.FirstOrDefault(x => x.Name == d.requiredItemName[i]) == null || (inventory.items.FirstOrDefault(x => x.Name == d.requiredItemName[i]) != null &&  inventory.items.FirstOrDefault(x => x.Name == d.requiredItemName[i]).Amount < d.requiredItemAmount[i]))
+					if (inventory.items.FirstOrDefault(x => x.Name == d.requiredItemName[i]) == null || (inventory.items.FirstOrDefault(x => x.Name == d.requiredItemName[i]) != null && inventory.items.FirstOrDefault(x => x.Name == d.requiredItemName[i]).Amount < d.requiredItemAmount[i]))
 					{
-		
-							buttons[i].SetActive(false);
+
+						buttons[i].SetActive(false);
 					}
 				}
 			}
