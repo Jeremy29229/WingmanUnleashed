@@ -33,6 +33,6 @@ public class Conversable : MonoBehaviour, IInteractable
 
 	public void InteractWith()
 	{
-		cm.ProcessDialog(conversation.start);
+		cm.ProcessDialog(conversation.Beginning);
 	}
 }

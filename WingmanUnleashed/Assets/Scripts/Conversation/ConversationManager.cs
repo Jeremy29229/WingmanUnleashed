@@ -10,15 +10,18 @@ public class ConversationManager : MonoBehaviour
 	private Camera_ThirdPerson cam;
 	private Controller_ThirdPerson controller;
 
-	private Dialog[] response;
 	private GameObject[] buttons;
-	private Text[] textz;
+	private Text[] responseTextDisplay;
 	private Text npcText;
 	private Text npcName;
 
 	private Inventory inventory;
 	private GameObject player;
 	private Dialog last;
+
+	private Target targetScript;
+	private Client clientScript;
+	private Outfit outfit;
 
 	void Start()
 	{
@@ -28,9 +31,7 @@ public class ConversationManager : MonoBehaviour
 		controller = Controller_ThirdPerson.Instance;
 
 		player = GameObject.Find("Wingman");
-		inventory = GameObject.Find("Wingman").GetComponent<Inventory>();
-
-		response = new Dialog[4];
+		inventory = player.GetComponent<Inventory>();
 
 		buttons = new GameObject[4];
 		buttons[0] = GameObject.Find("Dialog1Button");
@@ -38,23 +39,22 @@ public class ConversationManager : MonoBehaviour
 		buttons[2] = GameObject.Find("Dialog3Button");
 		buttons[3] = GameObject.Find("Dialog4Button");
 
-		textz = new Text[4];
-		textz[0] = buttons[0].GetComponentInChildren<Text>();
-		textz[1] = buttons[1].GetComponentInChildren<Text>();
-		textz[2] = buttons[2].GetComponentInChildren<Text>();
-		textz[3] = buttons[3].GetComponentInChildren<Text>();
+		responseTextDisplay = new Text[4];
+		responseTextDisplay[0] = buttons[0].GetComponentInChildren<Text>();
+		responseTextDisplay[1] = buttons[1].GetComponentInChildren<Text>();
+		responseTextDisplay[2] = buttons[2].GetComponentInChildren<Text>();
+		responseTextDisplay[3] = buttons[3].GetComponentInChildren<Text>();
 
 		npcText = GameObject.Find("NPCText").GetComponent<Text>();
 		npcName = GameObject.Find("NPCName").GetComponent<Text>();
+
+		clientScript = GameObject.Find("Client").GetComponent<Client>();
+		targetScript = GameObject.Find("Target").GetComponent<Target>();
+		outfit = player.GetComponent<Outfit>();
 	}
 
 	public void ProcessDialog(Dialog d)
 	{
-		if (d != null)
-		{
-			last = d;
-		}
-
 		if (d == null)
 		{
 			UI.enabled = false;
@@ -63,63 +63,112 @@ public class ConversationManager : MonoBehaviour
 		}
 		else
 		{
+			last = d;
 			UI.enabled = true;
 			cam.IsInConversation = true;
 			controller.IsInConversation = true;
 
-			npcText.text = "\"" + d.npcText + "\"";
-			npcName.text = d.npcName;
-
 			for (int i = 0; i < buttons.Length; i++)
 			{
-				if (i >= d.responseText.Length)
+				buttons[i].SetActive(false);
+			}
+
+			for (int i = 0; i < d.Responses.Length && i < buttons.Length; i++)
+			{
+				if (IsDialogVisiable(d.Responses[i]))
 				{
-					buttons[i].SetActive(false);
-				}
-				else
-				{
+					npcText.text = "\"" + d.NPCDialog + "\"";
+					npcName.text = d.GetNPCName();
 					buttons[i].SetActive(true);
-					textz[i].text = d.responseText[i];
-				}
-
-				if (i < d.responseObject.Length)
-				{
-					response[i] = d.responseObject[i];
-				}
-				else
-				{
-					response[i] = null;
-				}
-
-				if (i < d.disguiseName.Length && d.disguiseName[i] != null && d.disguiseName[i] != "")
-				{
-					if (player.GetComponent<Outfit>().outfitName != d.disguiseName[i])
-					{
-						buttons[i].SetActive(false);
-					}
-				}
-
-				if (i < d.requiredItemName.Length && d.requiredItemName[i] != null && d.requiredItemName[i] != "")
-				{
-					if (inventory.items.FirstOrDefault(x => x.Name == d.requiredItemName[i]) == null || (inventory.items.FirstOrDefault(x => x.Name == d.requiredItemName[i]) != null && inventory.items.FirstOrDefault(x => x.Name == d.requiredItemName[i]).Amount < d.requiredItemAmount[i]))
-					{
-
-						buttons[i].SetActive(false);
-					}
+					buttons[i].GetComponentInChildren<Text>().text = d.Responses[i].Text;
 				}
 			}
 		}
 	}
 
-	public void ProcessDialog(int choice)
+	public void ProcessDialog(int choiceIndex)
 	{
+		//add item removal
 
-		if (last != null && choice < last.requiredItemName.Length && last.requiredItemName[choice] != null && last.requiredItemName[choice] != "")
+		DialogResponse choice = null;
+		Dialog next = null;
+
+		if (choiceIndex < last.Responses.Length)
 		{
+			choice = last.Responses[choiceIndex];
+			choice.NumTimesSelected++;
+			next = choice.Resulting;
 
-			inventory.items.Remove(inventory.items.FirstOrDefault(x => x.Name == last.requiredItemName[choice]));
+			if (choice.NewCurrent != null)
+			{
+				GetComponent<Correspondence>().Current = choice.NewCurrent;
+			}
 		}
 
-		ProcessDialog(response[choice]);
+		ProcessDialog(next);
 	}
+
+	private bool IsDialogVisiable(DialogResponse d)
+	{
+		return HasRequiredItems(d) 
+			&& HasRequiredObjectives(d)
+			&& HasCorrectSelectionState(d)
+			&& HasRequiredDisguise(d)
+			&& HasRequiredInterest(d) 
+			&& HadRequiredConfidence(d);
+	}
+
+	private bool HasRequiredItems(DialogResponse d)
+	{
+		bool hasItems = true;
+
+		foreach (var itemRequirement in d.Items)
+		{
+			var item = inventory.items.FirstOrDefault(x => x.Name == itemRequirement.ItemName);
+
+			if (item == null || item.Amount < itemRequirement.Amount)
+			{
+				hasItems = false;
+			}
+		}
+
+		return hasItems;
+	}
+
+	private bool HasRequiredObjectives(DialogResponse d)
+	{
+		return true;
+	}
+
+	private bool HasCorrectSelectionState(DialogResponse d)
+	{
+		return !d.IsOneTimeOption || d.NumTimesSelected == 0;
+	}
+
+	private bool HasRequiredDisguise(DialogResponse d)
+	{
+		bool hasDisguise = false;
+
+		foreach (string disguiseName in d.DisguiseNames)
+		{
+			if (disguiseName == outfit.outfitName)
+			{
+				hasDisguise = true;
+				break;
+			}
+		}
+
+		return hasDisguise;
+	}
+
+	private bool HasRequiredInterest(DialogResponse d)
+	{
+		return d.RequiredInterested >= targetScript.GetInterest();
+	}
+
+	private bool HadRequiredConfidence(DialogResponse d)
+	{
+		return d.RequiredConfidence >= clientScript.GetConfidence();
+	}
+
 }

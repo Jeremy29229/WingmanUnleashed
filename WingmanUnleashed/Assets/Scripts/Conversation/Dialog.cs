@@ -3,29 +3,17 @@ using System.Collections;
 
 public class Dialog : MonoBehaviour
 {
-	public bool IsOneTimeOption = false;
-	public int NumTimesSelected;
+	public string NPCDialog;
+	public DialogResponse[] Responses = new DialogResponse[4];
+	private Interactable npc;
+	
 	void Start()
 	{
-		if (gameObject.GetComponent<Interactable>() != null)
-		{
-			npcName = gameObject.GetComponent<Interactable>().InteractableName;
-		}
+		npc = (GetComponent<Interactable>()) ? GetComponent<Interactable>() : null;
 	}
 
-	public string npcName;
-
-	public string npcText;
-
-	public string[] responseText;
-
-	public Dialog[] responseObject;
-
-	public string[] requiredItemName;
-
-	public int[] requiredItemAmount;
-
-	public string[] disguiseName;
-
-	//public InventoryItem t;
+	public string GetNPCName()
+	{
+		return npc.InteractableName;
+	}
 }

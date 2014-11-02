@@ -4,7 +4,7 @@ using System.Collections;
 
 public class Player : MonoBehaviour
 {
-	//private Canvas HUD;
+	private Canvas HUD;
 	private Image detectionBar;
 	private Image eye;
 	public bool wingmanVisionActive;
