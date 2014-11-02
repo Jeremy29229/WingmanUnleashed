@@ -11,7 +11,6 @@ public class BouncerAI : MonoBehaviour
 	public Transform[] waypoints;
 
 	private VisionDetection detection;
-    private DistractionManager distractions;
 	private NavMeshAgent nav;
 	private Transform playerWingman;
 	private Player player;
@@ -29,11 +28,9 @@ public class BouncerAI : MonoBehaviour
     private Vector3 distractionPos;
     private bool checkingDistraction;
 
-	void Awake()
+	void Start()
 	{
 		detection = GetComponentInChildren<VisionDetection>();
-        GameObject distractionManager = GameObject.Find("DistractionManager");
-        distractions = distractionManager.GetComponent<DistractionManager>();
 		nav = GetComponent<NavMeshAgent>();
 		playerWingman = GameObject.Find("Wingman").transform;
 		player = GameObject.Find("Wingman").GetComponent<Player>() as Player;
@@ -53,7 +50,12 @@ public class BouncerAI : MonoBehaviour
 	{
 		float currentDetectionLevel = player.getDetectionLevel();
 
-		if (currentDetectionLevel >= 0.0f && currentDetectionLevel <= maxStopToLookLevel)
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            DistractionManager.Instance.AddDistraction(10.0f, 10.0f, playerWingman.position);
+        }
+
+		if (currentDetectionLevel <= maxStopToLookLevel)
 		{
 			Patrolling();
 		}
@@ -226,13 +228,11 @@ public class BouncerAI : MonoBehaviour
 
     private void OnPatrol()
     {
-        if (!checkingDistraction)
-        {
-            distractionPos = distractions.CheckForDistractions(transform.position);
-        }
+        distractionPos = DistractionManager.Instance.CheckForDistractions(transform.position);
 
         if (distractionPos == new Vector3(-1.0f, -1.0f, -1.0f))
         {
+            checkingDistraction = false;
             FollowPath();
         }
         else if (distractionPos != new Vector3(-1.0f, -1.0f, -1.0f) && !checkingDistraction)
@@ -242,19 +242,12 @@ public class BouncerAI : MonoBehaviour
         }
         else if(checkingDistraction)
         {
-            transform.LookAt(distractionPos);
             nav.destination = distractionPos;
-
-            Vector3 distanceVector = distractionPos - transform.position;
-            if (distanceVector.magnitude <= stopZone)
-            {
-                totalTimePausing += Time.deltaTime;
-                if (totalTimePausing >= pauseWaitTime)
-                {
-                    checkingDistraction = false;
-                    totalTimePausing = 0.0f;
-                }
-            }
         }
     }
 }
+
+
+
+
+//Debug.LogError(distractionPos.x + ", " + distractionPos.y + ", " + distractionPos.z);

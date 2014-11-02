@@ -5,7 +5,7 @@ public class DistractionManager : MonoBehaviour{
     public static DistractionManager Instance;
     List<GameObject> distractions;
 	// Use this for initialization
-    void Start()
+    void Awake()
     {
         Instance = this;
         distractions = new List<GameObject>();
