@@ -7,7 +7,49 @@ AnimatorController:
   m_PrefabInternal: {fileID: 0}
   m_Name: HipsController
   serializedVersion: 2
-  m_AnimatorParameters: []
+  m_AnimatorParameters:
+  - m_Name: IsWalking
+    m_Type: 4
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+    m_Controller: {fileID: 9100000}
+  - m_Name: IsDancing
+    m_Type: 4
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+    m_Controller: {fileID: 9100000}
+  - m_Name: Jump
+    m_Type: 9
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+    m_Controller: {fileID: 9100000}
+  - m_Name: TurnLeft
+    m_Type: 9
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+    m_Controller: {fileID: 9100000}
+  - m_Name: TurnRight
+    m_Type: 9
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+    m_Controller: {fileID: 9100000}
+  - m_Name: IsStrafingLeft
+    m_Type: 4
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+    m_Controller: {fileID: 9100000}
+  - m_Name: IsStrafingRight
+    m_Type: 4
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+    m_Controller: {fileID: 9100000}
   m_AnimatorLayers:
   - serializedVersion: 3
     m_Name: Base Layer
@@ -52,8 +94,12 @@ Transition:
   m_TransitionDuration: .241935462
   m_TransitionOffset: 0
   m_Conditions:
-  - m_ConditionMode: 5
-    m_ConditionEvent: 
+  - m_ConditionMode: 2
+    m_ConditionEvent: IsStrafingLeft
+    m_EventTreshold: 0
+    m_ExitTime: .758064508
+  - m_ConditionMode: 1
+    m_ConditionEvent: IsWalking
     m_EventTreshold: 0
     m_ExitTime: .758064508
   m_Atomic: 1
@@ -73,7 +119,7 @@ Transition:
   m_TransitionOffset: 0
   m_Conditions:
   - m_ConditionMode: 5
-    m_ConditionEvent: 
+    m_ConditionEvent: IsWalking
     m_EventTreshold: 0
     m_ExitTime: .732142866
   m_Atomic: 1
@@ -92,8 +138,12 @@ Transition:
   m_TransitionDuration: .48317939
   m_TransitionOffset: 0
   m_Conditions:
-  - m_ConditionMode: 5
-    m_ConditionEvent: 
+  - m_ConditionMode: 2
+    m_ConditionEvent: IsStrafingLeft
+    m_EventTreshold: 0
+    m_ExitTime: .758064508
+  - m_ConditionMode: 2
+    m_ConditionEvent: IsWalking
     m_EventTreshold: 0
     m_ExitTime: .758064508
   m_Atomic: 1
@@ -109,11 +159,11 @@ Transition:
   m_Name: 
   m_SrcState: {fileID: 110200000}
   m_DstState: {fileID: 110299917}
-  m_TransitionDuration: .0299999975
-  m_TransitionOffset: 0
+  m_TransitionDuration: .02380432
+  m_TransitionOffset: .34377867
   m_Conditions:
-  - m_ConditionMode: 5
-    m_ConditionEvent: 
+  - m_ConditionMode: 1
+    m_ConditionEvent: IsWalking
     m_EventTreshold: 0
     m_ExitTime: .970000029
   m_Atomic: 1
@@ -132,8 +182,8 @@ Transition:
   m_TransitionDuration: .0523683019
   m_TransitionOffset: 0
   m_Conditions:
-  - m_ConditionMode: 5
-    m_ConditionEvent: 
+  - m_ConditionMode: 1
+    m_ConditionEvent: IsStrafingRight
     m_EventTreshold: 0
     m_ExitTime: .947631836
   m_Atomic: 1
@@ -152,8 +202,8 @@ Transition:
   m_TransitionDuration: .0491605178
   m_TransitionOffset: 0
   m_Conditions:
-  - m_ConditionMode: 5
-    m_ConditionEvent: 
+  - m_ConditionMode: 1
+    m_ConditionEvent: IsStrafingLeft
     m_EventTreshold: 0
     m_ExitTime: .950839579
   m_Atomic: 1
@@ -172,8 +222,8 @@ Transition:
   m_TransitionDuration: .0516282804
   m_TransitionOffset: 0
   m_Conditions:
-  - m_ConditionMode: 5
-    m_ConditionEvent: 
+  - m_ConditionMode: 2
+    m_ConditionEvent: IsDancing
     m_EventTreshold: 0
     m_ExitTime: .948371708
   m_Atomic: 0
@@ -192,8 +242,8 @@ Transition:
   m_TransitionDuration: .498338133
   m_TransitionOffset: 0
   m_Conditions:
-  - m_ConditionMode: 5
-    m_ConditionEvent: 
+  - m_ConditionMode: 2
+    m_ConditionEvent: IsWalking
     m_EventTreshold: 0
     m_ExitTime: .479113221
   m_Atomic: 1
@@ -212,8 +262,8 @@ Transition:
   m_TransitionDuration: .317765921
   m_TransitionOffset: 0
   m_Conditions:
-  - m_ConditionMode: 5
-    m_ConditionEvent: 
+  - m_ConditionMode: 1
+    m_ConditionEvent: IsStrafingLeft
     m_EventTreshold: 0
     m_ExitTime: .758064508
   m_Atomic: 1
@@ -232,11 +282,11 @@ Transition:
   m_TransitionDuration: .0299999975
   m_TransitionOffset: 0
   m_Conditions:
-  - m_ConditionMode: 5
-    m_ConditionEvent: 
+  - m_ConditionMode: 1
+    m_ConditionEvent: TurnLeft
     m_EventTreshold: 0
     m_ExitTime: .970000029
-  m_Atomic: 0
+  m_Atomic: 1
   m_Solo: 0
   m_Mute: 0
   m_CanTransitionToSelf: 0
@@ -252,8 +302,8 @@ Transition:
   m_TransitionDuration: .0299999975
   m_TransitionOffset: 0
   m_Conditions:
-  - m_ConditionMode: 5
-    m_ConditionEvent: 
+  - m_ConditionMode: 1
+    m_ConditionEvent: TurnRight
     m_EventTreshold: 0
     m_ExitTime: .970000029
   m_Atomic: 1
@@ -272,8 +322,12 @@ Transition:
   m_TransitionDuration: .580164015
   m_TransitionOffset: 0
   m_Conditions:
-  - m_ConditionMode: 5
-    m_ConditionEvent: 
+  - m_ConditionMode: 2
+    m_ConditionEvent: IsStrafingRight
+    m_EventTreshold: 0
+    m_ExitTime: .758064508
+  - m_ConditionMode: 2
+    m_ConditionEvent: IsWalking
     m_EventTreshold: 0
     m_ExitTime: .758064508
   m_Atomic: 1
@@ -292,8 +346,8 @@ Transition:
   m_TransitionDuration: .248629138
   m_TransitionOffset: .0208563693
   m_Conditions:
-  - m_ConditionMode: 5
-    m_ConditionEvent: 
+  - m_ConditionMode: 1
+    m_ConditionEvent: IsDancing
     m_EventTreshold: 0
     m_ExitTime: .916169107
   m_Atomic: 0
@@ -312,10 +366,30 @@ Transition:
   m_TransitionDuration: .408762515
   m_TransitionOffset: 0
   m_Conditions:
+  - m_ConditionMode: 1
+    m_ConditionEvent: IsStrafingRight
+    m_EventTreshold: 0
+    m_ExitTime: .758064508
+  m_Atomic: 1
+  m_Solo: 0
+  m_Mute: 0
+  m_CanTransitionToSelf: 0
+--- !u!1101 &110176298
+Transition:
+  serializedVersion: 2
+  m_ObjectHideFlags: 3
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: 
+  m_SrcState: {fileID: 110200000}
+  m_DstState: {fileID: 110200000}
+  m_TransitionDuration: .0299999975
+  m_TransitionOffset: 0
+  m_Conditions:
   - m_ConditionMode: 5
     m_ConditionEvent: 
     m_EventTreshold: 0
-    m_ExitTime: .758064508
+    m_ExitTime: .970000029
   m_Atomic: 1
   m_Solo: 0
   m_Mute: 0
@@ -333,7 +407,7 @@ Transition:
   m_TransitionOffset: 0
   m_Conditions:
   - m_ConditionMode: 5
-    m_ConditionEvent: 
+    m_ConditionEvent: IsWalking
     m_EventTreshold: 0
     m_ExitTime: .732142866
   m_Atomic: 1
@@ -349,6 +423,26 @@ Transition:
   m_Name: 
   m_SrcState: {fileID: 110200000}
   m_DstState: {fileID: 110243300}
+  m_TransitionDuration: .0299999975
+  m_TransitionOffset: 0
+  m_Conditions:
+  - m_ConditionMode: 1
+    m_ConditionEvent: Jump
+    m_EventTreshold: 0
+    m_ExitTime: .970000029
+  m_Atomic: 1
+  m_Solo: 0
+  m_Mute: 0
+  m_CanTransitionToSelf: 0
+--- !u!1101 &110195040
+Transition:
+  serializedVersion: 2
+  m_ObjectHideFlags: 3
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: 
+  m_SrcState: {fileID: 110200000}
+  m_DstState: {fileID: 110200000}
   m_TransitionDuration: .0299999975
   m_TransitionOffset: 0
   m_Conditions:
@@ -373,7 +467,7 @@ Transition:
   m_TransitionOffset: 0
   m_Conditions:
   - m_ConditionMode: 5
-    m_ConditionEvent: 
+    m_ConditionEvent: IsWalking
     m_EventTreshold: 0
     m_ExitTime: .884615421
   m_Atomic: 1
@@ -392,8 +486,12 @@ Transition:
   m_TransitionDuration: .241935462
   m_TransitionOffset: 0
   m_Conditions:
-  - m_ConditionMode: 5
-    m_ConditionEvent: 
+  - m_ConditionMode: 2
+    m_ConditionEvent: IsStrafingRight
+    m_EventTreshold: 0
+    m_ExitTime: .758064508
+  - m_ConditionMode: 1
+    m_ConditionEvent: IsWalking
     m_EventTreshold: 0
     m_ExitTime: .758064508
   m_Atomic: 1
@@ -420,7 +518,7 @@ State:
   m_ObjectHideFlags: 3
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: samba_dancing_1
+  m_Name: samba_dance
   m_Speed: 1
   m_CycleOffset: 0
   m_Motions:
@@ -486,7 +584,7 @@ State:
   m_Motions:
   - {fileID: 7400000, guid: 5aab7933740c9e94bb9a944232e7f5bb, type: 3}
   m_ParentStateMachine: {fileID: 110700000}
-  m_Position: {x: 324, y: -36, z: 0}
+  m_Position: {x: 300, y: -96, z: 0}
   m_IKOnFeet: 0
   m_Mirror: 0
   m_Tag: 
@@ -541,47 +639,50 @@ StateMachine:
   m_ChildStateMachinePosition: []
   m_OrderedTransitions:
     data:
-      first: {fileID: 110299917}
+      first: {fileID: 0}
+      second: []
+    data:
+      first: {fileID: 110200000}
       second:
-      - {fileID: 110142681}
-      - {fileID: 110175369}
-      - {fileID: 110146946}
+      - {fileID: 110157255}
+      - {fileID: 110192649}
+      - {fileID: 110128093}
+      - {fileID: 110151102}
+      - {fileID: 110151472}
+      - {fileID: 110139230}
+      - {fileID: 110139518}
     data:
       first: {fileID: 110213775}
       second:
       - {fileID: 110140583}
-    data:
-      first: {fileID: 110289534}
-      second:
-      - {fileID: 110190545}
     data:
       first: {fileID: 110229648}
       second:
       - {fileID: 110152458}
       - {fileID: 110197666}
     data:
-      first: {fileID: 110289341}
+      first: {fileID: 110243300}
       second:
-      - {fileID: 110119401}
+      - {fileID: 110196300}
     data:
       first: {fileID: 110285177}
       second:
       - {fileID: 110125123}
       - {fileID: 110100590}
     data:
-      first: {fileID: 110243300}
+      first: {fileID: 110289341}
       second:
-      - {fileID: 110196300}
+      - {fileID: 110119401}
     data:
-      first: {fileID: 110200000}
+      first: {fileID: 110289534}
       second:
-      - {fileID: 110151102}
-      - {fileID: 110157255}
-      - {fileID: 110139518}
-      - {fileID: 110192649}
-      - {fileID: 110128093}
-      - {fileID: 110151472}
-      - {fileID: 110139230}
+      - {fileID: 110190545}
+    data:
+      first: {fileID: 110299917}
+      second:
+      - {fileID: 110142681}
+      - {fileID: 110175369}
+      - {fileID: 110146946}
   m_MotionSetCount: 1
   m_AnyStatePosition: {x: 50, y: 20, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
