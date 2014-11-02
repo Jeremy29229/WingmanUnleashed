@@ -6,6 +6,7 @@ public class BouncerAI : MonoBehaviour
 	public float patrolSpeed = 2.0f;
 	public float pursueSpeed = 4.0f;
 	public float patrolPointWaitTime = 1.0f;
+    public float timeSearching = 3.0f;
 	public Transform[] waypoints;
 
 	private VisionDetection detection;
@@ -18,6 +19,10 @@ public class BouncerAI : MonoBehaviour
 	private float maxStopToLookLevel;
 	private float maxAwareLevel;
 	private float maxPursueLevel;
+    private bool searching;
+    private bool lastPositionKnown;
+    private float totalTimeSearching;
+    private Vector3 lastKnownPlayerPosition;
 
 	void Awake()
 	{
@@ -30,6 +35,10 @@ public class BouncerAI : MonoBehaviour
 		maxStopToLookLevel = 0.4f;
 		maxAwareLevel = 0.7f;
 		maxPursueLevel = 1.0f;
+        searching = false;
+        lastPositionKnown = false;
+        totalTimeSearching = 0.0f;
+        lastKnownPlayerPosition = Vector3.zero;
 	}
 
 	void LateUpdate()
@@ -55,21 +64,91 @@ public class BouncerAI : MonoBehaviour
 
 	public void FullPursuit()
 	{
-		nav.speed = pursueSpeed;
-		nav.destination = playerWingman.position;
+        nav.speed = pursueSpeed;
+        if (detection.IsPlayInRangeAndVisable)
+        {
+            nav.destination = playerWingman.position;
+            lastPositionKnown = false;
+            searching = false;
+            totalTimeSearching = 0.0f;
+        }
+        else if (!detection.IsPlayInRangeAndVisable && !lastPositionKnown)
+        {
+            lastKnownPlayerPosition = playerWingman.position;
+            lastPositionKnown = true;
+            searching = false;
+            totalTimeSearching = 0.0f;
+        }
+        else if (!detection.IsPlayInRangeAndVisable && lastPositionKnown)
+        {
+            Vector3 currentPos = lastKnownPlayerPosition;
+
+            Vector3 distanceVector = lastKnownPlayerPosition - transform.position;
+            if (distanceVector.magnitude <= stopZone && !searching)
+            {
+                totalTimeSearching += Time.deltaTime;
+                if (totalTimeSearching >= timeSearching)
+                {
+                    totalTimeSearching = 0.0f;
+                    searching = true;
+                }
+            }
+            else if (searching)
+            {
+                if (totalTimeSearching <= 0.0f)
+                {
+                    float yPos = transform.position.y;
+                    currentPos = transform.position + Random.insideUnitSphere;
+                    currentPos = new Vector3(currentPos.x, yPos, currentPos.z);
+                }
+
+                totalTimeSearching += Time.deltaTime;
+                if (totalTimeSearching >= timeSearching)
+                {
+                    totalTimeSearching = 0.0f;
+                }
+            }
+
+            nav.destination = currentPos;
+        }
 	}
 
 	public void Pursuing()
 	{
-		if (!detection.IsPlayInRangeAndVisable)
+        if (!detection.IsPlayInRangeAndVisable)
 		{
-			FollowPath();
+            if (searching)
+            {
+                nav.speed = pursueSpeed;
+                nav.destination = lastKnownPlayerPosition;
+
+                Vector3 distanceVector = lastKnownPlayerPosition - transform.position;
+                if (distanceVector.magnitude <= stopZone)
+                {
+                    totalTimeSearching += Time.deltaTime;
+                    if (totalTimeSearching >= timeSearching)
+                    {
+                        searching = false;
+                        totalTimeSearching = 0.0f;
+                        lastKnownPlayerPosition = Vector3.zero;
+                    }
+                }
+            }
+            else
+            {
+                FollowPath();
+            }
 		}
-		else
-		{
-			nav.speed = pursueSpeed;
-			nav.destination = playerWingman.position;
-		}
+        else
+        {
+            searching = true;
+            totalTimeSearching = 0.0f;
+            lastKnownPlayerPosition = playerWingman.position;
+            transform.LookAt(playerWingman);
+
+            nav.speed = pursueSpeed;
+            nav.destination = lastKnownPlayerPosition;
+        }
 	}
 
 	public void Aware()
