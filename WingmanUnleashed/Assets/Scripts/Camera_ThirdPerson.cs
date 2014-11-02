@@ -73,7 +73,9 @@ public class Camera_ThirdPerson : MonoBehaviour
 				{
 					HandlePlayerInput();
 					CalculateDesiredPosition();
+                    
 					UpdatePosition();
+                    WallCollide();
 				}
 			}
 		}
@@ -182,6 +184,15 @@ public class Camera_ThirdPerson : MonoBehaviour
 			}
 		}
 	}
+
+    private void WallCollide()
+    {
+        RaycastHit wallHit = new RaycastHit();
+        if (Physics.Linecast(TargetObjectLookAt.position,transform.position, out wallHit)&&Vector3.Distance(wallHit.point,TargetObjectLookAt.position)>0.5f)
+        {
+            transform.position = new Vector3(wallHit.point.x, wallHit.point.y, wallHit.point.z);
+        }
+    }
 
 	private static bool mainCameraExists()
 	{

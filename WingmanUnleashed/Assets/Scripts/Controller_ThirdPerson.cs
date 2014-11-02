@@ -54,7 +54,6 @@ public class Controller_ThirdPerson : MonoBehaviour
 		Rigidbody rig = (Rigidbody)player.GetComponent("Rigidbody");
 		rig.useGravity = false;
         windSound.Play();
-        player.GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
 	}
 
 	void Awake()
