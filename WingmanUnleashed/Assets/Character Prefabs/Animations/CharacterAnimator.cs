@@ -21,16 +21,26 @@ public class CharacterAnimator : MonoBehaviour
             throw new MissingComponentException("Character " + gameObject.name + " has no animation component, cannot be animated by CharacterAnimation script.");
         }
 	}
-	
+    private void CheckAnimator()
+    {
+        if (animator == null)
+        {
+            animator = GetComponent<Animator>();
+        }
+    }
 	void Update () 
     {
-
+        if (animator == null)
+        {
+            animator = GetComponent <Animator>();
+        }
 	}
     /// <summary>
     /// The character will jump once.
     /// </summary>
     public void Jump()
     {
+        CheckAnimator();
         animator.SetTrigger("Jump");
     }
     /// <summary>
@@ -40,6 +50,7 @@ public class CharacterAnimator : MonoBehaviour
     /// </summary>
     public void StartWalking()
     {
+        CheckAnimator();
         animator.SetBool("IsWalking", true);
     }
     /// <summary>
@@ -56,6 +67,7 @@ public class CharacterAnimator : MonoBehaviour
     /// </summary>
     public void StartWalkingDrunk()
     {
+        CheckAnimator();
         animator.SetBool("IsWalkingDrunk", true);
     }
     /// <summary>
@@ -70,6 +82,7 @@ public class CharacterAnimator : MonoBehaviour
     /// </summary>
     public void StartDancingSamba()
     {
+        CheckAnimator();
         animator.SetBool("IsDancingSamba", true);
     }
     /// <summary>
@@ -84,6 +97,7 @@ public class CharacterAnimator : MonoBehaviour
     /// </summary>
     public void StartDancingGangnam()
     {
+        CheckAnimator();
         animator.SetBool("IsDancingGangnam", true);
     }
     /// <summary>
@@ -99,6 +113,7 @@ public class CharacterAnimator : MonoBehaviour
     /// </summary>
     public void StartStrafingRight()
     {
+        CheckAnimator();
         animator.SetBool("IsStrafingRight", true);
     }
     /// <summary>
@@ -114,6 +129,7 @@ public class CharacterAnimator : MonoBehaviour
     /// </summary>
     public void StartStrafingLeft()
     {
+        CheckAnimator();
         animator.SetBool("IsStrafingLeft", true);
 
     }
@@ -131,6 +147,7 @@ public class CharacterAnimator : MonoBehaviour
     /// </summary>
     public void TurnRight()
     {
+        CheckAnimator();
         animator.SetTrigger("TurnRight");
     }
     /// <summary>
@@ -139,6 +156,7 @@ public class CharacterAnimator : MonoBehaviour
     /// </summary>
     public void TurnLeft()
     {
+        CheckAnimator();
         animator.SetTrigger("TurnLeft");
     }
     /// <summary>
@@ -147,6 +165,7 @@ public class CharacterAnimator : MonoBehaviour
     /// </summary>
     public void ResetToIdle()
     {
+        CheckAnimator();
         animator.SetBool("IsWalking", false);
         animator.SetBool("IsWalkingDrunk", false);
         animator.SetBool("IsDancingSamba", false);
