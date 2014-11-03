@@ -5,12 +5,16 @@ using System.Collections;
 public class ObjectiveDisplayScript : MonoBehaviour {
 
     public GameObject ObjectiveBar;
+    private MouseManager mouseManager;
     bool on;
 	// Use this for initialization
 	void Start () {
+        mouseManager = GameObject.Find("MouseManager").GetComponent<MouseManager>();
         gameObject.GetComponentInParent<Canvas>().enabled = false;
         AddObjective("Start", "Talk to the client."); //Test: Add demo objective
-        RemoveObjective("Start");
+        AddObjective("Test", "Do the thing."); //Test: Add demo objective
+
+        //RemoveObjective("Start");
 
 	}
 	
@@ -18,14 +22,30 @@ public class ObjectiveDisplayScript : MonoBehaviour {
 	void Update () {
         if (Input.GetKeyUp(KeyCode.O))
         {
-            if(on)
-            gameObject.GetComponent<Canvas>().enabled = false;
+            if (on)
+            {
+                gameObject.GetComponent<Canvas>().enabled = false;
+            }
             else
-            gameObject.GetComponent<Canvas>().enabled = true;
+            {
+                gameObject.GetComponent<Canvas>().enabled = true;
+            }
+            mouseManager.IsMouseLocked = on;
             on = !on;
+            
 
         }
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            if (on)
+            {
+                gameObject.GetComponent<Canvas>().enabled = false;
+                mouseManager.IsMouseLocked = on;
+                on = !on;
+            }
+        }
 	}
+
 
     public void AddObjective(string name, string objectiveText)
     {
