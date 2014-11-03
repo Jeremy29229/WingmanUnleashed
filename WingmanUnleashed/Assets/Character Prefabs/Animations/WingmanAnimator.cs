@@ -239,5 +239,14 @@ public class WingmanAnimator : MonoBehaviour
     {
         return animator.GetBool("IsStrafingLeft");
     }
-    
+
+    public bool IsInTPose()
+    {
+        return animator.GetBool("IsInTPose");
+    }
+
+    public bool IsIdle()
+    {
+        return (!IsWalking() && !IsWalkingDrunk() && !IsDancingGangnam() && !IsDancingSamba() && !IsStrafingLeft() && !IsStrafingRight() && !IsInTPose());
+    }
 }
