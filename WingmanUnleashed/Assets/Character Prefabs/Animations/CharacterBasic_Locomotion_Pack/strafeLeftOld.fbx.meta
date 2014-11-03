@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: a356c6be3c56bed4f9a8ad71082dbac3
+guid: 4937dd5cd9b75c7498030ac673ab17ac
 ModelImporter:
   serializedVersion: 16
   fileIDToRecycleName:
@@ -87,7 +87,7 @@ ModelImporter:
     400078: mixamorig:Spine
     400080: mixamorig:Spine1
     400082: mixamorig:Spine2
-    7400000: walk
+    7400000: strafeLeft
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -98,7 +98,7 @@ ModelImporter:
     bakeSimulation: 0
     optimizeGameObjects: 0
     motionNodeName: 
-    animationCompression: 3
+    animationCompression: 1
     animationRotationError: .5
     animationPositionError: .5
     animationScaleError: .5
@@ -106,10 +106,10 @@ ModelImporter:
     extraExposedTransformPaths: []
     clipAnimations:
     - serializedVersion: 16
-      name: walk
+      name: strafeLeft
       takeName: mixamo.com
       firstFrame: 0
-      lastFrame: 31
+      lastFrame: 32
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -117,9 +117,9 @@ ModelImporter:
       loop: 0
       loopTime: 1
       loopBlend: 1
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
       keepOriginalOrientation: 0
       keepOriginalPositionY: 1
       keepOriginalPositionXZ: 0
