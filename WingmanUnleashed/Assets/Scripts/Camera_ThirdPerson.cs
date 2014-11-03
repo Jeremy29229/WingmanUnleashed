@@ -190,7 +190,7 @@ public class Camera_ThirdPerson : MonoBehaviour
         RaycastHit wallHit = new RaycastHit();
         if (Physics.Linecast(TargetObjectLookAt.position,transform.position, out wallHit)&&Vector3.Distance(wallHit.point,TargetObjectLookAt.position)>0.5f)
         {
-            transform.position = new Vector3(wallHit.point.x, wallHit.point.y, wallHit.point.z);
+            if(!wallHit.collider.isTrigger)transform.position = new Vector3(wallHit.point.x, wallHit.point.y, wallHit.point.z);
         }
     }
 
