@@ -35521,8 +35521,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 852464707}
   m_HandleRect: {fileID: 852464706}
   m_Direction: 2
-  m_Value: .938679218
-  m_Size: .36450839
+  m_Value: .892074227
+  m_Size: .230868995
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -53629,7 +53629,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: dd688994451074a4b8d00b7fa569d658, type: 2}
+  - {fileID: 2100000, guid: 1bf9339e59073b641a1b05aa8f333ffb, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -59634,7 +59634,7 @@ MonoBehaviour:
   Collect: {fileID: 8300000, guid: e3375baa7a2849c4da960f27dcd7735e, type: 3}
   SmallSuccess: {fileID: 8300000, guid: 1bf73417959b28d488a9cd0da51f7827, type: 3}
   Caught: {fileID: 8300000, guid: e0f0b05f5ae40bc4da290f91d79fef16, type: 3}
-  Shatter: {fileID: 0}
+  Shatter: {fileID: 8300000, guid: 19ec90b3501355246af6dc6b3d0a7392, type: 3}
 --- !u!1 &985293368
 GameObject:
   m_ObjectHideFlags: 0
@@ -61802,6 +61802,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 2249a7c9609e836438d78388ef1a6671, type: 2}
+      propertyPath: Shatter
+      value: 
+      objectReference: {fileID: 8300000, guid: 19ec90b3501355246af6dc6b3d0a7392, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2249a7c9609e836438d78388ef1a6671, type: 2}
   m_RootGameObject: {fileID: 985128364}
@@ -64465,6 +64469,108 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: .479999989, y: .850000024, z: .5}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &1071353841
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1071353847}
+  - 33: {fileID: 1071353846}
+  - 65: {fileID: 1071353845}
+  - 23: {fileID: 1071353844}
+  - 114: {fileID: 1071353843}
+  - 114: {fileID: 1071353842}
+  m_Layer: 8
+  m_Name: Suit
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1071353842
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1071353841}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 351dde2e14cdf1d488edc8e5b31449f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  InteractionRadius: 2
+  InteractionKey: 101
+  PlayerObjectName: Wingman
+  IsActive: 1
+  Action: put on the
+  InteractableName: Suit
+  AdditionalInformation: 
+--- !u!114 &1071353843
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1071353841}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8296715ff97bbb94689c421adebd6d88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PlayerObjectName: Wingman
+  DisguiseName: bouncer
+--- !u!23 &1071353844
+Renderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1071353841}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 2100000, guid: a360a349d32d8ec448619f118e6c0618, type: 2}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+--- !u!65 &1071353845
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1071353841}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!33 &1071353846
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1071353841}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1071353847
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1071353841}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1462.09998, y: 242.520004, z: 546.799988}
+  m_LocalScale: {x: .44896701, y: .0884588659, z: .44896701}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 308
 --- !u!1 &1076044876
 GameObject:
   m_ObjectHideFlags: 0
@@ -115347,7 +115453,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 3a38d43304e67ba4182333230468ef4f, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
