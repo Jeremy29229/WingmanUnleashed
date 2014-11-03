@@ -61,6 +61,9 @@ public class Player : MonoBehaviour
 			DetectionSound.pitch = detectionLevel * 2;
 			if (detectionLevel <= 0.0f) DetectionSound.Stop();
 		}
+
+        if (numDetectors <= 0 && DetectionSound.isPlaying) DetectionSound.Stop();
+
 		detectionBar.fillAmount = detectionLevel;
 		detectionBar.color = Color.red * (detectionLevel + 0.2f);
 		eye.color = Color.red * (detectionLevel + 0.2f);
@@ -83,6 +86,7 @@ public class Player : MonoBehaviour
 	{
 		if (!DetectionSound.isPlaying) DetectionSound.Play();
 		detectionLevel += amount * Time.deltaTime;
+        DetectionSound.volume = detectionLevel;
 	}
 
 	public void increaseDetectionFlat(float amount)
