@@ -55,6 +55,20 @@ public class ConversationManager : MonoBehaviour
 		outfit = player.GetComponent<Outfit>();
 	}
 
+	void Update()
+	{
+		if(Input.GetKeyDown(KeyCode.Escape))
+		{
+			UI.enabled = false;
+			cam.IsInConversation = false;
+			controller.IsInConversation = false;
+			if (last != null)
+			{
+				last.gameObject.GetComponent<Interactable>().IsActive = true;
+			}
+		}
+	}
+
 	public void ProcessDialog(Dialog d)
 	{
 		if (d == null)
@@ -62,6 +76,10 @@ public class ConversationManager : MonoBehaviour
 			UI.enabled = false;
 			cam.IsInConversation = false;
 			controller.IsInConversation = false;
+			if (last != null)
+			{
+				last.gameObject.GetComponent<Interactable>().IsActive = true;
+			}
 		}
 		else
 		{

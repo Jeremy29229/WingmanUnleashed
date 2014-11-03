@@ -1,8 +1,6 @@
 ﻿using UnityEngine;
-using System.Collections;
-using System.Collections.Generic;
 
-public class Conversable : MonoBehaviour, IInteractable
+public class RandomConversible : MonoBehaviour, IInteractable
 {
 	private Correspondence correspondence;
 	private ConversationManager cm;
@@ -18,6 +16,11 @@ public class Conversable : MonoBehaviour, IInteractable
 		cm = GameObject.Find("ConvoGUI").GetComponent<ConversationManager>();
 		chatBubbleDisplay = GetComponentInChildren<Canvas>();
 		chatBubbleDisplay.enabled = false;
+
+		if (correspondence.Conversations.Length == 0)
+		{
+			GetComponent<Interactable>().IsActive = false;
+		}
 	}
 
 	void Update()
@@ -33,7 +36,11 @@ public class Conversable : MonoBehaviour, IInteractable
 
 	public void InteractWith()
 	{
-		GetComponent<Interactable>().IsActive = false;
-		cm.ProcessDialog(correspondence.Current.Beginning);
+		if (correspondence.Conversations.Length > 0)
+		{
+			int selection = Random.Range(0, correspondence.Conversations.Length);
+			GetComponent<Interactable>().IsActive = false;
+			cm.ProcessDialog(correspondence.Conversations[selection].Beginning);
+		}
 	}
 }
