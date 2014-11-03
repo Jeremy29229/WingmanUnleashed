@@ -78,6 +78,7 @@ public class Controller_ThirdPerson : MonoBehaviour
 			if (flightmode)
 			{
 				float airspeed = velocity.magnitude;
+                Vector3 headDirection = player.transform.rotation * new Vector3(0,1,0);
 				windResistance = airspeed / 100.0f;
 				lift = new Vector3(0.0f, 0.0f, -1.0f);
 				lift = player.transform.rotation * lift;
@@ -87,16 +88,15 @@ public class Controller_ThirdPerson : MonoBehaviour
 				velocity += netforce * Time.deltaTime;
 				velocity *= (1 - (windResistance * Time.deltaTime));
 				player.transform.position += velocity * Time.deltaTime;
-
-				float correctionForce = Quaternion.Angle(player.transform.rotation, Quaternion.LookRotation(velocity, Vector3.up)) * (airspeed / 30.0f);
-				player.transform.rotation = Quaternion.RotateTowards(player.transform.rotation, Quaternion.LookRotation(velocity, Vector3.up), correctionForce * Time.deltaTime);
+                float correctionForce = Quaternion.Angle(Quaternion.LookRotation(headDirection, Vector3.up), Quaternion.LookRotation(velocity, Vector3.up)) * (airspeed / 30.0f);
+                player.transform.rotation = Quaternion.RotateTowards(player.transform.rotation, Quaternion.LookRotation(Quaternion.LookRotation(velocity, Vector3.up)*new Vector3(1,0,0),Vector3.up), correctionForce * Time.deltaTime);
 
 				windSound.volume = Mathf.Pow((airspeed / 30.0f), 4);
-				if (Input.GetKey(KeyCode.A))
+				if (Input.GetKey(KeyCode.Q))
 				{
 					player.transform.Rotate(new Vector3(0, 0, 1), 1.0f, Space.Self);
 				}
-				if (Input.GetKey(KeyCode.D))
+				if (Input.GetKey(KeyCode.E))
 				{
 					player.transform.Rotate(new Vector3(0, 0, 1), -1.0f, Space.Self);
 				}
@@ -108,11 +108,11 @@ public class Controller_ThirdPerson : MonoBehaviour
 				{
 					player.transform.Rotate(new Vector3(1, 0, 0), -1.0f, Space.Self);
 				}
-				if (Input.GetKey(KeyCode.Q))
+				if (Input.GetKey(KeyCode.D))
 				{
 					player.transform.Rotate(new Vector3(0, 1, 0), -1.0f, Space.Self);
 				}
-				if (Input.GetKey(KeyCode.E))
+				if (Input.GetKey(KeyCode.A))
 				{
 					player.transform.Rotate(new Vector3(0, 1, 0), 1.0f, Space.Self);
 				}
