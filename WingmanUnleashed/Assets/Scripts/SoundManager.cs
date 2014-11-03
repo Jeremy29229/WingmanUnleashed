@@ -7,6 +7,7 @@ public class SoundManager : MonoBehaviour
 	public AudioClip Collect;
 	public AudioClip SmallSuccess;
 	public AudioClip Caught;
+    public AudioClip Shatter;
 
 	// Use this for initialization
 	void Start()
@@ -26,6 +27,7 @@ public class SoundManager : MonoBehaviour
 		if (soundName == "cashGrab") theSound = Collect;
 		if (soundName == "SmallSuccess") theSound = SmallSuccess;
 		if (soundName == "RecordScratch") theSound = Caught;
+        if (soundName == "Shatter") theSound = Shatter;
 		AudioSource.PlayClipAtPoint(theSound, position);
 	}
 
@@ -35,6 +37,7 @@ public class SoundManager : MonoBehaviour
 		if (soundName == "cashGrab") theSound = Collect;
 		if (soundName == "SmallSuccess") theSound = SmallSuccess;
 		if (soundName == "RecordScratch") theSound = Caught;
+        if (soundName == "Shatter") theSound = Shatter;
 		AudioSource.PlayClipAtPoint(theSound, new Vector3(0, 0, 0));
 	}
 }
