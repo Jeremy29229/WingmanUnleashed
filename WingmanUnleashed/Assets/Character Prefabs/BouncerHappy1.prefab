@@ -1392,7 +1392,7 @@ MonoBehaviour:
   patrolPointWaitTime: 1.29999995
   pauseWaitTime: 1
   timeSearching: 3
-  stopDistanceFromPlayer: .200000003
+  stopDistanceFromPlayer: 2
   waypoints: []
 --- !u!114 &11400002
 MonoBehaviour:

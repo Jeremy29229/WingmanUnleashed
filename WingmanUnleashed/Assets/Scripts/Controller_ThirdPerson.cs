@@ -30,14 +30,12 @@ public class Controller_ThirdPerson : MonoBehaviour
 		velocity = new Vector3(0.0f, 0.0f, 0.0f);
 		flightmode = false;
 		player.transform.rotation = new Quaternion(0.0f, player.transform.rotation.y, 0.0f, player.transform.rotation.w);
-		player.transform.GetChild(1).transform.localRotation = Quaternion.identity;
-		player.transform.GetChild(1).transform.localPosition = new Vector3(0, 0, 0);
-		CapsuleCollider coll = (CapsuleCollider)player.GetComponent("CapsuleCollider");
-		coll.direction = 1;
 		Rigidbody rig = (Rigidbody)player.GetComponent("Rigidbody");
 		rig.useGravity = true;
         rig.velocity = new Vector3(0, 0, 0);
         windSound.Stop();
+        player.transform.GetComponent<WingmanAnimator>().ExitTPose();
+        player.transform.GetChild(0).GetComponent<MeshRenderer>().enabled = false;
 	}
 	public void flightmodeOn()
 	{
@@ -47,13 +45,12 @@ public class Controller_ThirdPerson : MonoBehaviour
 		acceleration = new Vector3(0.0f, -9.81f, 0.0f);
 		lift = new Vector3(0.0f, 0.0f, 0.0f);
 		flightmode = true;
-		player.transform.GetChild(1).transform.Rotate(new Vector3(1, 0, 0), 90);
-		player.transform.GetChild(1).transform.localPosition = new Vector3(0.0f, 0.97f, -0.97f);
-		CapsuleCollider coll = (CapsuleCollider)player.GetComponent("CapsuleCollider");
-		coll.direction = 2;
+		player.transform.Rotate(new Vector3(1, 0, 0), 90);
 		Rigidbody rig = (Rigidbody)player.GetComponent("Rigidbody");
 		rig.useGravity = false;
         windSound.Play();
+        player.transform.GetComponent<WingmanAnimator>().EnterTPose();
+        player.transform.GetChild(0).GetComponent<MeshRenderer>().enabled = true;
 	}
 
 	void Awake()
@@ -82,7 +79,7 @@ public class Controller_ThirdPerson : MonoBehaviour
 			{
 				float airspeed = velocity.magnitude;
 				windResistance = airspeed / 100.0f;
-				lift = new Vector3(0.0f, 1.0f, 0.0f);
+				lift = new Vector3(0.0f, 0.0f, -1.0f);
 				lift = player.transform.rotation * lift;
 				lift = lift * Mathf.Abs(Vector3.Dot(lift, Vector3.up)) * (airspeed / 2.0f);
 				if (lift.y < 0.0f) lift = lift * -1.0f;
@@ -128,6 +125,38 @@ public class Controller_ThirdPerson : MonoBehaviour
 				}
 				else
 				{
+                    if (Input.GetKeyDown(KeyCode.W))
+                    {
+                        player.transform.GetComponent<WingmanAnimator>().StartWalking();
+                    }
+                    else if (Input.GetKeyDown(KeyCode.A))
+                    {
+                        player.transform.GetComponent<WingmanAnimator>().StartStrafingLeft();
+                    }
+                    else if (Input.GetKeyDown(KeyCode.S))
+                    {
+                        player.transform.GetComponent<WingmanAnimator>().StartDancingGangnam();
+                    }
+                    else if (Input.GetKeyDown(KeyCode.D))
+                    {
+                        player.transform.GetComponent<WingmanAnimator>().StartStrafingRight();
+                    }
+                    if (Input.GetKeyUp(KeyCode.W))
+                    {
+                        player.transform.GetComponent<WingmanAnimator>().StopWalking();
+                    }
+                    else if (Input.GetKeyUp(KeyCode.A))
+                    {
+                        player.transform.GetComponent<WingmanAnimator>().StopStrafingLeft();
+                    }
+                    else if (Input.GetKeyUp(KeyCode.S))
+                    {
+                        player.transform.GetComponent<WingmanAnimator>().StopDancingGangnam();
+                    }
+                    else if (Input.GetKeyUp(KeyCode.D))
+                    {
+                        player.transform.GetComponent<WingmanAnimator>().StopStrafingRight();
+                    }
 					if (inputTaken())
 					{
 						horizontal = Input.GetAxis("Horizontal");
@@ -143,7 +172,6 @@ public class Controller_ThirdPerson : MonoBehaviour
 						}
 						Motor_ThirdPerson.Instance.UpdateMotor();
 					}
-
 				}
 			}
 			if (Input.GetKeyDown(KeyCode.Alpha1))

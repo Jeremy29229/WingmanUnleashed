@@ -3,6 +3,7 @@
 public class Adoorable : MonoBehaviour, IInteractable
 {
 	public Vector3 newPositionOffset;
+	public GameObject ConnectingDoor;
 	private GameObject wingman;
 
 	void Start()
@@ -24,6 +25,6 @@ public class Adoorable : MonoBehaviour, IInteractable
 
 	public void InteractWith()
 	{
-		wingman.transform.position = transform.position + newPositionOffset;
+		wingman.transform.position = ConnectingDoor.transform.position + newPositionOffset;
 	}
 }

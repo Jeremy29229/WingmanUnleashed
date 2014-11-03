@@ -84,6 +84,10 @@ public class BouncerAI : MonoBehaviour
 
         if (detection.IsPlayInRangeAndVisable) //Pursuing player
         {
+            if (!animation.IsWalking())
+            {
+                animation.StartWalking();
+            }
             nav.stoppingDistance = stopDistanceFromPlayer;
             nav.destination = playerWingman.position;
             transform.LookAt(playerWingman);
@@ -91,6 +95,15 @@ public class BouncerAI : MonoBehaviour
             searching = false;
             totalTimePausing = 0.0f;
             totalTimeSearching = 0.0f;
+
+            Vector3 distanceVector = playerWingman.position - transform.position;
+            if (distanceVector.magnitude <= stopDistanceFromPlayer)
+            {
+                if (animation.IsWalking())
+                {
+                    animation.StopWalking();
+                }
+            }
         }
         else if (!detection.IsPlayInRangeAndVisable && !lastPositionKnown) //Lost sight of player
         {
@@ -107,6 +120,10 @@ public class BouncerAI : MonoBehaviour
             {
                 if (totalTimeSearching <= 0.0f)
                 {
+                    if (!animation.IsWalking())
+                    {
+                        animation.StartWalking();
+                    }
                     float yPos = transform.position.y;
                     Vector3 currentPos = lastKnownPlayerPosition + (Random.insideUnitSphere * 5);
                     currentPos = new Vector3(currentPos.x, yPos, currentPos.z);
@@ -114,6 +131,10 @@ public class BouncerAI : MonoBehaviour
                     nav.destination = currentPos;
                 }
 
+                if (animation.IsWalking())
+                {
+                    animation.StopWalking();
+                }
                 totalTimeSearching += Time.deltaTime;
                 if (totalTimeSearching >= timeSearching)
                 {
@@ -122,9 +143,17 @@ public class BouncerAI : MonoBehaviour
             }
             else if (!searching)
             {
+                if (!animation.IsWalking())
+                {
+                    animation.StartWalking();
+                }
                 Vector3 distanceVector = lastKnownPlayerPosition - transform.position;
                 if (distanceVector.magnitude <= stopZone && !searching)
                 {
+                    if (animation.IsWalking())
+                    {
+                        animation.StopWalking();
+                    }
                     totalTimePausing += Time.deltaTime;
                     if (totalTimePausing >= pauseWaitTime)
                     {
@@ -145,6 +174,10 @@ public class BouncerAI : MonoBehaviour
 		{
             if (searching)
             {
+                if (!animation.IsWalking())
+                {
+                    animation.StartWalking();
+                }
                 nav.speed = pursueSpeed;
                 nav.stoppingDistance = DEFAULT_STOP;
                 nav.destination = lastKnownPlayerPosition;
@@ -152,6 +185,10 @@ public class BouncerAI : MonoBehaviour
                 Vector3 distanceVector = lastKnownPlayerPosition - transform.position;
                 if (distanceVector.magnitude <= stopZone)
                 {
+                    if (animation.IsWalking())
+                    {
+                        animation.StopWalking();
+                    }
                     totalTimeSearching += Time.deltaTime;
                     if (totalTimeSearching >= timeSearching)
                     {
@@ -168,6 +205,10 @@ public class BouncerAI : MonoBehaviour
 		}
         else
         {
+            if (!animation.IsWalking())
+            {
+                animation.StartWalking();
+            }
             searching = true;
             totalTimeSearching = 0.0f;
             lastKnownPlayerPosition = playerWingman.position;
@@ -176,6 +217,15 @@ public class BouncerAI : MonoBehaviour
             nav.speed = pursueSpeed;
             nav.stoppingDistance = stopDistanceFromPlayer;
             nav.destination = lastKnownPlayerPosition;
+
+            Vector3 distanceVector = lastKnownPlayerPosition - transform.position;
+            if (distanceVector.magnitude <= stopDistanceFromPlayer)
+            {
+                if (animation.IsWalking())
+                {
+                    animation.StopWalking();
+                }
+            }
         }
 	}
 
@@ -208,6 +258,7 @@ public class BouncerAI : MonoBehaviour
 
 	public void PlayerDetected()
 	{
+        animation.StopWalking();
 		nav.Stop();
 	}
 
