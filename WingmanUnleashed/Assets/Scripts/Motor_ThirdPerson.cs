@@ -20,7 +20,7 @@ public class Motor_ThirdPerson : MonoBehaviour
 		MovementVector = transform.TransformDirection(MovementVector);
 		MovementVector = Vector3.Normalize(MovementVector);
 		MovementVector = (MovementVector * movementSpeed) * Time.deltaTime;
-		transform.position += MovementVector;
+		rigidbody.position += MovementVector;
 		MovementVector = new Vector3(0, 0, 0);
 	}
 
