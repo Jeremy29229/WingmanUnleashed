@@ -18,7 +18,7 @@ public class Wanderer : MonoBehaviour
 		gameObject.GetComponent<NavMeshAgent>().SetDestination(targetPosition);
         if (gameObject.GetComponent<CharacterAnimator>() != null)
         {
-            if(Random.Range(0,1)==0)gameObject.GetComponent<CharacterAnimator>().StartDancingGangnam();
+            if(Random.Range(0,100)>=50)gameObject.GetComponent<CharacterAnimator>().StartDancingGangnam();
             else gameObject.GetComponent<CharacterAnimator>().StartDancingSamba();
         }
 	}
