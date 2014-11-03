@@ -11,6 +11,7 @@ public class BouncerAI : MonoBehaviour
     public float stopDistanceFromPlayer = 0.2f;
 	public Transform[] waypoints;
 
+    private CharacterAnimator animation;
 	private VisionDetection detection;
 	private NavMeshAgent nav;
 	private Transform playerWingman;
@@ -32,6 +33,7 @@ public class BouncerAI : MonoBehaviour
 
 	void Start()
 	{
+        animation = GetComponent<CharacterAnimator>();
 		detection = GetComponentInChildren<VisionDetection>();
 		nav = GetComponent<NavMeshAgent>();
 		playerWingman = GameObject.Find("Wingman").transform;
@@ -211,6 +213,10 @@ public class BouncerAI : MonoBehaviour
 
 	private void FollowPath()
 	{
+        if (!animation.IsWalking())
+        {
+            animation.StartWalking();
+        }
 		nav.speed = patrolSpeed;
 		if (waypoints[currentWaypoint] != null)
 		{
@@ -219,6 +225,10 @@ public class BouncerAI : MonoBehaviour
 
 			if (distanceVector.magnitude <= stopZone)
 			{
+                if (animation.IsWalking())
+                {
+                    animation.StopWalking();
+                }
 				patrolPointWait_Timer += Time.deltaTime;
 
 				if (patrolPointWait_Timer >= patrolPointWaitTime)
