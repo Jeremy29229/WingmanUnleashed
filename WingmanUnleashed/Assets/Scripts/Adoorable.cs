@@ -10,6 +10,18 @@ public class Adoorable : MonoBehaviour, IInteractable
 		wingman = GameObject.Find("Wingman");
 	}
 
+	void Update()
+	{
+		if (wingman.GetComponent<Player>().getDetectionLevel() < 1.0f)
+		{
+			GetComponent<Interactable>().IsActive = true;
+		}
+		else
+		{
+			GetComponent<Interactable>().IsActive = false;
+		}
+	}
+
 	public void InteractWith()
 	{
 		wingman.transform.position = transform.position + newPositionOffset;
