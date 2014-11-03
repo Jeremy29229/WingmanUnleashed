@@ -38,6 +38,8 @@ public class Controller_ThirdPerson : MonoBehaviour
 		rig.useGravity = true;
         rig.velocity = new Vector3(0, 0, 0);
         windSound.Stop();
+        player.transform.GetComponent<WingmanAnimator>().ExitTPose();
+        player.transform.GetChild(0).GetComponent<MeshRenderer>().enabled = false;
 	}
 	public void flightmodeOn()
 	{
@@ -54,6 +56,8 @@ public class Controller_ThirdPerson : MonoBehaviour
 		Rigidbody rig = (Rigidbody)player.GetComponent("Rigidbody");
 		rig.useGravity = false;
         windSound.Play();
+        player.transform.GetComponent<WingmanAnimator>().EnterTPose();
+        player.transform.GetChild(0).GetComponent<MeshRenderer>().enabled = true;
 	}
 
 	void Awake()
@@ -128,6 +132,38 @@ public class Controller_ThirdPerson : MonoBehaviour
 				}
 				else
 				{
+                    if (Input.GetKeyDown(KeyCode.W))
+                    {
+                        player.transform.GetComponent<WingmanAnimator>().StartWalking();
+                    }
+                    else if (Input.GetKeyDown(KeyCode.A))
+                    {
+                        player.transform.GetComponent<WingmanAnimator>().StartStrafingLeft();
+                    }
+                    else if (Input.GetKeyDown(KeyCode.S))
+                    {
+                        player.transform.GetComponent<WingmanAnimator>().StartDancingGangnam();
+                    }
+                    else if (Input.GetKeyDown(KeyCode.D))
+                    {
+                        player.transform.GetComponent<WingmanAnimator>().StartStrafingRight();
+                    }
+                    if (Input.GetKeyUp(KeyCode.W))
+                    {
+                        player.transform.GetComponent<WingmanAnimator>().StopWalking();
+                    }
+                    else if (Input.GetKeyUp(KeyCode.A))
+                    {
+                        player.transform.GetComponent<WingmanAnimator>().StopStrafingLeft();
+                    }
+                    else if (Input.GetKeyUp(KeyCode.S))
+                    {
+                        player.transform.GetComponent<WingmanAnimator>().StopDancingGangnam();
+                    }
+                    else if (Input.GetKeyUp(KeyCode.D))
+                    {
+                        player.transform.GetComponent<WingmanAnimator>().StopStrafingRight();
+                    }
 					if (inputTaken())
 					{
 						horizontal = Input.GetAxis("Horizontal");
@@ -143,7 +179,6 @@ public class Controller_ThirdPerson : MonoBehaviour
 						}
 						Motor_ThirdPerson.Instance.UpdateMotor();
 					}
-
 				}
 			}
 			if (Input.GetKeyDown(KeyCode.Alpha1))
