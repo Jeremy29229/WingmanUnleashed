@@ -8,14 +8,18 @@ public class Commandable : MonoBehaviour {
     private bool destinationReached;
     private GameObject leader;
     bool following;
+    bool willReturn;
 	// Use this for initialization
 	void Start () {
         agent = gameObject.GetComponent<NavMeshAgent>();
         startPosition = gameObject.transform.position;
         destinationReached = true;
         following = false;
+        willReturn = false;
         //followCharacter(GameObject.Find("Wingman")); //Test: follow Wingman
         //sendToLocation(new Vector3(1471.9f, 241.59f, 554.71f)); //Test: go to target
+        //visitLocation(new Vector3(1471.9f, 241.59f, 554.71f)); //Test: go to target and return
+
 	}
 	
 	// Update is called once per frame
@@ -32,6 +36,10 @@ public class Commandable : MonoBehaviour {
                 agent.SetDestination(gameObject.transform.position);
             }
         }
+        else if (willReturn)
+        {
+            sendToStartPosition();
+        }
 	}
 
     public void sendToLocation(Vector3 location)
@@ -44,6 +52,12 @@ public class Commandable : MonoBehaviour {
     public void sendToStartPosition()
     {
         sendToLocation(startPosition);
+    }
+
+    public void visitLocation(Vector3 location)
+    {
+        sendToLocation(location);
+        willReturn = true;
     }
 
     public void followCharacter(GameObject character)
