@@ -36,6 +36,7 @@ public class Controller_ThirdPerson : MonoBehaviour
         windSound.Stop();
         player.transform.GetComponent<WingmanAnimator>().ExitTPose();
         player.transform.GetChild(0).GetComponent<MeshRenderer>().enabled = false;
+        player.transform.Translate(new Vector3(0.0f, -0.5f, 0.0f));
 	}
 	public void flightmodeOn()
 	{
@@ -77,9 +78,9 @@ public class Controller_ThirdPerson : MonoBehaviour
 			if (flightmode)
 			{
 				float airspeed = velocity.magnitude;
-                Vector3 headDirection = player.transform.rotation * new Vector3(0,1,0);
+                player.transform.Rotate(new Vector3(1, 0, 0), -90.0f, Space.Self);
 				windResistance = airspeed / 100.0f;
-				lift = new Vector3(0.0f, 0.0f, -1.0f);
+				lift = new Vector3(0.0f, 1.0f, 0.0f);
 				lift = player.transform.rotation * lift;
 				lift = lift * Mathf.Abs(Vector3.Dot(lift, Vector3.up)) * (airspeed / 2.0f);
 				if (lift.y < 0.0f) lift = lift * -1.0f;
@@ -87,9 +88,9 @@ public class Controller_ThirdPerson : MonoBehaviour
 				velocity += netforce * Time.deltaTime;
 				velocity *= (1 - (windResistance * Time.deltaTime));
 				player.transform.position += velocity * Time.deltaTime;
-                float correctionForce = Quaternion.Angle(Quaternion.LookRotation(headDirection, Vector3.up), Quaternion.LookRotation(velocity, Vector3.up)) * (airspeed / 30.0f);
-                player.transform.rotation = Quaternion.RotateTowards(player.transform.rotation, Quaternion.LookRotation(Quaternion.LookRotation(velocity, Vector3.up)*new Vector3(1,0,0),Vector3.up), correctionForce * Time.deltaTime);
-
+                float correctionForce = Quaternion.Angle(player.transform.rotation, Quaternion.LookRotation(velocity, Vector3.up)) * (airspeed / 30.0f);
+                player.transform.rotation = Quaternion.RotateTowards(player.transform.rotation,Quaternion.LookRotation(velocity, Vector3.up), correctionForce * Time.deltaTime);
+                player.transform.Rotate(new Vector3(1, 0, 0), 90.0f, Space.Self);
 				windSound.volume = Mathf.Pow((airspeed / 30.0f), 4);
 				if (Input.GetKey(KeyCode.Q))
 				{
