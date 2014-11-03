@@ -41,6 +41,10 @@ public class Player : MonoBehaviour
 					lockDetection = false;
 					detectionLevel = 0.95f;
 				}
+				else
+				{
+					detectionLevel = 1.0f;
+				}
 			}
 			else
 			{
