@@ -16,5 +16,6 @@ public class Smashable : MonoBehaviour {
     void OnCollisionEnter(Collision c)
     {
         DistractionManager.Instance.AddDistraction(8.0f, 5.0f, gameObject.transform.position);
+        SoundManager.Instance.PlaySoundAt("Shatter", gameObject.transform.position);
     }
 }
