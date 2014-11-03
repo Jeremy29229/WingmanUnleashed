@@ -12,5 +12,7 @@ public class DialogResponse : MonoBehaviour
 	public string[] DisguiseNames;
 	public float RequiredInterested = 0.0f;
 	public float RequiredConfidence = 0.0f;
+	public float AddedInterested = 0.0f;
+	public float AddedConfidence = 0.0f;
 	public string[] RequiredObjectiveNames;
 }

@@ -128,6 +128,16 @@ public class ConversationManager : MonoBehaviour
 					inventory.RemoveItem(item.ItemName, item.Amount);
 				}
 			}
+
+			if(choice.AddedConfidence != 0.0f)
+			{
+				clientScript.increaseConfidence(choice.AddedConfidence);
+			}
+
+			if(choice.AddedInterested != 0.0f)
+			{
+				targetScript.increaseInterest(choice.AddedInterested);
+			}
 		}
 
 		ProcessDialog(next);

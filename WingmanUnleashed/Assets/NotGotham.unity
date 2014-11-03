@@ -11345,10 +11345,29 @@ GameObject:
   - 4: {fileID: 222397113}
   - 33: {fileID: 222397112}
   - 23: {fileID: 222397111}
+  - 114: {fileID: 222397117}
   - 114: {fileID: 222397116}
   - 114: {fileID: 222397115}
+  - 114: {fileID: 222397121}
+  - 114: {fileID: 222397120}
+  - 114: {fileID: 222397119}
+  - 114: {fileID: 222397118}
+  - 114: {fileID: 222397130}
+  - 114: {fileID: 222397129}
+  - 114: {fileID: 222397128}
+  - 114: {fileID: 222397127}
+  - 114: {fileID: 222397126}
+  - 114: {fileID: 222397125}
+  - 114: {fileID: 222397124}
+  - 114: {fileID: 222397123}
+  - 114: {fileID: 222397122}
   - 114: {fileID: 222397114}
-  - 114: {fileID: 222397117}
+  - 114: {fileID: 222397134}
+  - 114: {fileID: 222397133}
+  - 114: {fileID: 222397136}
+  - 114: {fileID: 222397135}
+  - 114: {fileID: 222397132}
+  - 114: {fileID: 222397131}
   m_Layer: 8
   m_Name: Client
   m_TagString: Untagged
@@ -11407,10 +11426,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 222397110}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2dc234e3a2651b44b883d0e587984c45, type: 3}
+  m_Script: {fileID: 11500000, guid: 152c028ba9883f44aad8faeed999ab82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Beginning: {fileID: 0}
+  NPCDialog: "But...I\u2019m desperate\u2026 Pleeeease?"
+  Responses:
+  - {fileID: 222397134}
+  - {fileID: 222397133}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!114 &222397115
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11438,7 +11462,7 @@ MonoBehaviour:
   PlayerObjectName: Wingman
   IsActive: 1
   Action: talk to
-  InteractableName: Sam Smitherson
+  InteractableName: "Bruce Ludolf McGinnis\L"
   AdditionalInformation: 
 --- !u!114 &222397117
 MonoBehaviour:
@@ -11451,6 +11475,385 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fa7b828ed4c77c47bf213bee4825aea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &222397118
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 222397110}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e17f620e3a789d4181b8b35170f3757, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Resulting: {fileID: 222397129}
+  NewCurrent: {fileID: 0}
+  Text: -Yes. Tell me about the job.
+  IsOneTimeOption: 0
+  NumTimesSelected: 0
+  Items: []
+  DisguiseNames: []
+  RequiredInterested: 0
+  RequiredConfidence: 0
+  AddedInterested: 0
+  AddedConfidence: 0
+  RequiredObjectiveNames: []
+--- !u!114 &222397119
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 222397110}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 152c028ba9883f44aad8faeed999ab82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NPCDialog: Hey! You the Wingman?
+  Responses:
+  - {fileID: 222397118}
+  - {fileID: 222397130}
+  - {fileID: 0}
+  - {fileID: 0}
+--- !u!114 &222397120
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 222397110}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2dc234e3a2651b44b883d0e587984c45, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Beginning: {fileID: 222397119}
+--- !u!114 &222397121
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 222397110}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d5004510bb39e44bb7bd96cf47486b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Current: {fileID: 222397120}
+  Conversations:
+  - {fileID: 222397120}
+--- !u!114 &222397122
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 222397110}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e17f620e3a789d4181b8b35170f3757, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Resulting: {fileID: 0}
+  NewCurrent: {fileID: 222397132}
+  Text: -Ugh, here we go again...
+  IsOneTimeOption: 0
+  NumTimesSelected: 0
+  Items: []
+  DisguiseNames: []
+  RequiredInterested: 0
+  RequiredConfidence: 0
+  AddedInterested: 0
+  AddedConfidence: 0
+  RequiredObjectiveNames: []
+--- !u!114 &222397123
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 222397110}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e17f620e3a789d4181b8b35170f3757, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Resulting: {fileID: 222397136}
+  NewCurrent: {fileID: 0}
+  Text: -Tell me more about Mayra.
+  IsOneTimeOption: 0
+  NumTimesSelected: 0
+  Items: []
+  DisguiseNames: []
+  RequiredInterested: 0
+  RequiredConfidence: 0
+  AddedInterested: 0
+  AddedConfidence: 0
+  RequiredObjectiveNames: []
+--- !u!114 &222397124
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 222397110}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 152c028ba9883f44aad8faeed999ab82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NPCDialog: "Thanks Wingman! You\u2019re the best!"
+  Responses:
+  - {fileID: 222397123}
+  - {fileID: 222397122}
+  - {fileID: 0}
+  - {fileID: 0}
+--- !u!114 &222397125
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 222397110}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e17f620e3a789d4181b8b35170f3757, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Resulting: {fileID: 222397114}
+  NewCurrent: {fileID: 0}
+  Text: "-I don\u2019t take lost causes."
+  IsOneTimeOption: 0
+  NumTimesSelected: 0
+  Items: []
+  DisguiseNames: []
+  RequiredInterested: 0
+  RequiredConfidence: 0
+  AddedInterested: 0
+  AddedConfidence: 0
+  RequiredObjectiveNames: []
+--- !u!114 &222397126
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 222397110}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e17f620e3a789d4181b8b35170f3757, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Resulting: {fileID: 222397114}
+  NewCurrent: {fileID: 0}
+  Text: -LOL nope.
+  IsOneTimeOption: 0
+  NumTimesSelected: 0
+  Items: []
+  DisguiseNames: []
+  RequiredInterested: 0
+  RequiredConfidence: 0
+  AddedInterested: 0
+  AddedConfidence: 0
+  RequiredObjectiveNames: []
+--- !u!114 &222397127
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 222397110}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e17f620e3a789d4181b8b35170f3757, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Resulting: {fileID: 222397124}
+  NewCurrent: {fileID: 0}
+  Text: -The contract is sealed.
+  IsOneTimeOption: 0
+  NumTimesSelected: 0
+  Items: []
+  DisguiseNames: []
+  RequiredInterested: 0
+  RequiredConfidence: 0
+  AddedInterested: 0
+  AddedConfidence: 0
+  RequiredObjectiveNames: []
+--- !u!114 &222397128
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 222397110}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e17f620e3a789d4181b8b35170f3757, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Resulting: {fileID: 222397124}
+  NewCurrent: {fileID: 0}
+  Text: -Acknowledged.
+  IsOneTimeOption: 0
+  NumTimesSelected: 0
+  Items: []
+  DisguiseNames: []
+  RequiredInterested: 0
+  RequiredConfidence: 0
+  AddedInterested: 0
+  AddedConfidence: 0
+  RequiredObjectiveNames: []
+--- !u!114 &222397129
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 222397110}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 152c028ba9883f44aad8faeed999ab82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NPCDialog: "Great! I really need your help, Wingman. I\u2019m desperate. I\u2019ve
+    been putting the moves on Mayra all night long, but I just have no game lately.
+    If you can get me a date with Mayra, I\u2019ll pay you handsomely."
+  Responses:
+  - {fileID: 222397128}
+  - {fileID: 222397127}
+  - {fileID: 222397126}
+  - {fileID: 222397125}
+--- !u!114 &222397130
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 222397110}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e17f620e3a789d4181b8b35170f3757, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Resulting: {fileID: 0}
+  NewCurrent: {fileID: 0}
+  Text: "-No idea what you\u2019re talking about, sir."
+  IsOneTimeOption: 0
+  NumTimesSelected: 0
+  Items: []
+  DisguiseNames: []
+  RequiredInterested: 0
+  RequiredConfidence: 0
+  AddedInterested: 0
+  AddedConfidence: 0
+  RequiredObjectiveNames: []
+--- !u!114 &222397131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 222397110}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 152c028ba9883f44aad8faeed999ab82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NPCDialog: Need something?
+  Responses:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+--- !u!114 &222397132
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 222397110}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2dc234e3a2651b44b883d0e587984c45, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Beginning: {fileID: 222397131}
+--- !u!114 &222397133
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 222397110}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e17f620e3a789d4181b8b35170f3757, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Resulting: {fileID: 0}
+  NewCurrent: {fileID: 0}
+  Text: "-I\u2019m leaving."
+  IsOneTimeOption: 0
+  NumTimesSelected: 0
+  Items: []
+  DisguiseNames: []
+  RequiredInterested: 0
+  RequiredConfidence: 0
+  AddedInterested: 0
+  AddedConfidence: 0
+  RequiredObjectiveNames: []
+--- !u!114 &222397134
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 222397110}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e17f620e3a789d4181b8b35170f3757, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Resulting: {fileID: 222397124}
+  NewCurrent: {fileID: 0}
+  Text: -Okay, fine.
+  IsOneTimeOption: 0
+  NumTimesSelected: 0
+  Items: []
+  DisguiseNames: []
+  RequiredInterested: 0
+  RequiredConfidence: 0
+  AddedInterested: 0
+  AddedConfidence: 0
+  RequiredObjectiveNames: []
+--- !u!114 &222397135
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 222397110}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e17f620e3a789d4181b8b35170f3757, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Resulting: {fileID: 0}
+  NewCurrent: {fileID: 222397132}
+  Text: -No problem, we got this, stud.
+  IsOneTimeOption: 0
+  NumTimesSelected: 0
+  Items: []
+  DisguiseNames: []
+  RequiredInterested: 0
+  RequiredConfidence: 0
+  AddedInterested: 0
+  AddedConfidence: .100000001
+  RequiredObjectiveNames: []
+--- !u!114 &222397136
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 222397110}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 152c028ba9883f44aad8faeed999ab82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NPCDialog: Sorry, man. To be honest, I don't really know much about her. She seems
+    upset though. I wonder why.
+  Responses:
+  - {fileID: 222397135}
+  - {fileID: 222397122}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1001 &222596795
 Prefab:
   m_ObjectHideFlags: 0
@@ -30869,8 +31272,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 852464707}
   m_HandleRect: {fileID: 852464706}
   m_Direction: 2
-  m_Value: .943984747
-  m_Size: .376834601
+  m_Value: .990851521
+  m_Size: .467989504
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -35009,6 +35412,7 @@ MonoBehaviour:
   patrolPointWaitTime: 1.29999995
   pauseWaitTime: 1
   timeSearching: 3
+  stopDistance: .200000003
   waypoints:
   - {fileID: 791708661}
   - {fileID: 368324039}
@@ -41265,6 +41669,8 @@ MonoBehaviour:
   DisguiseNames: []
   RequiredInterested: 0
   RequiredConfidence: 0
+  AddedInterested: 0
+  AddedConfidence: 0
   RequiredObjectiveNames: []
 --- !u!114 &785326617
 MonoBehaviour:
@@ -41304,6 +41710,8 @@ MonoBehaviour:
   DisguiseNames: []
   RequiredInterested: 0
   RequiredConfidence: 0
+  AddedInterested: 0
+  AddedConfidence: 0
   RequiredObjectiveNames: []
 --- !u!114 &785326619
 MonoBehaviour:
@@ -82401,6 +82809,7 @@ MonoBehaviour:
   patrolPointWaitTime: .800000012
   pauseWaitTime: 1
   timeSearching: 3
+  stopDistance: .200000003
   waypoints:
   - {fileID: 407878998}
   - {fileID: 576282527}
@@ -110542,6 +110951,7 @@ MonoBehaviour:
   patrolPointWaitTime: 1.29999995
   pauseWaitTime: 1
   timeSearching: 3
+  stopDistance: .200000003
   waypoints:
   - {fileID: 574034871}
   - {fileID: 1302836453}
@@ -112369,7 +112779,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 112
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!136 &2108539856
 CapsuleCollider:
   m_ObjectHideFlags: 0
