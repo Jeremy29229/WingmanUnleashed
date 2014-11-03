@@ -8,6 +8,7 @@ public class BouncerAI : MonoBehaviour
 	public float patrolPointWaitTime = 1.0f;
     public float pauseWaitTime = 1.0f;
     public float timeSearching = 3.0f;
+    public float stopDistance = 0.2f;
 	public Transform[] waypoints;
 
 	private VisionDetection detection;
@@ -50,7 +51,7 @@ public class BouncerAI : MonoBehaviour
 	{
 		float currentDetectionLevel = player.getDetectionLevel();
 
-        if (Input.GetKeyDown(KeyCode.F))
+        if (Input.GetKeyDown(KeyCode.P))
         {
             DistractionManager.Instance.AddDistraction(10.0f, 10.0f, playerWingman.position);
         }
@@ -68,7 +69,7 @@ public class BouncerAI : MonoBehaviour
 			Pursuing();
 		}
 		else if (currentDetectionLevel > maxPursueLevel)
-		{
+        {
 			FullPursuit();
 		}
 	}
@@ -76,7 +77,8 @@ public class BouncerAI : MonoBehaviour
 	public void FullPursuit()
 	{
         nav.speed = pursueSpeed;
-        if (detection.IsPlayInRangeAndVisable)
+
+        if (detection.IsPlayInRangeAndVisable) //Pursuing player
         {
             nav.destination = playerWingman.position;
             lastPositionKnown = false;
@@ -84,7 +86,7 @@ public class BouncerAI : MonoBehaviour
             totalTimePausing = 0.0f;
             totalTimeSearching = 0.0f;
         }
-        else if (!detection.IsPlayInRangeAndVisable && !lastPositionKnown)
+        else if (!detection.IsPlayInRangeAndVisable && !lastPositionKnown) //Lost sight of player
         {
             lastKnownPlayerPosition = playerWingman.position;
             lastPositionKnown = true;
@@ -92,7 +94,7 @@ public class BouncerAI : MonoBehaviour
             totalTimePausing = 0.0f;
             totalTimeSearching = 0.0f;
         }
-        else if (!detection.IsPlayInRangeAndVisable && lastPositionKnown)
+        else if (!detection.IsPlayInRangeAndVisable && lastPositionKnown) //Investigating last player position
         {
             Vector3 currentPos = lastKnownPlayerPosition;
 
@@ -107,7 +109,7 @@ public class BouncerAI : MonoBehaviour
                     searching = true;
                 }
             }
-            else if (searching)
+            else if (searching) //Searching around the last known position
             {
                 if (totalTimeSearching <= 0.0f)
                 {
