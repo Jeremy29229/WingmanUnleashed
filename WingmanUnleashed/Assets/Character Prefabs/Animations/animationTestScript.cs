@@ -19,11 +19,11 @@ public class animationTestScript : MonoBehaviour {
         frame++;
         if (frame == 200)
         {
-            animator.SetBool("IsDancing", true);
+            animator.SetBool("IsDancingSamba", true);
         }
         if (frame == 400)
         {
-            animator.SetBool("IsDancing", false);
+            animator.SetBool("IsDancingSamba", false);
         }
         if (frame == 600)
         {
