@@ -13,6 +13,7 @@ public class CharacterAnimator : MonoBehaviour
     //IsStrafingLeft
     //IsStrafingRight
     private Animator animator;
+    public int speed = 1;
 	void Start () 
     {
         animator = GetComponent<Animator>();
@@ -20,6 +21,7 @@ public class CharacterAnimator : MonoBehaviour
         {
             throw new MissingComponentException("Character " + gameObject.name + " has no animation component, cannot be animated by CharacterAnimation script.");
         }
+        animator.speed = speed;
 	}
     private void CheckAnimator()
     {
