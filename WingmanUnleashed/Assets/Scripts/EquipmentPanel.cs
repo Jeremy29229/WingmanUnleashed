@@ -31,7 +31,6 @@ public class EquipmentPanel : MonoBehaviour
 	public void Unequip()
 	{
         gameObject.transform.FindChild("EquipImage").GetComponent<Image>().sprite = GameObject.Find("ItemDisplay").transform.FindChild("ItemImage").GetComponent<Image>().sprite;
-        Destroy(item);
 	}
 
 	public void Use()

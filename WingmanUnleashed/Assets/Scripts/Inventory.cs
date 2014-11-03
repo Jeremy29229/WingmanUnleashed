@@ -77,6 +77,24 @@ public class Inventory : MonoBehaviour
         {
             result = true;
             GameObject.Find("InventoryDisplay").GetComponent<InventoryDisplayScript>().RemoveItem(item.Name);
+            Destroy(item.Gob);
+            items.Remove(item);
+        }
+        return result;
+    }
+
+    public bool RemoveItem(string Name, int amount = 1)
+    {
+        bool result = false;
+        InventoryItem item = items.First<InventoryItem>(i => i.Name == Name);
+        item.Amount -= amount;
+        GameObject.Find("InventoryDisplay").GetComponent<InventoryDisplayScript>().UpdateAmount(item.Name, item.Amount);
+
+        if (item.Amount <= 0)
+        {
+            result = true;
+            GameObject.Find("InventoryDisplay").GetComponent<InventoryDisplayScript>().RemoveItem(item.Name);
+            Destroy(item.Gob);
             items.Remove(item);
         }
         return result;
