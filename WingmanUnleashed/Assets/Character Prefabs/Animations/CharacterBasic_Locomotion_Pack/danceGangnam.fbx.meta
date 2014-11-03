@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: cb8dad2814fe7074d8a1692bc9936b7e
+guid: 29cb2fa8b39e3164f839af718ccd5dc6
 ModelImporter:
   serializedVersion: 16
   fileIDToRecycleName:
@@ -45,7 +45,6 @@ ModelImporter:
     100078: mixamorig:Spine
     100080: mixamorig:Spine1
     100082: mixamorig:Spine2
-    100084: unamed
     400000: //RootNode
     400002: mixamorig:Head
     400004: mixamorig:HeadTop_End
@@ -88,11 +87,8 @@ ModelImporter:
     400078: mixamorig:Spine
     400080: mixamorig:Spine1
     400082: mixamorig:Spine2
-    400084: unamed
-    4300000: unamed
-    7400000: TPose
+    7400000: gangnamStyle
     9500000: //RootNode
-    13700000: unamed
   materials:
     importMaterials: 1
     materialName: 0
@@ -102,7 +98,7 @@ ModelImporter:
     bakeSimulation: 0
     optimizeGameObjects: 0
     motionNodeName: 
-    animationCompression: 3
+    animationCompression: 1
     animationRotationError: .5
     animationPositionError: .5
     animationScaleError: .5
@@ -110,10 +106,10 @@ ModelImporter:
     extraExposedTransformPaths: []
     clipAnimations:
     - serializedVersion: 16
-      name: TPose
+      name: gangnamStyle
       takeName: mixamo.com
       firstFrame: 0
-      lastFrame: 472
+      lastFrame: 371
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -121,10 +117,10 @@ ModelImporter:
       loop: 0
       loopTime: 1
       loopBlend: 1
-      loopBlendOrientation: 0
+      loopBlendOrientation: 1
       loopBlendPositionY: 0
       loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
+      keepOriginalOrientation: 1
       keepOriginalPositionY: 1
       keepOriginalPositionXZ: 0
       heightFromFeet: 0
@@ -217,8 +213,6 @@ ModelImporter:
         weight: 1
       - path: mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:RightShoulder/mixamorig:RightArm/mixamorig:RightForeArm/mixamorig:RightHand/mixamorig:RightHandThumb1/mixamorig:RightHandThumb2/mixamorig:RightHandThumb3/mixamorig:RightHandThumb4
         weight: 0
-      - path: unamed
-        weight: 0
       maskType: 0
       maskSource: {instanceID: 0}
     isReadable: 1
@@ -243,7 +237,7 @@ ModelImporter:
     normalImportMode: 0
     tangentImportMode: 1
   importAnimation: 1
-  copyAvatar: 0
+  copyAvatar: 1
   humanDescription:
     human:
     - boneName: mixamorig:Hips
@@ -734,7 +728,8 @@ ModelImporter:
     legStretch: .0500000007
     feetSpacing: 0
     rootMotionBoneName: 
-  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: cb8dad2814fe7074d8a1692bc9936b7e,
+    type: 3}
   animationType: 3
   additionalBone: 0
   userData: 

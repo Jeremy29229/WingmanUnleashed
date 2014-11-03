@@ -12,39 +12,40 @@ public class animationTestScript : MonoBehaviour {
         //animator.Play("walking", 0, 50);
 	}
 
+    int interval = 300;
     int frame = 0;
 	// Update is called once per frame
 	void Update () 
     {
         frame++;
-        if (frame == 200)
+        if (frame == interval)
         {
             animator.SetBool("IsDancingSamba", true);
         }
-        if (frame == 400)
+        if (frame == interval*2)
         {
             animator.SetBool("IsDancingSamba", false);
         }
-        if (frame == 600)
+        if (frame == interval*3)
         {
             //animator.SetBool("IsDancing", false);
             animator.SetTrigger("Jump");
         }
-        if (frame == 800)
+        if (frame == interval*4)
         {
             //animator.SetBool("IsDancing", false);
             animator.SetBool("IsWalking", true);    
             //animator.SetTrigger("Jump");
         }
-        if (frame == 1000)
+        if (frame == interval*5)
         {
             animator.SetBool("IsStrafingRight", true);
         }
-        if (frame == 1200)
+        if (frame == interval*6)
         {
             animator.SetBool("IsStrafingRight", false);
         }
-        if (frame == 1400)
+        if (frame == interval*7)
         {
             //animator.SetBool("IsDancing", false);
             animator.SetBool("IsWalking", false);
