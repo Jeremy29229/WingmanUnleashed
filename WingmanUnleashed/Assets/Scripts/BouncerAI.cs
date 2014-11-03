@@ -8,7 +8,7 @@ public class BouncerAI : MonoBehaviour
 	public float patrolPointWaitTime = 1.0f;
     public float pauseWaitTime = 1.0f;
     public float timeSearching = 3.0f;
-    public float stopDistance = 0.2f;
+    public float stopDistanceFromPlayer = 0.2f;
 	public Transform[] waypoints;
 
 	private VisionDetection detection;
@@ -28,6 +28,7 @@ public class BouncerAI : MonoBehaviour
     private Vector3 lastKnownPlayerPosition;
     private Vector3 distractionPos;
     private bool checkingDistraction;
+    private float DEFAULT_STOP = 0.0f;
 
 	void Start()
 	{
@@ -77,10 +78,13 @@ public class BouncerAI : MonoBehaviour
 	public void FullPursuit()
 	{
         nav.speed = pursueSpeed;
+        nav.stoppingDistance = DEFAULT_STOP;
 
         if (detection.IsPlayInRangeAndVisable) //Pursuing player
         {
+            nav.stoppingDistance = stopDistanceFromPlayer;
             nav.destination = playerWingman.position;
+            transform.LookAt(playerWingman);
             lastPositionKnown = false;
             searching = false;
             totalTimePausing = 0.0f;
@@ -88,6 +92,7 @@ public class BouncerAI : MonoBehaviour
         }
         else if (!detection.IsPlayInRangeAndVisable && !lastPositionKnown) //Lost sight of player
         {
+            nav.stoppingDistance = DEFAULT_STOP;
             lastKnownPlayerPosition = playerWingman.position;
             lastPositionKnown = true;
             searching = false;
@@ -96,26 +101,15 @@ public class BouncerAI : MonoBehaviour
         }
         else if (!detection.IsPlayInRangeAndVisable && lastPositionKnown) //Investigating last player position
         {
-            Vector3 currentPos = lastKnownPlayerPosition;
-
-            Vector3 distanceVector = lastKnownPlayerPosition - transform.position;
-            if (distanceVector.magnitude <= stopZone && !searching)
-            {
-                totalTimePausing += Time.deltaTime;
-                if (totalTimePausing >= pauseWaitTime)
-                {
-                    totalTimePausing = 0.0f;
-                    totalTimeSearching = 0.0f;
-                    searching = true;
-                }
-            }
-            else if (searching) //Searching around the last known position
+            if (searching) //Searching around the last known position
             {
                 if (totalTimeSearching <= 0.0f)
                 {
                     float yPos = transform.position.y;
-                    currentPos = transform.position + Random.insideUnitSphere;
+                    Vector3 currentPos = lastKnownPlayerPosition + (Random.insideUnitSphere * 5);
                     currentPos = new Vector3(currentPos.x, yPos, currentPos.z);
+                    nav.stoppingDistance = DEFAULT_STOP;
+                    nav.destination = currentPos;
                 }
 
                 totalTimeSearching += Time.deltaTime;
@@ -124,8 +118,22 @@ public class BouncerAI : MonoBehaviour
                     totalTimeSearching = 0.0f;
                 }
             }
-
-            nav.destination = currentPos;
+            else if (!searching)
+            {
+                Vector3 distanceVector = lastKnownPlayerPosition - transform.position;
+                if (distanceVector.magnitude <= stopZone && !searching)
+                {
+                    totalTimePausing += Time.deltaTime;
+                    if (totalTimePausing >= pauseWaitTime)
+                    {
+                        totalTimePausing = 0.0f;
+                        totalTimeSearching = 0.0f;
+                        searching = true;
+                    }
+                }
+                nav.stoppingDistance = DEFAULT_STOP;
+                nav.destination = lastKnownPlayerPosition;
+            }
         }
 	}
 
@@ -136,6 +144,7 @@ public class BouncerAI : MonoBehaviour
             if (searching)
             {
                 nav.speed = pursueSpeed;
+                nav.stoppingDistance = DEFAULT_STOP;
                 nav.destination = lastKnownPlayerPosition;
 
                 Vector3 distanceVector = lastKnownPlayerPosition - transform.position;
@@ -163,12 +172,14 @@ public class BouncerAI : MonoBehaviour
             transform.LookAt(playerWingman);
 
             nav.speed = pursueSpeed;
+            nav.stoppingDistance = stopDistanceFromPlayer;
             nav.destination = lastKnownPlayerPosition;
         }
 	}
 
 	public void Aware()
 	{
+        nav.stoppingDistance = DEFAULT_STOP;
 		if (!detection.IsPlayInRangeAndVisable)
 		{
             OnPatrol();
@@ -182,6 +193,7 @@ public class BouncerAI : MonoBehaviour
 
 	public void Patrolling()
 	{
+        nav.stoppingDistance = DEFAULT_STOP;
 		if (!detection.IsPlayInRangeAndVisable)
 		{
             OnPatrol();
@@ -235,6 +247,7 @@ public class BouncerAI : MonoBehaviour
         if (distractionPos == new Vector3(-1.0f, -1.0f, -1.0f))
         {
             checkingDistraction = false;
+            nav.stoppingDistance = DEFAULT_STOP;
             FollowPath();
         }
         else if (distractionPos != new Vector3(-1.0f, -1.0f, -1.0f) && !checkingDistraction)
