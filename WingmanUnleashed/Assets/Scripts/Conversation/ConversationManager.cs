@@ -107,7 +107,7 @@ public class ConversationManager : MonoBehaviour
 		DialogResponse choice = null;
 		Dialog next = null;
 
-		if (choiceIndex < last.Responses.Length)
+		if (!ignoreSelection && choiceIndex < last.Responses.Length)
 		{
 			choice = last.Responses[choiceIndex];
 			if (!ignoreSelection)
@@ -119,6 +119,14 @@ public class ConversationManager : MonoBehaviour
 			if (choice != null && choice.NewCurrent != null)
 			{
 				choice.gameObject.GetComponent<Correspondence>().Current = choice.NewCurrent;
+			}
+
+			if (choice != null && choice.Items != null)
+			{
+				foreach (var item in choice.Items)
+				{
+					inventory.RemoveItem(item.ItemName, item.Amount);
+				}
 			}
 		}
 
