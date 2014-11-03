@@ -10,6 +10,7 @@ public class Conversable : MonoBehaviour, IInteractable
 	private bool isChatBubbleDisplayed = false;
 	private bool wasChatBubbleDisplayed = false;
 	private Canvas chatBubbleDisplay;
+	private MouseManager mouseManager;
 
 	void Start()
 	{
@@ -18,6 +19,7 @@ public class Conversable : MonoBehaviour, IInteractable
 		cm = GameObject.Find("ConvoGUI").GetComponent<ConversationManager>();
 		chatBubbleDisplay = GetComponentInChildren<Canvas>();
 		chatBubbleDisplay.enabled = false;
+		mouseManager = GameObject.Find("MouseManager").GetComponent<MouseManager>();
 	}
 
 	void Update()
@@ -34,6 +36,7 @@ public class Conversable : MonoBehaviour, IInteractable
 	public void InteractWith()
 	{
 		GetComponent<Interactable>().IsActive = false;
+		mouseManager.IsMouseLocked = false;
 		cm.ProcessDialog(correspondence.Current.Beginning);
 	}
 }

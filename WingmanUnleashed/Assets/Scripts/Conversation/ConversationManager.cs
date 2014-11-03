@@ -25,8 +25,12 @@ public class ConversationManager : MonoBehaviour
 	private Client clientScript;
 	private Outfit outfit;
 
+	private MouseManager mouseManager;
+
 	void Start()
 	{
+		mouseManager = GameObject.Find("MouseManager").GetComponent<MouseManager>();
+
 		UI = gameObject.GetComponent<Canvas>();
 		UI.enabled = false;
 		cam = Camera_ThirdPerson.Instance;
@@ -57,11 +61,12 @@ public class ConversationManager : MonoBehaviour
 
 	void Update()
 	{
-		if(Input.GetKeyDown(KeyCode.Escape))
+		if(Input.GetKeyDown(KeyCode.Q))
 		{
 			UI.enabled = false;
 			cam.IsInConversation = false;
 			controller.IsInConversation = false;
+			mouseManager.IsMouseLocked = true;
 			if (last != null)
 			{
 				last.gameObject.GetComponent<Interactable>().IsActive = true;
@@ -76,6 +81,7 @@ public class ConversationManager : MonoBehaviour
 			UI.enabled = false;
 			cam.IsInConversation = false;
 			controller.IsInConversation = false;
+			mouseManager.IsMouseLocked = true;
 			if (last != null)
 			{
 				last.gameObject.GetComponent<Interactable>().IsActive = true;
@@ -220,12 +226,12 @@ public class ConversationManager : MonoBehaviour
 
 	private bool HasRequiredInterest(DialogResponse d)
 	{
-		return d.RequiredInterested >= targetScript.GetInterest();
+		return d.RequiredInterested <= targetScript.GetInterest();
 	}
 
 	private bool HadRequiredConfidence(DialogResponse d)
 	{
-		return d.RequiredConfidence >= clientScript.GetConfidence();
+		return d.RequiredConfidence <= clientScript.GetConfidence();
 	}
 
 }

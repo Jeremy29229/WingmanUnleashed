@@ -10,12 +10,14 @@ public class Inventory : MonoBehaviour
 	public KeyCode InventoryDisplayKey;
 
 	private bool inventoryVisible;
+	private MouseManager mouseManager;
 
 	void Start()
 	{
 		items = new List<InventoryItem>();
 		inventoryVisible = false;
 		GameObject.Find("InventoryCanvas").GetComponent<Canvas>().enabled = false;
+		mouseManager = GameObject.Find("MouseManager").GetComponent<MouseManager>();
 	}
 
 	void Update()
@@ -28,7 +30,7 @@ public class Inventory : MonoBehaviour
 		{
 			DisplayInventory();
 		}
-		if (Input.GetKeyDown(KeyCode.Escape))
+		if (Input.GetKeyDown(KeyCode.Q))
 		{
 			CloseInventory();
 		}
@@ -38,6 +40,7 @@ public class Inventory : MonoBehaviour
 	{
 		inventoryVisible = !inventoryVisible;
 		GameObject.Find("InventoryCanvas").GetComponent<Canvas>().enabled = inventoryVisible;
+		mouseManager.IsMouseLocked = !mouseManager.IsMouseLocked;
 	}
 
 	public void CloseInventory()

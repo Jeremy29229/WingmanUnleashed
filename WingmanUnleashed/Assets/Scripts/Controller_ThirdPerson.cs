@@ -174,7 +174,7 @@ public class Controller_ThirdPerson : MonoBehaviour
 					}
 				}
 			}
-			if (Input.GetKeyDown(KeyCode.Alpha1))
+			if (Input.GetKeyDown(KeyCode.Alpha1)||(player.transform.position.y<=0&&player.transform.position.y>-5))
 			{
 				player.transform.position = new Vector3(1328.158f, 1010.9615f, 162.7299f);
 				flightmodeOff();
@@ -189,7 +189,7 @@ public class Controller_ThirdPerson : MonoBehaviour
 				player.transform.position = new Vector3(1764.116f, 828.00f, 1764.895f);
 				flightmodeOff();
 			}
-            if (Input.GetKeyDown(KeyCode.Alpha4)||player.transform.position.y <= 0)
+            if (Input.GetKeyDown(KeyCode.Alpha4))
             {
                 player.transform.position = new Vector3(1446.1f, 251.58f, 555.77f);
                 flightmodeOff();

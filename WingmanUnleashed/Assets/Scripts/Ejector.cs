@@ -6,6 +6,8 @@ public class Ejector : MonoBehaviour
 
 	private GameObject wingman;
 	private bool IsWingmanInRange = false;
+	public bool IsInHouse = false;
+	public Vector3 kickPosition = new Vector3(1449.3f, 244.4f, 546.0f);
 
 	void Start()
 	{
@@ -14,10 +16,17 @@ public class Ejector : MonoBehaviour
 
 	void Update()
 	{
-		if (IsWingmanInRange && wingman.GetComponent<Player>().getDetectionLevel() >= 1.0f)
+		if (IsWingmanInRange && wingman.GetComponent<Player>().getDetectionLevel() >= 1.0f && !IsInHouse)
 		{
 			GameObject.Find("Wingman").GetComponent<Rigidbody>().AddForce(transform.parent.forward.normalized.x * ThrowingForce, ThrowingForce, transform.parent.forward.normalized.z * ThrowingForce); 
-			GameObject.Find("SoundManager").GetComponent<SoundManager>().PlaySound("RecordScratch");
+			//GameObject.Find("SoundManager").GetComponent<SoundManager>().PlaySound("RecordScratch");
+			GameObject.Find("Detection").audio.Stop();
+			IsWingmanInRange = false;
+		}
+		else if (IsWingmanInRange && wingman.GetComponent<Player>().getDetectionLevel() >= 1.0f && IsInHouse)
+		{
+			GameObject.Find("Wingman").transform.position = kickPosition;
+			//GameObject.Find("SoundManager").GetComponent<SoundManager>().PlaySound("RecordScratch");
 			GameObject.Find("Detection").audio.Stop();
 			IsWingmanInRange = false;
 		}

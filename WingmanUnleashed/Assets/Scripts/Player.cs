@@ -62,13 +62,13 @@ public class Player : MonoBehaviour
 			if (detectionLevel <= 0.0f) DetectionSound.Stop();
 		}
 
-        if (numDetectors <= 0 && DetectionSound.isPlaying) DetectionSound.Stop();
+		if (numDetectors <= 0 && DetectionSound.isPlaying) DetectionSound.Stop();
 
 		detectionBar.fillAmount = detectionLevel;
 		detectionBar.color = Color.red * (detectionLevel + 0.2f);
 		eye.color = Color.red * (detectionLevel + 0.2f);
 
-		if (Input.GetKeyDown(KeyCode.Q) && !((Controller_ThirdPerson)gameObject.GetComponent("Controller_ThirdPerson")).flightmode)
+		if (Input.GetKeyDown(KeyCode.V) && !((Controller_ThirdPerson)gameObject.GetComponent("Controller_ThirdPerson")).flightmode)
 		{
 			if (wingmanVisionActive)
 			{
@@ -86,7 +86,7 @@ public class Player : MonoBehaviour
 	{
 		if (!DetectionSound.isPlaying) DetectionSound.Play();
 		detectionLevel += amount * Time.deltaTime;
-        DetectionSound.volume = detectionLevel;
+		DetectionSound.volume = detectionLevel;
 	}
 
 	public void increaseDetectionFlat(float amount)
