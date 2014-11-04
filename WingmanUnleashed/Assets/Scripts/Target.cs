@@ -25,15 +25,29 @@ public class Target : MonoBehaviour
 	{
 		GameObject.Find("SoundManager").GetComponent<SoundManager>().PlaySoundAt("SmallSuccess", gameObject.transform.position);
 		interest += amount;
+		InterestBoundsCheck();
 	}
 
 	public void decreaseInterest(float amount)
 	{
 		interest -= amount;
+		InterestBoundsCheck();
 	}
 
 	public float GetInterest()
 	{
 		return interest;
+	}
+
+	private void InterestBoundsCheck()
+	{
+		if (interest < 0.0f)
+		{
+			interest = 0.0f;
+		}
+		else if (interest > 1.0f)
+		{
+			interest = 1.0f;
+		}
 	}
 }

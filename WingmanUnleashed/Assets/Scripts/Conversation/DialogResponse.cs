@@ -14,5 +14,6 @@ public class DialogResponse : MonoBehaviour
 	public float RequiredConfidence = 0.0f;
 	public float AddedInterested = 0.0f;
 	public float AddedConfidence = 0.0f;
-	public string[] RequiredObjectiveNames;
+	public ConvoObjectiveHelper[] RequiredObjectives;
+	public float AddedSuspicion = 0.0f;
 }

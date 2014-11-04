@@ -11,7 +11,7 @@ public class BouncerAI : MonoBehaviour
 	public float stopDistanceFromPlayer = 0.2f;
 	public Transform[] waypoints;
 
-	private CharacterAnimator animation;
+	private CharacterAnimator Characteranimation;
 	private VisionDetection detection;
 	private NavMeshAgent nav;
 	private Transform playerWingman;
@@ -33,7 +33,7 @@ public class BouncerAI : MonoBehaviour
 
 	void Start()
 	{
-		animation = GetComponent<CharacterAnimator>();
+		Characteranimation = GetComponent<CharacterAnimator>();
 		detection = GetComponentInChildren<VisionDetection>();
 		nav = GetComponent<NavMeshAgent>();
 		playerWingman = GameObject.Find("Wingman").transform;
@@ -84,9 +84,9 @@ public class BouncerAI : MonoBehaviour
 
 		if (detection.IsPlayInRangeAndVisable) //Pursuing player
 		{
-			if (!animation.IsWalking())
+			if (!Characteranimation.IsWalking())
 			{
-				animation.StartWalking();
+				Characteranimation.StartWalking();
 			}
 			nav.stoppingDistance = stopDistanceFromPlayer;
 			nav.destination = playerWingman.position;
@@ -99,9 +99,9 @@ public class BouncerAI : MonoBehaviour
 			Vector3 distanceVector = playerWingman.position - transform.position;
 			if (distanceVector.magnitude <= stopDistanceFromPlayer)
 			{
-				if (animation.IsWalking())
+				if (Characteranimation.IsWalking())
 				{
-					animation.StopWalking();
+					Characteranimation.StopWalking();
 				}
 			}
 		}
@@ -120,9 +120,9 @@ public class BouncerAI : MonoBehaviour
 			{
 				if (totalTimeSearching <= 0.0f)
 				{
-					if (!animation.IsWalking())
+					if (!Characteranimation.IsWalking())
 					{
-						animation.StartWalking();
+						Characteranimation.StartWalking();
 					}
 					float yPos = transform.position.y;
 					Vector3 currentPos = lastKnownPlayerPosition + (Random.insideUnitSphere * 5);
@@ -131,9 +131,9 @@ public class BouncerAI : MonoBehaviour
 					nav.destination = currentPos;
 				}
 
-				if (animation.IsWalking())
+				if (Characteranimation.IsWalking())
 				{
-					animation.StopWalking();
+					Characteranimation.StopWalking();
 				}
 				totalTimeSearching += Time.deltaTime;
 				if (totalTimeSearching >= timeSearching)
@@ -143,16 +143,16 @@ public class BouncerAI : MonoBehaviour
 			}
 			else if (!searching)
 			{
-				if (!animation.IsWalking())
+				if (!Characteranimation.IsWalking())
 				{
-					animation.StartWalking();
+					Characteranimation.StartWalking();
 				}
 				Vector3 distanceVector = lastKnownPlayerPosition - transform.position;
 				if (distanceVector.magnitude <= stopZone && !searching)
 				{
-					if (animation.IsWalking())
+					if (Characteranimation.IsWalking())
 					{
-						animation.StopWalking();
+						Characteranimation.StopWalking();
 					}
 					totalTimePausing += Time.deltaTime;
 					if (totalTimePausing >= pauseWaitTime)
@@ -174,9 +174,9 @@ public class BouncerAI : MonoBehaviour
 		{
 			if (searching)
 			{
-				if (!animation.IsWalking())
+				if (!Characteranimation.IsWalking())
 				{
-					animation.StartWalking();
+					Characteranimation.StartWalking();
 				}
 				nav.speed = pursueSpeed;
 				nav.stoppingDistance = DEFAULT_STOP;
@@ -185,9 +185,9 @@ public class BouncerAI : MonoBehaviour
 				Vector3 distanceVector = lastKnownPlayerPosition - transform.position;
 				if (distanceVector.magnitude <= stopZone)
 				{
-					if (animation.IsWalking())
+					if (Characteranimation.IsWalking())
 					{
-						animation.StopWalking();
+						Characteranimation.StopWalking();
 					}
 					totalTimeSearching += Time.deltaTime;
 					if (totalTimeSearching >= timeSearching)
@@ -205,9 +205,9 @@ public class BouncerAI : MonoBehaviour
 		}
 		else
 		{
-			if (!animation.IsWalking())
+			if (!Characteranimation.IsWalking())
 			{
-				animation.StartWalking();
+				Characteranimation.StartWalking();
 			}
 			searching = true;
 			totalTimeSearching = 0.0f;
@@ -221,9 +221,9 @@ public class BouncerAI : MonoBehaviour
 			Vector3 distanceVector = lastKnownPlayerPosition - transform.position;
 			if (distanceVector.magnitude <= stopDistanceFromPlayer)
 			{
-				if (animation.IsWalking())
+				if (Characteranimation.IsWalking())
 				{
-					animation.StopWalking();
+					Characteranimation.StopWalking();
 				}
 			}
 		}
@@ -258,15 +258,15 @@ public class BouncerAI : MonoBehaviour
 
 	public void PlayerDetected()
 	{
-		animation.StopWalking();
+		Characteranimation.StopWalking();
 		nav.Stop();
 	}
 
 	private void FollowPath()
 	{
-		if (!animation.IsWalking())
+		if (!Characteranimation.IsWalking())
 		{
-			animation.StartWalking();
+			Characteranimation.StartWalking();
 		}
 		nav.speed = patrolSpeed;
 		if (waypoints[currentWaypoint] != null)
@@ -276,9 +276,9 @@ public class BouncerAI : MonoBehaviour
 
 			if (distanceVector.magnitude <= stopZone)
 			{
-				if (animation.IsWalking())
+				if (Characteranimation.IsWalking())
 				{
-					animation.StopWalking();
+					Characteranimation.StopWalking();
 				}
 				patrolPointWait_Timer += Time.deltaTime;
 

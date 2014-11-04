@@ -26,9 +26,11 @@ public class ConversationManager : MonoBehaviour
 	private Outfit outfit;
 
 	private MouseManager mouseManager;
+	private ObjectiveDisplayScript objectiveManager;
 
 	void Start()
 	{
+		objectiveManager = GameObject.Find("ObjectiveCanvas").GetComponent<ObjectiveDisplayScript>();
 		mouseManager = GameObject.Find("MouseManager").GetComponent<MouseManager>();
 
 		UI = gameObject.GetComponent<Canvas>();
@@ -149,18 +151,55 @@ public class ConversationManager : MonoBehaviour
 			{
 				foreach (var item in choice.Items)
 				{
-					inventory.RemoveItem(item.ItemName, item.Amount);
+					if (item.takeItems)
+					{
+						inventory.RemoveItem(item.ItemName, item.Amount);
+					}
 				}
 			}
 
 			if(choice.AddedConfidence != 0.0f)
 			{
-				clientScript.increaseConfidence(choice.AddedConfidence);
+				if (choice.AddedConfidence > 0.0f)
+				{
+					clientScript.increaseConfidence(choice.AddedConfidence);
+				}
+				else
+				{
+					clientScript.decreaseConfidence(-choice.AddedConfidence);
+				}
+				
 			}
 
 			if(choice.AddedInterested != 0.0f)
 			{
-				targetScript.increaseInterest(choice.AddedInterested);
+				if (choice.AddedInterested > 0.0f)
+				{
+					targetScript.increaseInterest(choice.AddedInterested);
+				}
+				else
+				{
+					targetScript.decreaseInterest(-choice.AddedInterested);
+				}
+			}
+
+			if (choice.RequiredObjectives.Length != 0)
+			{
+				foreach (var objective in choice.RequiredObjectives)
+				{
+					if (objective.AddOnSelection)
+					{
+						objectiveManager.AddObjective(objective.ObjectiveName, objective.AddOnText);
+					}
+
+					if (objective.CompleteOnSelection)
+					{
+						var objectObject = GameObject.Find(objective.ObjectiveName);
+						objectObject.GetComponent<ObjectiveInfo>().SetCompleted();
+
+						objectObject.GetComponentInChildren<Text>().text = "(Completed) " + objectObject.GetComponentInChildren<Text>().text;
+					}
+				}
 			}
 		}
 
@@ -200,7 +239,35 @@ public class ConversationManager : MonoBehaviour
 
 	private bool HasRequiredObjectives(DialogResponse d)
 	{
-		return true;
+		bool hasObjectivesCompleted = true;
+
+		foreach (var objective in d.RequiredObjectives)
+		{
+			var objectiveObject = GameObject.Find(objective.ObjectiveName);
+			switch (objective.RequiredObjectiveState)
+			{
+				case ObjectState.DoesNotExist:
+					if (objectiveObject != null)
+					{
+						hasObjectivesCompleted = false;
+					}
+					break;
+				case ObjectState.Started:
+					if (objectiveObject == null || objectiveObject.GetComponent<ObjectiveInfo>().IsComplete())
+					{
+						hasObjectivesCompleted = false;
+					}
+					break;
+				case ObjectState.Completed:
+					if (objectiveObject == null || !objectiveObject.GetComponent<ObjectiveInfo>().IsComplete())
+					{
+						hasObjectivesCompleted = false;
+					}
+					break;
+			}
+		}
+
+		return hasObjectivesCompleted;
 	}
 
 	private bool HasCorrectSelectionState(DialogResponse d)
