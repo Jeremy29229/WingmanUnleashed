@@ -3,7 +3,8 @@ using System.Collections;
 
 public class Motor_ThirdPerson : MonoBehaviour
 {
-	public float movementSpeed = 10.0f;
+	public float movementSpeed = 5.0f;
+    public float sprintSpeed = 10.0f;
 	public static Motor_ThirdPerson Instance;
 
 	public Vector3 MovementVector { get; set; }
@@ -19,7 +20,8 @@ public class Motor_ThirdPerson : MonoBehaviour
 
 		MovementVector = transform.TransformDirection(MovementVector);
 		MovementVector = Vector3.Normalize(MovementVector);
-		MovementVector = (MovementVector * movementSpeed) * Time.deltaTime;
+        if(Input.GetKey(KeyCode.LeftShift)) MovementVector = (MovementVector * sprintSpeed) * Time.deltaTime;
+        else MovementVector = (MovementVector * movementSpeed) * Time.deltaTime;
 		transform.position += MovementVector;
 		MovementVector = new Vector3(0, 0, 0);
 	}

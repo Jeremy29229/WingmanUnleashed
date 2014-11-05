@@ -11,6 +11,7 @@ public class Controller_ThirdPerson : MonoBehaviour
 	float windResistance = 0.5f;
 	public AudioSource windSound;
 	float jumpHeight = 300.0f;
+    float inAirCount = 0.0f;
 
 	public bool IsInConversation = false;
 
@@ -36,7 +37,6 @@ public class Controller_ThirdPerson : MonoBehaviour
         windSound.Stop();
         player.transform.GetComponent<WingmanAnimator>().ExitTPose();
         player.transform.GetChild(0).GetComponent<MeshRenderer>().enabled = false;
-        player.transform.Translate(new Vector3(0.0f, -0.5f, 0.0f));
 	}
 	public void flightmodeOn()
 	{
@@ -63,17 +63,6 @@ public class Controller_ThirdPerson : MonoBehaviour
 	{
 		if (!IsInConversation)
 		{
-			//if (Input.GetKeyDown(KeyCode.Space))
-			//{
-			//	if (flightmode)
-			//	{
-			//		flightmodeOff();
-			//	}
-			//	else
-			//	{
-			//		flightmodeOn();
-			//	}
-			//}
 
 			if (flightmode)
 			{
@@ -116,6 +105,10 @@ public class Controller_ThirdPerson : MonoBehaviour
 				{
 					player.transform.Rotate(new Vector3(0, 1, 0), 1.0f, Space.Self);
 				}
+                if (airspeed > 5.0f)
+                {
+                    if (Grounded()) flightmodeOff();
+                }
 			}
 			else
 			{
@@ -125,85 +118,147 @@ public class Controller_ThirdPerson : MonoBehaviour
 				}
 				else
 				{
-                    if (Input.GetKeyDown(KeyCode.W))
+                    if (inputTaken())
                     {
-                        player.transform.GetComponent<WingmanAnimator>().StartWalking();
-                    }
-                    else if (Input.GetKeyDown(KeyCode.A))
-                    {
-                        player.transform.GetComponent<WingmanAnimator>().StartStrafingLeft();
-                    }
-                    else if (Input.GetKeyDown(KeyCode.S))
-                    {
-                        player.transform.GetComponent<WingmanAnimator>().StartDancingGangnam();
-                    }
-                    else if (Input.GetKeyDown(KeyCode.D))
-                    {
-                        player.transform.GetComponent<WingmanAnimator>().StartStrafingRight();
-                    }
-                    if (Input.GetKeyUp(KeyCode.W))
-                    {
-                        player.transform.GetComponent<WingmanAnimator>().StopWalking();
-                    }
-                    else if (Input.GetKeyUp(KeyCode.A))
-                    {
-                        player.transform.GetComponent<WingmanAnimator>().StopStrafingLeft();
-                    }
-                    else if (Input.GetKeyUp(KeyCode.S))
-                    {
-                        player.transform.GetComponent<WingmanAnimator>().StopDancingGangnam();
-                    }
-                    else if (Input.GetKeyUp(KeyCode.D))
-                    {
-                        player.transform.GetComponent<WingmanAnimator>().StopStrafingRight();
-                    }
-					if (inputTaken())
-					{
-						horizontal = Input.GetAxis("Horizontal");
-						vertical = Input.GetAxis("Vertical");
-						Motor_ThirdPerson.Instance.MovementVector = new Vector3(horizontal, 0.0f, vertical);
-						if (Input.GetKeyDown(KeyCode.Space))
-						{
-                            if (CanJump())
+                        if (Input.GetKeyDown(KeyCode.C))
+                        {
+                            player.transform.GetComponent<WingmanAnimator>().ResetToIdle();
+                            player.transform.GetComponent<WingmanAnimator>().StartDancingGangnam();
+                        }
+                        if (Input.GetKeyUp(KeyCode.C))
+                        {
+                            player.transform.GetComponent<WingmanAnimator>().StopDancingGangnam();
+                        }
+                        if (!Input.GetKey(KeyCode.C))
+                        {
+                            if (Input.GetKeyDown(KeyCode.W))
                             {
-                                Rigidbody rig = (Rigidbody)player.GetComponent("Rigidbody");
-                                rig.AddForce(new Vector3(0.0f, jumpHeight, 0.0f));
+                                player.transform.GetComponent<WingmanAnimator>().StartWalking();
                             }
-						}
-						Motor_ThirdPerson.Instance.UpdateMotor();
-					}
+                            if (Input.GetKeyDown(KeyCode.A))
+                            {
+                                player.transform.GetComponent<WingmanAnimator>().StartStrafingLeft();
+                            }
+                            if (Input.GetKeyDown(KeyCode.S))
+                            {
+                                player.transform.GetComponent<WingmanAnimator>().StartWalking();
+                            }
+                            if (Input.GetKeyDown(KeyCode.D))
+                            {
+                                player.transform.GetComponent<WingmanAnimator>().StartStrafingRight();
+                            }
+                            if (Input.GetKeyUp(KeyCode.W))
+                            {
+                                player.transform.GetComponent<WingmanAnimator>().StopWalking();
+                            }
+                            if (Input.GetKeyUp(KeyCode.A))
+                            {
+                                player.transform.GetComponent<WingmanAnimator>().StopStrafingLeft();
+                            }
+                            if (Input.GetKeyUp(KeyCode.S))
+                            {
+                                player.transform.GetComponent<WingmanAnimator>().StopWalking();
+                            }
+                            if (Input.GetKeyUp(KeyCode.D))
+                            {
+                                player.transform.GetComponent<WingmanAnimator>().StopStrafingRight();
+                            }
+                            horizontal = Input.GetAxis("Horizontal");
+                            vertical = Input.GetAxis("Vertical");
+                            Motor_ThirdPerson.Instance.MovementVector = new Vector3(horizontal, 0.0f, vertical);
+                            if (Input.GetKeyDown(KeyCode.Space))
+                            {
+                                if (CanJump())
+                                {
+                                    Rigidbody rig = (Rigidbody)player.GetComponent("Rigidbody");
+                                    rig.AddForce(new Vector3(0.0f, jumpHeight, 0.0f));
+                                }
+                                else if(!Grounded()) flightmodeOn();
+                            }
+                            Motor_ThirdPerson.Instance.UpdateMotor();
+                        }
+                        else gameObject.GetComponent<Player>().decreaseDetection(0.1f);
+                    }
+                    else if(!player.transform.GetComponent<WingmanAnimator>().IsIdle())
+                    {
+                        player.transform.GetComponent<WingmanAnimator>().ResetToIdle();
+                    }
 				}
+                if (InAir()) flightmodeOn();
 			}
 			if (Input.GetKeyDown(KeyCode.Alpha1)||(player.transform.position.y<=0&&player.transform.position.y>-5))
 			{
-				player.transform.position = new Vector3(1328.158f, 1010.9615f, 162.7299f);
+				player.transform.position = new Vector3(1328.158f, 1000.9615f, 162.7299f);
 				flightmodeOff();
 			}
 			if (Input.GetKeyDown(KeyCode.Alpha2))
 			{
-				player.transform.position = new Vector3(310.0185f, 890.5f, 1143.175f);
+				player.transform.position = new Vector3(310.0185f, 880.5f, 1143.175f);
 				flightmodeOff();
 			}
 			if (Input.GetKeyDown(KeyCode.Alpha3))
 			{
-				player.transform.position = new Vector3(1764.116f, 828.00f, 1764.895f);
+				player.transform.position = new Vector3(1764.116f, 818.00f, 1764.895f);
 				flightmodeOff();
 			}
             if (Input.GetKeyDown(KeyCode.Alpha4))
             {
-                player.transform.position = new Vector3(1446.1f, 251.58f, 555.77f);
+                player.transform.position = new Vector3(1446.1f, 241.58f, 555.77f);
                 flightmodeOff();
             }
 		}
 	}
 
+    void OnCollisionEnter(Collision c)
+    {
+        if (flightmode && velocity.magnitude<=5.0f)
+        {
+            flightmodeOff();
+        }
+    }
+
     private bool CanJump()
     {
-        return Physics.Linecast(player.transform.position+new Vector3(0.0f,0.2f,0.0f), player.transform.position-new Vector3(0.0f,0.2f,0.0f));
+        bool result = false;
+        RaycastHit hit = new RaycastHit();
+        if (Physics.Linecast(player.transform.position + new Vector3(0.0f, 0.2f, 0.0f), player.transform.position - new Vector3(0.0f, 0.2f, 0.0f), out hit))
+        {
+            if (!hit.collider.isTrigger) result = true;
+        }
+        return result;
+    }
+    private bool Grounded()
+    {
+        bool result = false;
+        RaycastHit hit = new RaycastHit();
+        if (Physics.Linecast(player.transform.position + player.transform.rotation * new Vector3(0.0f, 1.1f, 0.0f), player.transform.position - new Vector3(0.0f, 1.50f, 0.0f), out hit))
+        {
+            if (!hit.collider.isTrigger) result = true;
+        }
+        return result;
+    }
+    private bool InAir()
+    {
+        bool result = false;
+        RaycastHit hit = new RaycastHit();
+        if (Physics.Linecast(player.transform.position + new Vector3(0.0f, 0.2f, 0.0f), player.transform.position - new Vector3(0.0f, 10.0f, 0.0f), out hit) && !hit.collider.isTrigger)
+        {
+            inAirCount = 0.0f;
+        }
+        else
+        {
+            inAirCount += Time.deltaTime;
+            if (inAirCount > 1.5f)
+            {
+                result = true;
+                inAirCount = 0.0f;
+            }
+        }
+        return result;
     }
 
 	private bool inputTaken()
 	{
-		return (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.Space));
+		return (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.C));
 	}
 }

@@ -93,7 +93,17 @@ public class Player : MonoBehaviour
 	{
 		if (detectionLevel <= 0.0f) DetectionSound.Play();
 		detectionLevel += amount;
+        DetectionSound.volume = detectionLevel;
 	}
+
+    public void decreaseDetection(float amount)
+    {
+        if (detectionLevel > 0.0f && !lockDetection)
+        {
+            detectionLevel -= amount * Time.deltaTime;
+            DetectionSound.volume = detectionLevel;
+        }
+    }
 
 	public float getDetectionLevel()
 	{

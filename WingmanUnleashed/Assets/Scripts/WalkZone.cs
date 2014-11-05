@@ -21,7 +21,6 @@ public class WalkZone : MonoBehaviour
     {
         if (c.gameObject == wingman)
         {
-            wingman.GetComponent<Controller_ThirdPerson>().flightmodeOff();
             GameObject.Find("MusicManager").GetComponent<Music>().PlayMusic(music);
         }
     }
@@ -30,7 +29,6 @@ public class WalkZone : MonoBehaviour
     {
         if (c.gameObject == wingman)
         {
-            wingman.GetComponent<Controller_ThirdPerson>().flightmodeOn();
             GameObject.Find("MusicManager").GetComponent<Music>().PlayDefault();
         }
     }
