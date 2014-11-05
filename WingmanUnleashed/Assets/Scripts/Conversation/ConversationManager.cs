@@ -185,6 +185,11 @@ public class ConversationManager : MonoBehaviour
 				}
 			}
 
+			if (choice.AddedSuspicion != 0.0f)
+			{
+				player.AddComponent<Player>().increaseDetectionFlat(choice.AddedSuspicion);
+			}
+
 			if (choice.RequiredObjectives.Length != 0)
 			{
 				foreach (var objective in choice.RequiredObjectives)
@@ -197,6 +202,12 @@ public class ConversationManager : MonoBehaviour
 					if (objective.CompleteOnSelection)
 					{
 						var objectObject = GameObject.Find(objective.ObjectiveName);
+						if (objectObject == null)
+						{
+							objectiveManager.AddObjective(objective.ObjectiveName, objective.AddOnText);
+							objectObject = GameObject.Find(objective.ObjectiveName);
+						}
+
 						objectObject.GetComponent<ObjectiveInfo>().SetCompleted();
 
 						objectObject.GetComponentInChildren<Text>().text = "(Completed) " + objectObject.GetComponentInChildren<Text>().text;
