@@ -16,4 +16,6 @@ public class DialogResponse : MonoBehaviour
 	public float AddedConfidence = 0.0f;
 	public ConvoObjectiveHelper[] RequiredObjectives;
 	public float AddedSuspicion = 0.0f;
+    public bool visitAfterward;
+    public GameObject destinationGameObject;
 }

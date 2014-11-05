@@ -23,6 +23,7 @@ public class ConversationManager : MonoBehaviour
 
 	private Target targetScript;
 	private Client clientScript;
+    private Commandable commandableClient;
 	private Outfit outfit;
 
 	private MouseManager mouseManager;
@@ -57,6 +58,7 @@ public class ConversationManager : MonoBehaviour
 		npcName = GameObject.Find("NPCName").GetComponent<Text>();
 
 		clientScript = GameObject.Find("Client").GetComponent<Client>();
+        commandableClient = GameObject.Find("Client").GetComponent<Commandable>();
 		targetScript = GameObject.Find("Target").GetComponent<Target>();
 		outfit = player.GetComponent<Outfit>();
 	}
@@ -201,6 +203,11 @@ public class ConversationManager : MonoBehaviour
 					}
 				}
 			}
+
+            if (choice.visitAfterward)
+            {
+                commandableClient.visitLocation(choice.destinationGameObject.transform.position);
+            }
 		}
 
 		ProcessDialog(next);

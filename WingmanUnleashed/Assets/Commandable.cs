@@ -7,12 +7,14 @@ public class Commandable : MonoBehaviour {
     private Vector3 currentDestination;
     private bool destinationReached;
     private GameObject leader;
+    private CharacterAnimator animator;
     bool following;
     bool willReturn;
 	// Use this for initialization
 	void Start () {
         agent = gameObject.GetComponent<NavMeshAgent>();
         startPosition = gameObject.transform.position;
+        animator = gameObject.GetComponent<CharacterAnimator>();
         destinationReached = true;
         following = false;
         willReturn = false;
@@ -32,18 +34,25 @@ public class Commandable : MonoBehaviour {
         {
             if (Vector3.Distance(gameObject.transform.position, currentDestination) < 1)
             {
+                animator.ResetToIdle();
                 destinationReached = true;
-                agent.SetDestination(gameObject.transform.position);
+                agent.Stop();
             }
+            if (currentDestination == startPosition)
+            {
+                willReturn = false;
+            } 
         }
         else if (willReturn)
         {
             sendToStartPosition();
         }
+       
 	}
 
     public void sendToLocation(Vector3 location)
     {
+        animator.StartWalking();
         currentDestination = location;
         agent.SetDestination(currentDestination);
         destinationReached = false;
