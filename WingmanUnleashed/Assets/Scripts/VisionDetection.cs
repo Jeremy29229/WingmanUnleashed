@@ -4,10 +4,10 @@ using System.Collections;
 public class VisionDetection : MonoBehaviour
 {
 	private GameObject wingMan;
+    public string disguiseGroup;
 	public bool playerInRange = false;
 	public bool IsPlayInRangeAndVisable = false;
-	public float SuitDectectionRate = 0.025f;
-	public float WingSuitDectectionRate = 0.1f;
+    public float BaseDetectionRate = 0.1f;
 	public Vector3 npcOffset = new Vector3(0, 1.5f, 0);
 	public Vector3 playerOffset = new Vector3(0, 1.5f, 0);
 
@@ -40,8 +40,8 @@ public class VisionDetection : MonoBehaviour
 						wingMan.GetComponent<Player>().numDetectors++;
 					}
 					IsPlayInRangeAndVisable = true;
-					if (wingMan.GetComponent<Outfit>().outfitName == "wingsuit") wingMan.GetComponent<Player>().increaseDetection(WingSuitDectectionRate);
-					else wingMan.GetComponent<Player>().increaseDetection(SuitDectectionRate);
+					if(wingMan.GetComponent<Outfit>().outfitName == disguiseGroup) wingMan.GetComponent<Player>().increaseDetection(BaseDetectionRate-wingMan.GetComponent<Outfit>().supression);
+                    else wingMan.GetComponent<Player>().increaseDetection(BaseDetectionRate - wingMan.GetComponent<Outfit>().supression*0.5f);
 					//					print(wingMan.GetComponent<Player>().getDetectionLevel());
 				}
 				else

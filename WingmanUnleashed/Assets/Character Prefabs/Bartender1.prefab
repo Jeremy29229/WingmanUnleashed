@@ -1275,10 +1275,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a95480042c5c5443b7afc95428a42ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  disguiseGroup: bartender
   playerInRange: 0
   IsPlayInRangeAndVisable: 0
-  SuitDectectionRate: 0
-  WingSuitDectectionRate: .0500000007
+  BaseDetectionRate: .100000001
   npcOffset: {x: 0, y: .899999976, z: 0}
   playerOffset: {x: 0, y: 1.5, z: 0}
 --- !u!114 &11400002

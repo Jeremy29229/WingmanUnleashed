@@ -5,6 +5,7 @@ public class Outfit : MonoBehaviour
 {
 	public string outfitName;
 	private GameObject player;
+    public float supression;
 
 	// Use this for initialization
 	void Start()
@@ -18,10 +19,10 @@ public class Outfit : MonoBehaviour
 
 	}
 
-	public void changeTo(string newOutfit)
+	public void changeTo(string newOutfit,float baseSupression)
 	{
         player.transform.GetChild(1).renderer.material.mainTexture = Resources.Load<Texture2D>(newOutfit + "Outfit");
-
+        supression = baseSupression;
 		outfitName = newOutfit;
 	}
 

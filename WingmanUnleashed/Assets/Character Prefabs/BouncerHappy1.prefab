@@ -1405,10 +1405,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a95480042c5c5443b7afc95428a42ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  disguiseGroup: bouncer
   playerInRange: 0
   IsPlayInRangeAndVisable: 0
-  SuitDectectionRate: .0250000004
-  WingSuitDectectionRate: .100000001
+  BaseDetectionRate: .100000001
   npcOffset: {x: 0, y: 1.64999998, z: 0}
   playerOffset: {x: 0, y: 1.5, z: 0}
 --- !u!114 &11400004
@@ -1423,6 +1423,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ThrowingForce: 1000
+  IsInHouse: 0
+  kickPosition: {x: 1449.30005, y: 244.399994, z: 546}
 --- !u!114 &11400006
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1434,6 +1436,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 772e8367e30d6fb42a1bce63508c7359, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 1
 --- !u!136 &13600000
 CapsuleCollider:
   m_ObjectHideFlags: 1

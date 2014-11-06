@@ -6,6 +6,7 @@ public class Disguise : MonoBehaviour, IInteractable
 	public string PlayerObjectName = "Wingman";
 	private Outfit outfit;
 	public string DisguiseName;
+    public float baseSupression;
 
 	void Start()
 	{
@@ -16,7 +17,7 @@ public class Disguise : MonoBehaviour, IInteractable
 	{
 		string playersOutfit = outfit.outfitName;
 		gameObject.renderer.material.mainTexture = Resources.Load<Texture2D>(playersOutfit + "Disguise");
-		outfit.changeTo(DisguiseName);
+		outfit.changeTo(DisguiseName,baseSupression);
 		DisguiseName = playersOutfit;
 	}
 }
