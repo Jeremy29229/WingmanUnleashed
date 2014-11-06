@@ -36,7 +36,7 @@ public class Controller_ThirdPerson : MonoBehaviour
         rig.velocity = new Vector3(0, 0, 0);
         windSound.Stop();
         player.transform.GetComponent<WingmanAnimator>().ExitTPose();
-        player.transform.GetChild(3).transform.GetChild(2).GetComponent<MeshRenderer>().enabled = false;
+        player.transform.GetChild(3).transform.GetChild(2).GetComponent<SkinnedMeshRenderer>().enabled = false;
 	}
 	public void flightmodeOn()
 	{
@@ -50,7 +50,7 @@ public class Controller_ThirdPerson : MonoBehaviour
 		rig.useGravity = false;
         windSound.Play();
         player.transform.GetComponent<WingmanAnimator>().EnterTPose();
-        player.transform.GetChild(3).transform.GetChild(2).GetComponent<MeshRenderer>().enabled = true;
+        player.transform.GetChild(3).transform.GetChild(2).GetComponent<SkinnedMeshRenderer>().enabled = true;
 	}
 
 	void Awake()
