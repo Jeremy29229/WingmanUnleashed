@@ -10,8 +10,10 @@ public class BouncerAI : MonoBehaviour
 	public float timeSearching = 3.0f;
 	public float stopDistanceFromPlayer = 0.2f;
 	public Transform[] waypoints;
+    public Vector3 throwPoint;
+    public float ThrowingForce = 1000.0f;
 
-	private CharacterAnimator Characteranimation;
+	private BouncerAnimator Characteranimation;
 	private VisionDetection detection;
 	private NavMeshAgent nav;
 	private Transform playerWingman;
@@ -30,10 +32,11 @@ public class BouncerAI : MonoBehaviour
 	private Vector3 distractionPos;
 	private bool checkingDistraction;
 	private float DEFAULT_STOP = 0.0f;
+    private bool carryingWingman;
 
 	void Start()
 	{
-		Characteranimation = GetComponent<CharacterAnimator>();
+		Characteranimation = GetComponent<BouncerAnimator>();
 		detection = GetComponentInChildren<VisionDetection>();
 		nav = GetComponent<NavMeshAgent>();
 		playerWingman = GameObject.Find("Wingman").transform;
@@ -48,6 +51,7 @@ public class BouncerAI : MonoBehaviour
 		totalTimeSearching = 0.0f;
 		lastKnownPlayerPosition = Vector3.zero;
 		checkingDistraction = false;
+        carryingWingman = false;
 	}
 
 	void LateUpdate()
@@ -58,8 +62,11 @@ public class BouncerAI : MonoBehaviour
 		{
 			DistractionManager.Instance.AddDistraction(10.0f, 10.0f, playerWingman.position);
 		}
-
-		if (currentDetectionLevel <= maxStopToLookLevel)
+        if (carryingWingman)
+        {
+            Carrying();
+        }
+		else if (currentDetectionLevel <= maxStopToLookLevel)
 		{
 			Patrolling();
 		}
@@ -71,11 +78,32 @@ public class BouncerAI : MonoBehaviour
 		{
 			Pursuing();
 		}
-		else if (currentDetectionLevel > maxPursueLevel)
-		{
-			FullPursuit();
-		}
+        else if (currentDetectionLevel > maxPursueLevel)
+        {
+            FullPursuit();
+        }
 	}
+
+    public void Carrying()
+    {
+        Vector3 distanceVector = throwPoint - transform.position;
+        if (distanceVector.magnitude <= stopDistanceFromPlayer)
+        {
+            carryingWingman = false;
+            Characteranimation.FinishThrow();
+            playerWingman.Rotate(transform.forward, -90);
+            playerWingman.gameObject.GetComponent<Rigidbody>().AddForce((transform.forward + Vector3.up) * ThrowingForce); 
+            
+        }
+        else
+        {
+            playerWingman.position = gameObject.transform.position + new Vector3(0f, 1.9f, 0f) - playerWingman.up;
+            playerWingman.forward = transform.forward;
+            playerWingman.Rotate(transform.forward, 90);
+            nav.destination = throwPoint;
+            Characteranimation.fixWeight();
+        }
+    }
 
 	public void FullPursuit()
 	{
@@ -99,10 +127,15 @@ public class BouncerAI : MonoBehaviour
 			Vector3 distanceVector = playerWingman.position - transform.position;
 			if (distanceVector.magnitude <= stopDistanceFromPlayer)
 			{
-				if (Characteranimation.IsWalking())
-				{
-					Characteranimation.StopWalking();
-				}
+                //if (Characteranimation.IsWalking())
+                //{
+                //    Characteranimation.StopWalking();
+                //}
+                carryingWingman = true;
+                Characteranimation.StartThrow();
+                playerWingman.position = gameObject.transform.position + new Vector3(0f, 1.8f, 0f);
+                playerWingman.Rotate(transform.forward, 90);
+                nav.destination = throwPoint;
 			}
 		}
 		else if (!detection.IsPlayInRangeAndVisable && !lastPositionKnown) //Lost sight of player
