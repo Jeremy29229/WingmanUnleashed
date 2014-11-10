@@ -12,6 +12,7 @@ public class Controller_ThirdPerson : MonoBehaviour
 	public AudioSource windSound;
 	float jumpHeight = 300.0f;
     float inAirCount = 0.0f;
+    bool coverBlown = false;
 
 	public bool IsInConversation = false;
 
@@ -124,10 +125,12 @@ public class Controller_ThirdPerson : MonoBehaviour
                         {
                             player.transform.GetComponent<WingmanAnimator>().ResetToIdle();
                             player.transform.GetComponent<WingmanAnimator>().StartDancingGangnam();
+                            if (gameObject.GetComponent<Player>().numDetectors > 0) coverBlown = true;
                         }
                         if (Input.GetKeyUp(KeyCode.C))
                         {
                             player.transform.GetComponent<WingmanAnimator>().StopDancingGangnam();
+                            coverBlown = false;
                         }
                         if (!Input.GetKey(KeyCode.C))
                         {
@@ -164,7 +167,7 @@ public class Controller_ThirdPerson : MonoBehaviour
                                 player.transform.GetComponent<WingmanAnimator>().StopStrafingRight();
                             }
                         }
-                        else gameObject.GetComponent<Player>().decreaseDetection(0.1f);
+                        else if(!coverBlown)gameObject.GetComponent<Player>().decreaseDetection(0.1f);
                     }
                     else if(!player.transform.GetComponent<WingmanAnimator>().IsIdle())
                     {
