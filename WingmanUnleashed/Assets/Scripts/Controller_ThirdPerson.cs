@@ -163,19 +163,6 @@ public class Controller_ThirdPerson : MonoBehaviour
                             {
                                 player.transform.GetComponent<WingmanAnimator>().StopStrafingRight();
                             }
-                            horizontal = Input.GetAxis("Horizontal");
-                            vertical = Input.GetAxis("Vertical");
-                            Motor_ThirdPerson.Instance.MovementVector = new Vector3(horizontal, 0.0f, vertical);
-                            if (Input.GetKeyDown(KeyCode.Space))
-                            {
-                                if (CanJump())
-                                {
-                                    Rigidbody rig = (Rigidbody)player.GetComponent("Rigidbody");
-                                    rig.AddForce(new Vector3(0.0f, jumpHeight, 0.0f));
-                                }
-                                else if(!Grounded()) flightmodeOn();
-                            }
-                            Motor_ThirdPerson.Instance.UpdateMotor();
                         }
                         else gameObject.GetComponent<Player>().decreaseDetection(0.1f);
                     }
@@ -183,6 +170,23 @@ public class Controller_ThirdPerson : MonoBehaviour
                     {
                         player.transform.GetComponent<WingmanAnimator>().ResetToIdle();
                     }
+
+
+                    horizontal = Input.GetAxis("Horizontal");
+                    vertical = Input.GetAxis("Vertical");
+                    Motor_ThirdPerson.Instance.MovementVector = new Vector3(horizontal, 0.0f, vertical);
+
+                    if (Input.GetKeyDown(KeyCode.Space))
+                    {
+                        if (CanJump())
+                        {
+                            Rigidbody rig = (Rigidbody)player.GetComponent("Rigidbody");
+                            rig.AddForce(new Vector3(0.0f, jumpHeight, 0.0f));
+                        }
+                        else if (!Grounded()) flightmodeOn();
+                    }
+                    Motor_ThirdPerson.Instance.UpdateMotor();
+
 				}
                 if (InAir()) flightmodeOn();
 			}
@@ -230,11 +234,14 @@ public class Controller_ThirdPerson : MonoBehaviour
     private bool Grounded()
     {
         bool result = false;
-        RaycastHit hit = new RaycastHit();
+        RaycastHit hit;// = new RaycastHit();
+        Debug.DrawLine(player.transform.position + player.transform.rotation * new Vector3(0.0f, 1.1f, 0.0f), player.transform.position - new Vector3(0.0f, 1.50f, 0.0f), Color.red, 1000);
+
         if (Physics.Linecast(player.transform.position + player.transform.rotation * new Vector3(0.0f, 1.1f, 0.0f), player.transform.position - new Vector3(0.0f, 1.50f, 0.0f), out hit))
         {
             if (!hit.collider.isTrigger) result = true;
         }
+
         return result;
     }
     private bool InAir()

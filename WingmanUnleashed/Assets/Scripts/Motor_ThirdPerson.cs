@@ -5,13 +5,16 @@ public class Motor_ThirdPerson : MonoBehaviour
 {
 	public float movementSpeed = 5.0f;
     public float sprintSpeed = 10.0f;
+    public float crouchSpeed = 2.0f;
 	public static Motor_ThirdPerson Instance;
 
 	public Vector3 MovementVector { get; set; }
+    public bool isCrouching;
 
 	void Awake()
 	{
 		Instance = this;
+        isCrouching = false;
 	}
 
 	public void UpdateMotor()
@@ -20,8 +23,26 @@ public class Motor_ThirdPerson : MonoBehaviour
 
 		MovementVector = transform.TransformDirection(MovementVector);
 		MovementVector = Vector3.Normalize(MovementVector);
-        if(Input.GetKey(KeyCode.LeftShift)) MovementVector = (MovementVector * sprintSpeed) * Time.deltaTime;
-        else MovementVector = (MovementVector * movementSpeed) * Time.deltaTime;
+
+        float speedValue = 0.0f;
+        if (Input.GetKeyDown(KeyCode.LeftControl) || Input.GetKeyDown(KeyCode.RightControl))
+        {
+            isCrouching = !isCrouching;
+        }
+
+        if (isCrouching)
+        {
+            speedValue = crouchSpeed;
+        }
+        else if (Input.GetKey(KeyCode.LeftShift))
+        {
+            speedValue = sprintSpeed;
+        }
+        else
+        {
+            speedValue = movementSpeed;
+        }
+        MovementVector = (MovementVector * speedValue) * Time.deltaTime;
 		transform.position += MovementVector;
 		MovementVector = new Vector3(0, 0, 0);
 	}
