@@ -75,6 +75,11 @@ public class Commandable : MonoBehaviour {
         following = true;
     }
 
+    public void teleport(Vector3 location)
+    {
+        gameObject.transform.position = location;
+    }
+
     public void stopFollowing()
     {
         following = false;
