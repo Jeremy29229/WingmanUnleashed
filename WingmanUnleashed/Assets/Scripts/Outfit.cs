@@ -21,7 +21,7 @@ public class Outfit : MonoBehaviour
 
 	public void changeTo(string newOutfit,float baseSupression)
 	{
-        player.transform.GetChild(1).renderer.material.mainTexture = Resources.Load<Texture2D>(newOutfit + "Outfit");
+        player.transform.GetChild(0).renderer.material.mainTexture = Resources.Load<Texture2D>(newOutfit + "Outfit");
         supression = baseSupression;
 		outfitName = newOutfit;
 	}
@@ -29,7 +29,7 @@ public class Outfit : MonoBehaviour
 	IEnumerator sleep(string newOutfit)
 	{
 		yield return new WaitForSeconds(0.1f);
-		player.transform.GetChild(1).renderer.material.mainTexture = Resources.Load<Texture2D>(newOutfit + "Outfit");
+		player.transform.GetChild(0).renderer.material.mainTexture = Resources.Load<Texture2D>(newOutfit + "Outfit");
 	}
 
 }
