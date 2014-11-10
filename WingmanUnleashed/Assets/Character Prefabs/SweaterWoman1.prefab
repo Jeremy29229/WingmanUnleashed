@@ -1275,6 +1275,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 772e8367e30d6fb42a1bce63508c7359, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 1
 --- !u!114 &11400010
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1286,10 +1287,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a95480042c5c5443b7afc95428a42ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  disguiseGroup: 
   playerInRange: 0
   IsPlayInRangeAndVisable: 0
-  SuitDectectionRate: 0
-  WingSuitDectectionRate: .0500000007
+  BaseDetectionRate: .0250000004
   npcOffset: {x: 0, y: .899999976, z: 0}
   playerOffset: {x: 0, y: 1.5, z: 0}
 --- !u!137 &13700000
