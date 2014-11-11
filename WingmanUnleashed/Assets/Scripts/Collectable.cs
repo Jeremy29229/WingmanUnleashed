@@ -30,7 +30,6 @@ public class Collectable : MonoBehaviour, IInteractable
 
 		if (isItemImportanceDisplayed != wasItemImportanceDisplayed)
 		{
-			print("changing display state");
 			wasItemImportanceDisplayed = isItemImportanceDisplayed;
 			GetComponentInChildren<Canvas>().enabled = isItemImportanceDisplayed;
 
@@ -41,7 +40,7 @@ public class Collectable : MonoBehaviour, IInteractable
 	{
 		GameObject.Find("SoundManager").GetComponent<SoundManager>().PlaySoundAt("cashGrab", gameObject.transform.position);
 
-        inventory.AddItem(gameObject.GetComponent<Interactable>().InteractableName, gameObject, inventorySprite);
+		inventory.AddItem(gameObject.GetComponent<Interactable>().InteractableName, gameObject, inventorySprite);
 
 		if (wingman.numDetectors > 0)
 		{

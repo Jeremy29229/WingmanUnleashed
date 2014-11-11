@@ -6,6 +6,9 @@ TagManager:
   - TargetLookAt
   - Wingman
   - WMVLight
+  - Zone0
+  - Zone1
+  - Test
   - 
   Builtin Layer 0: Default
   Builtin Layer 1: TransparentFX

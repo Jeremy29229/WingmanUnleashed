@@ -13,7 +13,7 @@ public class Player_Crouch : MonoBehaviour
     private float originalColliderHeight;
     private float crouchColliderHeight;
     private float previousColliderHeight;
-    private CapsuleCollider collider;
+    private CapsuleCollider capCollider;
     private Transform cameraLookAt;
 
     private float CROUCHING = 1;
@@ -23,17 +23,17 @@ public class Player_Crouch : MonoBehaviour
     {
         Instance = this;
         currentCrouchAmount = 1.0f;
-        collider = GetComponent<CapsuleCollider>() as CapsuleCollider;
-        originalColliderHeight = collider.height;
+        capCollider = GetComponent<CapsuleCollider>() as CapsuleCollider;
+        originalColliderHeight = capCollider.height;
         crouchColliderHeight = originalColliderHeight * crouchAmount;
     }
 
     void Update()
     {
         cameraLookAt = Camera_ThirdPerson.Instance.TargetObjectLookAt;
-        previousColliderHeight = collider.height;
+        previousColliderHeight = capCollider.height;
 
-        collider.height = Mathf.Lerp(originalColliderHeight, crouchColliderHeight, currentCrouchAmount);
+        capCollider.height = Mathf.Lerp(originalColliderHeight, crouchColliderHeight, currentCrouchAmount);
 
         if (Motor_ThirdPerson.Instance.isCrouching)
         {
@@ -45,8 +45,8 @@ public class Player_Crouch : MonoBehaviour
             currentCrouchAmount = Mathf.SmoothDamp(currentCrouchAmount, STANDING, ref crouchVelocity, transitionInSeconds);
         }
 
-        cameraLookAt.position += new Vector3(0.0f, (collider.height - previousColliderHeight) * 0.5f, 0.0f);
-        collider.center += new Vector3(0.0f, (collider.height - previousColliderHeight) * 0.5f, 0.0f);
+        cameraLookAt.position += new Vector3(0.0f, (capCollider.height - previousColliderHeight) * 0.5f, 0.0f);
+        capCollider.center += new Vector3(0.0f, (capCollider.height - previousColliderHeight) * 0.5f, 0.0f);
     }
 
 

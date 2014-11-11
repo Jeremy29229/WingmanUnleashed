@@ -57,9 +57,9 @@ public class ConversationManager : MonoBehaviour
 		npcText = GameObject.Find("NPCText").GetComponent<Text>();
 		npcName = GameObject.Find("NPCName").GetComponent<Text>();
 
-		clientScript = GameObject.Find("Client").GetComponent<Client>();
-        commandableClient = GameObject.Find("Client").GetComponent<Commandable>();
-		targetScript = GameObject.Find("Target").GetComponent<Target>();
+		clientScript = GameObject.Find("Client").GetComponentInChildren<Client>();
+		commandableClient = GameObject.Find("Client").GetComponentInChildren<Commandable>();
+		targetScript = GameObject.Find("Target").GetComponentInChildren<Target>();
 		outfit = player.GetComponent<Outfit>();
 	}
 
