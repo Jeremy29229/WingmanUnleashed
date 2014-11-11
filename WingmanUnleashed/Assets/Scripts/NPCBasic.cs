@@ -70,7 +70,7 @@ public class NPCBasic : MonoBehaviour
         switch (CharacterType)
         {
             case BasicCharacters.Bartender:
-                conversationInformation.GetComponent<Interactable>().name = "Bartender";
+                conversationInformation.GetComponent<Interactable>().InteractableName = "Bartender";
                 dialog1a.NPCDialog = "I'm not judging your outfit. I'm just giving you constructive criticism. Silently.";
                 dialog2a.NPCDialog = "I'm just a bartender. I tend the bar. Or end the bart, it really depends.";
                 dialog3a.NPCDialog = "It took me three years to perfect the art of silently washing cups while feigning sympathy towards your problems.";
@@ -78,7 +78,7 @@ public class NPCBasic : MonoBehaviour
                 dialog5a.NPCDialog = "I may look bored, but I'm actually racking up points on my people watching score.";
                 break;
             case BasicCharacters.GingerMan:
-                conversationInformation.GetComponent<Interactable>().name = NameGenerator.GenerateRandomFullNameMasculine();
+                conversationInformation.GetComponent<Interactable>().InteractableName = NameGenerator.GenerateRandomFullNameMasculine();
                 dialog1a.NPCDialog = "Mmhm.";
                 dialog2a.NPCDialog = "No. I'm not going to steal your soul. Not yet.";
                 dialog3a.NPCDialog = "It's a shame steel trees went extinct. Nice workout.";
@@ -86,7 +86,7 @@ public class NPCBasic : MonoBehaviour
                 dialog5a.NPCDialog = "Everyone's always too busy to get their own drinks. Lazy.";
                 break;
             case BasicCharacters.Jock:
-                conversationInformation.GetComponent<Interactable>().name = NameGenerator.GenerateRandomFullNameMasculine();
+                conversationInformation.GetComponent<Interactable>().InteractableName = NameGenerator.GenerateRandomFullNameMasculine();
                 dialog1a.NPCDialog = "Eeeeeey ballin' threads brah!!";
                 dialog2a.NPCDialog = "Didja catch the game last night?! Saawwweeeeeet!";
                 dialog3a.NPCDialog = "Look at all these <b>GIIIIRLS</b> duuuude!";
@@ -94,7 +94,7 @@ public class NPCBasic : MonoBehaviour
                 dialog5a.NPCDialog = "Breath check. One. Two. Awhh yeah I am HAWT.";
                 break;
             case BasicCharacters.PlaidMan:
-                conversationInformation.GetComponent<Interactable>().name = NameGenerator.GenerateRandomFullNameMasculine();
+                conversationInformation.GetComponent<Interactable>().InteractableName = NameGenerator.GenerateRandomFullNameMasculine();
                 dialog1a.NPCDialog = "<i>Adjusts mustache</i>";
                 dialog2a.NPCDialog = "I have thirty-five shirts. All of them plaid. All of them different colors.";
                 dialog3a.NPCDialog = "My plaid game is top.";
@@ -102,7 +102,7 @@ public class NPCBasic : MonoBehaviour
                 dialog5a.NPCDialog = "Don't get mad. Get plaid.";
                 break;
             case BasicCharacters.PoliceMan:
-                conversationInformation.GetComponent<Interactable>().name = NameGenerator.GenerateRandomFullNameMasculine();
+                conversationInformation.GetComponent<Interactable>().InteractableName = NameGenerator.GenerateRandomFullNameMasculine();
                 dialog1a.NPCDialog = "STOP RIGHT THERE CRIMINAL SCUM! Just kidding. I'm off duty right now.";
                 dialog2a.NPCDialog = "I can't really compete with these bouncers here. But my taser can.";
                 dialog3a.NPCDialog = "I've been on the force for over forty years now. It can be rough sometimes.";
@@ -110,7 +110,7 @@ public class NPCBasic : MonoBehaviour
                 dialog5a.NPCDialog = "These are some good drinks, must have been expensive.";
                 break;
             case BasicCharacters.Shenheizzer:
-                conversationInformation.GetComponent<Interactable>().name = "The Shenheizzer";
+                conversationInformation.GetComponent<Interactable>().InteractableName = "The Shenheizzer";
                 dialog1a.NPCDialog = "Dr-dr-dr-dr-DROP the <b>BASS</b>";
                 dialog2a.NPCDialog = "Awwwwhaha yeah man these beats are HOT!";
                 dialog3a.NPCDialog = "The Shenheizzer doesn't like to brag.... but the Shenheizzer is absolutely KILLING IT RIGHT NOW.";

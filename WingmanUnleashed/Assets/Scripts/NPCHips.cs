@@ -70,7 +70,7 @@ public class NPCHips : MonoBehaviour
 		switch (CharacterType)
 		{
 			case HipsCharacters.AgingWoman:
-				conversationInformation.GetComponent<Interactable>().name = NameGenerator.GenerateRandomFullNameFeminine();
+                conversationInformation.GetComponent<Interactable>().InteractableName = NameGenerator.GenerateRandomFullNameFeminine();
 				dialog1a.NPCDialog = "Harumph.";
 				dialog2a.NPCDialog = "They say the drinks at this party are imported.";
 				dialog3a.NPCDialog = "My niece invited me here. She's a doctor you know.";
@@ -78,7 +78,7 @@ public class NPCHips : MonoBehaviour
 				dialog5a.NPCDialog = "Did you know my son in law is a chef? Why they don't have him cater <i>every</i> party is beyond me.";
 				break;
 			case HipsCharacters.BlondeGirl:
-				conversationInformation.GetComponent<Interactable>().name = NameGenerator.GenerateRandomFullNameFeminine();
+                conversationInformation.GetComponent<Interactable>().InteractableName = NameGenerator.GenerateRandomFullNameFeminine();
 				dialog1a.NPCDialog = "You see that guy? He's totes checking me out. NO don't look! Play it cool!";
 				dialog2a.NPCDialog = "O.M.G. My selfie in this outfit already has like 50 ups.";
 				dialog3a.NPCDialog = "#party #datmusictho #someweirdokeepstalkingtome #whoevenisthisguy";
@@ -86,7 +86,7 @@ public class NPCHips : MonoBehaviour
 				dialog5a.NPCDialog = "Sometimes I feel like the people at these parties know, like, two whole dances. It's super weird.";
 				break;
 			case HipsCharacters.DarkHairWoman:
-				conversationInformation.GetComponent<Interactable>().name = NameGenerator.GenerateRandomFullNameFeminine();
+                conversationInformation.GetComponent<Interactable>().InteractableName = NameGenerator.GenerateRandomFullNameFeminine();
 				dialog1a.NPCDialog = "That economy huh?";
 				dialog2a.NPCDialog = "Do you always just walk up to people, nothing to say, and wait for them to talk to you?";
 				dialog3a.NPCDialog = "I'm pretty sure you're not supposed to be here. But then, I don't really <i>want</i> to be here. So whatever.";
@@ -94,7 +94,7 @@ public class NPCHips : MonoBehaviour
 				dialog5a.NPCDialog = "I'm so glad they created those bigger-on-the-inside-pockets. Where else would I put my purse?";
 				break;
 			case HipsCharacters.GingerWoman:
-				conversationInformation.GetComponent<Interactable>().name = NameGenerator.GenerateRandomFullNameFeminine();
+                conversationInformation.GetComponent<Interactable>().InteractableName = NameGenerator.GenerateRandomFullNameFeminine();
 				dialog1a.NPCDialog = "Did you see that guy over there? In the glasses? So cute. So cute.";
 				dialog2a.NPCDialog = "The day they outlawed laser eye surgery was historic day.";
 				dialog3a.NPCDialog = "Can you believe? There was a guest using the <i>p word!</i>";
@@ -102,7 +102,7 @@ public class NPCHips : MonoBehaviour
 				dialog5a.NPCDialog = "Excuse me, I seem to have lost my phone number, can I please borrow yours? ... That was a joke. Ha.";
 				break;
 			case HipsCharacters.GothWoman:
-				conversationInformation.GetComponent<Interactable>().name = NameGenerator.GenerateRandomFullNameFeminine();
+                conversationInformation.GetComponent<Interactable>().InteractableName = NameGenerator.GenerateRandomFullNameFeminine();
 				dialog1a.NPCDialog = "<i>Self loathing intensifies</i>";
 				dialog2a.NPCDialog = "You ever hike up in the mountains and just howl alone to the party moon?";
 				dialog3a.NPCDialog = "Ever seen someone carry around their own dismembered leg?";

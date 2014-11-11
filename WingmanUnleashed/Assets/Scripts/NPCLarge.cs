@@ -69,7 +69,7 @@ public class NPCLarge : MonoBehaviour {
         switch (CharacterType)
         {
             case LargeCharacters.Gamer:
-                conversationInformation.GetComponent<Interactable>().name = NameGenerator.GenerateRandomGamerName();
+                conversationInformation.GetComponent<Interactable>().InteractableName = NameGenerator.GenerateRandomGamerName();
                 dialog1a.NPCDialog = "I have like 30 followers on my Switch Stream.";
                 dialog2a.NPCDialog = "The latest Hat Man movie was insufferabley incorrect in regards to Cane's backstory. Typical mainstream media.";
                 dialog3a.NPCDialog = "Wanna see my level 9999 CyberWhale on YoY?";
@@ -77,7 +77,7 @@ public class NPCLarge : MonoBehaviour {
                 dialog5a.NPCDialog = "I hear there's this new 'wingman' game in development. Sounds like a game for filthy casuals.";
                 break;
             case LargeCharacters.RichMan:
-                conversationInformation.GetComponent<Interactable>().name = NameGenerator.GenerateRandomFullNameMasculine();
+                conversationInformation.GetComponent<Interactable>().InteractableName = NameGenerator.GenerateRandomFullNameMasculine();
                 dialog1a.NPCDialog = "<i>Pretentiously jolly laughter</i>";
                 dialog2a.NPCDialog = "I paid for a large portion of this party. Only the very best for my closest - wait, who are you?";
                 dialog3a.NPCDialog = "Some say that my greatest weakness is that I am just far too humble.";
@@ -85,7 +85,7 @@ public class NPCLarge : MonoBehaviour {
                 dialog5a.NPCDialog = "Sometimes I toss money off this rooftop and watch the people down below. It's like the ancient ducks with bread.";
                 break;
             case LargeCharacters.RichWoman:
-                conversationInformation.GetComponent<Interactable>().name = NameGenerator.GenerateRandomFullNameFeminine();
+                conversationInformation.GetComponent<Interactable>().InteractableName = NameGenerator.GenerateRandomFullNameFeminine();
                 dialog1a.NPCDialog = "Hmmmmmmmmmph.";
                 dialog2a.NPCDialog = "What do you want? Never mind, I don't care.";
                 dialog3a.NPCDialog = "I should think a party of this caliber would warrant more care in outfit planning. Evidently not.";

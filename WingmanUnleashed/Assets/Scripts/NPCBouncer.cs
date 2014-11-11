@@ -83,7 +83,7 @@ public class NPCBouncer : MonoBehaviour {
                 break;
         }
         conversationInformation.GetComponent<Interactable>().enabled = true;
-        conversationInformation.GetComponent<Interactable>().name = "Bouncer";
+        conversationInformation.GetComponent<Interactable>().InteractableName = "Bouncer";
         conversationInformation.GetComponent<Interactable>().Action = "Talk to";
     }
 
