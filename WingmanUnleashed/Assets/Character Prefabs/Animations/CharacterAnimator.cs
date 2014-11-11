@@ -17,6 +17,7 @@ public class CharacterAnimator : MonoBehaviour
 	void Start () 
     {
         animator = GetComponent<Animator>();
+            
         if (animator == null)
         {
             throw new MissingComponentException("Character " + gameObject.name + " has no animation component, cannot be animated by CharacterAnimation script.");

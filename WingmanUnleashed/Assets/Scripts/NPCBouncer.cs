@@ -5,8 +5,7 @@ public class NPCBouncer : MonoBehaviour {
     public BouncerType BouncerType = BouncerType.Angry;
     public BouncerVariant Variant = BouncerVariant.One;
     public bool RandomIdleDialogue = true;
-    public bool UseNavMesh = false;
-    public bool Wander = false;
+    public bool UseNavMesh = true;
 
     void Start()
     {
@@ -14,10 +13,7 @@ public class NPCBouncer : MonoBehaviour {
         if (!UseNavMesh)
         {
             gameObject.GetComponent<NavMeshAgent>().enabled = false;
-        }
-        if (!Wander)
-        {
-            gameObject.GetComponent<Wanderer>().enabled = false;
+            GetComponent<CharacterAnimator>().ResetToIdle();
         }
         if (RandomIdleDialogue)
         {
@@ -27,35 +23,38 @@ public class NPCBouncer : MonoBehaviour {
 
     private void SetupRandomDialogue()
     {
-        Interactable interactable = gameObject.AddComponent<Interactable>();
-        interactable.Action = "Talk to";
-        interactable.name = "Default";
-        RandomConversible randomConversible = gameObject.AddComponent<RandomConversible>();
-        Correspondence correspondance = gameObject.AddComponent<Correspondence>();
-        correspondance.Conversations = new Conversation[5];
+        GameObject conversationInformation = gameObject.transform.FindChild("ConversationInformation").gameObject;
+        conversationInformation.transform.FindChild("NPCOverheadDisplay").gameObject.SetActive(true);
 
-        Conversation conversation1 = gameObject.AddComponent<Conversation>();
-        Dialog dialog1a = gameObject.AddComponent<Dialog>();
+        RandomConversible randomConversible = conversationInformation.AddComponent<RandomConversible>();
+        randomConversible.enabled = false;
+
+        Correspondence correspondance = conversationInformation.AddComponent<Correspondence>();
+        correspondance.Conversations = new Conversation[5];
+        randomConversible.enabled = true;
+
+        Conversation conversation1 = conversationInformation.AddComponent<Conversation>();
+        Dialog dialog1a = conversationInformation.AddComponent<Dialog>();
         conversation1.Beginning = dialog1a;
         correspondance.Conversations[0] = conversation1;
 
-        Conversation conversation2 = gameObject.AddComponent<Conversation>();
-        Dialog dialog2a = gameObject.AddComponent<Dialog>();
+        Conversation conversation2 = conversationInformation.AddComponent<Conversation>();
+        Dialog dialog2a = conversationInformation.AddComponent<Dialog>();
         conversation2.Beginning = dialog2a;
         correspondance.Conversations[1] = conversation2;
 
-        Conversation conversation3 = gameObject.AddComponent<Conversation>();
-        Dialog dialog3a = gameObject.AddComponent<Dialog>();
+        Conversation conversation3 = conversationInformation.AddComponent<Conversation>();
+        Dialog dialog3a = conversationInformation.AddComponent<Dialog>();
         conversation3.Beginning = dialog3a;
         correspondance.Conversations[2] = conversation3;
 
-        Conversation conversation4 = gameObject.AddComponent<Conversation>();
-        Dialog dialog4a = gameObject.AddComponent<Dialog>();
+        Conversation conversation4 = conversationInformation.AddComponent<Conversation>();
+        Dialog dialog4a = conversationInformation.AddComponent<Dialog>();
         conversation4.Beginning = dialog4a;
         correspondance.Conversations[3] = conversation4;
 
-        Conversation conversation5 = gameObject.AddComponent<Conversation>();
-        Dialog dialog5a = gameObject.AddComponent<Dialog>();
+        Conversation conversation5 = conversationInformation.AddComponent<Conversation>();
+        Dialog dialog5a = conversationInformation.AddComponent<Dialog>();
         conversation5.Beginning = dialog5a;
         correspondance.Conversations[4] = conversation5;
 
@@ -83,6 +82,9 @@ public class NPCBouncer : MonoBehaviour {
                 dialog5a.NPCDialog = "Don't have money for drinks? You can always pay with your blood.";
                 break;
         }
+        conversationInformation.GetComponent<Interactable>().enabled = true;
+        conversationInformation.GetComponent<Interactable>().name = "Bouncer";
+        conversationInformation.GetComponent<Interactable>().Action = "Talk to";
     }
 
     private void SetupTexture()

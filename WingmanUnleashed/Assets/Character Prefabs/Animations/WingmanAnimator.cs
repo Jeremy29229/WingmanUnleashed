@@ -175,6 +175,19 @@ public class WingmanAnimator : MonoBehaviour
         animator.SetBool("IsInTPose", false);
     }
 
+    public void StartCrouching()
+    {
+        animator.SetLayerWeight(1, 1);
+        animator.SetLayerWeight(2, 1);
+        animator.SetBool("IsCrouching", true);
+    }
+    public void StopCrouching()
+    {
+        animator.SetLayerWeight(1, 0);
+        animator.SetLayerWeight(2, 0);
+        animator.SetBool("IsCrouching", false);
+    }
+
     /// <summary>
     /// The character will stand in an idle state. This does NOT need to be called to have the character idle, as that is already its default state if no other animation has been called.
     /// Use this method instead as a fail safe to end any lingering animations that may have been started but not stopped.

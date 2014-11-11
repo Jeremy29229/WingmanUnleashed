@@ -28,6 +28,14 @@ public class Motor_ThirdPerson : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.LeftControl) || Input.GetKeyDown(KeyCode.RightControl))
         {
             isCrouching = !isCrouching;
+            if (isCrouching)
+            {
+                transform.GetComponent<WingmanAnimator>().StartCrouching();
+            }
+            else
+            {
+                transform.GetComponent<WingmanAnimator>().StopCrouching();
+            }
         }
 
         if (isCrouching)

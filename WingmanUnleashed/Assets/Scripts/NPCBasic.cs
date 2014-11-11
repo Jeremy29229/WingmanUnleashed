@@ -16,10 +16,13 @@ public class NPCBasic : MonoBehaviour
         if (!UseNavMesh)
         {
             gameObject.GetComponent<NavMeshAgent>().enabled = false;
+            Wander = false;
+            GetComponent<CharacterAnimator>().ResetToIdle();
         }
         if (!Wander)
         {
             gameObject.GetComponent<Wanderer>().enabled = false;
+            GetComponent<CharacterAnimator>().ResetToIdle();
         }
         if (RandomIdleDialogue)
         {
@@ -29,41 +32,45 @@ public class NPCBasic : MonoBehaviour
 
     private void SetupRandomDialogue()
     {
-        Interactable interactable = gameObject.AddComponent<Interactable>();
-        interactable.Action = "Talk to";
-        interactable.name = "Default";
-        RandomConversible randomConversible = gameObject.AddComponent<RandomConversible>();
-        Correspondence correspondance = gameObject.AddComponent<Correspondence>();
+        GameObject conversationInformation = gameObject.transform.FindChild("ConversationInformation").gameObject;
+        conversationInformation.transform.FindChild("NPCOverheadDisplay").gameObject.SetActive(true);
+        RandomConversible randomConversible = conversationInformation.AddComponent<RandomConversible>();
+        randomConversible.enabled = false;
+        
+        Correspondence correspondance = conversationInformation.AddComponent<Correspondence>();
         correspondance.Conversations = new Conversation[5];
+        randomConversible.enabled = true;
 
-        Conversation conversation1 = gameObject.AddComponent<Conversation>();
-        Dialog dialog1a = gameObject.AddComponent<Dialog>();
+        Conversation conversation1 = conversationInformation.AddComponent<Conversation>();
+        Dialog dialog1a = conversationInformation.AddComponent<Dialog>();
         conversation1.Beginning = dialog1a;
         correspondance.Conversations[0] = conversation1;
 
-        Conversation conversation2 = gameObject.AddComponent<Conversation>();
-        Dialog dialog2a = gameObject.AddComponent<Dialog>();
+        Conversation conversation2 = conversationInformation.AddComponent<Conversation>();
+        Dialog dialog2a = conversationInformation.AddComponent<Dialog>();
         conversation2.Beginning = dialog2a;
         correspondance.Conversations[1] = conversation2;
 
-        Conversation conversation3 = gameObject.AddComponent<Conversation>();
-        Dialog dialog3a = gameObject.AddComponent<Dialog>();
+        Conversation conversation3 = conversationInformation.AddComponent<Conversation>();
+        Dialog dialog3a = conversationInformation.AddComponent<Dialog>();
         conversation3.Beginning = dialog3a;
         correspondance.Conversations[2] = conversation3;
 
-        Conversation conversation4 = gameObject.AddComponent<Conversation>();
-        Dialog dialog4a = gameObject.AddComponent<Dialog>();
+        Conversation conversation4 = conversationInformation.AddComponent<Conversation>();
+        Dialog dialog4a = conversationInformation.AddComponent<Dialog>();
         conversation4.Beginning = dialog4a;
         correspondance.Conversations[3] = conversation4;
 
-        Conversation conversation5 = gameObject.AddComponent<Conversation>();
-        Dialog dialog5a = gameObject.AddComponent<Dialog>();
+        Conversation conversation5 = conversationInformation.AddComponent<Conversation>();
+        Dialog dialog5a = conversationInformation.AddComponent<Dialog>();
         conversation5.Beginning = dialog5a;
         correspondance.Conversations[4] = conversation5;
 
+        conversationInformation.GetComponent<Interactable>().enabled = true;
         switch (CharacterType)
         {
             case BasicCharacters.Bartender:
+                conversationInformation.GetComponent<Interactable>().name = "Bartender";
                 dialog1a.NPCDialog = "I'm not judging your outfit. I'm just giving you constructive criticism. Silently.";
                 dialog2a.NPCDialog = "I'm just a bartender. I tend the bar. Or end the bart, it really depends.";
                 dialog3a.NPCDialog = "It took me three years to perfect the art of silently washing cups while feigning sympathy towards your problems.";
@@ -71,6 +78,7 @@ public class NPCBasic : MonoBehaviour
                 dialog5a.NPCDialog = "I may look bored, but I'm actually racking up points on my people watching score.";
                 break;
             case BasicCharacters.GingerMan:
+                conversationInformation.GetComponent<Interactable>().name = NameGenerator.GenerateRandomFullNameMasculine();
                 dialog1a.NPCDialog = "Mmhm.";
                 dialog2a.NPCDialog = "No. I'm not going to steal your soul. Not yet.";
                 dialog3a.NPCDialog = "It's a shame steel trees went extinct. Nice workout.";
@@ -78,6 +86,7 @@ public class NPCBasic : MonoBehaviour
                 dialog5a.NPCDialog = "Everyone's always too busy to get their own drinks. Lazy.";
                 break;
             case BasicCharacters.Jock:
+                conversationInformation.GetComponent<Interactable>().name = NameGenerator.GenerateRandomFullNameMasculine();
                 dialog1a.NPCDialog = "Eeeeeey ballin' threads brah!!";
                 dialog2a.NPCDialog = "Didja catch the game last night?! Saawwweeeeeet!";
                 dialog3a.NPCDialog = "Look at all these <b>GIIIIRLS</b> duuuude!";
@@ -85,6 +94,7 @@ public class NPCBasic : MonoBehaviour
                 dialog5a.NPCDialog = "Breath check. One. Two. Awhh yeah I am HAWT.";
                 break;
             case BasicCharacters.PlaidMan:
+                conversationInformation.GetComponent<Interactable>().name = NameGenerator.GenerateRandomFullNameMasculine();
                 dialog1a.NPCDialog = "<i>Adjusts mustache</i>";
                 dialog2a.NPCDialog = "I have thirty-five shirts. All of them plaid. All of them different colors.";
                 dialog3a.NPCDialog = "My plaid game is top.";
@@ -92,6 +102,7 @@ public class NPCBasic : MonoBehaviour
                 dialog5a.NPCDialog = "Don't get mad. Get plaid.";
                 break;
             case BasicCharacters.PoliceMan:
+                conversationInformation.GetComponent<Interactable>().name = NameGenerator.GenerateRandomFullNameMasculine();
                 dialog1a.NPCDialog = "STOP RIGHT THERE CRIMINAL SCUM! Just kidding. I'm off duty right now.";
                 dialog2a.NPCDialog = "I can't really compete with these bouncers here. But my taser can.";
                 dialog3a.NPCDialog = "I've been on the force for over forty years now. It can be rough sometimes.";
@@ -99,6 +110,7 @@ public class NPCBasic : MonoBehaviour
                 dialog5a.NPCDialog = "These are some good drinks, must have been expensive.";
                 break;
             case BasicCharacters.Shenheizzer:
+                conversationInformation.GetComponent<Interactable>().name = "The Shenheizzer";
                 dialog1a.NPCDialog = "Dr-dr-dr-dr-DROP the <b>BASS</b>";
                 dialog2a.NPCDialog = "Awwwwhaha yeah man these beats are HOT!";
                 dialog3a.NPCDialog = "The Shenheizzer doesn't like to brag.... but the Shenheizzer is absolutely KILLING IT RIGHT NOW.";
@@ -106,6 +118,8 @@ public class NPCBasic : MonoBehaviour
                 dialog5a.NPCDialog = "The Shenheizzer's favorite season is spring. I LOVE those adorable baby birds.";
                 break;
         }
+
+        conversationInformation.GetComponent<Interactable>().Action = "Talk to";
     }
 
     private void SetupTexture()

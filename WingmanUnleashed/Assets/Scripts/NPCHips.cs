@@ -15,10 +15,13 @@ public class NPCHips : MonoBehaviour
         if (!UseNavMesh)
         {
             gameObject.GetComponent<NavMeshAgent>().enabled = false;
+            Wander = false;
+            GetComponent<CharacterAnimator>().ResetToIdle();
         }
         if (!Wander)
         {
             gameObject.GetComponent<Wanderer>().enabled = false;
+            GetComponent<CharacterAnimator>().ResetToIdle();
         }
         if (RandomIdleDialogue)
         {
@@ -28,41 +31,44 @@ public class NPCHips : MonoBehaviour
 
     private void SetupRandomDialogue()
     {
-        Interactable interactable = gameObject.AddComponent<Interactable>();
-        interactable.Action = "Talk to";
-        interactable.name = "Default";
-        RandomConversible randomConversible = gameObject.AddComponent<RandomConversible>();
-        Correspondence correspondance = gameObject.AddComponent<Correspondence>();
+        GameObject conversationInformation = gameObject.transform.FindChild("ConversationInformation").gameObject;
+        conversationInformation.transform.FindChild("NPCOverheadDisplay").gameObject.SetActive(true);
+        
+        RandomConversible randomConversible = conversationInformation.AddComponent<RandomConversible>();
+        
+        Correspondence correspondance = conversationInformation.AddComponent<Correspondence>();
         correspondance.Conversations = new Conversation[5];
 
-        Conversation conversation1 = gameObject.AddComponent<Conversation>();
-        Dialog dialog1a = gameObject.AddComponent<Dialog>();
+        Conversation conversation1 = conversationInformation.AddComponent<Conversation>();
+        Dialog dialog1a = conversationInformation.AddComponent<Dialog>();
         conversation1.Beginning = dialog1a;
         correspondance.Conversations[0] = conversation1;
 
-        Conversation conversation2 = gameObject.AddComponent<Conversation>();
-        Dialog dialog2a = gameObject.AddComponent<Dialog>();
+        Conversation conversation2 = conversationInformation.AddComponent<Conversation>();
+        Dialog dialog2a = conversationInformation.AddComponent<Dialog>();
         conversation2.Beginning = dialog2a;
         correspondance.Conversations[1] = conversation2;
 
-        Conversation conversation3 = gameObject.AddComponent<Conversation>();
-        Dialog dialog3a = gameObject.AddComponent<Dialog>();
+        Conversation conversation3 = conversationInformation.AddComponent<Conversation>();
+        Dialog dialog3a = conversationInformation.AddComponent<Dialog>();
         conversation3.Beginning = dialog3a;
         correspondance.Conversations[2] = conversation3;
 
-        Conversation conversation4 = gameObject.AddComponent<Conversation>();
-        Dialog dialog4a = gameObject.AddComponent<Dialog>();
+        Conversation conversation4 = conversationInformation.AddComponent<Conversation>();
+        Dialog dialog4a = conversationInformation.AddComponent<Dialog>();
         conversation4.Beginning = dialog4a;
         correspondance.Conversations[3] = conversation4;
 
-        Conversation conversation5 = gameObject.AddComponent<Conversation>();
-        Dialog dialog5a = gameObject.AddComponent<Dialog>();
+        Conversation conversation5 = conversationInformation.AddComponent<Conversation>();
+        Dialog dialog5a = conversationInformation.AddComponent<Dialog>();
         conversation5.Beginning = dialog5a;
         correspondance.Conversations[4] = conversation5;
 
+        conversationInformation.GetComponent<Interactable>().enabled = true;
         switch (CharacterType)
         {
             case HipsCharacters.AgingWoman:
+                conversationInformation.GetComponent<Interactable>().name = NameGenerator.GenerateRandomFullNameFeminine();
                 dialog1a.NPCDialog = "Harumph.";
                 dialog2a.NPCDialog = "They say the drinks at this party are imported.";
                 dialog3a.NPCDialog = "My niece invited me here. She's a doctor you know.";
@@ -70,6 +76,7 @@ public class NPCHips : MonoBehaviour
                 dialog5a.NPCDialog = "Did you know my son in law is a chef? Why they don't have him cater <i>every</i> party is beyond me.";
                 break;
             case HipsCharacters.BlondeGirl:
+                conversationInformation.GetComponent<Interactable>().name = NameGenerator.GenerateRandomFullNameFeminine();
                 dialog1a.NPCDialog = "You see that guy? He's totes checking me out. NO don't look! Play it cool!";
                 dialog2a.NPCDialog = "O.M.G. My selfie in this outfit already has like 50 ups.";
                 dialog3a.NPCDialog = "#party #datmusictho #someweirdokeepstalkingtome #whoevenisthisguy";
@@ -77,6 +84,7 @@ public class NPCHips : MonoBehaviour
                 dialog5a.NPCDialog = "Sometimes I feel like the people at these parties know, like, two whole dances. It's super weird.";
                 break;
             case HipsCharacters.DarkHairWoman:
+                conversationInformation.GetComponent<Interactable>().name = NameGenerator.GenerateRandomFullNameFeminine();
                 dialog1a.NPCDialog = "That economy huh?";
                 dialog2a.NPCDialog = "Do you always just walk up to people, nothing to say, and wait for them to talk to you?";
                 dialog3a.NPCDialog = "I'm pretty sure you're not supposed to be here. But then, I don't really <i>want</i> to be here. So whatever.";
@@ -84,6 +92,7 @@ public class NPCHips : MonoBehaviour
                 dialog5a.NPCDialog = "I'm so glad they created those bigger-on-the-inside-pockets. Where else would I put my purse?";
                 break;
             case HipsCharacters.GingerWoman:
+                conversationInformation.GetComponent<Interactable>().name = NameGenerator.GenerateRandomFullNameFeminine();
                 dialog1a.NPCDialog = "Did you see that guy over there? In the glasses? So cute. So cute.";
                 dialog2a.NPCDialog = "The day they outlawed laser eye surgery was historic day.";
                 dialog3a.NPCDialog = "Can you believe? There was a guest using the <i>p word!</i>";
@@ -91,6 +100,7 @@ public class NPCHips : MonoBehaviour
                 dialog5a.NPCDialog = "Excuse me, I seem to have lost my phone number, can I please borrow yours? ... That was a joke. Ha.";
                 break;
             case HipsCharacters.GothWoman:
+                conversationInformation.GetComponent<Interactable>().name = NameGenerator.GenerateRandomFullNameFeminine();
                 dialog1a.NPCDialog = "<i>Self loathing intensifies</i>";
                 dialog2a.NPCDialog = "You ever hike up in the mountains and just howl alone to the party moon?";
                 dialog3a.NPCDialog = "Ever seen someone carry around their own dismembered leg?";
@@ -98,6 +108,8 @@ public class NPCHips : MonoBehaviour
                 dialog5a.NPCDialog = "I know you. I could tell the bouncers about you right now. But I like rebels.";
                 break;
         }
+
+        conversationInformation.GetComponent<Interactable>().Action = "Talk to";
     }
 
     private void SetupTexture()

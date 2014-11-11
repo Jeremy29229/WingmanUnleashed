@@ -38,6 +38,7 @@ public class Player_Crouch : MonoBehaviour
         if (Motor_ThirdPerson.Instance.isCrouching)
         {
             currentCrouchAmount = Mathf.SmoothDamp(currentCrouchAmount, CROUCHING, ref crouchVelocity, transitionInSeconds);
+
         }
         else
         {

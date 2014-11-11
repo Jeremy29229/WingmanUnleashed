@@ -14,10 +14,13 @@ public class NPCLarge : MonoBehaviour {
         if (!UseNavMesh)
         {
             gameObject.GetComponent<NavMeshAgent>().enabled = false;
+            Wander = false;
+            GetComponent<CharacterAnimator>().ResetToIdle();
         }
         if (!Wander)
         {
             gameObject.GetComponent<Wanderer>().enabled = false;
+            GetComponent<CharacterAnimator>().ResetToIdle();
         }
         if (RandomIdleDialogue)
         {
@@ -27,41 +30,46 @@ public class NPCLarge : MonoBehaviour {
 
     private void SetupRandomDialogue()
     {
-        Interactable interactable = gameObject.AddComponent<Interactable>();
-        interactable.Action = "Talk to";
-        interactable.name = "Default";
-        RandomConversible randomConversible = gameObject.AddComponent<RandomConversible>();
-        Correspondence correspondance = gameObject.AddComponent<Correspondence>();
-        correspondance.Conversations = new Conversation[5];
+        GameObject conversationInformation = gameObject.transform.FindChild("ConversationInformation").gameObject;
+        conversationInformation.transform.FindChild("NPCOverheadDisplay").gameObject.SetActive(true);
 
-        Conversation conversation1 = gameObject.AddComponent<Conversation>();
-        Dialog dialog1a = gameObject.AddComponent<Dialog>();
+        RandomConversible randomConversible = conversationInformation.AddComponent<RandomConversible>();
+        randomConversible.enabled = false;
+
+        Correspondence correspondance = conversationInformation.AddComponent<Correspondence>();
+        correspondance.Conversations = new Conversation[5];
+        randomConversible.enabled = true;
+
+        Conversation conversation1 = conversationInformation.AddComponent<Conversation>();
+        Dialog dialog1a = conversationInformation.AddComponent<Dialog>();
         conversation1.Beginning = dialog1a;
         correspondance.Conversations[0] = conversation1;
 
-        Conversation conversation2 = gameObject.AddComponent<Conversation>();
-        Dialog dialog2a = gameObject.AddComponent<Dialog>();
+        Conversation conversation2 = conversationInformation.AddComponent<Conversation>();
+        Dialog dialog2a = conversationInformation.AddComponent<Dialog>();
         conversation2.Beginning = dialog2a;
         correspondance.Conversations[1] = conversation2;
 
-        Conversation conversation3 = gameObject.AddComponent<Conversation>();
-        Dialog dialog3a = gameObject.AddComponent<Dialog>();
+        Conversation conversation3 = conversationInformation.AddComponent<Conversation>();
+        Dialog dialog3a = conversationInformation.AddComponent<Dialog>();
         conversation3.Beginning = dialog3a;
         correspondance.Conversations[2] = conversation3;
 
-        Conversation conversation4 = gameObject.AddComponent<Conversation>();
-        Dialog dialog4a = gameObject.AddComponent<Dialog>();
+        Conversation conversation4 = conversationInformation.AddComponent<Conversation>();
+        Dialog dialog4a = conversationInformation.AddComponent<Dialog>();
         conversation4.Beginning = dialog4a;
         correspondance.Conversations[3] = conversation4;
 
-        Conversation conversation5 = gameObject.AddComponent<Conversation>();
-        Dialog dialog5a = gameObject.AddComponent<Dialog>();
+        Conversation conversation5 = conversationInformation.AddComponent<Conversation>();
+        Dialog dialog5a = conversationInformation.AddComponent<Dialog>();
         conversation5.Beginning = dialog5a;
         correspondance.Conversations[4] = conversation5;
 
+        conversationInformation.GetComponent<Interactable>().enabled = true;
         switch (CharacterType)
         {
             case LargeCharacters.Gamer:
+                conversationInformation.GetComponent<Interactable>().name = NameGenerator.GenerateRandomGamerName();
                 dialog1a.NPCDialog = "I have like 30 followers on my Switch Stream.";
                 dialog2a.NPCDialog = "The latest Hat Man movie was insufferabley incorrect in regards to Cane's backstory. Typical mainstream media.";
                 dialog3a.NPCDialog = "Wanna see my level 9999 CyberWhale on YoY?";
@@ -69,6 +77,7 @@ public class NPCLarge : MonoBehaviour {
                 dialog5a.NPCDialog = "I hear there's this new 'wingman' game in development. Sounds like a game for filthy casuals.";
                 break;
             case LargeCharacters.RichMan:
+                conversationInformation.GetComponent<Interactable>().name = NameGenerator.GenerateRandomFullNameMasculine();
                 dialog1a.NPCDialog = "<i>Pretentiously jolly laughter</i>";
                 dialog2a.NPCDialog = "I paid for a large portion of this party. Only the very best for my closest - wait, who are you?";
                 dialog3a.NPCDialog = "Some say that my greatest weakness is that I am just far too humble.";
@@ -76,6 +85,7 @@ public class NPCLarge : MonoBehaviour {
                 dialog5a.NPCDialog = "Sometimes I toss money off this rooftop and watch the people down below. It's like the ancient ducks with bread.";
                 break;
             case LargeCharacters.RichWoman:
+                conversationInformation.GetComponent<Interactable>().name = NameGenerator.GenerateRandomFullNameFeminine();
                 dialog1a.NPCDialog = "Hmmmmmmmmmph.";
                 dialog2a.NPCDialog = "What do you want? Never mind, I don't care.";
                 dialog3a.NPCDialog = "I should think a party of this caliber would warrant more care in outfit planning. Evidently not.";
@@ -83,6 +93,7 @@ public class NPCLarge : MonoBehaviour {
                 dialog5a.NPCDialog = "<i>Pretends not to see you</i>";
                 break;
         }
+        conversationInformation.GetComponent<Interactable>().Action = "Talk";
     }
 
     private void SetupTexture()
