@@ -2,7 +2,7 @@
 
 public class ZoneManager : MonoBehaviour
 {
-	public int ZoneNumber;
+	public string ZoneName = "";
 	public bool EnableZoneFading = false;
 	public float ZoneFadeTime = 10.0f;
 	public bool EnabledZoneAtStart = false;
@@ -16,7 +16,7 @@ public class ZoneManager : MonoBehaviour
 
 	void Start()
 	{
-		zoneObjects = GameObject.FindGameObjectsWithTag("Zone" + ZoneNumber);
+		zoneObjects = GameObject.FindGameObjectsWithTag("Zone" + ZoneName);
 
 		player = GameObject.Find(PlayerObjectName);
 
