@@ -10,6 +10,7 @@ GameObject:
   - 4: {fileID: 400000}
   - 54: {fileID: 5400000}
   - 65: {fileID: 6500000}
+  - 54: {fileID: 5400002}
   m_Layer: 8
   m_Name: roundTable
   m_TagString: Untagged
@@ -41,7 +42,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: -0, z: 0, w: 1}
-  m_LocalPosition: {x: -10.8660002, y: -.200000003, z: -32.7290001}
+  m_LocalPosition: {x: 3.92779994, y: -.200000003, z: -25.2479992}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400002}
@@ -71,7 +72,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: 121017ace70b0334cb439f1073010025, type: 2}
+  - {fileID: 2100000, guid: 88bdd658862f56f4b83ff70423486a58, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -87,6 +88,21 @@ MeshFilter:
   m_GameObject: {fileID: 100002}
   m_Mesh: {fileID: 4300002, guid: b6a34ee86e4ade5418f5d405c0c09701, type: 3}
 --- !u!54 &5400000
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
+--- !u!54 &5400002
 Rigidbody:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}

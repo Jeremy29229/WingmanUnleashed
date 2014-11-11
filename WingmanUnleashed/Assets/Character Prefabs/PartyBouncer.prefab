@@ -702,6 +702,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &100092
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 400092}
+  - 136: {fileID: 13600000}
+  m_Layer: 0
+  m_Name: Collision
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &100094
 GameObject:
   m_ObjectHideFlags: 1
@@ -1287,7 +1303,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100084}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 1464.06433, y: 241.533981, z: 544.887512}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400086}
@@ -1295,6 +1311,7 @@ Transform:
   - {fileID: 400090}
   - {fileID: 400082}
   - {fileID: 400080}
+  - {fileID: 400092}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!4 &400086
@@ -1334,6 +1351,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 400084}
   m_RootOrder: 2
+--- !u!4 &400092
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100092}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: .822430015, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 400084}
+  m_RootOrder: 5
 --- !u!54 &5400000
 Rigidbody:
   m_ObjectHideFlags: 1
@@ -1465,7 +1494,8 @@ MonoBehaviour:
   timeSearching: 3
   stopDistanceFromPlayer: 2
   waypoints: []
-  throwPoint: {x: 0, y: 0, z: 0}
+  throwPoint: {fileID: 0}
+  throwDirection: {fileID: 0}
   ThrowingForce: 1000
 --- !u!114 &11400008
 MonoBehaviour:
@@ -1542,6 +1572,19 @@ MonoBehaviour:
   Action: 
   InteractableName: 
   AdditionalInformation: 
+--- !u!136 &13600000
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100092}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: .300000012
+  m_Height: 1.70000005
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!137 &13700000
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
@@ -1682,7 +1725,7 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 1.99757385}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: .5, y: .5}
 --- !u!1001 &100100000

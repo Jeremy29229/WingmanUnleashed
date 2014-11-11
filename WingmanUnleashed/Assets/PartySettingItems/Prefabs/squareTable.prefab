@@ -30,8 +30,8 @@ GameObject:
   m_Name: polySurface2_polySurface1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &400000
 Transform:
@@ -39,8 +39,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalRotation: {x: 0, y: -0, z: 0, w: 1}
+  m_LocalPosition: {x: 5.80509996, y: -.0338440016, z: 9.45390034}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400002}
@@ -70,7 +70,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: 8fe767583e33d8a4a91d3bb9dc479dc5, type: 2}
+  - {fileID: 2100000, guid: 1cc5bd897d6b04b40b5507159ba7a758, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
