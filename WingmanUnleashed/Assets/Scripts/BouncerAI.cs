@@ -95,7 +95,7 @@ public class BouncerAI : MonoBehaviour
             Characteranimation.FinishThrow();
             playerWingman.Rotate(transform.forward, -90);
             //playerWingman.eulerAngles = new Vector3(playerWingman.eulerAngles.x, playerWingman.eulerAngles.y, 0.0f);
-            Vector3 direction = throwPoint.transform.position - throwDirection.transform.position;
+            Vector3 direction = throwDirection.transform.position - throwPoint.transform.position;
             playerWingman.gameObject.GetComponent<Rigidbody>().AddForce((direction + Vector3.up) * ThrowingForce); 
             
         }
