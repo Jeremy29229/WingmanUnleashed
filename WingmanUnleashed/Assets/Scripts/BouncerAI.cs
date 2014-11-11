@@ -74,14 +74,15 @@ public class BouncerAI : MonoBehaviour
 		{
 			Aware();
 		}
-		else if (currentDetectionLevel > maxAwareLevel && currentDetectionLevel <= maxPursueLevel)
+		else if (currentDetectionLevel > maxAwareLevel && currentDetectionLevel < maxPursueLevel)
 		{
 			Pursuing();
 		}
-        else if (currentDetectionLevel > maxPursueLevel)
+        else if (currentDetectionLevel >= maxPursueLevel)
         {
             FullPursuit();
         }
+
 	}
 
     public void Carrying()

@@ -643,7 +643,7 @@ GameObject:
   - 114: {fileID: 11400000}
   - 114: {fileID: 11400004}
   - 195: {fileID: 19500000}
-  - 114: {fileID: 11400006}
+  - 114: {fileID: 11400010}
   m_Layer: 0
   m_Name: PartyBouncer
   m_TagString: Untagged
@@ -697,24 +697,6 @@ GameObject:
   - 54: {fileID: 5400000}
   m_Layer: 2
   m_Name: BouncerDetectionCone
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!1 &100092
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 400092}
-  - 114: {fileID: 11400010}
-  - 54: {fileID: 5400002}
-  - 136: {fileID: 13600000}
-  m_Layer: 0
-  m_Name: Ejector
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1282,7 +1264,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400084}
-  m_RootOrder: 5
+  m_RootOrder: 4
 --- !u!4 &400082
 Transform:
   m_ObjectHideFlags: 1
@@ -1297,7 +1279,7 @@ Transform:
   - {fileID: 400076}
   - {fileID: 400074}
   m_Father: {fileID: 400084}
-  m_RootOrder: 4
+  m_RootOrder: 3
 --- !u!4 &400084
 Transform:
   m_ObjectHideFlags: 1
@@ -1309,7 +1291,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400086}
-  - {fileID: 400092}
   - {fileID: 400088}
   - {fileID: 400090}
   - {fileID: 400082}
@@ -1340,7 +1321,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400084}
-  m_RootOrder: 2
+  m_RootOrder: 1
 --- !u!4 &400090
 Transform:
   m_ObjectHideFlags: 1
@@ -1352,19 +1333,7 @@ Transform:
   m_LocalScale: {x: 3.54773498, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400084}
-  m_RootOrder: 3
---- !u!4 &400092
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100092}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: .850158691, z: 0}
-  m_LocalScale: {x: 1.72000003, y: 2.6400001, z: 1.72000003}
-  m_Children: []
-  m_Father: {fileID: 400084}
-  m_RootOrder: 1
+  m_RootOrder: 2
 --- !u!54 &5400000
 Rigidbody:
   m_ObjectHideFlags: 1
@@ -1377,21 +1346,6 @@ Rigidbody:
   m_AngularDrag: .0500000007
   m_UseGravity: 0
   m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!54 &5400002
-Rigidbody:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100092}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: .0500000007
-  m_UseGravity: 0
-  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -1420,7 +1374,7 @@ Animator:
   m_Controller: {fileID: 9100000, guid: 688f250423260b5468a9d1fc05990611, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
-  m_ApplyRootMotion: 1
+  m_ApplyRootMotion: 0
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
 --- !u!108 &10800000
@@ -1470,8 +1424,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BouncerType: 1
-  Variant: 0
-  RandomIdleDialogue: 0
+  Variant: 3
+  RandomIdleDialogue: 1
   UseNavMesh: 1
 --- !u!114 &11400002
 MonoBehaviour:
@@ -1511,18 +1465,8 @@ MonoBehaviour:
   timeSearching: 3
   stopDistanceFromPlayer: 2
   waypoints: []
---- !u!114 &11400006
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100084}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 772e8367e30d6fb42a1bce63508c7359, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 1
+  throwPoint: {x: 0, y: 0, z: 0}
+  ThrowingForce: 1000
 --- !u!114 &11400008
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1545,15 +1489,13 @@ MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100092}
+  m_GameObject: {fileID: 100084}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 427828bd6d50d3d4dbe0dc1837283baf, type: 3}
+  m_Script: {fileID: 11500000, guid: c1b1db0e183bd6f45ac254432ce491b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ThrowingForce: 1000
-  IsInHouse: 0
-  kickPosition: {x: 1449.30005, y: 244.399994, z: 546}
+  speed: 1
 --- !u!114 &11400012
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1600,19 +1542,6 @@ MonoBehaviour:
   Action: 
   InteractableName: 
   AdditionalInformation: 
---- !u!136 &13600000
-CapsuleCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100092}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: .5
-  m_Height: 1
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!137 &13700000
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1

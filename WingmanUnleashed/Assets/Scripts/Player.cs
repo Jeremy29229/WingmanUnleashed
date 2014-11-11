@@ -43,7 +43,7 @@ public class Player : MonoBehaviour
 				}
 				else
 				{
-					detectionLevel = 1.0f;
+                    detectionLevel = 1.0f;
 				}
 			}
 			else
