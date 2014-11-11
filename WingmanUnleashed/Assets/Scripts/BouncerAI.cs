@@ -97,8 +97,7 @@ public class BouncerAI : MonoBehaviour
             carryingWingman = false;
             Characteranimation.FinishThrow();
             playerWingman.Rotate(transform.forward, -90);
-            playerWingman.gameObject.rigidbody.useGravity = false;
-
+            Camera.main.GetComponent<Camera_ThirdPerson>().rotationSmoothing = 0.8f;
             //playerWingman.eulerAngles = new Vector3(playerWingman.eulerAngles.x, playerWingman.eulerAngles.y, 0.0f);
             Vector3 direction = throwDirection.transform.position - throwPoint.transform.position;
             playerWingman.gameObject.GetComponent<Rigidbody>().AddForce((direction + Vector3.up) * ThrowingForce);
@@ -224,7 +223,7 @@ public class BouncerAI : MonoBehaviour
     private void Grab()
     {
         carryingWingman = true;
-        playerWingman.gameObject.rigidbody.useGravity = false;
+        Camera.main.GetComponent<Camera_ThirdPerson>().rotationSmoothing = 0.2f;
         Characteranimation.StartThrow();
         playerWingman.position = gameObject.transform.position + new Vector3(0f, 1.8f, 0f);
         //playerWingman.Rotate(transform.forward, 90);
