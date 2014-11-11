@@ -13,6 +13,9 @@ public class BouncerAI : MonoBehaviour
     public GameObject throwPoint;
     public GameObject throwDirection;
     public float ThrowingForce = 1000.0f;
+    public bool insideBuilding;
+    public Vector3 kickPosition = new Vector3(1449.3f, 244.4f, 546.0f);
+
 
 	private BouncerAnimator Characteranimation;
 	private VisionDetection detection;
@@ -94,6 +97,8 @@ public class BouncerAI : MonoBehaviour
             carryingWingman = false;
             Characteranimation.FinishThrow();
             playerWingman.Rotate(transform.forward, -90);
+            playerWingman.gameObject.rigidbody.useGravity = false;
+
             //playerWingman.eulerAngles = new Vector3(playerWingman.eulerAngles.x, playerWingman.eulerAngles.y, 0.0f);
             Vector3 direction = throwDirection.transform.position - throwPoint.transform.position;
             playerWingman.gameObject.GetComponent<Rigidbody>().AddForce((direction + Vector3.up) * ThrowingForce); 
@@ -136,11 +141,15 @@ public class BouncerAI : MonoBehaviour
                 //{
                 //    Characteranimation.StopWalking();
                 //}
-                carryingWingman = true;
-                Characteranimation.StartThrow();
-                playerWingman.position = gameObject.transform.position + new Vector3(0f, 1.8f, 0f);
-                //playerWingman.Rotate(transform.forward, 90);
-                nav.destination = throwPoint.transform.position;
+                if (insideBuilding)
+                {
+                    KickOutDoor();
+                }
+                else
+                {
+                    Grab();
+                }
+                
 			}
 		}
 		else if (!detection.IsPlayInRangeAndVisable && !lastPositionKnown) //Lost sight of player
@@ -205,6 +214,21 @@ public class BouncerAI : MonoBehaviour
 			}
 		}
 	}
+
+    private void KickOutDoor()
+    {
+        playerWingman.position = kickPosition;
+    }
+
+    private void Grab()
+    {
+        carryingWingman = true;
+        playerWingman.gameObject.rigidbody.useGravity = false;
+        Characteranimation.StartThrow();
+        playerWingman.position = gameObject.transform.position + new Vector3(0f, 1.8f, 0f);
+        //playerWingman.Rotate(transform.forward, 90);
+        nav.destination = throwPoint.transform.position;
+    }
 
 	public void Pursuing()
 	{
