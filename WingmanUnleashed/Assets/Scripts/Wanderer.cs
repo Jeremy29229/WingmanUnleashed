@@ -8,7 +8,7 @@ public class Wanderer : MonoBehaviour
 	public float range = 0.5f;
 	public float speed = 1.0f;
 
-	void Start()
+	void OnEnable()
 	{
 		gameObject.GetComponent<NavMeshAgent>().acceleration = speed;
 		basePosition = gameObject.transform.position;
