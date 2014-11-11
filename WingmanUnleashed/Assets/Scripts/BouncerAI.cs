@@ -101,7 +101,8 @@ public class BouncerAI : MonoBehaviour
 
             //playerWingman.eulerAngles = new Vector3(playerWingman.eulerAngles.x, playerWingman.eulerAngles.y, 0.0f);
             Vector3 direction = throwDirection.transform.position - throwPoint.transform.position;
-            playerWingman.gameObject.GetComponent<Rigidbody>().AddForce((direction + Vector3.up) * ThrowingForce); 
+            playerWingman.gameObject.GetComponent<Rigidbody>().AddForce((direction + Vector3.up) * ThrowingForce);
+            playerWingman.gameObject.GetComponent<Controller_ThirdPerson>().flightmodeOn();
             
         }
         else

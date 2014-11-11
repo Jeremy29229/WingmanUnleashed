@@ -195,24 +195,19 @@ public class Controller_ThirdPerson : MonoBehaviour
 			}
 			if (Input.GetKeyDown(KeyCode.Alpha1)||(player.transform.position.y<=0&&player.transform.position.y>-5))
 			{
-				player.transform.position = new Vector3(1328.158f, 1000.9615f, 162.7299f);
+                player.transform.position = new Vector3(1446.1f, 241.58f, 555.77f);
 				flightmodeOff();
 			}
 			if (Input.GetKeyDown(KeyCode.Alpha2))
 			{
-				player.transform.position = new Vector3(310.0185f, 880.5f, 1143.175f);
+                player.transform.position = new Vector3(1716.2f, -21.563f, 207.66f);
 				flightmodeOff();
 			}
 			if (Input.GetKeyDown(KeyCode.Alpha3))
 			{
-				player.transform.position = new Vector3(1764.116f, 818.00f, 1764.895f);
+                player.transform.position = new Vector3(1328.158f, 1000.9615f, 162.7299f);
 				flightmodeOff();
 			}
-            if (Input.GetKeyDown(KeyCode.Alpha4))
-            {
-                player.transform.position = new Vector3(1446.1f, 241.58f, 555.77f);
-                flightmodeOff();
-            }
 		}
 	}
 

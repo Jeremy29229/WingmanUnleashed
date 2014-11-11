@@ -20,10 +20,10 @@ public class Motor_ThirdPerson : MonoBehaviour
 	public void UpdateMotor()
 	{
 		alignCharacter();
-
+    
 		MovementVector = transform.TransformDirection(MovementVector);
 		MovementVector = Vector3.Normalize(MovementVector);
-
+    
         float speedValue = 0.0f;
         if (Input.GetKeyDown(KeyCode.LeftControl) || Input.GetKeyDown(KeyCode.RightControl))
         {
@@ -37,7 +37,7 @@ public class Motor_ThirdPerson : MonoBehaviour
                 transform.GetComponent<WingmanAnimator>().StopCrouching();
             }
         }
-
+    
         if (isCrouching)
         {
             speedValue = crouchSpeed;
@@ -54,7 +54,7 @@ public class Motor_ThirdPerson : MonoBehaviour
 		transform.position += MovementVector;
 		MovementVector = new Vector3(0, 0, 0);
 	}
-
+    
 	private void alignCharacter()
 	{
 		if (MovementVector.x != 0 || MovementVector.z != 0)
@@ -64,7 +64,7 @@ public class Motor_ThirdPerson : MonoBehaviour
 												  transform.eulerAngles.z);
 		}
 	}
-
+    
 	private void faceCharacterTowardsMovementDirection()
 	{
 		if (MovementVector.x != 0 || MovementVector.z != 0)
