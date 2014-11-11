@@ -9,9 +9,9 @@ GameObject:
   m_Component:
   - 4: {fileID: 400000}
   - 95: {fileID: 9500000}
-  - 114: {fileID: 11400006}
   - 114: {fileID: 11400000}
   - 195: {fileID: 19500000}
+  - 114: {fileID: 11400006}
   m_Layer: 0
   m_Name: BouncerHappy1
   m_TagString: Untagged
@@ -1338,7 +1338,7 @@ Animator:
   m_Controller: {fileID: 9100000, guid: 688f250423260b5468a9d1fc05990611, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
-  m_ApplyRootMotion: 1
+  m_ApplyRootMotion: 0
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
 --- !u!108 &10800000
@@ -1394,6 +1394,8 @@ MonoBehaviour:
   timeSearching: 3
   stopDistanceFromPlayer: 2
   waypoints: []
+  throwPoint: {x: 1458.5, y: 241.570007, z: 536.02002}
+  ThrowingForce: 1000
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1423,6 +1425,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ThrowingForce: 1000
+  wingman: {fileID: 0}
+  IsWingmanInRange: 0
+  WingmanGrabbed: 0
   IsInHouse: 0
   kickPosition: {x: 1449.30005, y: 244.399994, z: 546}
 --- !u!114 &11400006
@@ -1433,7 +1438,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 100000}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 772e8367e30d6fb42a1bce63508c7359, type: 3}
+  m_Script: {fileID: 11500000, guid: c1b1db0e183bd6f45ac254432ce491b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
