@@ -10,8 +10,6 @@ public class Wanderer : MonoBehaviour
 
 	void Start()
 	{
-        range = 0.5f;
-        speed = 1.0f;
         gameObject.GetComponent<NavMeshAgent>().acceleration = speed;
 		basePosition = gameObject.transform.position;
 		targetPosition = basePosition + new Vector3((Random.value * (2 * range)) - range, 0, (Random.value * (2 * range)) - range);
@@ -25,11 +23,14 @@ public class Wanderer : MonoBehaviour
 
 	void Update()
 	{
-		Vector3 distance = gameObject.transform.position - targetPosition;
-		if (distance.magnitude < 1)
-		{
-			targetPosition = basePosition + new Vector3((Random.value * (2 * range)) - range, 0, (Random.value * (2 * range)) - range);
-			gameObject.GetComponent<NavMeshAgent>().SetDestination(targetPosition);
-		}
+        if (range > 0)
+        {
+            Vector3 distance = gameObject.transform.position - targetPosition;
+            if (distance.magnitude < 1)
+            {
+                targetPosition = basePosition + new Vector3((Random.value * (2 * range)) - range, 0, (Random.value * (2 * range)) - range);
+                gameObject.GetComponent<NavMeshAgent>().SetDestination(targetPosition);
+            }
+        }
 	}
 }
