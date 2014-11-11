@@ -23,7 +23,7 @@ public class ConversationManager : MonoBehaviour
 
 	private Target targetScript;
 	private Client clientScript;
-    private Commandable commandableClient;
+	private Commandable commandableClient;
 	private Outfit outfit;
 
 	private MouseManager mouseManager;
@@ -57,9 +57,6 @@ public class ConversationManager : MonoBehaviour
 		npcText = GameObject.Find("NPCText").GetComponent<Text>();
 		npcName = GameObject.Find("NPCName").GetComponent<Text>();
 
-		clientScript = GameObject.Find("Client").GetComponentInChildren<Client>();
-		commandableClient = GameObject.Find("Client").GetComponentInChildren<Commandable>();
-		targetScript = GameObject.Find("Target").GetComponentInChildren<Target>();
 		outfit = player.GetComponent<Outfit>();
 	}
 
@@ -80,6 +77,25 @@ public class ConversationManager : MonoBehaviour
 
 	public void ProcessDialog(Dialog d)
 	{
+		if (GameObject.Find("Client") != null)
+		{
+			clientScript = GameObject.Find("Client").GetComponentInChildren<Client>();
+			commandableClient = GameObject.Find("Client").GetComponentInChildren<Commandable>();
+		}
+		else
+		{
+			clientScript = null;
+		}
+
+		if (GameObject.Find("Target"))
+		{
+			targetScript = GameObject.Find("Target").GetComponentInChildren<Target>();
+		}
+		else
+		{
+			targetScript = null;
+		}
+		
 		if (d == null)
 		{
 			UI.enabled = false;
@@ -130,8 +146,6 @@ public class ConversationManager : MonoBehaviour
 
 	public void ProcessDialog(int choiceIndex)
 	{
-		//add item removal
-
 		DialogResponse choice = null;
 		Dialog next = null;
 
@@ -160,7 +174,7 @@ public class ConversationManager : MonoBehaviour
 				}
 			}
 
-			if(choice.AddedConfidence != 0.0f)
+			if (clientScript != null && choice.AddedConfidence != 0.0f)
 			{
 				if (choice.AddedConfidence > 0.0f)
 				{
@@ -170,10 +184,9 @@ public class ConversationManager : MonoBehaviour
 				{
 					clientScript.decreaseConfidence(-choice.AddedConfidence);
 				}
-				
 			}
 
-			if(choice.AddedInterested != 0.0f)
+			if(targetScript != null && choice.AddedInterested != 0.0f)
 			{
 				if (choice.AddedInterested > 0.0f)
 				{
@@ -215,10 +228,10 @@ public class ConversationManager : MonoBehaviour
 				}
 			}
 
-            if (choice.visitAfterward)
-            {
-                commandableClient.visitLocation(choice.destinationGameObject.transform.position);
-            }
+			if (commandableClient != null && choice.visitAfterward)
+			{
+				commandableClient.visitLocation(choice.destinationGameObject.transform.position);
+			}
 		}
 
 		ProcessDialog(next);
@@ -311,12 +324,12 @@ public class ConversationManager : MonoBehaviour
 
 	private bool HasRequiredInterest(DialogResponse d)
 	{
-		return d.RequiredInterested <= targetScript.GetInterest();
+		return targetScript == null || d.RequiredInterested <= targetScript.GetInterest();
 	}
 
 	private bool HadRequiredConfidence(DialogResponse d)
 	{
-		return d.RequiredConfidence <= clientScript.GetConfidence();
+		return clientScript == null || d.RequiredConfidence <= clientScript.GetConfidence();
 	}
 
 }

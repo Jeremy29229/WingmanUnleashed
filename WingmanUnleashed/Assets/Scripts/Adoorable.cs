@@ -26,7 +26,7 @@ public class Adoorable : MonoBehaviour, IInteractable
 	public void InteractWith()
 	{
 		wingman.transform.position = ConnectingDoor.transform.position + newPositionOffset;
-		print(wingman.transform.position);
+		//print(wingman.transform.position);
 		wingman.GetComponent<Controller_ThirdPerson>().flightmodeOff();
 	}
 }

@@ -50,7 +50,6 @@ public class ZoneManager : MonoBehaviour
 
 	void OnTriggerExit(Collider c)
 	{
-		print(c.gameObject.name);
 		if (c.gameObject == player)
 		{
 			if (EnableZoneFading)
@@ -69,7 +68,6 @@ public class ZoneManager : MonoBehaviour
 	{
 		foreach (var obj in zoneObjects)
 		{
-			print(isActive + " " + obj);
 			obj.transform.parent.gameObject.SetActive(isActive);
 		}
 	}
