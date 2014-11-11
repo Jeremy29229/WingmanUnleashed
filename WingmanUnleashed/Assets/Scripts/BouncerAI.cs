@@ -10,7 +10,8 @@ public class BouncerAI : MonoBehaviour
 	public float timeSearching = 3.0f;
 	public float stopDistanceFromPlayer = 0.2f;
 	public Transform[] waypoints;
-    public Vector3 throwPoint;
+    public GameObject throwPoint;
+    public GameObject throwDirection;
     public float ThrowingForce = 1000.0f;
 
 	private BouncerAnimator Characteranimation;
@@ -87,13 +88,15 @@ public class BouncerAI : MonoBehaviour
 
     public void Carrying()
     {
-        Vector3 distanceVector = throwPoint - transform.position;
+        Vector3 distanceVector = throwPoint.transform.position - transform.position;
         if (distanceVector.magnitude <= stopDistanceFromPlayer)
         {
             carryingWingman = false;
             Characteranimation.FinishThrow();
             playerWingman.Rotate(transform.forward, -90);
-            playerWingman.gameObject.GetComponent<Rigidbody>().AddForce((transform.forward + Vector3.up) * ThrowingForce); 
+            //playerWingman.eulerAngles = new Vector3(playerWingman.eulerAngles.x, playerWingman.eulerAngles.y, 0.0f);
+            Vector3 direction = throwPoint.transform.position - throwDirection.transform.position;
+            playerWingman.gameObject.GetComponent<Rigidbody>().AddForce((direction + Vector3.up) * ThrowingForce); 
             
         }
         else
@@ -101,7 +104,8 @@ public class BouncerAI : MonoBehaviour
             playerWingman.position = gameObject.transform.position + new Vector3(0f, 1.9f, 0f) - playerWingman.up;
             playerWingman.forward = transform.forward;
             playerWingman.Rotate(transform.forward, 90);
-            nav.destination = throwPoint;
+            //playerWingman.eulerAngles = new Vector3(playerWingman.eulerAngles.x, playerWingman.eulerAngles.y, 90.0f);
+            nav.destination = throwPoint.transform.position;
             Characteranimation.fixWeight();
         }
     }
@@ -135,8 +139,8 @@ public class BouncerAI : MonoBehaviour
                 carryingWingman = true;
                 Characteranimation.StartThrow();
                 playerWingman.position = gameObject.transform.position + new Vector3(0f, 1.8f, 0f);
-                playerWingman.Rotate(transform.forward, 90);
-                nav.destination = throwPoint;
+                //playerWingman.Rotate(transform.forward, 90);
+                nav.destination = throwPoint.transform.position;
 			}
 		}
 		else if (!detection.IsPlayInRangeAndVisable && !lastPositionKnown) //Lost sight of player
