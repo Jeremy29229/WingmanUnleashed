@@ -97,11 +97,11 @@ public class BouncerAI : MonoBehaviour
             carryingWingman = false;
             Characteranimation.FinishThrow();
             playerWingman.Rotate(transform.forward, -90);
-            playerWingman.gameObject.rigidbody.useGravity = false;
-
+            Camera.main.GetComponent<Camera_ThirdPerson>().rotationSmoothing = 0.8f;
             //playerWingman.eulerAngles = new Vector3(playerWingman.eulerAngles.x, playerWingman.eulerAngles.y, 0.0f);
             Vector3 direction = throwDirection.transform.position - throwPoint.transform.position;
-            playerWingman.gameObject.GetComponent<Rigidbody>().AddForce((direction + Vector3.up) * ThrowingForce); 
+            playerWingman.gameObject.GetComponent<Rigidbody>().AddForce((direction + Vector3.up) * ThrowingForce);
+            playerWingman.gameObject.GetComponent<Controller_ThirdPerson>().flightmodeOn();
             
         }
         else
@@ -129,6 +129,7 @@ public class BouncerAI : MonoBehaviour
 			nav.stoppingDistance = stopDistanceFromPlayer;
 			nav.destination = playerWingman.position;
 			transform.LookAt(playerWingman);
+			transform.rotation = new Quaternion(0, transform.rotation.y, 0, transform.rotation.w);
 			lastPositionKnown = false;
 			searching = false;
 			totalTimePausing = 0.0f;
@@ -223,7 +224,7 @@ public class BouncerAI : MonoBehaviour
     private void Grab()
     {
         carryingWingman = true;
-        playerWingman.gameObject.rigidbody.useGravity = false;
+        Camera.main.GetComponent<Camera_ThirdPerson>().rotationSmoothing = 0.2f;
         Characteranimation.StartThrow();
         playerWingman.position = gameObject.transform.position + new Vector3(0f, 1.8f, 0f);
         //playerWingman.Rotate(transform.forward, 90);
@@ -275,6 +276,7 @@ public class BouncerAI : MonoBehaviour
 			totalTimeSearching = 0.0f;
 			lastKnownPlayerPosition = playerWingman.position;
 			transform.LookAt(playerWingman);
+			transform.rotation = new Quaternion(0, transform.rotation.y, 0, transform.rotation.w);
 
 			nav.speed = pursueSpeed;
 			nav.stoppingDistance = stopDistanceFromPlayer;
@@ -302,6 +304,7 @@ public class BouncerAI : MonoBehaviour
 		{
 			PlayerDetected();
 			transform.LookAt(playerWingman);
+			transform.rotation = new Quaternion(0, transform.rotation.y, 0, transform.rotation.w);
 		}
 	}
 

@@ -166,8 +166,27 @@ public class Controller_ThirdPerson : MonoBehaviour
                             {
                                 player.transform.GetComponent<WingmanAnimator>().StopStrafingRight();
                             }
+
+                            // moveing
+                            horizontal = Input.GetAxisRaw("Horizontal");
+                            vertical = Input.GetAxisRaw("Vertical");
+                            Motor_ThirdPerson.Instance.MovementVector = new Vector3(horizontal, 0.0f, vertical);
+
+                            if (Input.GetKeyDown(KeyCode.Space))
+                            {
+                                if (CanJump())
+                                {
+                                    Rigidbody rig = (Rigidbody)player.GetComponent("Rigidbody");
+                                    rig.AddForce(new Vector3(0.0f, jumpHeight, 0.0f));
+                                }
+                                else if (!Grounded()) flightmodeOn();
+                            }
+                            Motor_ThirdPerson.Instance.UpdateMotor();
+
                         }
                         else if(!coverBlown)gameObject.GetComponent<Player>().decreaseDetection(0.1f);
+
+                        
                     }
                     else if(!player.transform.GetComponent<WingmanAnimator>().IsIdle())
                     {
@@ -175,44 +194,26 @@ public class Controller_ThirdPerson : MonoBehaviour
                     }
 
 
-                    horizontal = Input.GetAxis("Horizontal");
-                    vertical = Input.GetAxis("Vertical");
-                    Motor_ThirdPerson.Instance.MovementVector = new Vector3(horizontal, 0.0f, vertical);
-
-                    if (Input.GetKeyDown(KeyCode.Space))
-                    {
-                        if (CanJump())
-                        {
-                            Rigidbody rig = (Rigidbody)player.GetComponent("Rigidbody");
-                            rig.AddForce(new Vector3(0.0f, jumpHeight, 0.0f));
-                        }
-                        else if (!Grounded()) flightmodeOn();
-                    }
-                    Motor_ThirdPerson.Instance.UpdateMotor();
+                   
 
 				}
                 if (InAir()) flightmodeOn();
 			}
 			if (Input.GetKeyDown(KeyCode.Alpha1)||(player.transform.position.y<=0&&player.transform.position.y>-5))
 			{
-				player.transform.position = new Vector3(1328.158f, 1000.9615f, 162.7299f);
+                player.transform.position = new Vector3(1446.1f, 241.58f, 555.77f);
 				flightmodeOff();
 			}
 			if (Input.GetKeyDown(KeyCode.Alpha2))
 			{
-				player.transform.position = new Vector3(310.0185f, 880.5f, 1143.175f);
+                player.transform.position = new Vector3(1716.2f, -21.563f, 207.66f);
 				flightmodeOff();
 			}
 			if (Input.GetKeyDown(KeyCode.Alpha3))
 			{
-				player.transform.position = new Vector3(1764.116f, 818.00f, 1764.895f);
+                player.transform.position = new Vector3(1328.158f, 1000.9615f, 162.7299f);
 				flightmodeOff();
 			}
-            if (Input.GetKeyDown(KeyCode.Alpha4))
-            {
-                player.transform.position = new Vector3(1446.1f, 241.58f, 555.77f);
-                flightmodeOff();
-            }
 		}
 	}
 
@@ -269,6 +270,6 @@ public class Controller_ThirdPerson : MonoBehaviour
 
 	private bool inputTaken()
 	{
-		return (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.C));
+        return (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.C) || Input.GetKey(KeyCode.LeftControl));
 	}
 }

@@ -8,6 +8,7 @@ public class RandomConversible : MonoBehaviour, IInteractable
 	private bool isChatBubbleDisplayed = false;
 	private bool wasChatBubbleDisplayed = false;
 	private Canvas chatBubbleDisplay;
+	private MouseManager mouseManager;
 
 	void Start()
 	{
@@ -16,6 +17,7 @@ public class RandomConversible : MonoBehaviour, IInteractable
 		cm = GameObject.Find("ConvoGUI").GetComponent<ConversationManager>();
 		chatBubbleDisplay = GetComponentInChildren<Canvas>();
 		chatBubbleDisplay.enabled = false;
+		mouseManager = GameObject.Find("MouseManager").GetComponent<MouseManager>();
 
 		if (correspondence.Conversations.Length == 0)
 		{
@@ -40,6 +42,7 @@ public class RandomConversible : MonoBehaviour, IInteractable
 		{
 			int selection = Random.Range(0, correspondence.Conversations.Length);
 			GetComponent<Interactable>().IsActive = false;
+			mouseManager.IsMouseLocked = false;
 			cm.ProcessDialog(correspondence.Conversations[selection].Beginning);
 		}
 	}

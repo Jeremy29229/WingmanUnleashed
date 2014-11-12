@@ -8,11 +8,12 @@ public class Camera_ThirdPerson : MonoBehaviour
 	public float minDistance = 3.0f;
 	public float maxDistance = 10.0f;
 	public float distanceSmoothing = 0.5f;
+    public float rotationSmoothing = 0.8f;
 	public float x_MouseSensitivity = 5.0f;
 	public float y_MouseSensitivity = 5.0f;
 	public float mouseWheelSensitivity = 5.0f;
-	public float y_MinLimit = -40.0f;
-	public float y_MaxLimit = 40.0f;
+	public float y_MinLimit = -180.0f;
+	public float y_MaxLimit = 180.0f;
 	public float x_Smooth = 0.05f;
 	public float y_Smooth = 0.1f;
 	public bool usingFlightCamera;
@@ -57,18 +58,18 @@ public class Camera_ThirdPerson : MonoBehaviour
 		if (!IsInConversation)
 		{
 
-			if (usingFlightCamera)
-			{
-				//Vector3 abovePlayer = TargetObjectLookAt.up * cameraDistance;
-				//Vector3 behindPlayer = TargetObjectLookAt.forward * cameraDistance;
-				Vector3 newPosition = TargetObjectLookAt.position;
-
-				transform.position = Vector3.Lerp(transform.position, newPosition, distanceSmoothing);
-
-				transform.LookAt(TargetObjectLookAt);
-			}
-			else
-			{
+			//if (usingFlightCamera)
+			//{
+			//	//Vector3 abovePlayer = TargetObjectLookAt.up * cameraDistance;
+			//	//Vector3 behindPlayer = TargetObjectLookAt.forward * cameraDistance;
+			//	Vector3 newPosition = TargetObjectLookAt.position;
+            //
+			//	transform.position = Vector3.Lerp(transform.position, newPosition, distanceSmoothing);
+            //
+			//	transform.LookAt(TargetObjectLookAt);
+			//}
+			//else
+			//{
 				if (targetLookAtExists())
 				{
 					HandlePlayerInput();
@@ -77,7 +78,7 @@ public class Camera_ThirdPerson : MonoBehaviour
 					UpdatePosition();
                     WallCollide();
 				}
-			}
+			//}
 		}
 	}
 
@@ -112,14 +113,14 @@ public class Camera_ThirdPerson : MonoBehaviour
 
 	void UpdatePosition()
 	{
-		float pos_X = Mathf.SmoothDamp(position.x, desiredPosition.x, ref x_Velocity, x_Smooth);
-		float pos_Y = Mathf.SmoothDamp(position.y, desiredPosition.y, ref y_Velocity, y_Smooth);
-		float pos_Z = Mathf.SmoothDamp(position.z, desiredPosition.z, ref z_Velocity, x_Smooth);
-		position = new Vector3(pos_X, pos_Y, pos_Z);
+		//float pos_X = Mathf.SmoothDamp(position.x, desiredPosition.x, ref x_Velocity, x_Smooth);
+		//float pos_Y = Mathf.SmoothDamp(position.y, desiredPosition.y, ref y_Velocity, y_Smooth);
+		//float pos_Z = Mathf.SmoothDamp(position.z, desiredPosition.z, ref z_Velocity, x_Smooth);
+		//position = new Vector3(pos_X, pos_Y, pos_Z);
 
-		transform.position = position;
-
-		transform.LookAt(TargetObjectLookAt);
+        transform.position = Vector3.Lerp(transform.position, desiredPosition, distanceSmoothing);
+        transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.LookRotation(Vector3.Normalize(TargetObjectLookAt.position - gameObject.transform.position)), rotationSmoothing);
+		//transform.LookAt(TargetObjectLookAt);
 	}
 
 	public void Reset()
