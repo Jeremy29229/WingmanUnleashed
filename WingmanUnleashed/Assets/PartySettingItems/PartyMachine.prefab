@@ -243,7 +243,7 @@ ParticleSystem:
   InitialModule:
     enabled: 1
     startLifetime:
-      scalar: 6
+      scalar: 7
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -258,7 +258,7 @@ ParticleSystem:
         serializedVersion: 2
         m_Curve:
         - time: 0
-          value: .666666687
+          value: .714285731
           inSlope: 0
           outSlope: 0
           tangentMode: 0
@@ -468,7 +468,7 @@ ParticleSystem:
     enabled: 1
     m_Type: 0
     rate:
-      scalar: 50
+      scalar: 100
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -518,23 +518,13 @@ ParticleSystem:
         m_Curve:
         - time: 0
           value: 1
-          inSlope: -.127038449
-          outSlope: -.127038449
-          tangentMode: 10
-        - time: .857306778
-          value: .891089082
-          inSlope: -1.23642361
-          outSlope: -1.23642361
-          tangentMode: 10
-        - time: .929058909
-          value: .7227723
-          inSlope: -6.26707697
-          outSlope: -6.26707697
+          inSlope: 0
+          outSlope: 0
           tangentMode: 10
         - time: 1
-          value: 0
-          inSlope: -10.188345
-          outSlope: -10.188345
+          value: 1
+          inSlope: 0
+          outSlope: 0
           tangentMode: 10
         m_PreInfinity: 2
         m_PostInfinity: 2
@@ -557,16 +547,11 @@ ParticleSystem:
   RotationModule:
     enabled: 0
     curve:
-      scalar: .785398185
+      scalar: 6.28318501
       maxCurve:
         serializedVersion: 2
         m_Curve:
         - time: 0
-          value: 1
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-        - time: 1
           value: 1
           inSlope: 0
           outSlope: 0
@@ -577,18 +562,13 @@ ParticleSystem:
         serializedVersion: 2
         m_Curve:
         - time: 0
-          value: 0
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-        - time: 1
-          value: 0
+          value: -1
           inSlope: 0
           outSlope: 0
           tangentMode: 0
         m_PreInfinity: 2
         m_PostInfinity: 2
-      minMaxState: 0
+      minMaxState: 3
   ColorModule:
     enabled: 1
     gradient:
@@ -601,7 +581,7 @@ ParticleSystem:
           rgba: 4294967295
         key2:
           serializedVersion: 2
-          rgba: 0
+          rgba: 3305111552
         key3:
           serializedVersion: 2
           rgba: 0
@@ -626,15 +606,15 @@ ParticleSystem:
         ctime6: 0
         ctime7: 0
         atime0: 0
-        atime1: 58789
-        atime2: 65535
-        atime3: 0
+        atime1: 47995
+        atime2: 56669
+        atime3: 65535
         atime4: 0
         atime5: 0
         atime6: 0
         atime7: 0
         m_NumColorKeys: 2
-        m_NumAlphaKeys: 3
+        m_NumAlphaKeys: 4
       minGradient:
         key0:
           serializedVersion: 2
