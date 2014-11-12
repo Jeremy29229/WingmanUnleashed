@@ -80,7 +80,7 @@ public class ConversationManager : MonoBehaviour
 		if (GameObject.Find("Client") != null)
 		{
 			clientScript = GameObject.Find("Client").GetComponentInChildren<Client>();
-			commandableClient = GameObject.Find("Client").GetComponentInChildren<Commandable>();
+			commandableClient = gameObject.GetComponent<Commandable>();
 		}
 		else
 		{
