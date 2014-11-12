@@ -202,6 +202,39 @@ public class NPCHips : MonoBehaviour
 		//gameObject.GetComponentsInChildren<Renderer>().FirstOrDefault(r => r.transform.parent.name == "Mesh").material = mat;
 	}
 
+    public void ActivateWanderer()
+    {
+        Wander = true;
+        if (!UseNavMesh)
+        {
+            ActivateNavmesh();
+        }
+        GetComponent<CharacterAnimator>().ResetToIdle();
+        gameObject.GetComponent<Wanderer>().enabled = true;
+    }
+    public void DeactivateWanderer()
+    {
+        Wander = false;
+        gameObject.GetComponent<Wanderer>().enabled = false;
+        GetComponent<CharacterAnimator>().ResetToIdle();
+    }
+    public void ActivateNavmesh()
+    {
+        UseNavMesh = true;
+        GetComponent<CharacterAnimator>().ResetToIdle();
+        gameObject.GetComponent<NavMeshAgent>().enabled = true;
+    }
+    public void DectivateNavmesh()
+    {
+        UseNavMesh = false;
+        if (Wander)
+        {
+            DeactivateWanderer();
+        }
+        GetComponent<CharacterAnimator>().ResetToIdle();
+        gameObject.GetComponent<NavMeshAgent>().enabled = true;
+    }
+
 	void Update()
 	{
 
