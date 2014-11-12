@@ -9,7 +9,7 @@ public class Target : MonoBehaviour
 	private Image interestBar;
 
 	// Use this for initialization
-	void Start()
+	void OnEnable()
 	{
 		interestBar = (Image)GameObject.Find("InterestBar").GetComponent(typeof(Image));
 

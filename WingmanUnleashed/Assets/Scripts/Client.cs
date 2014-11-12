@@ -5,11 +5,11 @@ using System.Collections;
 public class Client : MonoBehaviour
 {
 
-	private float confidence;
+	public float confidence =0;
 	private Image confidenceBar;
 
 	// Use this for initialization
-	void Start()
+	void OnEnable()
 	{
 		confidenceBar = (Image)GameObject.Find("ConfidenceBar").GetComponent(typeof(Image));
 

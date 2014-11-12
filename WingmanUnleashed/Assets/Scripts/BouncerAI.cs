@@ -40,7 +40,7 @@ public class BouncerAI : MonoBehaviour
 	private float DEFAULT_STOP = 0.0f;
     private bool carryingWingman;
 
-	void Start()
+	void OnEnable()
 	{
 		Characteranimation = GetComponent<BouncerAnimator>();
 		detection = GetComponentInChildren<VisionDetection>();
