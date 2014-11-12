@@ -4,6 +4,7 @@ public class Adoorable : MonoBehaviour, IInteractable
 {
 	public Vector3 newPositionOffset;
 	public GameObject ConnectingDoor;
+	public bool RequireBouncerSuit = false;
 	private GameObject wingman;
 
 	void Start()
@@ -25,8 +26,10 @@ public class Adoorable : MonoBehaviour, IInteractable
 
 	public void InteractWith()
 	{
-		wingman.transform.position = ConnectingDoor.transform.position + newPositionOffset;
-		//print(wingman.transform.position);
-		wingman.GetComponent<Controller_ThirdPerson>().flightmodeOff();
+		if (!RequireBouncerSuit || wingman.GetComponent<Outfit>().outfitName == "bouncer")
+		{
+			wingman.transform.position = ConnectingDoor.transform.position + newPositionOffset;
+			wingman.GetComponent<Controller_ThirdPerson>().flightmodeOff();
+		}
 	}
 }

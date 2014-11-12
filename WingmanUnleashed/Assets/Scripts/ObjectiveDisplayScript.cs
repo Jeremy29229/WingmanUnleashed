@@ -15,8 +15,6 @@ public class ObjectiveDisplayScript : MonoBehaviour
         ScrollBounds = GameObject.Find("ScrollBounds");
 		mouseManager = GameObject.Find("MouseManager").GetComponent<MouseManager>();
 		gameObject.GetComponentInParent<Canvas>().enabled = false;
-		AddObjective("Start", "Talk to Bruce Ludolf McGinnis."); //Test: Add demo objective
-
 	}
 
 	// Update is called once per frame
