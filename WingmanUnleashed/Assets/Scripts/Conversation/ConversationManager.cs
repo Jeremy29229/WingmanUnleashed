@@ -232,6 +232,11 @@ public class ConversationManager : MonoBehaviour
 			{
 				commandableClient.visitLocation(choice.destinationGameObject.transform.position);
 			}
+
+            if (commandableClient != null && choice.followAfterward)
+            {
+                commandableClient.followCharacter(choice.destinationGameObject);
+            }
 		}
 
 		ProcessDialog(next);

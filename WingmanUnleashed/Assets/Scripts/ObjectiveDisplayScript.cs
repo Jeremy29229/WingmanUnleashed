@@ -69,4 +69,6 @@ public class ObjectiveDisplayScript : MonoBehaviour
             Destroy(ScrollBounds.transform.GetChild(0).gameObject);
         }
     }
+
+    
 }
