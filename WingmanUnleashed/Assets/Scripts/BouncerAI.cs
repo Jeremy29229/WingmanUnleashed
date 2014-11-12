@@ -14,6 +14,8 @@ public class BouncerAI : MonoBehaviour
     public GameObject throwDirection;
     public float ThrowingForce = 1000.0f;
     public bool insideBuilding;
+    public bool constrictRange = false;
+    public float rangeConstriction = 10.0f;
     public Vector3 kickPosition = new Vector3(1449.3f, 244.4f, 546.0f);
 
 
@@ -61,30 +63,39 @@ public class BouncerAI : MonoBehaviour
 	void LateUpdate()
 	{
 		float currentDetectionLevel = player.getDetectionLevel();
-
-		if (Input.GetKeyDown(KeyCode.P))
-		{
-			DistractionManager.Instance.AddDistraction(10.0f, 10.0f, playerWingman.position);
-		}
-        if (carryingWingman)
+        bool withingRange = true;
+        if (constrictRange)
         {
-            Carrying();
+            Vector3 bouncerToPlayerRange = transform.position - playerWingman.position;
+            withingRange = bouncerToPlayerRange.magnitude <= rangeConstriction;
         }
-		else if (currentDetectionLevel <= maxStopToLookLevel)
-		{
-			Patrolling();
-		}
-		else if (currentDetectionLevel > maxStopToLookLevel && currentDetectionLevel <= maxAwareLevel)
-		{
-			Aware();
-		}
-		else if (currentDetectionLevel > maxAwareLevel && currentDetectionLevel < maxPursueLevel)
-		{
-			Pursuing();
-		}
-        else if (currentDetectionLevel >= maxPursueLevel)
+
+        if (withingRange)
         {
-            FullPursuit();
+            if (carryingWingman)
+            {
+                Carrying();
+            }
+            else if (currentDetectionLevel <= maxStopToLookLevel || playerWingman.gameObject.GetComponent<Outfit>().outfitName == "bouncer")
+            {
+                Patrolling();
+            }
+            else if (currentDetectionLevel > maxStopToLookLevel && currentDetectionLevel <= maxAwareLevel)
+            {
+                Aware();
+            }
+            else if (currentDetectionLevel > maxAwareLevel && currentDetectionLevel < maxPursueLevel)
+            {
+                Pursuing();
+            }
+            else if (currentDetectionLevel >= maxPursueLevel)
+            {
+                FullPursuit();
+            }
+        }
+        else
+        {
+            Patrolling();
         }
 
 	}
