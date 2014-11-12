@@ -237,6 +237,11 @@ public class ConversationManager : MonoBehaviour
             {
                 commandableClient.followCharacter(choice.destinationGameObject);
             }
+
+            if (commandableClient != null && choice.sentToAfterward)
+            {
+                commandableClient.sendToLocation(choice.destinationGameObject.transform.position);
+            }
 		}
 
 		ProcessDialog(next);

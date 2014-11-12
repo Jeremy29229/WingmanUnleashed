@@ -18,5 +18,6 @@ public class DialogResponse : MonoBehaviour
 	public float AddedSuspicion = 0.0f;
     public bool visitAfterward;
     public bool followAfterward;
+    public bool sentToAfterward;
     public GameObject destinationGameObject;
 }
