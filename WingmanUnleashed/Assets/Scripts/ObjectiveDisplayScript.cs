@@ -5,12 +5,14 @@ using System.Collections;
 public class ObjectiveDisplayScript : MonoBehaviour
 {
 	public GameObject ObjectiveBar;
+    private GameObject ScrollBounds;
 	private MouseManager mouseManager;
 	bool on;
 
 	// Use this for initialization
 	void Start()
 	{
+        ScrollBounds = GameObject.Find("ScrollBounds");
 		mouseManager = GameObject.Find("MouseManager").GetComponent<MouseManager>();
 		gameObject.GetComponentInParent<Canvas>().enabled = false;
 		AddObjective("Start", "Talk to Bruce Ludolf McGinnis."); //Test: Add demo objective
@@ -51,12 +53,20 @@ public class ObjectiveDisplayScript : MonoBehaviour
 		var id = (GameObject)Instantiate(ObjectiveBar);
 		id.name = name;
 		id.transform.FindChild("Text").GetComponent<Text>().text = objectiveText;
-		id.transform.SetParent(GameObject.Find("ScrollBounds").transform, false);
+		id.transform.SetParent(ScrollBounds.transform, false);
 	}
 
 	public void RemoveObjective(string name)
 	{
-		var id = GameObject.Find("ScrollBounds").transform.FindChild(name);
+		var id = ScrollBounds.transform.FindChild(name);
 		Destroy(id.gameObject);
 	}
+
+    public void RemoveAllObjectives()
+    {
+        while (ScrollBounds.transform.childCount > 0)
+        {
+            Destroy(ScrollBounds.transform.GetChild(0).gameObject);
+        }
+    }
 }
