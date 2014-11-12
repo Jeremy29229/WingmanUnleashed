@@ -12,9 +12,9 @@ public class Commandable : MonoBehaviour {
     bool willReturn;
 	// Use this for initialization
 	void Start () {
-        agent = gameObject.GetComponent<NavMeshAgent>();
+		agent = gameObject.GetComponentInParent<NavMeshAgent>();
         startPosition = gameObject.transform.position;
-        animator = gameObject.GetComponent<CharacterAnimator>();
+        animator = gameObject.GetComponentInParent<CharacterAnimator>();
         destinationReached = true;
         following = false;
         willReturn = false;
