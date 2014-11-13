@@ -76,7 +76,7 @@ public class BouncerAI : MonoBehaviour
             {
                 Carrying();
             }
-            else if (currentDetectionLevel <= maxStopToLookLevel || playerWingman.gameObject.GetComponent<Outfit>().outfitName == "bouncer")
+            else if (currentDetectionLevel <= maxStopToLookLevel)
             {
                 Patrolling();
             }
