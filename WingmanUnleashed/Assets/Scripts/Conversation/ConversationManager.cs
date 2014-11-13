@@ -77,10 +77,14 @@ public class ConversationManager : MonoBehaviour
 
 	public void ProcessDialog(Dialog d)
 	{
+		if (d != null && d.gameObject.GetComponent<Commandable>() != null)
+		{
+			commandableClient = d.gameObject.GetComponent<Commandable>();
+		}
+        
 		if (GameObject.Find("Client") != null)
 		{
 			clientScript = GameObject.Find("Client").GetComponentInChildren<Client>();
-			commandableClient = GameObject.Find("Client").GetComponentInChildren<Commandable>();
 		}
 		else
 		{

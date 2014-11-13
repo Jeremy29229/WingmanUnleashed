@@ -1,94 +1,53 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class NPCBouncer : MonoBehaviour {
+public class NPCBouncer : NPCControlScript
+{
     public BouncerType BouncerType = BouncerType.Angry;
     public BouncerVariant Variant = BouncerVariant.One;
-    public bool RandomIdleDialogue = true;
-    public bool UseNavMesh = true;
 
     void Start()
     {
-        SetupTexture();
-        if (!UseNavMesh)
-        {
-            gameObject.GetComponent<NavMeshAgent>().enabled = false;
-            GetComponent<CharacterAnimator>().ResetToIdle();
-        }
-        if (RandomIdleDialogue)
-        {
-            SetupRandomDialogue();
-        }
+        Wander = false;
+        base.StartSetup();
     }
 
-    private void SetupRandomDialogue()
+    protected override void SetupRandomDialogue()
     {
         GameObject conversationInformation = gameObject.transform.FindChild("ConversationInformation").gameObject;
-        conversationInformation.transform.FindChild("NPCOverheadDisplay").gameObject.SetActive(true);
-
-        RandomConversible randomConversible = conversationInformation.AddComponent<RandomConversible>();
-        randomConversible.enabled = false;
-
-        Correspondence correspondance = conversationInformation.AddComponent<Correspondence>();
-        correspondance.Conversations = new Conversation[5];
-        randomConversible.enabled = true;
-
-        Conversation conversation1 = conversationInformation.AddComponent<Conversation>();
-        Dialog dialog1a = conversationInformation.AddComponent<Dialog>();
-        conversation1.Beginning = dialog1a;
-        correspondance.Conversations[0] = conversation1;
-
-        Conversation conversation2 = conversationInformation.AddComponent<Conversation>();
-        Dialog dialog2a = conversationInformation.AddComponent<Dialog>();
-        conversation2.Beginning = dialog2a;
-        correspondance.Conversations[1] = conversation2;
-
-        Conversation conversation3 = conversationInformation.AddComponent<Conversation>();
-        Dialog dialog3a = conversationInformation.AddComponent<Dialog>();
-        conversation3.Beginning = dialog3a;
-        correspondance.Conversations[2] = conversation3;
-
-        Conversation conversation4 = conversationInformation.AddComponent<Conversation>();
-        Dialog dialog4a = conversationInformation.AddComponent<Dialog>();
-        conversation4.Beginning = dialog4a;
-        correspondance.Conversations[3] = conversation4;
-
-        Conversation conversation5 = conversationInformation.AddComponent<Conversation>();
-        Dialog dialog5a = conversationInformation.AddComponent<Dialog>();
-        conversation5.Beginning = dialog5a;
-        correspondance.Conversations[4] = conversation5;
-
+        base.SetupRandomDialogue();
         switch (BouncerType)
         {
             case BouncerType.Angry:
-                dialog1a.NPCDialog = "Let me guess, someone stole your mint.";
-                dialog2a.NPCDialog = "My cousin's out bouncing fight clubs and what do I get? Party duty.";
-                dialog3a.NPCDialog = "No loitering. Oh, wait, this is a party. Never mind.";
-                dialog4a.NPCDialog = "Hands to yourself, sneak thief.";
-                dialog5a.NPCDialog = "People keep calling us Tigger or something. I don't get the joke. It isn't funny.";
+                randomDialogs[0].NPCDialog = "Let me guess, someone stole your mint.";
+                randomDialogs[1].NPCDialog = "My cousin's out bouncing fight clubs and what do I get? Party duty.";
+                randomDialogs[2].NPCDialog = "No loitering. Oh, wait, this is a party. Never mind.";
+                randomDialogs[3].NPCDialog = "Hands to yourself.";
+                randomDialogs[4].NPCDialog = "People keep calling us Tigger or something. I don't get the joke. It isn't funny.";
                 break;
             case BouncerType.Happy:
-                dialog1a.NPCDialog = "They say The Shenheizzer broke the sound barrier... With his voice!";
-                dialog2a.NPCDialog = "I need to ask you to stop partying so hard. It's making people nervous.";
-                dialog3a.NPCDialog = "This party is under my protection. You have a good time, now.";
-                dialog4a.NPCDialog = "I don't know about you, but I am having a blast. A blast!";
-                dialog5a.NPCDialog = "These party guests are so polite. I love you guys.";
+                randomDialogs[0].NPCDialog = "They say The Shenheizzer broke the sound barrier... With his voice!";
+                randomDialogs[1].NPCDialog = "I need to ask you to start partying harder. You're making people nervous.";
+                randomDialogs[2].NPCDialog = "This party is under my protection. You have a good time, now.";
+                randomDialogs[3].NPCDialog = "I don't know about you, but I am having a blast. A blast!";
+                randomDialogs[4].NPCDialog = "These party guests are so polite. I love you guys.";
                 break;
             case BouncerType.Stoic:
-                dialog1a.NPCDialog = "I used to be a partier like you... What, did you expect me to say more?";
-                dialog2a.NPCDialog = "I mostly deal with petty party crashers and drunken fisticuffs.";
-                dialog3a.NPCDialog = "Heard about you and your flowered words.";
-                dialog4a.NPCDialog = "Pibs think we need their laws. Pffft.";
-                dialog5a.NPCDialog = "Don't have money for drinks? You can always pay with your blood.";
+                randomDialogs[0].NPCDialog = "I used to be a partier like you... What, did you expect me to say more?";
+                randomDialogs[1].NPCDialog = "I mostly deal with petty party crashers and drunken fisticuffs.";
+                randomDialogs[2].NPCDialog = "Heard about you and your flowered words.";
+                randomDialogs[3].NPCDialog = "Pibs think we need their laws. Pffft.";
+                randomDialogs[4].NPCDialog = "Don't have money for drinks? You can always pay with your blood.";
                 break;
         }
-        conversationInformation.GetComponent<Interactable>().enabled = true;
         conversationInformation.GetComponent<Interactable>().InteractableName = "Bouncer";
         conversationInformation.GetComponent<Interactable>().Action = "Talk to";
     }
 
-    private void SetupTexture()
+    protected override void SetThemeOutfit(PartyTheme theme)
     {
+        //Will add party theme specific stuff outfit logic if bouncers every have theme specific outfits
+        //For now this method is pointless to have called after the first material setup
         Material mat;
         string matName = "";
         switch (BouncerType)
@@ -120,9 +79,7 @@ public class NPCBouncer : MonoBehaviour {
                 break;
         }
         mat = (Material)Resources.Load(matName, typeof(Material));
-        //gameObject.renderer.material = mat;
         transform.FindChild("Mesh").GetComponent<Renderer>().material = mat;
-        //gameObject.GetComponentsInChildren<Renderer>().FirstOrDefault(r => r.transform.parent.name == "Mesh").material = mat;
     }
 
     void Update()

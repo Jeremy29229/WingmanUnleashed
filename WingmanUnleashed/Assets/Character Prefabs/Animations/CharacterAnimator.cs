@@ -12,9 +12,9 @@ public class CharacterAnimator : MonoBehaviour
     //TurnRight
     //IsStrafingLeft
     //IsStrafingRight
-    private Animator animator;
+    protected Animator animator;
     public int speed = 1;
-	void Start () 
+    protected void Start() 
     {
         animator = GetComponent<Animator>();
             
@@ -24,14 +24,14 @@ public class CharacterAnimator : MonoBehaviour
         }
         animator.speed = speed;
 	}
-    private void CheckAnimator()
+    protected void CheckAnimator()
     {
         if (animator == null)
         {
             animator = GetComponent<Animator>();
         }
     }
-	void Update () 
+    protected void Update() 
     {
         if (animator == null)
         {
