@@ -83,7 +83,11 @@ public abstract class NPCControlScript : MonoBehaviour
                 ActivateNavmesh();
             }
             GetComponent<CharacterAnimator>().ResetToIdle();
-            gameObject.GetComponent<Wanderer>().enabled = true;
+
+			if (gameObject.GetComponent<Wanderer>() != null)
+			{
+				gameObject.GetComponent<Wanderer>().enabled = true;
+			}
         }
     }
     public void DeactivateWanderer()

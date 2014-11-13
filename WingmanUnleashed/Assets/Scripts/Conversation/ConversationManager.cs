@@ -77,7 +77,10 @@ public class ConversationManager : MonoBehaviour
 
 	public void ProcessDialog(Dialog d)
 	{
-        commandableClient = d.gameObject.GetComponent<Commandable>(); 
+		if (d != null && d.gameObject.GetComponent<Commandable>() != null)
+		{
+			commandableClient = d.gameObject.GetComponent<Commandable>();
+		}
         
 		if (GameObject.Find("Client") != null)
 		{
