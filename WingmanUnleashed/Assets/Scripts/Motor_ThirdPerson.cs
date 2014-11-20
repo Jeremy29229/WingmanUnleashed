@@ -7,9 +7,9 @@ public class Motor_ThirdPerson : MonoBehaviour
     public float sprintSpeed = 10.0f;
     public float crouchSpeed = 2.0f;
 	public static Motor_ThirdPerson Instance;
+    bool isCrouching;
 
 	public Vector3 MovementVector { get; set; }
-    public bool isCrouching;
 
 	void Awake()
 	{
@@ -25,17 +25,15 @@ public class Motor_ThirdPerson : MonoBehaviour
 		MovementVector = Vector3.Normalize(MovementVector);
     
         float speedValue = 0.0f;
-        if (Input.GetKeyDown(KeyCode.LeftControl) || Input.GetKeyDown(KeyCode.RightControl))
+        if (Input.GetKeyDown(KeyCode.LeftControl))
         {
-            isCrouching = !isCrouching;
-            if (isCrouching)
-            {
-                transform.GetComponent<WingmanAnimator>().StartCrouching();
-            }
-            else
-            {
-                transform.GetComponent<WingmanAnimator>().StopCrouching();
-            }
+            isCrouching = true;
+            transform.GetComponent<WingmanAnimator>().StartCrouching();
+        }
+        if (Input.GetKeyUp(KeyCode.LeftControl))
+        {
+            isCrouching = false;
+            transform.GetComponent<WingmanAnimator>().StopCrouching();
         }
     
         if (isCrouching)
