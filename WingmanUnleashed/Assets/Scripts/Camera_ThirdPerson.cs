@@ -18,6 +18,7 @@ public class Camera_ThirdPerson : MonoBehaviour
 	public float y_Smooth = 0.1f;
 	public bool usingFlightCamera;
 	public bool IsInConversation = false;
+    GameObject wingman;
 
 	private float mouseX;
 	private float mouseY;
@@ -50,6 +51,7 @@ public class Camera_ThirdPerson : MonoBehaviour
 	{
 		cameraDistance = Mathf.Clamp(cameraDistance, minDistance, maxDistance);
 		startDistance = cameraDistance;
+        wingman = GameObject.Find("Wingman");
 		Reset();
 	}
 
@@ -188,10 +190,54 @@ public class Camera_ThirdPerson : MonoBehaviour
 
     private void WallCollide()
     {
-        RaycastHit wallHit = new RaycastHit();
-        if (Physics.Linecast(TargetObjectLookAt.position,transform.position, out wallHit)&&Vector3.Distance(wallHit.point,TargetObjectLookAt.position)>0.5f)
+        RaycastHit[] hit = new RaycastHit[8];
+
+        for (int i = 0; i < hit.Length; i++)
         {
-            if(!wallHit.collider.isTrigger)transform.position = new Vector3(wallHit.point.x, wallHit.point.y, wallHit.point.z);
+            hit[i] = new RaycastHit();
+        }
+
+        Vector3[] points = new Vector3[8];
+
+        points[0] = new Vector3( 0.0f, 0.3f, 0.0f);
+        points[1] = new Vector3( 0.5f, 0.0f, 0.0f);
+        points[2] = new Vector3( 0.0f,-0.3f, 0.0f);
+        points[3] = new Vector3(-0.5f, 0.0f, 0.0f);
+        points[4] = new Vector3( 0.3f, 0.2f, 0.0f);
+        points[5] = new Vector3(-0.3f, 0.2f, 0.0f);
+        points[6] = new Vector3( 0.3f,-0.2f, 0.0f);
+        points[7] = new Vector3(-0.3f,-0.2f, 0.0f);
+
+        //Debug.DrawLine(TargetObjectLookAt.position, transform.position + (transform.rotation * (points[0])), Color.blue);
+        //Debug.DrawLine(TargetObjectLookAt.position, transform.position + (transform.rotation * (points[1])), Color.red);
+        //Debug.DrawLine(TargetObjectLookAt.position, transform.position + (transform.rotation * (points[2])), Color.gray);
+        //Debug.DrawLine(TargetObjectLookAt.position, transform.position + (transform.rotation * (points[3])), Color.green);
+        //Debug.DrawLine(TargetObjectLookAt.position, transform.position + (transform.rotation * (points[4])), Color.magenta);
+        //Debug.DrawLine(TargetObjectLookAt.position, transform.position + (transform.rotation * (points[5])), Color.cyan);
+        //Debug.DrawLine(TargetObjectLookAt.position, transform.position + (transform.rotation * (points[6])), Color.black);
+        //Debug.DrawLine(TargetObjectLookAt.position, transform.position + (transform.rotation * (points[7])), Color.white);
+
+        bool ithit = false;
+        int closest = 0;
+
+        for (int i = 0; i < hit.Length; i++)
+        {
+            if (Physics.Linecast(TargetObjectLookAt.position, transform.position+(transform.rotation * (points[i])), out hit[i]))
+            {
+                if (!hit[i].collider.isTrigger && hit[i].collider.gameObject != wingman)
+                {
+                    ithit = true;
+                    if (Vector3.Distance(TargetObjectLookAt.position, new Vector3(hit[i].point.x, hit[i].point.y, hit[i].point.z)) < Vector3.Distance(TargetObjectLookAt.position, new Vector3(hit[closest].point.x, hit[closest].point.y, hit[closest].point.z)))
+                    {
+                        closest = i;
+                    }
+                }
+            }
+        }
+        if (ithit)
+        {
+            //Debug.DrawLine(TargetObjectLookAt.position, TargetObjectLookAt.position + Vector3.Project(new Vector3(hit[closest].point.x, hit[closest].point.y, hit[closest].point.z) - TargetObjectLookAt.position, transform.rotation * new Vector3(0.0f, 0.0f, -1.0f)), Color.yellow, 1);
+            transform.position = TargetObjectLookAt.position + Vector3.Project(new Vector3(hit[closest].point.x, hit[closest].point.y, hit[closest].point.z) - TargetObjectLookAt.position, transform.rotation * new Vector3(0.0f, 0.0f, -1.0f));
         }
     }
 

@@ -64,7 +64,6 @@ public class Controller_ThirdPerson : MonoBehaviour
 	{
 		if (!IsInConversation)
 		{
-
 			if (flightmode)
 			{
 				float airspeed = velocity.magnitude;
@@ -192,10 +191,6 @@ public class Controller_ThirdPerson : MonoBehaviour
                     {
                         player.transform.GetComponent<WingmanAnimator>().ResetToIdle();
                     }
-
-
-                   
-
 				}
                 if (InAir()) flightmodeOn();
 			}
@@ -259,7 +254,7 @@ public class Controller_ThirdPerson : MonoBehaviour
         else
         {
             inAirCount += Time.deltaTime;
-            if (inAirCount > 1.5f)
+            if (inAirCount > 0.0f)
             {
                 result = true;
                 inAirCount = 0.0f;
