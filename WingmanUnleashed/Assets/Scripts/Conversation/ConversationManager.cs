@@ -28,6 +28,10 @@ public class ConversationManager : MonoBehaviour
 
 	private MouseManager mouseManager;
 	private ObjectiveDisplayScript objectiveManager;
+	private InteractionManager interactionManager;
+	private GameObject interactionGUI;
+
+	private bool isShowing;
 
 	void Start()
 	{
@@ -58,30 +62,39 @@ public class ConversationManager : MonoBehaviour
 		npcName = GameObject.Find("NPCName").GetComponent<Text>();
 
 		outfit = player.GetComponent<Outfit>();
+		interactionGUI = GameObject.Find("InteractionGUI");
+		interactionManager = GameObject.Find("InteractionManager").GetComponent<InteractionManager>();
+
+		isShowing = false;
 	}
 
 	void Update()
 	{
-		if(Input.GetKeyDown(KeyCode.Q))
+		if(Input.GetKeyDown(KeyCode.Q) && isShowing)
 		{
 			UI.enabled = false;
 			cam.IsInConversation = false;
 			controller.IsInConversation = false;
 			mouseManager.IsMouseLocked = true;
-			if (last != null)
-			{
-				last.gameObject.GetComponent<Interactable>().IsActive = true;
-			}
+			interactionManager.Show();
+			isShowing = false;
 		}
 	}
 
 	public void ProcessDialog(Dialog d)
 	{
+		UI.enabled = true;
+		cam.IsInConversation = true;
+		controller.IsInConversation = true;
+		mouseManager.IsMouseLocked = false;
+		interactionManager.Hide();
+		isShowing = true;
+
 		if (d != null && d.gameObject.GetComponent<Commandable>() != null)
 		{
 			commandableClient = d.gameObject.GetComponent<Commandable>();
 		}
-        
+		
 		if (GameObject.Find("Client") != null)
 		{
 			clientScript = GameObject.Find("Client").GetComponentInChildren<Client>();
@@ -106,10 +119,8 @@ public class ConversationManager : MonoBehaviour
 			cam.IsInConversation = false;
 			controller.IsInConversation = false;
 			mouseManager.IsMouseLocked = true;
-			if (last != null)
-			{
-				last.gameObject.GetComponent<Interactable>().IsActive = true;
-			}
+			interactionManager.Show();
+			isShowing = false;
 		}
 		else
 		{
@@ -118,6 +129,9 @@ public class ConversationManager : MonoBehaviour
 			UI.enabled = true;
 			cam.IsInConversation = true;
 			controller.IsInConversation = true;
+			mouseManager.IsMouseLocked = false;
+			interactionManager.Hide();
+
 			ignoreSelection = false;
 
 			for (int i = 0; i < buttons.Length; i++)
@@ -237,15 +251,15 @@ public class ConversationManager : MonoBehaviour
 				commandableClient.visitLocation(choice.destinationGameObject.transform.position);
 			}
 
-            if (commandableClient != null && choice.followAfterward)
-            {
-                commandableClient.followCharacter(choice.destinationGameObject);
-            }
+			if (commandableClient != null && choice.followAfterward)
+			{
+				commandableClient.followCharacter(choice.destinationGameObject);
+			}
 
-            if (commandableClient != null && choice.sentToAfterward)
-            {
-                commandableClient.sendToLocation(choice.destinationGameObject.transform.position);
-            }
+			if (commandableClient != null && choice.sentToAfterward)
+			{
+				commandableClient.sendToLocation(choice.destinationGameObject.transform.position);
+			}
 		}
 
 		ProcessDialog(next);
@@ -344,6 +358,19 @@ public class ConversationManager : MonoBehaviour
 	private bool HadRequiredConfidence(DialogResponse d)
 	{
 		return clientScript == null || d.RequiredConfidence <= clientScript.GetConfidence();
+	}
+
+	public void Close()
+	{
+		if (isShowing)
+		{
+			UI.enabled = false;
+			cam.IsInConversation = false;
+			controller.IsInConversation = false;
+			mouseManager.IsMouseLocked = true;
+			interactionManager.Show();
+			isShowing = false;
+		}
 	}
 
 }
