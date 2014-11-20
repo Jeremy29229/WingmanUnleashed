@@ -41,8 +41,6 @@ public class RandomConversible : MonoBehaviour, IInteractable
 		if (correspondence.Conversations.Length > 0)
 		{
 			int selection = Random.Range(0, correspondence.Conversations.Length);
-			GetComponent<Interactable>().IsActive = false;
-			mouseManager.IsMouseLocked = false;
 			cm.ProcessDialog(correspondence.Conversations[selection].Beginning);
 		}
 	}

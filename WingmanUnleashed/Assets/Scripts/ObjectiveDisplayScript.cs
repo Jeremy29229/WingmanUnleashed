@@ -15,6 +15,7 @@ public class ObjectiveDisplayScript : MonoBehaviour
 
 	private Camera_ThirdPerson cam;
 	private Controller_ThirdPerson controller;
+	private Scrollbar objectiveScrollBar;
 
 	// Use this for initialization
 	void Start()
@@ -30,6 +31,7 @@ public class ObjectiveDisplayScript : MonoBehaviour
 		player = GameObject.Find("Wingman");
 		inventory = player.GetComponent<Inventory>();
 		on = false;
+		objectiveScrollBar = GameObject.Find("Scrollbar").GetComponent<Scrollbar>();
 	}
 
 	// Update is called once per frame
@@ -45,9 +47,11 @@ public class ObjectiveDisplayScript : MonoBehaviour
 				conversationManager.Close();
 				interactionManager.Hide();
 				gameObject.GetComponent<Canvas>().enabled = true;
+				objectiveScrollBar.value = 1.0f;
 				mouseManager.IsMouseLocked = false;
 				cam.IsInConversation = true;
 				controller.IsInConversation = true;
+				Time.timeScale = 0.0f;
 			}
 			else
 			{
@@ -56,6 +60,7 @@ public class ObjectiveDisplayScript : MonoBehaviour
 				mouseManager.IsMouseLocked = true;
 				cam.IsInConversation = false;
 				controller.IsInConversation = false;
+				Time.timeScale = 1.0f;
 			}
 		}
 		if (Input.GetKeyDown(KeyCode.Q))
@@ -63,8 +68,11 @@ public class ObjectiveDisplayScript : MonoBehaviour
 			if (on)
 			{
 				gameObject.GetComponent<Canvas>().enabled = false;
-				mouseManager.IsMouseLocked = on;
-				on = !on;
+				interactionManager.Show();
+				mouseManager.IsMouseLocked = true;
+				cam.IsInConversation = false;
+				controller.IsInConversation = false;
+				Time.timeScale = 1.0f;
 			}
 		}
 	}

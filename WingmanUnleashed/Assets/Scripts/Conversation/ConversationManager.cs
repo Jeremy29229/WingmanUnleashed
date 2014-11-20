@@ -31,7 +31,7 @@ public class ConversationManager : MonoBehaviour
 	private InteractionManager interactionManager;
 	private GameObject interactionGUI;
 
-	private bool isShowing;
+	public bool isShowing;
 
 	void Start()
 	{
