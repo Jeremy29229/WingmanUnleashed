@@ -18,6 +18,8 @@ public class Interactable : MonoBehaviour
 	public string InteractableName;
 	public string AdditionalInformation = "";
 
+	private InteractionManager interactionManager;
+
 	void Start()
 	{
 		UI = (Canvas)GameObject.Find("InteractionGUI").GetComponent(typeof(Canvas));
@@ -36,7 +38,8 @@ public class Interactable : MonoBehaviour
 			throw new UnassignedReferenceException("A script that implements IInteractable must be a component in the same GameObject as this script.");
 		}
 
-		GameObject.Find("InteractionManager").GetComponent<InteractionManager>().Interactables.Add(gameObject);
+		interactionManager = GameObject.Find("InteractionManager").GetComponent<InteractionManager>();
+		interactionManager.Interactables.Add(gameObject);
 	}
 
 	public void InteractionUpdate()
@@ -44,7 +47,7 @@ public class Interactable : MonoBehaviour
 		if (Vector3.Distance(Player.transform.position, gameObject.transform.position) <= InteractionRadius)
 		{
 			UI.enabled = true;
-			if (Input.GetKeyDown(InteractionKey))
+			if (Input.GetKeyDown(InteractionKey) && interactionManager.enabled)
 			{
 				behavior.InteractWith();
 			}

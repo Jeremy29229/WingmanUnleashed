@@ -5,16 +5,31 @@ using System.Collections;
 public class ObjectiveDisplayScript : MonoBehaviour
 {
 	public GameObject ObjectiveBar;
-    private GameObject ScrollBounds;
+	private GameObject ScrollBounds;
 	private MouseManager mouseManager;
+	private ConversationManager conversationManager;
 	bool on;
+	private GameObject player;
+	private InteractionManager interactionManager;
+	private Inventory inventory;
+
+	private Camera_ThirdPerson cam;
+	private Controller_ThirdPerson controller;
 
 	// Use this for initialization
 	void Start()
 	{
-        ScrollBounds = GameObject.Find("ScrollBounds");
+		cam = Camera_ThirdPerson.Instance;
+		controller = Controller_ThirdPerson.Instance;
+
+		ScrollBounds = GameObject.Find("ScrollBounds");
 		mouseManager = GameObject.Find("MouseManager").GetComponent<MouseManager>();
 		gameObject.GetComponentInParent<Canvas>().enabled = false;
+		interactionManager = GameObject.Find("InteractionManager").GetComponent<InteractionManager>();
+		conversationManager = GameObject.Find("ConvoGUI").GetComponent<ConversationManager>();
+		player = GameObject.Find("Wingman");
+		inventory = player.GetComponent<Inventory>();
+		on = false;
 	}
 
 	// Update is called once per frame
@@ -22,18 +37,26 @@ public class ObjectiveDisplayScript : MonoBehaviour
 	{
 		if (Input.GetKeyUp(KeyCode.O))
 		{
+			on = !on;
+
 			if (on)
 			{
-				gameObject.GetComponent<Canvas>().enabled = false;
+				inventory.CloseInventory();
+				conversationManager.Close();
+				interactionManager.Hide();
+				gameObject.GetComponent<Canvas>().enabled = true;
+				mouseManager.IsMouseLocked = false;
+				cam.IsInConversation = true;
+				controller.IsInConversation = true;
 			}
 			else
 			{
-				gameObject.GetComponent<Canvas>().enabled = true;
+				gameObject.GetComponent<Canvas>().enabled = false;
+				interactionManager.Show();
+				mouseManager.IsMouseLocked = true;
+				cam.IsInConversation = false;
+				controller.IsInConversation = false;
 			}
-			mouseManager.IsMouseLocked = on;
-			on = !on;
-
-
 		}
 		if (Input.GetKeyDown(KeyCode.Q))
 		{
@@ -60,13 +83,21 @@ public class ObjectiveDisplayScript : MonoBehaviour
 		Destroy(id.gameObject);
 	}
 
-    public void RemoveAllObjectives()
-    {
-        while (ScrollBounds.transform.childCount > 0)
-        {
-            Destroy(ScrollBounds.transform.GetChild(0).gameObject);
-        }
-    }
+	public void RemoveAllObjectives()
+	{
+		while (ScrollBounds.transform.childCount > 0)
+		{
+			Destroy(ScrollBounds.transform.GetChild(0).gameObject);
+		}
+	}
 
-    
+	public void Close()
+	{
+		gameObject.GetComponent<Canvas>().enabled = false;
+		interactionManager.Show();
+		mouseManager.IsMouseLocked = true;
+		on = false;
+	}
+
+	
 }

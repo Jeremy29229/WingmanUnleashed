@@ -11,13 +11,25 @@ public class Inventory : MonoBehaviour
 
 	private bool inventoryVisible;
 	private MouseManager mouseManager;
+	private InteractionManager interactionManager;
+	private ConversationManager conversationManger;
+	private ObjectiveDisplayScript objectiveManager;
+
+	private Camera_ThirdPerson cam;
+	private Controller_ThirdPerson controller;
 
 	void Start()
 	{
+		cam = Camera_ThirdPerson.Instance;
+		controller = Controller_ThirdPerson.Instance;
+
 		items = new List<InventoryItem>();
 		inventoryVisible = false;
 		GameObject.Find("InventoryCanvas").GetComponent<Canvas>().enabled = false;
 		mouseManager = GameObject.Find("MouseManager").GetComponent<MouseManager>();
+		interactionManager = GameObject.Find("InteractionManager").GetComponent<InteractionManager>();
+		objectiveManager = GameObject.Find("ObjectiveCanvas").GetComponent<ObjectiveDisplayScript>();
+		conversationManger = GameObject.Find("ConvoGUI").GetComponent<ConversationManager>();
 	}
 
 	void Update()
@@ -39,8 +51,24 @@ public class Inventory : MonoBehaviour
 	public void DisplayInventory()
 	{
 		inventoryVisible = !inventoryVisible;
-		GameObject.Find("InventoryCanvas").GetComponent<Canvas>().enabled = inventoryVisible;
-		mouseManager.IsMouseLocked = !mouseManager.IsMouseLocked;
+		if (inventoryVisible)
+		{
+			objectiveManager.Close();
+			conversationManger.Close();
+			interactionManager.Hide();
+			GameObject.Find("InventoryCanvas").GetComponent<Canvas>().enabled = true;
+			mouseManager.IsMouseLocked = false;
+			cam.IsInConversation = true;
+			controller.IsInConversation = true;
+		}
+		else
+		{
+			interactionManager.Show();
+			GameObject.Find("InventoryCanvas").GetComponent<Canvas>().enabled = false;
+			mouseManager.IsMouseLocked = true;
+			cam.IsInConversation = false;
+			controller.IsInConversation = false;
+		}
 	}
 
 	public void CloseInventory()

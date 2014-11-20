@@ -35,8 +35,8 @@ public class Conversable : MonoBehaviour, IInteractable
 
 	public void InteractWith()
 	{
-		GetComponent<Interactable>().IsActive = false;
-		mouseManager.IsMouseLocked = false;
+		//GetComponent<Interactable>().IsActive = false;
+		//mouseManager.IsMouseLocked = false;
 		cm.ProcessDialog(correspondence.Current.Beginning);
 	}
 }
