@@ -7,7 +7,7 @@ public class Motor_ThirdPerson : MonoBehaviour
     public float sprintSpeed = 10.0f;
     public float crouchSpeed = 2.0f;
 	public static Motor_ThirdPerson Instance;
-    bool isCrouching;
+    public bool isCrouching;
 
 	public Vector3 MovementVector { get; set; }
 
