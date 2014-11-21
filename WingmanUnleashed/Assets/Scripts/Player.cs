@@ -16,7 +16,7 @@ public class Player : MonoBehaviour
 	public float TimeTilUnlocked = 10.0f;
 	private bool lockDetection = false;
 	private float timeLocked = 0.0f;
-
+	private ConversationManager conversationManager;
 	// Use this for initialization
 	void Start()
 	{
@@ -25,6 +25,7 @@ public class Player : MonoBehaviour
 		detectionBar = (Image)GameObject.Find("DetectionBar").GetComponent(typeof(Image));
 		eye = (Image)GameObject.Find("Eye").GetComponent(typeof(Image));
 		WMVLights = GameObject.FindGameObjectsWithTag("WMVLight");
+		conversationManager = GameObject.Find("ConvoGUI").GetComponent<ConversationManager>();
 	}
 
 	// Update is called once per frame
@@ -43,7 +44,7 @@ public class Player : MonoBehaviour
 				}
 				else
 				{
-                    detectionLevel = 1.0f;
+					detectionLevel = 1.0f;
 				}
 			}
 			else
@@ -54,7 +55,7 @@ public class Player : MonoBehaviour
 			}
 		}
 
-		if (detectionLevel > 0.0f && !lockDetection)
+		if (detectionLevel > 0.0f && !lockDetection && !conversationManager.isShowing)
 		{
 			detectionLevel -= 0.01f * Time.deltaTime;
 			DetectionSound.volume = detectionLevel;
@@ -84,26 +85,29 @@ public class Player : MonoBehaviour
 
 	public void increaseDetection(float amount)
 	{
-		if (!DetectionSound.isPlaying) DetectionSound.Play();
-		detectionLevel += amount * Time.deltaTime;
-		DetectionSound.volume = detectionLevel;
+		if (!conversationManager.isShowing)
+		{
+			if (!DetectionSound.isPlaying) DetectionSound.Play();
+			detectionLevel += amount * Time.deltaTime;
+			DetectionSound.volume = detectionLevel;
+		}
 	}
 
 	public void increaseDetectionFlat(float amount)
 	{
 		if (detectionLevel <= 0.0f) DetectionSound.Play();
 		detectionLevel += amount;
-        DetectionSound.volume = detectionLevel;
+		DetectionSound.volume = detectionLevel;
 	}
 
-    public void decreaseDetection(float amount)
-    {
-        if (detectionLevel > 0.0f && !lockDetection)
-        {
-            detectionLevel -= amount * Time.deltaTime;
-            DetectionSound.volume = detectionLevel;
-        }
-    }
+	public void decreaseDetection(float amount)
+	{
+		if (detectionLevel > 0.0f && !lockDetection)
+		{
+			detectionLevel -= amount * Time.deltaTime;
+			DetectionSound.volume = detectionLevel;
+		}
+	}
 
 	public float getDetectionLevel()
 	{

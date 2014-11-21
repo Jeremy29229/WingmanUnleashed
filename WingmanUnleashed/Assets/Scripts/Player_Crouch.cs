@@ -38,15 +38,15 @@ public class Player_Crouch : MonoBehaviour
         if (Motor_ThirdPerson.Instance.isCrouching)
         {
             currentCrouchAmount = Mathf.SmoothDamp(currentCrouchAmount, CROUCHING, ref crouchVelocity, transitionInSeconds);
-
         }
         else
         {
             currentCrouchAmount = Mathf.SmoothDamp(currentCrouchAmount, STANDING, ref crouchVelocity, transitionInSeconds);
         }
 
-        cameraLookAt.position += new Vector3(0.0f, (capCollider.height - previousColliderHeight) * 0.5f, 0.0f);
-        capCollider.center += new Vector3(0.0f, (capCollider.height - previousColliderHeight) * 0.5f, 0.0f);
+        float capsuleHeight = (capCollider.height - previousColliderHeight) * 0.5f;
+        cameraLookAt.position += new Vector3(0.0f, capsuleHeight, 0.0f);
+        capCollider.center += new Vector3(0.0f, capsuleHeight, 0.0f);
     }
 
 

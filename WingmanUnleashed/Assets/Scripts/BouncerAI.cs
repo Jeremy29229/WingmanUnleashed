@@ -10,13 +10,13 @@ public class BouncerAI : MonoBehaviour
 	public float timeSearching = 3.0f;
 	public float stopDistanceFromPlayer = 0.2f;
 	public Transform[] waypoints;
-    public GameObject throwPoint;
-    public GameObject throwDirection;
-    public float ThrowingForce = 1000.0f;
-    public bool insideBuilding;
-    public bool constrictRange = false;
-    public float rangeConstriction = 10.0f;
-    public Vector3 kickPosition = new Vector3(1449.3f, 244.4f, 546.0f);
+	public GameObject throwPoint;
+	public GameObject throwDirection;
+	public float ThrowingForce = 1000.0f;
+	public bool insideBuilding;
+	public bool constrictRange = false;
+	public float rangeConstriction = 10.0f;
+	public Vector3 kickPosition = new Vector3(1449.3f, 244.4f, 546.0f);
 
 
 	private BouncerAnimator Characteranimation;
@@ -38,7 +38,8 @@ public class BouncerAI : MonoBehaviour
 	private Vector3 distractionPos;
 	private bool checkingDistraction;
 	private float DEFAULT_STOP = 0.0f;
-    private bool carryingWingman;
+	private bool carryingWingman;
+	private ConversationManager conversationManager;
 
 	void OnEnable()
 	{
@@ -57,74 +58,76 @@ public class BouncerAI : MonoBehaviour
 		totalTimeSearching = 0.0f;
 		lastKnownPlayerPosition = Vector3.zero;
 		checkingDistraction = false;
-        carryingWingman = false;
+		carryingWingman = false;
+		conversationManager = GameObject.Find("ConvoGUI").GetComponent<ConversationManager>();
 	}
 
 	void LateUpdate()
 	{
 		float currentDetectionLevel = player.getDetectionLevel();
-        bool withingRange = true;
-        if (constrictRange)
-        {
-            Vector3 bouncerToPlayerRange = transform.position - playerWingman.position;
-            withingRange = bouncerToPlayerRange.magnitude <= rangeConstriction;
-        }
+		bool withingRange = true;
+		if (constrictRange)
+		{
+			Vector3 bouncerToPlayerRange = transform.position - playerWingman.position;
+			withingRange = bouncerToPlayerRange.magnitude <= rangeConstriction;
+		}
 
-        if (withingRange)
-        {
-            if (carryingWingman)
-            {
-                Carrying();
-            }
-            else if (currentDetectionLevel <= maxStopToLookLevel)
-            {
-                Patrolling();
-            }
-            else if (currentDetectionLevel > maxStopToLookLevel && currentDetectionLevel <= maxAwareLevel)
-            {
-                Aware();
-            }
-            else if (currentDetectionLevel > maxAwareLevel && currentDetectionLevel < maxPursueLevel)
-            {
-                Pursuing();
-            }
-            else if (currentDetectionLevel >= maxPursueLevel)
-            {
-                FullPursuit();
-            }
-        }
-        else
-        {
-            Patrolling();
-        }
+		if (withingRange)
+		{
+			if (carryingWingman)
+			{
+				Carrying();
+			}
+			else if (currentDetectionLevel <= maxStopToLookLevel)
+			{
+				Patrolling();
+			}
+			else if (currentDetectionLevel > maxStopToLookLevel && currentDetectionLevel <= maxAwareLevel)
+			{
+				Aware();
+			}
+			else if (currentDetectionLevel > maxAwareLevel && currentDetectionLevel < maxPursueLevel)
+			{
+				Pursuing();
+			}
+			else if (currentDetectionLevel >= maxPursueLevel)
+			{
+				FullPursuit();
+			}
+		}
+		else
+		{
+			Patrolling();
+		}
 
 	}
 
-    public void Carrying()
-    {
-        Vector3 distanceVector = throwPoint.transform.position - transform.position;
-        if (distanceVector.magnitude <= stopDistanceFromPlayer)
-        {
-            carryingWingman = false;
-            Characteranimation.FinishThrow();
-            playerWingman.Rotate(transform.forward, -90);
-            Camera.main.GetComponent<Camera_ThirdPerson>().rotationSmoothing = 0.8f;
-            //playerWingman.eulerAngles = new Vector3(playerWingman.eulerAngles.x, playerWingman.eulerAngles.y, 0.0f);
-            Vector3 direction = throwDirection.transform.position - throwPoint.transform.position;
-            playerWingman.gameObject.GetComponent<Rigidbody>().AddForce((direction + Vector3.up) * ThrowingForce);
-            playerWingman.gameObject.GetComponent<Controller_ThirdPerson>().flightmodeOn();
-            
-        }
-        else
-        {
-            playerWingman.position = gameObject.transform.position + new Vector3(0f, 1.9f, 0f) - playerWingman.up;
-            playerWingman.forward = transform.forward;
-            playerWingman.Rotate(transform.forward, 90);
-            //playerWingman.eulerAngles = new Vector3(playerWingman.eulerAngles.x, playerWingman.eulerAngles.y, 90.0f);
-            nav.destination = throwPoint.transform.position;
-            Characteranimation.fixWeight();
-        }
-    }
+	public void Carrying()
+	{
+		Vector3 distanceVector = throwPoint.transform.position - transform.position;
+		if (distanceVector.magnitude <= stopDistanceFromPlayer)
+		{
+			carryingWingman = false;
+			player.increaseDetectionFlat(-player.getDetectionLevel());
+			Characteranimation.FinishThrow();
+			playerWingman.Rotate(transform.forward, -90);
+			Camera.main.GetComponent<Camera_ThirdPerson>().rotationSmoothing = 0.8f;
+			//playerWingman.eulerAngles = new Vector3(playerWingman.eulerAngles.x, playerWingman.eulerAngles.y, 0.0f);
+			Vector3 direction = throwDirection.transform.position - throwPoint.transform.position;
+			playerWingman.gameObject.GetComponent<Rigidbody>().AddForce((direction + Vector3.up) * ThrowingForce);
+			playerWingman.gameObject.GetComponent<Controller_ThirdPerson>().flightmodeOn();
+			
+		}
+		else
+		{
+			playerWingman.position = gameObject.transform.position + new Vector3(0f, 1.9f, 0f) - playerWingman.up;
+			playerWingman.forward = transform.forward;
+			playerWingman.Rotate(transform.forward, 90);
+			//playerWingman.eulerAngles = new Vector3(playerWingman.eulerAngles.x, playerWingman.eulerAngles.y, 90.0f);
+			nav.destination = throwPoint.transform.position;
+			Characteranimation.fixWeight();
+		}
+	}
 
 	public void FullPursuit()
 	{
@@ -149,19 +152,20 @@ public class BouncerAI : MonoBehaviour
 			Vector3 distanceVector = playerWingman.position - transform.position;
 			if (distanceVector.magnitude <= stopDistanceFromPlayer)
 			{
-                //if (Characteranimation.IsWalking())
-                //{
-                //    Characteranimation.StopWalking();
-                //}
-                if (insideBuilding)
-                {
-                    KickOutDoor();
-                }
-                else
-                {
-                    Grab();
-                }
-                
+				//if (Characteranimation.IsWalking())
+				//{
+				//    Characteranimation.StopWalking();
+				//}
+				if (insideBuilding)
+				{
+					KickOutDoor();
+				}
+				else
+				{
+					conversationManager.Close();
+					Grab();
+				}
+				
 			}
 		}
 		else if (!detection.IsPlayInRangeAndVisable && !lastPositionKnown) //Lost sight of player
@@ -227,20 +231,20 @@ public class BouncerAI : MonoBehaviour
 		}
 	}
 
-    private void KickOutDoor()
-    {
-        playerWingman.position = kickPosition;
-    }
+	private void KickOutDoor()
+	{
+		playerWingman.position = kickPosition;
+	}
 
-    private void Grab()
-    {
-        carryingWingman = true;
-        Camera.main.GetComponent<Camera_ThirdPerson>().rotationSmoothing = 0.2f;
-        Characteranimation.StartThrow();
-        playerWingman.position = gameObject.transform.position + new Vector3(0f, 1.8f, 0f);
-        //playerWingman.Rotate(transform.forward, 90);
-        nav.destination = throwPoint.transform.position;
-    }
+	private void Grab()
+	{
+		carryingWingman = true;
+		Camera.main.GetComponent<Camera_ThirdPerson>().rotationSmoothing = 0.2f;
+		Characteranimation.StartThrow();
+		playerWingman.position = gameObject.transform.position + new Vector3(0f, 1.8f, 0f);
+		//playerWingman.Rotate(transform.forward, 90);
+		nav.destination = throwPoint.transform.position;
+	}
 
 	public void Pursuing()
 	{

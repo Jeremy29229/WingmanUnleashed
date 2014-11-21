@@ -17,6 +17,7 @@ public class Inventory : MonoBehaviour
 
 	private Camera_ThirdPerson cam;
 	private Controller_ThirdPerson controller;
+	private Scrollbar inventoryScrollbar;
 
 	void Start()
 	{
@@ -30,6 +31,7 @@ public class Inventory : MonoBehaviour
 		interactionManager = GameObject.Find("InteractionManager").GetComponent<InteractionManager>();
 		objectiveManager = GameObject.Find("ObjectiveCanvas").GetComponent<ObjectiveDisplayScript>();
 		conversationManger = GameObject.Find("ConvoGUI").GetComponent<ConversationManager>();
+		inventoryScrollbar = GameObject.Find("ItemsScroll").GetComponent<Scrollbar>();
 	}
 
 	void Update()
@@ -60,6 +62,8 @@ public class Inventory : MonoBehaviour
 			mouseManager.IsMouseLocked = false;
 			cam.IsInConversation = true;
 			controller.IsInConversation = true;
+			inventoryScrollbar.value = 1.0f;
+			Time.timeScale = 0.0f;
 		}
 		else
 		{
@@ -68,6 +72,7 @@ public class Inventory : MonoBehaviour
 			mouseManager.IsMouseLocked = true;
 			cam.IsInConversation = false;
 			controller.IsInConversation = false;
+			Time.timeScale = 1.0f;
 		}
 	}
 
