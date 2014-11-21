@@ -13,6 +13,9 @@ public class Controller_ThirdPerson : MonoBehaviour
 	float jumpHeight = 300.0f;
 	float inAirCount = 0.0f;
 	bool coverBlown = false;
+    bool rotatingToFlat=false;
+    bool rotatingToStand=false;
+    int rotatInt = 0;
 
 	public bool IsInConversation = false;
 
@@ -25,34 +28,46 @@ public class Controller_ThirdPerson : MonoBehaviour
 
 	public void flightmodeOff()
 	{
-		Camera_ThirdPerson.Instance.usingFlightCamera = false;
-		Camera_ThirdPerson.Instance.distanceSmoothing = 0.1f;
-		acceleration = new Vector3(0.0f, 0.0f, 0.0f);
-		lift = new Vector3(0.0f, 0.0f, 0.0f);
-		velocity = new Vector3(0.0f, 0.0f, 0.0f);
-		flightmode = false;
-		player.transform.rotation = new Quaternion(0.0f, player.transform.rotation.y, 0.0f, player.transform.rotation.w);
-		Rigidbody rig = (Rigidbody)player.GetComponent("Rigidbody");
-		rig.useGravity = true;
-		rig.velocity = new Vector3(0, 0, 0);
-		windSound.Stop();
-		player.transform.GetComponent<WingmanAnimator>().ExitTPose();
-		player.transform.GetChild(3).transform.GetChild(2).GetComponent<SkinnedMeshRenderer>().enabled = false;
+        flightModeDeactivate();
+        rotatingToStand = true;
 	}
+
+    void flightModeDeactivate()
+    {
+        Camera_ThirdPerson.Instance.usingFlightCamera = false;
+        Camera_ThirdPerson.Instance.distanceSmoothing = 0.1f;
+        acceleration = new Vector3(0.0f, 0.0f, 0.0f);
+        lift = new Vector3(0.0f, 0.0f, 0.0f);
+        velocity = new Vector3(0.0f, 0.0f, 0.0f);
+        flightmode = false;
+        //player.transform.rotation = new Quaternion(0.0f, player.transform.rotation.y, 0.0f, player.transform.rotation.w);
+        Rigidbody rig = (Rigidbody)player.GetComponent("Rigidbody");
+        rig.useGravity = true;
+        rig.velocity = new Vector3(0, 0, 0);
+        windSound.Stop();
+        player.transform.GetComponent<WingmanAnimator>().ExitTPose();
+        player.transform.GetChild(3).transform.GetChild(2).GetComponent<SkinnedMeshRenderer>().enabled = false;
+    }
+
 	public void flightmodeOn()
 	{
-		Camera_ThirdPerson.Instance.usingFlightCamera = true;		Camera_ThirdPerson.Instance.distanceSmoothing = 0.04f;
-		if (gameObject.GetComponent<Player>().wingmanVisionActive) gameObject.GetComponent<Player>().deactivateWingmanVision();
-		acceleration = new Vector3(0.0f, -9.81f, 0.0f);
-		lift = new Vector3(0.0f, 0.0f, 0.0f);
-		flightmode = true;
-		player.transform.Rotate(new Vector3(1, 0, 0), 90);
-		Rigidbody rig = (Rigidbody)player.GetComponent("Rigidbody");
-		rig.useGravity = false;
-		windSound.Play();
-		player.transform.GetComponent<WingmanAnimator>().EnterTPose();
-		player.transform.GetChild(3).transform.GetChild(2).GetComponent<SkinnedMeshRenderer>().enabled = true;
+        rotatingToFlat = true;
 	}
+
+    void flightModeActivate()
+    {
+        Camera_ThirdPerson.Instance.usingFlightCamera = true; Camera_ThirdPerson.Instance.distanceSmoothing = 0.04f;
+        if (gameObject.GetComponent<Player>().wingmanVisionActive) gameObject.GetComponent<Player>().deactivateWingmanVision();
+        acceleration = new Vector3(0.0f, -9.81f, 0.0f);
+        lift = new Vector3(0.0f, 0.0f, 0.0f);
+        flightmode = true;
+        //player.transform.Rotate(new Vector3(1, 0, 0), 90);
+        Rigidbody rig = (Rigidbody)player.GetComponent("Rigidbody");
+        rig.useGravity = false;
+        windSound.Play();
+        player.transform.GetComponent<WingmanAnimator>().EnterTPose();
+        player.transform.GetChild(3).transform.GetChild(2).GetComponent<SkinnedMeshRenderer>().enabled = true;
+    }
 
 	void Awake()
 	{
@@ -62,6 +77,24 @@ public class Controller_ThirdPerson : MonoBehaviour
 
 	void Update()
 	{
+        if (rotatingToFlat)
+        {
+            player.transform.Rotate(new Vector3(1, 0, 0), 5);
+            rotatInt += 5;
+            if (rotatInt==90)
+            {
+                rotatingToFlat = false;
+                flightModeActivate();
+            }
+        }
+        if (rotatingToStand)
+        {
+            player.transform.rotation = Quaternion.RotateTowards(player.transform.rotation, new Quaternion(0.0f, player.transform.rotation.y, 0.0f, player.transform.rotation.w), 10);
+            if (player.transform.rotation.x == 0.0f && player.transform.rotation.z == 0.0f)
+            {
+                rotatingToStand = false;
+            }
+        }
 		if (!IsInConversation)
 		{
 			if (flightmode)
