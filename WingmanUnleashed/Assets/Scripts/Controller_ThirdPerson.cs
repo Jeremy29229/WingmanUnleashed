@@ -84,6 +84,7 @@ public class Controller_ThirdPerson : MonoBehaviour
             if (rotatInt==90)
             {
                 rotatingToFlat = false;
+                rotatInt = 0;
                 flightModeActivate();
             }
         }
