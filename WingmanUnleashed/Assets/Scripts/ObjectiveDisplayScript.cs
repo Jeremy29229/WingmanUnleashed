@@ -32,6 +32,8 @@ public class ObjectiveDisplayScript : MonoBehaviour
 		inventory = player.GetComponent<Inventory>();
 		on = false;
 		objectiveScrollBar = GameObject.Find("Scrollbar").GetComponent<Scrollbar>();
+        AddObjective("None", "You have no objectives yet. What are you doing with your life?");
+
 	}
 
 	// Update is called once per frame
@@ -79,6 +81,10 @@ public class ObjectiveDisplayScript : MonoBehaviour
 
 	public void AddObjective(string name, string objectiveText)
 	{
+        if (ScrollBounds.transform.childCount == 1 && ScrollBounds.transform.GetChild(0).name == "None")
+        {
+            RemoveObjective("None");
+        }
 		var id = (GameObject)Instantiate(ObjectiveBar);
 		id.name = name;
 		id.transform.FindChild("Text").GetComponent<Text>().text = objectiveText;
@@ -89,6 +95,10 @@ public class ObjectiveDisplayScript : MonoBehaviour
 	{
 		var id = ScrollBounds.transform.FindChild(name);
 		Destroy(id.gameObject);
+        if (ScrollBounds.transform.childCount <= 0)
+        {
+            AddObjective("None", "You have no objectives. What are you doing with your life?");
+        }
 	}
 
 	public void RemoveAllObjectives()
