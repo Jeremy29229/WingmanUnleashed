@@ -2,9 +2,11 @@
 
 public class Adoorable : MonoBehaviour, IInteractable
 {
-	public Vector3 newPositionOffset;
 	public GameObject ConnectingDoor;
-	public bool RequireBouncerSuit = false;
+	public Vector3 ConnectingDoorOffset = new Vector3(0, -1, 1);
+	public bool RequiresOutfit = false;
+	public string OutfitName = "bouncer";
+
 	private GameObject wingman;
 
 	void Start()
@@ -14,21 +16,33 @@ public class Adoorable : MonoBehaviour, IInteractable
 
 	void Update()
 	{
-		if (wingman.GetComponent<Player>().getDetectionLevel() < 1.0f)
+		ConnectingDoorOffset = new Vector3(0, -1.1f, 1);
+
+		GetComponent<Interactable>().IsCurrentlyInteractable = (ConnectingDoor != null);
+		
+		if (GetComponent<Interactable>().IsCurrentlyInteractable)
 		{
-			GetComponent<Interactable>().IsActive = true;
+			if (RequiresOutfit && wingman.GetComponent<Outfit>().outfitName != OutfitName)
+			{
+				GetComponent<Interactable>().IsCurrentlyInteractable = false;
+				GetComponent<Interactable>().AdditionalInformation = "<color=red>(requires " + OutfitName + " suit)</color>";
+			}
+			else
+			{
+				GetComponent<Interactable>().AdditionalInformation = "";
+			}
 		}
 		else
 		{
-			GetComponent<Interactable>().IsActive = false;
+			GetComponent<Interactable>().AdditionalInformation = "(locked)";
 		}
 	}
 
 	public void InteractWith()
 	{
-		if (!RequireBouncerSuit || wingman.GetComponent<Outfit>().outfitName == "bouncer")
+		if (!RequiresOutfit || wingman.GetComponent<Outfit>().outfitName == OutfitName)
 		{
-			wingman.transform.position = ConnectingDoor.transform.position + newPositionOffset;
+			wingman.transform.position = ConnectingDoor.transform.position + ConnectingDoorOffset;
 			wingman.GetComponent<Controller_ThirdPerson>().flightmodeOff();
 		}
 	}

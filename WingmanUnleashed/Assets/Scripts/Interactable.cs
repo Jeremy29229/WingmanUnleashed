@@ -17,6 +17,7 @@ public class Interactable : MonoBehaviour
 	public string Action;
 	public string InteractableName;
 	public string AdditionalInformation = "";
+	public bool IsCurrentlyInteractable = true;
 
 	private InteractionManager interactionManager;
 
@@ -60,7 +61,15 @@ public class Interactable : MonoBehaviour
 
 	public void updateGUIText()
 	{
-		UI.GetComponentInChildren<Text>().text = "Press " + InteractionKey.ToString() + " to " + Action + " " + InteractableName;
+		if (IsCurrentlyInteractable)
+		{
+			UI.GetComponentInChildren<Text>().text = "Press " + InteractionKey.ToString() + " to " + Action + " " + InteractableName;
+		}
+		else
+		{
+			UI.GetComponentInChildren<Text>().text = InteractableName;
+		}
+
 		if (!string.IsNullOrEmpty(AdditionalInformation))
 		{
 			UI.GetComponentInChildren<Text>().text += " " + AdditionalInformation;

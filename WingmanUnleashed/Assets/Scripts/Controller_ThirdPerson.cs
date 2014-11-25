@@ -285,7 +285,7 @@ public class Controller_ThirdPerson : MonoBehaviour
 		else
 		{
 			inAirCount += Time.deltaTime;
-			if (inAirCount > 0.0f)
+			if (inAirCount > 0.02f)
 			{
 				result = true;
 				inAirCount = 0.0f;
