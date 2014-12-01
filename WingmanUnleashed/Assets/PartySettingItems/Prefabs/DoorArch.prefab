@@ -33,7 +33,7 @@ GameObject:
   - 114: {fileID: 11400002}
   - 114: {fileID: 11400000}
   m_Layer: 0
-  m_Name: Door
+  m_Name: ToConversationsTutorialDoor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -145,7 +145,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100008}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.53223002, y: 0, z: 0}
+  m_LocalPosition: {x: 9.60099983, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400002}
@@ -186,7 +186,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: bb76a395d0147b043af89f8b2f0c94bf, type: 2}
+  - {fileID: 2100000, guid: 3ffe82e52e358044f8bd58823a287a93, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -336,8 +336,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6ce4c6e95bd78648a461b1b3cce9d71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  newPositionOffset: {x: 0, y: 0, z: 0}
   ConnectingDoor: {fileID: 0}
+  ConnectingDoorOffset: {x: 0, y: -1.29999995, z: -1}
+  RequiresOutfit: 0
+  OutfitName: bouncer
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -353,9 +355,10 @@ MonoBehaviour:
   InteractionKey: 101
   PlayerObjectName: Wingman
   IsActive: 1
-  Action: 
-  InteractableName: 
-  AdditionalInformation: 
+  Action: Open
+  InteractableName: Door to the next Tutorial
+  AdditionalInformation: on Client Confidence and Target Interest
+  IsCurrentlyInteractable: 1
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
