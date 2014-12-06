@@ -4,44 +4,55 @@ using System.Collections;
 
 public class EquipmentPanel : MonoBehaviour
 {
-    private Inventory inventory;
-	GameObject item;
-	// Use this for initialization
+	private Inventory inventory;
+	public GameObject item;
+	GameObject itemsDisplay;
+
 	void Start()
 	{
-        inventory = GameObject.Find("Wingman").GetComponent<Inventory>();
+		inventory = GameObject.Find("Wingman").GetComponent<Inventory>();
+		itemsDisplay = GameObject.Find("ItemsDisplay");
 	}
 
-	// Update is called once per frame
 	void Update()
 	{
 		if (Input.GetKeyDown(KeyCode.F))
 		{
 			Use();
 		}
+
+		if (gameObject.transform.FindChild("EquipImage").GetComponent<Image>().sprite == null && itemsDisplay.transform.childCount > 0)
+		{
+			itemsDisplay.transform.GetChild(0).GetComponent<InventoryButton>().equip();
+		}
+
+		//if (itemsDisplay.transform.childCount == 0 || item != null && item.GetComponent<Throwable>() == null)
+		//{
+		//	Unequip();
+		//}
 	}
 
 	public void Equip(GameObject gobject, Sprite image)
 	{
 		gameObject.transform.FindChild("EquipImage").GetComponent<Image>().sprite = image;
-        item = gobject;
+		item = gobject;
 
 	}
 
 	public void Unequip()
 	{
-        gameObject.transform.FindChild("EquipImage").GetComponent<Image>().sprite = GameObject.Find("ItemDisplay").transform.FindChild("ItemImage").GetComponent<Image>().sprite;
+		gameObject.transform.FindChild("EquipImage").GetComponent<Image>().sprite = null;
 	}
 
 	public void Use()
 	{
-        if (item != null && item.GetComponent<Throwable>() != null)
-        {
-            item.GetComponent<Throwable>().Use();
-            if (inventory.RemoveItem(item))
-            {
-                Unequip();
-            }
-        }
+		if (item != null && item.GetComponent<Throwable>() != null)
+		{
+			item.GetComponent<Throwable>().Use();
+			if (inventory.RemoveItem(item))
+			{
+				Unequip();
+			}
+		}
 	}
 }
