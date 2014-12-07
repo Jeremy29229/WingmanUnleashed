@@ -10,8 +10,8 @@ GameObject:
   - 224: {fileID: 22400000}
   - 222: {fileID: 22200000}
   - 114: {fileID: 11400000}
-  m_Layer: 5
-  m_Name: Text
+  m_Layer: 8
+  m_Name: ColectableText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -27,7 +27,7 @@ GameObject:
   - 224: {fileID: 22400002}
   - 223: {fileID: 22300000}
   - 114: {fileID: 11400002}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: InteractionGUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44,8 +44,8 @@ GameObject:
   - 224: {fileID: 22400004}
   - 222: {fileID: 22200002}
   - 114: {fileID: 11400004}
-  m_Layer: 5
-  m_Name: Image
+  m_Layer: 8
+  m_Name: CollectableBackground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -63,14 +63,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_Font: {fileID: 12800000, guid: 858895938e2208e47ba8b4258204fcf1, type: 3}
+    m_FontSize: 20
     m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 10
-    m_MaxSize: 40
+    m_BestFit: 1
+    m_MinSize: 15
+    m_MaxSize: 20
     m_Alignment: 4
     m_RichText: 1
     m_HorizontalOverflow: 0
@@ -106,9 +106,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: .25, g: .602941155, b: 1, a: .588235319}
-  m_Sprite: {fileID: 0}
-  m_Type: 0
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 1c5a733e9bd7aee499f6678f8c1881b7, type: 3}
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -159,8 +159,8 @@ RectTransform:
   m_RootOrder: 1
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: 40.8999023, y: 6.10351562e-05}
-  m_SizeDelta: {x: 181.800003, y: 100}
+  m_AnchoredPosition: {x: -1.10000002, y: 31}
+  m_SizeDelta: {x: 375, y: 119.699997}
   m_Pivot: {x: .5, y: .5}
 --- !u!224 &22400002
 RectTransform:
@@ -195,8 +195,8 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: 40.8999634, y: 3.05175781e-05}
-  m_SizeDelta: {x: 181.800003, y: 100}
+  m_AnchoredPosition: {x: -1.20000005, y: 30.7999992}
+  m_SizeDelta: {x: 495.700012, y: 193.800003}
   m_Pivot: {x: .5, y: .5}
 --- !u!1001 &100100000
 Prefab:
