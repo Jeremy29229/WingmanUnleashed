@@ -189,7 +189,7 @@ public class Controller_ThirdPerson : MonoBehaviour
                         Motor_ThirdPerson.Instance.MovementVector = new Vector3(horizontal, 0.0f, vertical);
                         Motor_ThirdPerson.Instance.UpdateMotor();
                     }
-                    else if (isSneaking())
+                    else if (isCrouching())
                     {
                         if (Input.GetKeyDown(KeyCode.LeftControl))
                         {
@@ -201,23 +201,16 @@ public class Controller_ThirdPerson : MonoBehaviour
                         Motor_ThirdPerson.Instance.MovementVector = new Vector3(horizontal, 0.0f, vertical);
                         Motor_ThirdPerson.Instance.UpdateMotor();
                     }
-                    else if (isCrouching())
-                    {
-                        if (Input.GetKeyDown(KeyCode.LeftControl))
-                        {
-                            player.transform.GetComponent<WingmanAnimator>().StartCrouching();
-                        }
-                    }
-                    else if (Input.GetKeyDown(KeyCode.LeftShift) && !isCrouching())
-                    {
-                        player.transform.GetComponent<WingmanAnimator>().SetSpeed(2);
-                    }
-                    else if (Input.GetKeyUp(KeyCode.LeftShift) && !isCrouching())
-                    {
-                        player.transform.GetComponent<WingmanAnimator>().SetSpeed(1);
-                    }
                     else if (isWalking())
                     {
+                        if (Input.GetKey(KeyCode.LeftShift))
+                        {
+                            player.transform.GetComponent<WingmanAnimator>().SetSpeed(2);
+                        }
+                        else
+                        {
+                            player.transform.GetComponent<WingmanAnimator>().SetSpeed(1);
+                        }
                         if (Input.GetKey(KeyCode.W) && !player.transform.GetComponent<WingmanAnimator>().IsWalking())
                         {
                             if (player.transform.GetComponent<WingmanAnimator>().IsCrouching()) player.transform.GetComponent<WingmanAnimator>().StopCrouching();
@@ -237,6 +230,16 @@ public class Controller_ThirdPerson : MonoBehaviour
                         {
                             if (player.transform.GetComponent<WingmanAnimator>().IsCrouching()) player.transform.GetComponent<WingmanAnimator>().StopCrouching();
                             player.transform.GetComponent<WingmanAnimator>().StartStrafingRight();
+                        }
+                        if (Input.GetKeyUp(KeyCode.D))
+                        {
+                            player.transform.GetComponent<WingmanAnimator>().StopStrafingRight();
+                            player.transform.GetComponent<WingmanAnimator>().StartWalking();
+                        }
+                        if (Input.GetKeyUp(KeyCode.A))
+                        {
+                            player.transform.GetComponent<WingmanAnimator>().StopStrafingLeft();
+                            player.transform.GetComponent<WingmanAnimator>().StartWalking();
                         }
 
                         horizontal = Input.GetAxisRaw("Horizontal");
