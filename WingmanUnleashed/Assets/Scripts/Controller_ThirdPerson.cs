@@ -178,21 +178,21 @@ public class Controller_ThirdPerson : MonoBehaviour
                         }
                         if (!coverBlown) gameObject.GetComponent<Player>().decreaseDetection(0.1f);
                     }
+                    else if (isJumping())
+                    {
+                        if (Input.GetKeyDown(KeyCode.Space) && CanJump())
+                        {
+                            Rigidbody rig = (Rigidbody)player.GetComponent("Rigidbody");
+                            rig.AddForce(new Vector3(0.0f, jumpHeight, 0.0f));
+                        }
+                        horizontal = Input.GetAxisRaw("Horizontal");
+                        vertical = Input.GetAxisRaw("Vertical");
+                        Motor_ThirdPerson.Instance.MovementVector = new Vector3(horizontal, 0.0f, vertical);
+                        Motor_ThirdPerson.Instance.UpdateMotor();
+                    }
                     else
                     {
-                        if (isJumping())
-                        {
-                            if (Input.GetKeyDown(KeyCode.Space) && CanJump())
-                            {
-                                Rigidbody rig = (Rigidbody)player.GetComponent("Rigidbody");
-                                rig.AddForce(new Vector3(0.0f, jumpHeight, 0.0f));
-                            }
-                            horizontal = Input.GetAxisRaw("Horizontal");
-                            vertical = Input.GetAxisRaw("Vertical");
-                            Motor_ThirdPerson.Instance.MovementVector = new Vector3(horizontal, 0.0f, vertical);
-                            Motor_ThirdPerson.Instance.UpdateMotor();
-                        }
-                        else if (isCrouching())
+                        if (isCrouching())
                         {
                             if (Input.GetKeyDown(KeyCode.LeftControl))
                             {
@@ -349,7 +349,7 @@ public class Controller_ThirdPerson : MonoBehaviour
 
     private bool isJumping()
     {
-        return (Input.GetKey(KeyCode.Space) || Input.GetKeyUp(KeyCode.Space));
+        return (Input.GetKeyDown(KeyCode.Space));
     }
 
     private bool isSprinting()
