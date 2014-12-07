@@ -19,6 +19,8 @@ public class Inventory : MonoBehaviour
 	private Controller_ThirdPerson controller;
 	private Scrollbar inventoryScrollbar;
 
+	private Text noItemsText;
+
 	void Start()
 	{
 		cam = Camera_ThirdPerson.Instance;
@@ -32,6 +34,7 @@ public class Inventory : MonoBehaviour
 		objectiveManager = GameObject.Find("ObjectiveCanvas").GetComponent<ObjectiveDisplayScript>();
 		conversationManger = GameObject.Find("ConvoGUI").GetComponent<ConversationManager>();
 		inventoryScrollbar = GameObject.Find("ItemsScroll").GetComponent<Scrollbar>();
+		noItemsText = GameObject.Find("NoItemsText").GetComponent<Text>();
 	}
 
 	void Update()
@@ -86,6 +89,11 @@ public class Inventory : MonoBehaviour
 
 	public void AddItem(string name, GameObject gobject, Sprite inventoryImage, int amount = 1)
 	{
+		if (items.Count < 1)
+		{
+			noItemsText.enabled = false;
+		}
+
 		var potentialItem = items.FirstOrDefault(x => x.Name == name);
 		if (potentialItem == null)
 		{
@@ -99,6 +107,11 @@ public class Inventory : MonoBehaviour
 			potentialItem.Amount += amount;
 			GameObject.Find("InventoryDisplay").GetComponent<InventoryDisplayScript>().UpdateAmount(name, potentialItem.Amount);
 		}
+
+		if (items.Count < 1)
+		{
+			noItemsText.enabled = false;
+		}
 	}
 
 	public void AddItem(InventoryItem i)
@@ -111,6 +124,11 @@ public class Inventory : MonoBehaviour
 		else
 		{
 			potentialItem.Amount += i.Amount;
+		}
+
+		if (items.Count < 1)
+		{
+			noItemsText.enabled = false;
 		}
 	}
 
@@ -127,6 +145,11 @@ public class Inventory : MonoBehaviour
 			GameObject.Find("InventoryDisplay").GetComponent<InventoryDisplayScript>().RemoveItem(item.Name);
 			Destroy(item.Gob);
 			items.Remove(item);
+
+			if (items.Count < 1)
+			{
+				noItemsText.enabled = true;
+			}
 		}
 		return result;
 	}
@@ -144,6 +167,11 @@ public class Inventory : MonoBehaviour
 			GameObject.Find("InventoryDisplay").GetComponent<InventoryDisplayScript>().RemoveItem(item.Name);
 			Destroy(item.Gob);
 			items.Remove(item);
+
+			if (items.Count < 1)
+			{
+				noItemsText.enabled = true;
+			}
 		}
 		return result;
 	}

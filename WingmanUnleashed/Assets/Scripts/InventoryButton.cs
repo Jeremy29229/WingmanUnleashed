@@ -5,10 +5,11 @@ using System.Collections;
 public class InventoryButton : MonoBehaviour
 {
 	public GameObject gobject;
+	public EquipmentPanel ep;
 	// Use this for initialization
 	void Start()
 	{
-
+		ep = GameObject.Find("EquipmentPanel").GetComponent<EquipmentPanel>();
 	}
 
 	// Update is called once per frame
@@ -20,6 +21,14 @@ public class InventoryButton : MonoBehaviour
 	public void equip()
 	{
 		Sprite image = gameObject.transform.FindChild("ItemImage").GetComponent<Image>().sprite;
-		GameObject.Find("EquipmentPanel").GetComponent<EquipmentPanel>().Equip(gobject, image);
+		ep.Equip(gobject, image);
+	}
+
+	void OnDestroy()
+	{
+		if (gobject == ep.item)
+		{
+			ep.Unequip();
+		}
 	}
 }

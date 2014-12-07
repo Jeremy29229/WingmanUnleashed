@@ -17,7 +17,8 @@ public class Player : MonoBehaviour
 	private bool lockDetection = false;
 	private float timeLocked = 0.0f;
 	private ConversationManager conversationManager;
-	// Use this for initialization
+	private bool IsJMode = false;
+
 	void Start()
 	{
 		detectionLevel = 0f;
@@ -31,81 +32,105 @@ public class Player : MonoBehaviour
 	// Update is called once per frame
 	void Update()
 	{
-		//        Debug.Log("detectionLevel: " + detectionLevel);
-		if (detectionLevel >= 1.0f)
+		if (Input.GetKeyDown(KeyCode.J))
 		{
-			if (lockDetection)
+			IsJMode = !IsJMode;
+			eye.enabled = !IsJMode;
+
+			if (IsJMode)
 			{
-				timeLocked += Time.deltaTime;
-				if (timeLocked >= TimeTilUnlocked)
+				detectionLevel = 0.0f;
+				DetectionSound.volume = detectionLevel;
+			}
+		}
+
+		if (!IsJMode)
+		{
+			// Debug.Log("detectionLevel: " + detectionLevel);
+			if (detectionLevel >= 1.0f)
+			{
+				if (lockDetection)
 				{
-					lockDetection = false;
-					detectionLevel = 0.95f;
+					timeLocked += Time.deltaTime;
+					if (timeLocked >= TimeTilUnlocked)
+					{
+						lockDetection = false;
+						detectionLevel = 0.95f;
+					}
+					else
+					{
+						detectionLevel = 1.0f;
+					}
 				}
 				else
 				{
 					detectionLevel = 1.0f;
+					lockDetection = true;
+					timeLocked = 0.0f;
 				}
 			}
-			else
+
+			if (detectionLevel > 0.0f && !lockDetection && !conversationManager.isShowing)
 			{
-				detectionLevel = 1.0f;
-				lockDetection = true;
-				timeLocked = 0.0f;
+				detectionLevel -= 0.01f * Time.deltaTime;
+				DetectionSound.volume = detectionLevel;
+				DetectionSound.pitch = detectionLevel * 2;
+				if (detectionLevel <= 0.0f) DetectionSound.Stop();
+			}
+
+			if (numDetectors <= 0 && DetectionSound.isPlaying) DetectionSound.Stop();
+
+			if (Input.GetKeyDown(KeyCode.V) && !((Controller_ThirdPerson)gameObject.GetComponent("Controller_ThirdPerson")).flightmode)
+			{
+				if (wingmanVisionActive)
+				{
+					deactivateWingmanVision();
+				}
+				else
+				{
+					activateWingmanVision();
+				}
 			}
 		}
-
-		if (detectionLevel > 0.0f && !lockDetection && !conversationManager.isShowing)
-		{
-			detectionLevel -= 0.01f * Time.deltaTime;
-			DetectionSound.volume = detectionLevel;
-			DetectionSound.pitch = detectionLevel * 2;
-			if (detectionLevel <= 0.0f) DetectionSound.Stop();
-		}
-
-		if (numDetectors <= 0 && DetectionSound.isPlaying) DetectionSound.Stop();
 
 		detectionBar.fillAmount = detectionLevel;
 		detectionBar.color = Color.red * (detectionLevel + 0.2f);
 		eye.color = Color.red * (detectionLevel + 0.2f);
 
-		if (Input.GetKeyDown(KeyCode.V) && !((Controller_ThirdPerson)gameObject.GetComponent("Controller_ThirdPerson")).flightmode)
-		{
-			if (wingmanVisionActive)
-			{
-				deactivateWingmanVision();
-			}
-			else
-			{
-				activateWingmanVision();
-			}
-		}
-
 	}
 
 	public void increaseDetection(float amount)
 	{
-		if (!conversationManager.isShowing)
+		if (!IsJMode)
 		{
-			if (!DetectionSound.isPlaying) DetectionSound.Play();
-			detectionLevel += amount * Time.deltaTime;
-			DetectionSound.volume = detectionLevel;
+			if (!conversationManager.isShowing)
+			{
+				if (!DetectionSound.isPlaying) DetectionSound.Play();
+				detectionLevel += amount * Time.deltaTime;
+				DetectionSound.volume = detectionLevel;
+			}
 		}
 	}
 
 	public void increaseDetectionFlat(float amount)
 	{
-		if (detectionLevel <= 0.0f) DetectionSound.Play();
-		detectionLevel += amount;
-		DetectionSound.volume = detectionLevel;
+		if (!IsJMode)
+		{
+			if (detectionLevel <= 0.0f) DetectionSound.Play();
+			detectionLevel += amount;
+			DetectionSound.volume = detectionLevel;
+		}
 	}
 
 	public void decreaseDetection(float amount)
 	{
-		if (detectionLevel > 0.0f && !lockDetection)
+		if (!IsJMode)
 		{
-			detectionLevel -= amount * Time.deltaTime;
-			DetectionSound.volume = detectionLevel;
+			if (detectionLevel > 0.0f && !lockDetection)
+			{
+				detectionLevel -= amount * Time.deltaTime;
+				DetectionSound.volume = detectionLevel;
+			}
 		}
 	}
 

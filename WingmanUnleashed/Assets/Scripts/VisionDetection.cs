@@ -11,11 +11,15 @@ public class VisionDetection : MonoBehaviour
 	public Vector3 npcOffset = new Vector3(0, 1.5f, 0);
 	public Vector3 playerOffset = new Vector3(0, 1.5f, 0);
 
+	[HideInInspector]
+	public bool CanIncreaseDetection;
+
 	// Use this for initialization
 	void Start()
 	{
 		wingMan = GameObject.Find("Wingman");
 		playerInRange = false;
+		CanIncreaseDetection = true;
 	}
 
 	// Update is called once per frame
