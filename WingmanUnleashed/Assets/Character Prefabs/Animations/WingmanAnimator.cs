@@ -35,6 +35,10 @@ public class WingmanAnimator : MonoBehaviour
             animator = GetComponent <Animator>();
         }
 	}
+    public void SetSpeed(int spd)
+    {
+        animator.speed = spd;
+    }
     /// <summary>
     /// The character will jump once.
     /// </summary>
@@ -219,6 +223,14 @@ public class WingmanAnimator : MonoBehaviour
     public bool IsWalkingDrunk()
     {
         return animator.GetBool("IsWalkingDrunk");
+    }
+    /// <summary>
+    /// Gets whether or not the character is currently crouched.
+    /// </summary>
+    /// <returns>Whether or not the character is currently crouched.</returns>
+    public bool IsCrouching()
+    {
+        return animator.GetBool("IsCrouching");
     }
     /// <summary>
     /// Gets whether or not the character is currently samba dancings.
