@@ -38,6 +38,10 @@ public class CharacterAnimator : MonoBehaviour
             animator = GetComponent <Animator>();
         }
 	}
+    public void SetSpeed(int spd)
+    {
+        animator.speed = spd;
+    }
     /// <summary>
     /// The character will jump once.
     /// </summary>

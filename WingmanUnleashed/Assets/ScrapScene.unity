@@ -3160,6 +3160,7 @@ MonoBehaviour:
   BaseDetectionRate: .100000001
   npcOffset: {x: 0, y: .899999976, z: 0}
   playerOffset: {x: 0, y: 1.5, z: 0}
+  CanIncreaseDetection: 0
 --- !u!1 &2142181441
 GameObject:
   m_ObjectHideFlags: 0
