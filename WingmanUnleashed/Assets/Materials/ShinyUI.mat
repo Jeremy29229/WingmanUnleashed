@@ -48,6 +48,10 @@ Material:
         second: 0
       data:
         first:
+          name: _Shininess
+        second: .00999999978
+      data:
+        first:
           name: _Stencil
         second: 0
       data:
@@ -70,10 +74,6 @@ Material:
         first:
           name: _ColorMask
         second: 15
-      data:
-        first:
-          name: _Shininess
-        second: .00999999978
       data:
         first:
           name: _Strength
