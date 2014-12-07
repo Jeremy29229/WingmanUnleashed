@@ -400,6 +400,14 @@ public class BouncerAI : MonoBehaviour
 		{
 			nav.destination = distractionPos;
 		}
+
+        if (gameObject.GetComponent<GuardPost>() != null)
+        {
+            if (gameObject.GetComponent<GuardPost>().AtPost()&&!gameObject.GetComponent<GuardPost>().AlreadyFacing())
+            {
+                gameObject.GetComponent<GuardPost>().lookTowards();
+            }
+        }
 	}
 }
 
