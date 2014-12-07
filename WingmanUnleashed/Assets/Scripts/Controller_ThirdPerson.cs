@@ -163,89 +163,107 @@ public class Controller_ThirdPerson : MonoBehaviour
                         if (isCrouching()) player.transform.GetComponent<WingmanAnimator>().StopCrouching();
                         player.transform.GetComponent<WingmanAnimator>().ResetToIdle();
                     }
-					else if (isDancing())
-					{
-						if (Input.GetKeyDown(KeyCode.C))
-						{
-							player.transform.GetComponent<WingmanAnimator>().StartDancingGangnam();
-							if (gameObject.GetComponent<Player>().numDetectors > 0) coverBlown = true;
-						}
-						if (Input.GetKeyUp(KeyCode.C))
-						{
-							player.transform.GetComponent<WingmanAnimator>().StopDancingGangnam();
-							coverBlown = false;
-						}
+                    else if (isDancing())
+                    {
+                        if (Input.GetKeyDown(KeyCode.C))
+                        {
+                            player.transform.GetComponent<WingmanAnimator>().ResetToIdle();
+                            player.transform.GetComponent<WingmanAnimator>().StartDancingGangnam();
+                            if (gameObject.GetComponent<Player>().numDetectors > 0) coverBlown = true;
+                        }
+                        if (Input.GetKeyUp(KeyCode.C))
+                        {
+                            player.transform.GetComponent<WingmanAnimator>().StopDancingGangnam();
+                            coverBlown = false;
+                        }
                         if (!coverBlown) gameObject.GetComponent<Player>().decreaseDetection(0.1f);
                     }
-                    else if(isJumping())
+                    else
                     {
-                        if (Input.GetKeyDown(KeyCode.Space) && CanJump())
-						{
-							Rigidbody rig = (Rigidbody)player.GetComponent("Rigidbody");
-							rig.AddForce(new Vector3(0.0f, jumpHeight, 0.0f));
-						}
-                        horizontal = Input.GetAxisRaw("Horizontal");
-                        vertical = Input.GetAxisRaw("Vertical");
-                        Motor_ThirdPerson.Instance.MovementVector = new Vector3(horizontal, 0.0f, vertical);
-                        Motor_ThirdPerson.Instance.UpdateMotor();
-                    }
-                    else if (isCrouching())
-                    {
-                        if (Input.GetKeyDown(KeyCode.LeftControl))
+                        if (isJumping())
                         {
-                            player.transform.GetComponent<WingmanAnimator>().StartCrouching();
+                            if (Input.GetKeyDown(KeyCode.Space) && CanJump())
+                            {
+                                Rigidbody rig = (Rigidbody)player.GetComponent("Rigidbody");
+                                rig.AddForce(new Vector3(0.0f, jumpHeight, 0.0f));
+                            }
+                            horizontal = Input.GetAxisRaw("Horizontal");
+                            vertical = Input.GetAxisRaw("Vertical");
+                            Motor_ThirdPerson.Instance.MovementVector = new Vector3(horizontal, 0.0f, vertical);
+                            Motor_ThirdPerson.Instance.UpdateMotor();
                         }
+                        else if (isCrouching())
+                        {
+                            if (Input.GetKeyDown(KeyCode.LeftControl))
+                            {
+                                player.transform.GetComponent<WingmanAnimator>().StartCrouching();
+                                Motor_ThirdPerson.Instance.isCrouching = true;
+                            }
+                            if (Input.GetKeyUp(KeyCode.LeftControl))
+                            {
+                                player.transform.GetComponent<WingmanAnimator>().StopCrouching();
+                                Motor_ThirdPerson.Instance.isCrouching = false;
+                            }
 
-                        horizontal = Input.GetAxisRaw("Horizontal");
-                        vertical = Input.GetAxisRaw("Vertical");
-                        Motor_ThirdPerson.Instance.MovementVector = new Vector3(horizontal, 0.0f, vertical);
-                        Motor_ThirdPerson.Instance.UpdateMotor();
-                    }
-                    else if (isWalking())
-                    {
-                        if (Input.GetKey(KeyCode.LeftShift))
-                        {
-                            player.transform.GetComponent<WingmanAnimator>().SetSpeed(2);
+                            horizontal = Input.GetAxisRaw("Horizontal");
+                            vertical = Input.GetAxisRaw("Vertical");
+                            Motor_ThirdPerson.Instance.MovementVector = new Vector3(horizontal, 0.0f, vertical);
+                            Motor_ThirdPerson.Instance.UpdateMotor();
                         }
-                        else
+                        if (isWalking())
                         {
-                            player.transform.GetComponent<WingmanAnimator>().SetSpeed(1);
+                            if (Input.GetKey(KeyCode.LeftShift) && !isCrouching())
+                            {
+                                player.transform.GetComponent<WingmanAnimator>().SetSpeed(2);
+                            }
+                            else
+                            {
+                                player.transform.GetComponent<WingmanAnimator>().SetSpeed(1);
+                            }
+                            if (Input.GetKey(KeyCode.W) && !player.transform.GetComponent<WingmanAnimator>().IsWalking())
+                            {
+                                player.transform.GetComponent<WingmanAnimator>().StartWalking();
+                            }
+                            if (Input.GetKey(KeyCode.A) && !player.transform.GetComponent<WingmanAnimator>().IsStrafingLeft())
+                            {
+                                player.transform.GetComponent<WingmanAnimator>().StartStrafingLeft();
+                            }
+                            if (Input.GetKey(KeyCode.S) && !player.transform.GetComponent<WingmanAnimator>().IsWalking())
+                            {
+                                player.transform.GetComponent<WingmanAnimator>().StartWalking();
+                            }
+                            if (Input.GetKey(KeyCode.D) && !player.transform.GetComponent<WingmanAnimator>().IsStrafingRight())
+                            {
+                                player.transform.GetComponent<WingmanAnimator>().StartStrafingRight();
+                            }
+                            if (Input.GetKeyUp(KeyCode.D))
+                            {
+                                player.transform.GetComponent<WingmanAnimator>().StopStrafingRight();
+                                player.transform.GetComponent<WingmanAnimator>().StartWalking();
+                            }
+                            if (Input.GetKeyUp(KeyCode.A))
+                            {
+                                player.transform.GetComponent<WingmanAnimator>().StopStrafingLeft();
+                                player.transform.GetComponent<WingmanAnimator>().StartWalking();
+                            }
+
+                            horizontal = Input.GetAxisRaw("Horizontal");
+                            vertical = Input.GetAxisRaw("Vertical");
+                            Motor_ThirdPerson.Instance.MovementVector = new Vector3(horizontal, 0.0f, vertical);
+                            Motor_ThirdPerson.Instance.UpdateMotor();
                         }
-                        if (Input.GetKey(KeyCode.W) && !player.transform.GetComponent<WingmanAnimator>().IsWalking())
+                        else if (player.transform.GetComponent<WingmanAnimator>().IsWalking())
                         {
-                            if (player.transform.GetComponent<WingmanAnimator>().IsCrouching()) player.transform.GetComponent<WingmanAnimator>().StopCrouching();
-                            player.transform.GetComponent<WingmanAnimator>().StartWalking();
+                            player.transform.GetComponent<WingmanAnimator>().StopWalking();
                         }
-                        if (Input.GetKey(KeyCode.A) && !player.transform.GetComponent<WingmanAnimator>().IsStrafingLeft())
-                        {
-                            if (player.transform.GetComponent<WingmanAnimator>().IsCrouching()) player.transform.GetComponent<WingmanAnimator>().StopCrouching();
-                            player.transform.GetComponent<WingmanAnimator>().StartStrafingLeft();
-                        }
-                        if (Input.GetKey(KeyCode.S) && !player.transform.GetComponent<WingmanAnimator>().IsWalking())
-                        {
-                            if (player.transform.GetComponent<WingmanAnimator>().IsCrouching()) player.transform.GetComponent<WingmanAnimator>().StopCrouching();
-                            player.transform.GetComponent<WingmanAnimator>().StartWalking();
-                        }
-                        if (Input.GetKey(KeyCode.D) && !player.transform.GetComponent<WingmanAnimator>().IsStrafingRight())
-                        {
-                            if (player.transform.GetComponent<WingmanAnimator>().IsCrouching()) player.transform.GetComponent<WingmanAnimator>().StopCrouching();
-                            player.transform.GetComponent<WingmanAnimator>().StartStrafingRight();
-                        }
-                        if (Input.GetKeyUp(KeyCode.D))
+                        else if (player.transform.GetComponent<WingmanAnimator>().IsStrafingRight())
                         {
                             player.transform.GetComponent<WingmanAnimator>().StopStrafingRight();
-                            player.transform.GetComponent<WingmanAnimator>().StartWalking();
                         }
-                        if (Input.GetKeyUp(KeyCode.A))
+                        else if (player.transform.GetComponent<WingmanAnimator>().IsStrafingLeft())
                         {
                             player.transform.GetComponent<WingmanAnimator>().StopStrafingLeft();
-                            player.transform.GetComponent<WingmanAnimator>().StartWalking();
                         }
-
-                        horizontal = Input.GetAxisRaw("Horizontal");
-                        vertical = Input.GetAxisRaw("Vertical");
-                        Motor_ThirdPerson.Instance.MovementVector = new Vector3(horizontal, 0.0f, vertical);
-                        Motor_ThirdPerson.Instance.UpdateMotor();
                     }
 					
 				}

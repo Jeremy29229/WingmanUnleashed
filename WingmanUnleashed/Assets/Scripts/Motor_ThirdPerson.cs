@@ -5,7 +5,7 @@ public class Motor_ThirdPerson : MonoBehaviour
 {
 	public float movementSpeed = 5.0f;
     public float sprintSpeed = 10.0f;
-    public float crouchSpeed = 2.0f;
+    public float crouchSpeed = 1.0f;
 	public static Motor_ThirdPerson Instance;
     public bool isCrouching;
 
@@ -25,14 +25,6 @@ public class Motor_ThirdPerson : MonoBehaviour
 		MovementVector = Vector3.Normalize(MovementVector);
     
         float speedValue = 0.0f;
-        if (Input.GetKeyDown(KeyCode.LeftControl))
-        {
-            isCrouching = true;
-        }
-        if (Input.GetKeyUp(KeyCode.LeftControl))
-        {
-            isCrouching = false;
-        }
     
         if (isCrouching)
         {
