@@ -40,6 +40,7 @@ public class BouncerAI : MonoBehaviour
 	private float DEFAULT_STOP = 0.0f;
 	private bool carryingWingman;
 	private ConversationManager conversationManager;
+	private VisionDetection vd;
 
 	void OnEnable()
 	{
@@ -60,6 +61,7 @@ public class BouncerAI : MonoBehaviour
 		checkingDistraction = false;
 		carryingWingman = false;
 		conversationManager = GameObject.Find("ConvoGUI").GetComponent<ConversationManager>();
+		vd = transform.FindChild("BouncerDetectionCone").GetComponent<VisionDetection>();
 	}
 
 	void LateUpdate()
@@ -326,7 +328,7 @@ public class BouncerAI : MonoBehaviour
 	public void Patrolling()
 	{
 		nav.stoppingDistance = DEFAULT_STOP;
-		if (!detection.IsPlayInRangeAndVisable)
+		if (!detection.IsPlayInRangeAndVisable || !vd.CanIncreaseDetection)
 		{
 			OnPatrol();
 		}
@@ -401,13 +403,13 @@ public class BouncerAI : MonoBehaviour
 			nav.destination = distractionPos;
 		}
 
-        if (gameObject.GetComponent<GuardPost>() != null)
-        {
-            if (gameObject.GetComponent<GuardPost>().AtPost()&&!gameObject.GetComponent<GuardPost>().AlreadyFacing())
-            {
-                gameObject.GetComponent<GuardPost>().lookTowards();
-            }
-        }
+		if (gameObject.GetComponent<GuardPost>() != null)
+		{
+			if (gameObject.GetComponent<GuardPost>().AtPost()&&!gameObject.GetComponent<GuardPost>().AlreadyFacing())
+			{
+				gameObject.GetComponent<GuardPost>().lookTowards();
+			}
+		}
 	}
 }
 
