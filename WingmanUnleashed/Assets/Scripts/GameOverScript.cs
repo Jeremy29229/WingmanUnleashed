@@ -6,18 +6,33 @@ public class GameOverScript : MonoBehaviour
 {
 
 	bool end = false;
+    private GameObject player;
+    private Camera_ThirdPerson cam;
+    private Controller_ThirdPerson controller;
 
 	//// Use this for initialization
-	//void Start () 
-	//{
-	//	gameObject.GetComponent<Canvas>().enabled = false;
-	//}
+    void Start()
+    {
+        gameObject.GetComponent<Canvas>().enabled = false;
+        player = GameObject.Find("Wingman");
+        cam = Camera_ThirdPerson.Instance;
+        controller = Controller_ThirdPerson.Instance;
+    }
 
-	//// Update is called once per frame
-	//void Update () 
-	//{
+    // Update is called once per frame
+    void Update()
+    {
+        if ((player.transform.position.y <= 0 && player.transform.position.y > -5))
+        {
+            //Screen.showCursor = true;
+            Screen.lockCursor = false;
+            gameObject.GetComponent<Canvas>().enabled = true;
+            cam.IsInConversation = true;
+            controller.IsInConversation = true;
 
-	//}
+        }
+    }
+
 	//public void HideGameOver()
 	//{
 	//	gameObject.GetComponent<Canvas>().enabled = false;
@@ -42,6 +57,18 @@ public class GameOverScript : MonoBehaviour
 			end = true;
 		}
 	}
+
+    public void Restart()
+    {
+        Application.LoadLevel("NotGotham");
+    }
+
+    public void Quit()
+    {
+        Application.Quit();
+        UnityEditor.EditorApplication.isPlaying = false;
+    }
+
 	//private void Show(string message)
 	//{
 	//	GameObject.Find("GameOverMessage").GetComponent<Text>().text = message;
