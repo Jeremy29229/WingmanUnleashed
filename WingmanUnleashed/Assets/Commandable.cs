@@ -45,10 +45,18 @@ public class Commandable : MonoBehaviour {
         }
         else if (willReturn)
         {
-            sendToStartPosition();
+           // sendToStartPosition();
+            StartCoroutine(waitThenReturn(3));
         }
        
 	}
+
+    IEnumerator waitThenReturn(int seconds)
+    {
+        willReturn = false;
+        yield return new WaitForSeconds(seconds);
+        sendToStartPosition();
+    }
 
     public void sendToLocation(Vector3 location)
     {
