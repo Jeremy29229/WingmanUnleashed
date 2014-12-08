@@ -40,7 +40,8 @@ public class Adoorable : MonoBehaviour, IInteractable
 	{
 		if (GetComponent<Interactable>().IsCurrentlyInteractable && (!RequiresOutfit || wingman.GetComponent<Outfit>().outfitName == OutfitName))
 		{
-			wingman.transform.position = ConnectingDoor.transform.position + ConnectingDoor.GetComponent<Adoorable>().PlayerFromDoorOffset;
+            Vector3 offset = ConnectingDoor.GetComponent<Adoorable>().PlayerFromDoorOffset;
+            wingman.transform.position = ConnectingDoor.transform.position + offset;
 			wingman.GetComponent<Controller_ThirdPerson>().flightmodeOff();
 		}
 	}
