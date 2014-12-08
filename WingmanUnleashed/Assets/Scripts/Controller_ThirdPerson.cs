@@ -269,7 +269,7 @@ public class Controller_ThirdPerson : MonoBehaviour
 				}
 				if (InAir()) flightmodeOn();
 			}
-			if (Input.GetKeyDown(KeyCode.Alpha1)||(player.transform.position.y<=0&&player.transform.position.y>-5))
+			if (Input.GetKeyDown(KeyCode.Alpha1))
 			{
 				player.transform.position = new Vector3(1446.1f, 241.58f, 555.77f);
 				flightmodeOff();
