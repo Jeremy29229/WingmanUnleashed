@@ -7,12 +7,16 @@ public class Adoorable : MonoBehaviour, IInteractable
 	public bool RequiresOutfit = false;
 	public string OutfitName = "bouncer";
 	public bool IsAutoReturningDoor = false;
+	public bool ResetDetectionLevelOnEnter = false;
+
+	private Player player;
 
 	private GameObject wingman;
 
 	void Start()
 	{
 		wingman = GameObject.Find("Wingman");
+		player = GameObject.Find("Wingman").GetComponent<Player>();
 	}
 
 	void Update()
@@ -48,6 +52,12 @@ public class Adoorable : MonoBehaviour, IInteractable
 			if (IsAutoReturningDoor)
 			{
 				ConnectingDoor.GetComponent<Adoorable>().ConnectingDoor = gameObject;
+			}
+
+			if (ResetDetectionLevelOnEnter)
+			{
+				player.increaseDetectionFlat(-player.getDetectionLevel());
+				print("reset");
 			}
 		}
 	}
