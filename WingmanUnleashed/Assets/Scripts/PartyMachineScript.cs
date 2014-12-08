@@ -27,7 +27,7 @@ public class PartyMachineScript : MonoBehaviour {
         while (!foundRandomEffect)
         {
             int index = Random.Range(0, PartyEffects.Length);
-            if (PartyEffects[index] != currentEffect)
+			if (PartyEffects[index] != currentEffect || PartyEffects.Length == 1)
             {
                 foundRandomEffect = true;
                 currentEffect = PartyEffects[index];

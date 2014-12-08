@@ -10,6 +10,12 @@ TagManager:
   - Zone1
   - Zone1B
   - Zone0B
+  - Zone2
+  - Zone3
+  - Zone4
+  - Zone5
+  - Zone6
+  - Zone7
   - 
   Builtin Layer 0: Default
   Builtin Layer 1: TransparentFX

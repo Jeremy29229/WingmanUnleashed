@@ -7,12 +7,16 @@ public class ZoneManager : MonoBehaviour
 	public float ZoneFadeTime = 10.0f;
 	public bool EnabledZoneAtStart = false;
 	public string PlayerObjectName = "Wingman";
+	public GameObject LaserLocatator;
+	private ParticleSystem[] originalParticles;
+	private ParticleSystem[] flyingParticles;
 	
 	private GameObject player;
 
 	private bool hasCountDownStarted = false;
 	private float currentTime = 0.0f;
 	private GameObject[] zoneObjects;
+	private PartyMachineScript pms;
 
 	void Start()
 	{
@@ -21,6 +25,16 @@ public class ZoneManager : MonoBehaviour
 		player = GameObject.Find(PlayerObjectName);
 
 		SetupAllZoneObject(EnabledZoneAtStart);
+
+		if (LaserLocatator != null)
+		{
+			pms = LaserLocatator.transform.parent.GetComponent<PartyMachineScript>();
+			originalParticles = pms.PartyEffects;
+			flyingParticles = new ParticleSystem[1];
+			flyingParticles[0] = LaserLocatator.particleSystem;
+			pms.PartyEffects = flyingParticles;
+			LaserLocatator.particleSystem.startSize = 40.0f;
+		}
 	}
 
 	void Update()
@@ -41,6 +55,12 @@ public class ZoneManager : MonoBehaviour
 	{
 		if (c.gameObject == player)
 		{
+			if (LaserLocatator != null)
+			{
+				pms.PartyEffects = originalParticles;
+				LaserLocatator.particleSystem.startSize = 2.0f;
+			}
+
 			hasCountDownStarted = false;
 			currentTime = 0.0f;
 
@@ -52,6 +72,12 @@ public class ZoneManager : MonoBehaviour
 	{
 		if (c.gameObject == player)
 		{
+			if (LaserLocatator != null)
+			{
+				pms.PartyEffects = flyingParticles;
+				LaserLocatator.particleSystem.startSize = 40.0f;
+			}
+
 			if (EnableZoneFading)
 			{
 				hasCountDownStarted = true;

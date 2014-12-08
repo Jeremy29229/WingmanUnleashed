@@ -281,7 +281,7 @@ public class Controller_ThirdPerson : MonoBehaviour
 			}
 			if (Input.GetKeyDown(KeyCode.Alpha3))
 			{
-				player.transform.position = new Vector3(1328.158f, 1000.9615f, 162.7299f);
+				player.transform.position = new Vector3(1710.908f, 892.4806f, 214.3976f);
 				flightmodeOff();
 			}
 		}
