@@ -16,7 +16,8 @@ public class BouncerAI : MonoBehaviour
 	public bool insideBuilding;
 	public bool constrictRange = false;
 	public float rangeConstriction = 10.0f;
-	public Vector3 kickPosition = new Vector3(1449.3f, 244.4f, 546.0f);
+	//public Vector3 kickPosition = new Vector3(1449.3f, 244.4f, 546.0f);
+	public Adoorable kickingDoor;
 
 
 	private BouncerAnimator Characteranimation;
@@ -62,6 +63,11 @@ public class BouncerAI : MonoBehaviour
 		carryingWingman = false;
 		conversationManager = GameObject.Find("ConvoGUI").GetComponent<ConversationManager>();
 		vd = transform.FindChild("BouncerDetectionCone").GetComponent<VisionDetection>();
+
+		if (insideBuilding && GameObject.Find("bouncerReturnDoor") != null)
+		{
+			kickingDoor = GameObject.Find("bouncerReturnDoor").GetComponent<Adoorable>();
+		}
 	}
 
 	void LateUpdate()
@@ -235,7 +241,8 @@ public class BouncerAI : MonoBehaviour
 
 	private void KickOutDoor()
 	{
-		playerWingman.position = kickPosition;
+		//playerWingman.position = kickPosition;
+		kickingDoor.InteractWith();
 	}
 
 	private void Grab()
