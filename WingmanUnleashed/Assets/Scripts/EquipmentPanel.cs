@@ -20,7 +20,6 @@ public class EquipmentPanel : MonoBehaviour
 		{
 			Use();
 		}
-
 		if (gameObject.transform.FindChild("EquipImage").GetComponent<Image>().sprite == null && itemsDisplay.transform.childCount > 0)
 		{
 			itemsDisplay.transform.GetChild(0).GetComponent<InventoryButton>().equip();
