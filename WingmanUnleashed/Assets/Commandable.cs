@@ -32,7 +32,7 @@ public class Commandable : MonoBehaviour {
         }
         if (!destinationReached)
         {
-            if (Vector3.Distance(gameObject.transform.position, currentDestination) < 1)
+            if (Vector3.Distance(gameObject.transform.position, currentDestination) < 2.5)
             {
                 animator.ResetToIdle();
                 destinationReached = true;
